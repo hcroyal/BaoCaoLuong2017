@@ -61,6 +61,9 @@
             // 
             // btn_TaoBatch
             // 
+            this.btn_TaoBatch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_TaoBatch.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.btn_TaoBatch.Appearance.Options.UseFont = true;
             this.btn_TaoBatch.Location = new System.Drawing.Point(351, 5);
@@ -205,7 +208,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl1);
             this.Name = "frm_ManagerBatch";
-            this.Text = "frm_ManagerBatch";
+            this.Text = "Quản lý Batch";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_ManagerBatch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
