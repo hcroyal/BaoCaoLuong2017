@@ -55,10 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataEntryBPO.designer.cs">
+    <Compile Include="DataBaoCaoLuong.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntryBPO.designer.cs">
       <DependentUpon>DataEntryBPO.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="MyForm\frm_Main.cs">
@@ -70,8 +75,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config" />
-    <None Include="DataEntryBPO.dbml.layout">
-      <DependentUpon>DataEntryBPO.dbml</DependentUpon>
+    <None Include="DataBaoCaoLuong.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataBaoCaoLuong.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaoCaoLuong.dbml.layout">
+      <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
@@ -86,9 +96,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="DataEntryBPO.dbml">
+      <SubType>Designer</SubType>
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataEntryBPO.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataEntryBPO.dbml.layout">
+      <DependentUpon>DataEntryBPO.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -7,7 +7,8 @@ namespace BaoCaoLuong2017
 {
     internal class Global
     {
-        public static DataEntryBPODataContext deBPO = new DataEntryBPODataContext();
+        public static DataEntryBPODataContext db_BPO = new DataEntryBPODataContext();
+        public static DataBaoCaoLuongDataContext db_BCL = new DataBaoCaoLuongDataContext();
         public static  string StrMachine= "";
         public static string StrUserWindow ="";
         public static string StrIpAddress = "";
