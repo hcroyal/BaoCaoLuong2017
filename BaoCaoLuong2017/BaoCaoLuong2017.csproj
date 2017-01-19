@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v16.1" />
     <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.Images.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DevExpress.Utils.v16.1" />
     <Reference Include="DevExpress.Sparkline.v16.1.Core" />
     <Reference Include="DevExpress.XtraEditors.v16.1" />
@@ -69,6 +72,12 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="MyForm\frm_CreateBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_CreateBatch.Designer.cs">
+      <DependentUpon>frm_CreateBatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +101,9 @@
     <None Include="DataBaoCaoLuong.dbml.layout">
       <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="MyForm\frm_CreateBatch.resx">
+      <DependentUpon>frm_CreateBatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>

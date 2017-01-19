@@ -189,6 +189,41 @@ namespace BaoCaoLuong2017
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
 			return ((ISingleResult<GetBatchResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.XoaBatch")]
+		public int XoaBatch([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinish_MissImageDEJP")]
+		public ISingleResult<GetBatNotFinish_MissImageDEJPResult> GetBatNotFinish_MissImageDEJP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetBatNotFinish_MissImageDEJPResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinish_MissImageDESO")]
+		public ISingleResult<GetBatNotFinish_MissImageDESOResult> GetBatNotFinish_MissImageDESO([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(100)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetBatNotFinish_MissImageDESOResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeJP")]
+		public ISingleResult<GetBatNotFinishDeJPResult> GetBatNotFinishDeJP()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetBatNotFinishDeJPResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeSo")]
+		public ISingleResult<GetBatNotFinishDeSoResult> GetBatNotFinishDeSo()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetBatNotFinishDeSoResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_Batch")]
@@ -207,11 +242,9 @@ namespace BaoCaoLuong2017
 		
 		private string _fPathPicture;
 		
-		private System.Nullable<bool> _fMultiEntry;
-		
 		private string _fLocation;
 		
-		private string _fGhiChu;
+		private string _fSoLuongAnh;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -227,12 +260,10 @@ namespace BaoCaoLuong2017
     partial void OnfusercreateChanged();
     partial void OnfPathPictureChanging(string value);
     partial void OnfPathPictureChanged();
-    partial void OnfMultiEntryChanging(System.Nullable<bool> value);
-    partial void OnfMultiEntryChanged();
     partial void OnfLocationChanging(string value);
     partial void OnfLocationChanged();
-    partial void OnfGhiChuChanging(string value);
-    partial void OnfGhiChuChanged();
+    partial void OnfSoLuongAnhChanging(string value);
+    partial void OnfSoLuongAnhChanged();
     #endregion
 		
 		public tbl_Batch()
@@ -320,7 +351,7 @@ namespace BaoCaoLuong2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fPathPicture", DbType="VarChar(200)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fPathPicture", DbType="NVarChar(200)")]
 		public string fPathPicture
 		{
 			get
@@ -336,26 +367,6 @@ namespace BaoCaoLuong2017
 					this._fPathPicture = value;
 					this.SendPropertyChanged("fPathPicture");
 					this.OnfPathPictureChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fMultiEntry", DbType="Bit")]
-		public System.Nullable<bool> fMultiEntry
-		{
-			get
-			{
-				return this._fMultiEntry;
-			}
-			set
-			{
-				if ((this._fMultiEntry != value))
-				{
-					this.OnfMultiEntryChanging(value);
-					this.SendPropertyChanging();
-					this._fMultiEntry = value;
-					this.SendPropertyChanged("fMultiEntry");
-					this.OnfMultiEntryChanged();
 				}
 			}
 		}
@@ -380,22 +391,22 @@ namespace BaoCaoLuong2017
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fGhiChu", DbType="NVarChar(200)")]
-		public string fGhiChu
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fSoLuongAnh", DbType="NVarChar(200)")]
+		public string fSoLuongAnh
 		{
 			get
 			{
-				return this._fGhiChu;
+				return this._fSoLuongAnh;
 			}
 			set
 			{
-				if ((this._fGhiChu != value))
+				if ((this._fSoLuongAnh != value))
 				{
-					this.OnfGhiChuChanging(value);
+					this.OnfSoLuongAnhChanging(value);
 					this.SendPropertyChanging();
-					this._fGhiChu = value;
-					this.SendPropertyChanged("fGhiChu");
-					this.OnfGhiChuChanged();
+					this._fSoLuongAnh = value;
+					this.SendPropertyChanged("fSoLuongAnh");
+					this.OnfSoLuongAnhChanged();
 				}
 			}
 		}
@@ -6279,6 +6290,110 @@ namespace BaoCaoLuong2017
 		private string _fBatchName;
 		
 		public GetBatchResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this._fBatchName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinish_MissImageDEJPResult
+	{
+		
+		private string _fBatchName;
+		
+		public GetBatNotFinish_MissImageDEJPResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this._fBatchName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinish_MissImageDESOResult
+	{
+		
+		private string _fBatchName;
+		
+		public GetBatNotFinish_MissImageDESOResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this._fBatchName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinishDeJPResult
+	{
+		
+		private string _fBatchName;
+		
+		public GetBatNotFinishDeJPResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this._fBatchName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetBatNotFinishDeSoResult
+	{
+		
+		private string _fBatchName;
+		
+		public GetBatNotFinishDeSoResult()
 		{
 		}
 		
