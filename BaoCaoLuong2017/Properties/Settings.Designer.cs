@@ -33,5 +33,16 @@ namespace BaoCaoLuong2017.Properties {
                 return ((string)(this["DatabaseDataEntryBPOConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.10.10.254\\BPOSERVER;Initial Catalog=BaoCaoLuong2017;User ID=sa;Pas" +
+            "sword=BPO@DN#2013")]
+        public string BaoCaoLuong2017ConnectionString {
+            get {
+                return ((string)(this["BaoCaoLuong2017ConnectionString"]));
+            }
+        }
     }
 }

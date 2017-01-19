@@ -73,21 +73,21 @@ namespace BaoCaoLuong2017
         {
             if (iLogin == 1)
             {
-                Global.deBPO.InsertLoginTime(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken);
-                Global.deBPO.UpdateToken_TableUser(strUsername, strToken);
+                Global.db_BPO.InsertLoginTime(strUsername, DateTime.Now, strUserWindow, strMachine, strIpAddress, strToken);
+                //Global.deBPO.UpdateToken_TableUser(strUsername, strToken);
             }
         }
         private static void a_LoginEvent(string username, string password, ref string strVersion, ref int iKiemtraLogin, ref string role, ref ComboBox cbb)
         {
             try
             {
-                iKiemtraLogin = Global.deBPO.KiemTraLogin(username, password);
-                strVersion = (from w in Global.deBPO.tbl_Versions where w.IDProject == "BaoCaoLuong2017" select w.IDVersion).FirstOrDefault();
-                role = (from w in Global.deBPO.tbl_Users where w.Username==username select w.IDRole).FirstOrDefault();
+                iKiemtraLogin = Global.db_BPO.KiemTraLogin(username, password);
+                strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == "BaoCaoLuong2017" select w.IDVersion).FirstOrDefault();
+                role = (from w in Global.db_BPO.tbl_Users where w.Username==username select w.IDRole).FirstOrDefault();
                 if (iKiemtraLogin == 1)
                 {
-                    cbb.DataSource = Global.DataNencho.GetBatchDE(username);
-                    cbb.DisplayMember = "Cot_Z";
+                    cbb.DataSource = Global.db_BCL.GetBatch(username);
+                    cbb.DisplayMember = "fBatchName";
                 }
                 
             }
