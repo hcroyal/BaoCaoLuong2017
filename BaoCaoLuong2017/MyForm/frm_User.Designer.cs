@@ -79,15 +79,15 @@
             this.panelControl1.Controls.Add(this.btn_suauser);
             this.panelControl1.Controls.Add(this.btn_themuser);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 312);
+            this.panelControl1.Location = new System.Drawing.Point(0, 334);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(872, 172);
+            this.panelControl1.Size = new System.Drawing.Size(872, 150);
             this.panelControl1.TabIndex = 9;
             // 
             // cbb_idrole
             // 
             this.cbb_idrole.FormattingEnabled = true;
-            this.cbb_idrole.Location = new System.Drawing.Point(119, 101);
+            this.cbb_idrole.Location = new System.Drawing.Point(111, 107);
             this.cbb_idrole.Name = "cbb_idrole";
             this.cbb_idrole.Size = new System.Drawing.Size(186, 21);
             this.cbb_idrole.TabIndex = 6;
@@ -95,7 +95,7 @@
             // txt_grouplevel
             // 
             this.txt_grouplevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_grouplevel.Location = new System.Drawing.Point(428, 61);
+            this.txt_grouplevel.Location = new System.Drawing.Point(420, 63);
             this.txt_grouplevel.Name = "txt_grouplevel";
             this.txt_grouplevel.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_grouplevel.Properties.Appearance.Options.UseFont = true;
@@ -107,7 +107,7 @@
             this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(332, 64);
+            this.labelControl6.Location = new System.Drawing.Point(324, 66);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(76, 16);
             this.labelControl6.TabIndex = 13;
@@ -118,7 +118,7 @@
             this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(332, 25);
+            this.labelControl5.Location = new System.Drawing.Point(324, 29);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(65, 16);
             this.labelControl5.TabIndex = 11;
@@ -128,7 +128,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(22, 101);
+            this.labelControl4.Location = new System.Drawing.Point(14, 110);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(50, 16);
             this.labelControl4.TabIndex = 14;
@@ -137,7 +137,7 @@
             // txt_password
             // 
             this.txt_password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_password.Location = new System.Drawing.Point(119, 64);
+            this.txt_password.Location = new System.Drawing.Point(111, 66);
             this.txt_password.Name = "txt_password";
             this.txt_password.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Properties.Appearance.Options.UseFont = true;
@@ -147,7 +147,7 @@
             // txt_FullName
             // 
             this.txt_FullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_FullName.Location = new System.Drawing.Point(428, 25);
+            this.txt_FullName.Location = new System.Drawing.Point(420, 27);
             this.txt_FullName.Name = "txt_FullName";
             this.txt_FullName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_FullName.Properties.Appearance.Options.UseFont = true;
@@ -157,7 +157,7 @@
             // txt_username
             // 
             this.txt_username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_username.Location = new System.Drawing.Point(119, 25);
+            this.txt_username.Location = new System.Drawing.Point(111, 27);
             this.txt_username.Name = "txt_username";
             this.txt_username.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.Properties.Appearance.Options.UseFont = true;
@@ -168,7 +168,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(23, 66);
+            this.labelControl3.Location = new System.Drawing.Point(15, 69);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(64, 16);
             this.labelControl3.TabIndex = 12;
@@ -178,7 +178,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(23, 26);
+            this.labelControl2.Location = new System.Drawing.Point(15, 30);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(68, 16);
             this.labelControl2.TabIndex = 10;
@@ -187,7 +187,7 @@
             // btn_suauser
             // 
             this.btn_suauser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_suauser.Location = new System.Drawing.Point(539, 101);
+            this.btn_suauser.Location = new System.Drawing.Point(531, 103);
             this.btn_suauser.Name = "btn_suauser";
             this.btn_suauser.Size = new System.Drawing.Size(75, 23);
             this.btn_suauser.TabIndex = 8;
@@ -197,7 +197,7 @@
             // btn_themuser
             // 
             this.btn_themuser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_themuser.Location = new System.Drawing.Point(457, 101);
+            this.btn_themuser.Location = new System.Drawing.Point(449, 103);
             this.btn_themuser.Name = "btn_themuser";
             this.btn_themuser.Size = new System.Drawing.Size(75, 23);
             this.btn_themuser.TabIndex = 7;
@@ -224,7 +224,7 @@
             this.dgv_listuser.Name = "dgv_listuser";
             this.dgv_listuser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn_delete});
-            this.dgv_listuser.Size = new System.Drawing.Size(872, 312);
+            this.dgv_listuser.Size = new System.Drawing.Size(872, 334);
             this.dgv_listuser.TabIndex = 1;
             this.dgv_listuser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

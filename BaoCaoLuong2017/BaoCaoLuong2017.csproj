@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="DevExpress.Utils.v16.1" />
     <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.1" />
     <Reference Include="DevExpress.Printing.v16.1.Core" />
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -99,11 +100,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config" />
-    <None Include="DataBaoCaoLuong.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataBaoCaoLuong.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="DataBaoCaoLuong.dbml.layout">
       <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
     </None>
@@ -129,6 +125,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataBaoCaoLuong.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataBaoCaoLuong.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="DataEntryBPO.dbml">
       <SubType>Designer</SubType>
       <Generator>MSLinqToSQLGenerator</Generator>
