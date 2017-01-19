@@ -1,6 +1,6 @@
-﻿namespace BaoCaoLuong2017
+﻿namespace BaoCaoLuong2017.MyForm
 {
-    partial class Form1
+    partial class frm_Main
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,18 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 278);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(435, 368);
+            this.Name = "frm_Main";
+            this.Text = "frm_Main";
+            this.Load += new System.EventHandler(this.frm_Main_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
     }
 }
-

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataEntryBPO">
+  <DataContextMoniker Name="/DataEntryBPODataContext" />
+  <nestedChildShapes>
+    <classShape Id="4ad086bb-8aa1-4060-a210-a3fa86d7b6d9" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataEntryBPODataContext/tbl_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c47bb9d-8a71-49ce-b1d2-46cf01cefff9" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2737eb0f-17a6-4812-850d-0e14428862df" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataEntryBPODataContext/tbl_Version" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d8ae881-fffc-450e-9609-b4e438d97e08" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6fe6088d-25e3-45df-a259-708d7bcca576" absoluteBounds="0.75, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataEntryBPODataContext/tbl_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f013330d-ab64-4c3c-88e0-c2b3a867cda8" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
