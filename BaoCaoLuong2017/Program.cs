@@ -24,8 +24,8 @@ namespace BaoCaoLuong2017
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new frm_ManagerBatch());
-            bool temp;
+            Application.Run(new frm_User());
+            //bool temp;
             //do
             //{
             //    temp = false;
@@ -83,13 +83,53 @@ namespace BaoCaoLuong2017
             {
                 iKiemtraLogin = Global.db_BPO.KiemTraLogin(username, password);
                 strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == "BaoCaoLuong2017" select w.IDVersion).FirstOrDefault();
-                role = (from w in Global.db_BPO.tbl_Users where w.Username==username select w.IDRole).FirstOrDefault();
-                if (iKiemtraLogin == 1)
+                role = (from w in Global.db_BPO.tbl_Users where w.Username==username select w.IDRole).FirstOrDefault().ToUpper();
+                if (iKiemtraLogin == 1 && role=="ADMIN" )
                 {
                     cbb.DataSource = Global.db_BCL.GetBatch(username);
                     cbb.DisplayMember = "fBatchName";
                 }
-                
+                else if (iKiemtraLogin == 1 && role =="DEJP")
+                {
+                    cbb.DataSource = Global.db_BCL.GetBatNotFinish_MissImageDEJP(username);
+                    cbb.DisplayMember = "fBatchName";
+                    if(cbb.Items.Count<=0)
+                    {
+                        cbb.DataSource = Global.db_BCL.GetBatNotFinishDeJP();
+                        cbb.DisplayMember = "fBatchName";
+                    }
+                }
+               
+                else if (iKiemtraLogin == 1 && role == "DESO")
+                {
+                    cbb.DataSource = Global.db_BCL.GetBatNotFinish_MissImageDESO(username);
+                    cbb.DisplayMember = "fBatchName";
+                    if (cbb.Items.Count <= 0)
+                    {
+                        cbb.DataSource = Global.db_BCL.GetBatNotFinishDeSo();
+                        cbb.DisplayMember = "fBatchName";
+                    }
+                }
+                else if (iKiemtraLogin == 1 && role == "CHECKERDEJP")
+                {
+                    cbb.DataSource = Global.db_BCL.GetBatNotFinish_MissImageCheckerDEJP(username);
+                    cbb.DisplayMember = "fBatchName";
+                    if (cbb.Items.Count <= 0)
+                    {
+                        cbb.DataSource = Global.db_BCL.GetBatNotFinishCheckerDeJP();
+                        cbb.DisplayMember = "fBatchName";
+                    }
+                }
+                else if (iKiemtraLogin == 1 && role == "CHECKERDESO")
+                {
+                    cbb.DataSource = Global.db_BCL.GetBatNotFinish_MissImageCheckerDESO(username);
+                    cbb.DisplayMember = "fBatchName";
+                    if (cbb.Items.Count <= 0)
+                    {
+                        cbb.DataSource = Global.db_BCL.GetBatNotFinishCheckerDeSo();
+                        cbb.DisplayMember = "fBatchName";
+                    }
+                }
             }
             catch (Exception e)
             {

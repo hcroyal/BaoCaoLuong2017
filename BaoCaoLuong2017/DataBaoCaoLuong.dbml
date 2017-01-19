@@ -289,6 +289,54 @@
     <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.GetBatNotFinish_MissImageCheckerDEJP" Method="GetBatNotFinish_MissImageCheckerDEJP">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetBatNotFinish_MissImageCheckerDEJPResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinish_MissImageCheckerDESO" Method="GetBatNotFinish_MissImageCheckerDESO">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetBatNotFinish_MissImageCheckerDESOResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinish_MissImageDEJP" Method="GetBatNotFinish_MissImageDEJP">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetBatNotFinish_MissImageDEJPResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinish_MissImageDESO" Method="GetBatNotFinish_MissImageDESO">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetBatNotFinish_MissImageDESOResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinishCheckerDeJP" Method="GetBatNotFinishCheckerDeJP">
+    <ElementType Name="GetBatNotFinishCheckerDeJPResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinishCheckerDeSo" Method="GetBatNotFinishCheckerDeSo">
+    <ElementType Name="GetBatNotFinishCheckerDeSoResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinishDeJP" Method="GetBatNotFinishDeJP">
+    <ElementType Name="GetBatNotFinishDeJPResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinishDeSo" Method="GetBatNotFinishDeSo">
+    <ElementType Name="GetBatNotFinishDeSoResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.XoaBatch" Method="XoaBatch">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.GetBatNotFinish_MissImageDEJP" Method="GetBatNotFinish_MissImageDEJP">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
     <ElementType Name="GetBatNotFinish_MissImageDEJPResult">
