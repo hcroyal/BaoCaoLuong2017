@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace BaoCaoLuong2017.MyForm
 {
-    public partial class frm_Main : Form
+    public partial class frm_Main : DevExpress.XtraEditors.XtraForm
     {
         public frm_Main()
         {
