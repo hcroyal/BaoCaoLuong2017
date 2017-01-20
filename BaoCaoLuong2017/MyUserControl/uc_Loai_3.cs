@@ -1,38 +1,42 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace BaoCaoLuonng2017.MyUserControl
+namespace BaoCaoLuong2017.MyUserControl
 {
-    public delegate void AllTextChange(object sender, EventArgs e);
-    public partial class uc_Loai_1 : UserControl
+    public partial class uc_Loai_3 : UserControl
     {
-        public event AllTextChange Changed;
-        public uc_Loai_1()
+        public uc_Loai_3()
         {
             InitializeComponent();
         }
         public void ResetData()
         {
-            txt_Truong_001.Text = string.Empty;
-            txt_Truong_001.BackColor = Color.White;
             txt_Truong_002.Text = string.Empty;
             txt_Truong_002.BackColor = Color.White;
+            txt_Truong_003.Text = string.Empty;
+            txt_Truong_003.BackColor = Color.White;
+
         }
 
         public bool IsEmpty()
         {
-            if (string.IsNullOrEmpty(txt_Truong_001.Text)&&
-                string.IsNullOrEmpty(txt_Truong_002.Text))
+            if (string.IsNullOrEmpty(txt_Truong_002.Text)&&
+                string.IsNullOrEmpty(txt_Truong_003.Text))
                 return true;
             return false;
         }
 
-        public void SetValue(string truong_001, string truong_002)
+        public void SetValue(string truong_001,string truong_002,string truong_003)
         {
-            txt_Truong_001.Text = truong_001;
             txt_Truong_002.Text = truong_002;
+            txt_Truong_003.Text = truong_003;
         }
 
         private void DoiMau(int soByteBe, int soBytelon, TextEdit textBox)
@@ -65,19 +69,5 @@ namespace BaoCaoLuonng2017.MyUserControl
             }
         }
         
-        private void txt_Truong_001_TextChanged(object sender, EventArgs e)
-        {
-            if (Changed != null)
-                Changed(sender, e);
-            if (txt_Truong_001.Text == "06" || txt_Truong_001.Text == "07")
-            {
-                txt_Truong_002.Enabled = true;
-            }
-            else
-            {
-                txt_Truong_002.Text = "";
-                txt_Truong_002.Enabled = false;
-            }
-        }
     }
 }
