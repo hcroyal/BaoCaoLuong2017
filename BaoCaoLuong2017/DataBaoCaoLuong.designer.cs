@@ -66,7 +66,7 @@ namespace BaoCaoLuong2017
     #endregion
 		
 		public DataBaoCaoLuongDataContext() : 
-				base(global::BaoCaoLuong2017.Properties.Settings.Default.BaoCaoLuong2017ConnectionString, mappingSource)
+				base(global::BaoCaoLuong2017.Properties.Settings.Default.BaoCaoLuong2017ConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}

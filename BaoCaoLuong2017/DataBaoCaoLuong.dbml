@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BaoCaoLuong2017" Class="DataBaoCaoLuongDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.10.254\BPOSERVER;Initial Catalog=BaoCaoLuong2017;User ID=sa" SettingsObjectName="BaoCaoLuong2017.Properties.Settings" SettingsPropertyName="BaoCaoLuong2017ConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.10.254\BPOSERVER;Initial Catalog=BaoCaoLuong2017;Persist Security Info=True;User ID=sa" SettingsObjectName="BaoCaoLuong2017.Properties.Settings" SettingsPropertyName="BaoCaoLuong2017ConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tbl_Batch" Member="tbl_Batches">
     <Type Name="tbl_Batch">
       <Column Name="IDBatch" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
