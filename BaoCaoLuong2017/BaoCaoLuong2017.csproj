@@ -107,6 +107,18 @@
     <Compile Include="MyForm\frm_User.designer.cs">
       <DependentUpon>frm_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\uc_Loai_3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\uc_Loai_3.designer.cs">
+      <DependentUpon>uc_Loai_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\uc_Loai_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\uc_Loai_2.designer.cs">
+      <DependentUpon>uc_Loai_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\uc_Loai_1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_User.resx">
       <DependentUpon>frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\uc_Loai_3.resx">
+      <DependentUpon>uc_Loai_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\uc_Loai_2.resx">
+      <DependentUpon>uc_Loai_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\uc_Loai_1.resx">
       <DependentUpon>uc_Loai_1.cs</DependentUpon>

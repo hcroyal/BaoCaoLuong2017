@@ -1,6 +1,6 @@
-﻿namespace BaoCaoLuonng2017.MyUserControl
+﻿namespace BaoCaoLuong2017.MyUserControl
 {
-    partial class uc_Loai_1
+    partial class uc_Loai_3
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,77 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_Truong_001 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Truong_002 = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_001.Properties)).BeginInit();
+            this.txt_Truong_003 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_002.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_003.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(9, 8);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(11, 16);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "1.";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(9, 40);
+            this.labelControl2.Location = new System.Drawing.Point(9, 10);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(11, 16);
-            this.labelControl2.TabIndex = 2;
+            this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "2.";
             // 
-            // txt_Truong_001
+            // labelControl3
             // 
-            this.txt_Truong_001.Location = new System.Drawing.Point(33, 7);
-            this.txt_Truong_001.Name = "txt_Truong_001";
-            this.txt_Truong_001.Properties.Mask.EditMask = "[0-9?]+";
-            this.txt_Truong_001.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txt_Truong_001.Properties.MaxLength = 2;
-            this.txt_Truong_001.Size = new System.Drawing.Size(153, 20);
-            this.txt_Truong_001.TabIndex = 3;
-            this.txt_Truong_001.TextChanged += new System.EventHandler(this.txt_Truong_001_TextChanged);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(9, 45);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(11, 16);
+            this.labelControl3.TabIndex = 0;
+            this.labelControl3.Text = "3.";
             // 
             // txt_Truong_002
             // 
-            this.txt_Truong_002.Enabled = false;
-            this.txt_Truong_002.Location = new System.Drawing.Point(33, 39);
+            this.txt_Truong_002.Location = new System.Drawing.Point(32, 9);
             this.txt_Truong_002.Name = "txt_Truong_002";
-            this.txt_Truong_002.Properties.Mask.EditMask = "[1-2?]+";
+            this.txt_Truong_002.Properties.Mask.EditMask = "[0-9?]+";
             this.txt_Truong_002.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_Truong_002.Properties.MaxLength = 12;
             this.txt_Truong_002.Size = new System.Drawing.Size(153, 20);
-            this.txt_Truong_002.TabIndex = 4;
+            this.txt_Truong_002.TabIndex = 1;
             // 
-            // uc_Loai_1
+            // txt_Truong_003
+            // 
+            this.txt_Truong_003.Location = new System.Drawing.Point(32, 44);
+            this.txt_Truong_003.Name = "txt_Truong_003";
+            this.txt_Truong_003.Properties.Mask.EditMask = "[0-9?]+";
+            this.txt_Truong_003.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txt_Truong_003.Properties.MaxLength = 12;
+            this.txt_Truong_003.Size = new System.Drawing.Size(153, 20);
+            this.txt_Truong_003.TabIndex = 2;
+            // 
+            // uc_Loai_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txt_Truong_003);
             this.Controls.Add(this.txt_Truong_002);
-            this.Controls.Add(this.txt_Truong_001);
+            this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl1);
-            this.Name = "uc_Loai_1";
-            this.Size = new System.Drawing.Size(197, 69);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_001.Properties)).EndInit();
+            this.Name = "uc_Loai_3";
+            this.Size = new System.Drawing.Size(197, 77);
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_002.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_003.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txt_Truong_001;
+        public DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txt_Truong_002;
+        private DevExpress.XtraEditors.TextEdit txt_Truong_003;
     }
 }
