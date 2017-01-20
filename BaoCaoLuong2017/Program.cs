@@ -24,7 +24,7 @@ namespace BaoCaoLuong2017
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new frm_Main());
+            Application.Run(new Form1());
             //bool temp;
             //do
             //{

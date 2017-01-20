@@ -46,6 +46,9 @@
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ImageGlass.ImageBox">
+      <HintPath>..\..\..\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\ImageGlass.ImageBox.dll</HintPath>
+    </Reference>
     <Reference Include="LibraryLogin">
       <HintPath>..\..\..\LibraryLogin\LibraryLogin\bin\Debug\LibraryLogin.dll</HintPath>
     </Reference>
@@ -73,6 +76,13 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="MyClass\CLHandling_Loai1.cs" />
+    <Compile Include="MyForm\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_CreateBatch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,11 +107,23 @@
     <Compile Include="MyForm\frm_User.designer.cs">
       <DependentUpon>frm_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\uc_Loai_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\uc_Loai_1.designer.cs">
+      <DependentUpon>uc_Loai_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\uc_Loai_4.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="MyUserControl\uc_Loai_4.Designer.cs">
       <DependentUpon>uc_Loai_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\uc_PictureBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\uc_PictureBox.designer.cs">
+      <DependentUpon>uc_PictureBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +131,9 @@
     <None Include="DataBaoCaoLuong.dbml.layout">
       <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="MyForm\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_CreateBatch.resx">
       <DependentUpon>frm_CreateBatch.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,8 +146,14 @@
     <EmbeddedResource Include="MyForm\frm_User.resx">
       <DependentUpon>frm_User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\uc_Loai_1.resx">
+      <DependentUpon>uc_Loai_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\uc_Loai_4.resx">
       <DependentUpon>uc_Loai_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\uc_PictureBox.resx">
+      <DependentUpon>uc_PictureBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -157,9 +188,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MyClass\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
