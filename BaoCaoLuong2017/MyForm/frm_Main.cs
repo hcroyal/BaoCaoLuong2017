@@ -20,5 +20,10 @@ namespace BaoCaoLuong2017.MyForm
         {
 
         }
+
+        private void btn_Check_DESO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

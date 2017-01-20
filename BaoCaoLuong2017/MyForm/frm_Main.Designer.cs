@@ -28,20 +28,537 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.menu_Menu = new DevExpress.XtraBars.BarSubItem();
+            this.btn_Logout = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Exit = new DevExpress.XtraBars.BarButtonItem();
+            this.menu_QuanLy = new DevExpress.XtraBars.BarSubItem();
+            this.btn_QuanLyBatch = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_QuanLyUser = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.btn_Check_DESO = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Check_DEJP = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Check_NhamPhieu = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_XuatExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_NangSuat = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_TienDo = new DevExpress.XtraBars.BarButtonItem();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.tabcontrol = new DevExpress.XtraTab.XtraTabControl();
+            this.tp_Loai_1 = new DevExpress.XtraTab.XtraTabPage();
+            this.tp_Loai_2 = new DevExpress.XtraTab.XtraTabPage();
+            this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
+            this.tp_Loai_3 = new DevExpress.XtraTab.XtraTabPage();
+            this.tp_Loai_4 = new DevExpress.XtraTab.XtraTabPage();
+            this.tp_Loai_4_1 = new DevExpress.XtraTab.XtraTabPage();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_fBatchName = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_TongSoHinh = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_SoHinhConLai = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_SoHinhLamDuoc = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_IdImage = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_UserName = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_LoaiPhieu = new DevExpress.XtraEditors.TextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabcontrol)).BeginInit();
+            this.tabcontrol.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_LoaiPhieu.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar2});
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.menu_Menu,
+            this.btn_Logout,
+            this.btn_Exit,
+            this.menu_QuanLy,
+            this.btn_QuanLyBatch,
+            this.btn_QuanLyUser,
+            this.barSubItem1,
+            this.btn_Check_DESO,
+            this.btn_Check_DEJP,
+            this.btn_Check_NhamPhieu,
+            this.btn_XuatExcel,
+            this.btn_NangSuat,
+            this.btn_TienDo});
+            this.barManager1.MainMenu = this.bar2;
+            this.barManager1.MaxItemId = 13;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1344, 20);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 722);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1344, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 702);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1344, 20);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 702);
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.menu_Menu),
+            new DevExpress.XtraBars.LinkPersistInfo(this.menu_QuanLy)});
+            this.bar2.OptionsBar.DrawBorder = false;
+            this.bar2.OptionsBar.DrawDragBorder = false;
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
+            // 
+            // menu_Menu
+            // 
+            this.menu_Menu.Caption = "&Menu";
+            this.menu_Menu.Id = 0;
+            this.menu_Menu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Logout),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Exit)});
+            this.menu_Menu.Name = "menu_Menu";
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Caption = "&Logout";
+            this.btn_Logout.Id = 1;
+            this.btn_Logout.Name = "btn_Logout";
+            // 
+            // btn_Exit
+            // 
+            this.btn_Exit.Caption = "&Exit";
+            this.btn_Exit.Id = 2;
+            this.btn_Exit.Name = "btn_Exit";
+            // 
+            // menu_QuanLy
+            // 
+            this.menu_QuanLy.Caption = "&Quản lý";
+            this.menu_QuanLy.Id = 3;
+            this.menu_QuanLy.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_QuanLyBatch),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_QuanLyUser),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_XuatExcel),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_NangSuat),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_TienDo)});
+            this.menu_QuanLy.Name = "menu_QuanLy";
+            // 
+            // btn_QuanLyBatch
+            // 
+            this.btn_QuanLyBatch.Caption = "&Quản lý Batch";
+            this.btn_QuanLyBatch.Id = 4;
+            this.btn_QuanLyBatch.Name = "btn_QuanLyBatch";
+            // 
+            // btn_QuanLyUser
+            // 
+            this.btn_QuanLyUser.Caption = "&Quản lý User";
+            this.btn_QuanLyUser.Id = 5;
+            this.btn_QuanLyUser.Name = "btn_QuanLyUser";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "&Check";
+            this.barSubItem1.Id = 6;
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DESO),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DEJP),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_NhamPhieu)});
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // btn_Check_DESO
+            // 
+            this.btn_Check_DESO.Caption = "Check_DE&SO";
+            this.btn_Check_DESO.Id = 7;
+            this.btn_Check_DESO.Name = "btn_Check_DESO";
+            this.btn_Check_DESO.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_DESO_ItemClick);
+            // 
+            // btn_Check_DEJP
+            // 
+            this.btn_Check_DEJP.Caption = "Check_DE&JP";
+            this.btn_Check_DEJP.Id = 8;
+            this.btn_Check_DEJP.Name = "btn_Check_DEJP";
+            // 
+            // btn_Check_NhamPhieu
+            // 
+            this.btn_Check_NhamPhieu.Caption = "Check_Nhầm &Phiếu";
+            this.btn_Check_NhamPhieu.Id = 9;
+            this.btn_Check_NhamPhieu.Name = "btn_Check_NhamPhieu";
+            // 
+            // btn_XuatExcel
+            // 
+            this.btn_XuatExcel.Caption = "&Xuất Excel";
+            this.btn_XuatExcel.Id = 10;
+            this.btn_XuatExcel.Name = "btn_XuatExcel";
+            // 
+            // btn_NangSuat
+            // 
+            this.btn_NangSuat.Caption = "&Năng suất";
+            this.btn_NangSuat.Id = 11;
+            this.btn_NangSuat.Name = "btn_NangSuat";
+            // 
+            // btn_TienDo
+            // 
+            this.btn_TienDo.Caption = "&Tiến độ";
+            this.btn_TienDo.Id = 12;
+            this.btn_TienDo.Name = "btn_TienDo";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.lb_SoHinhLamDuoc);
+            this.panelControl1.Controls.Add(this.lb_SoHinhConLai);
+            this.panelControl1.Controls.Add(this.labelControl6);
+            this.panelControl1.Controls.Add(this.lb_TongSoHinh);
+            this.panelControl1.Controls.Add(this.labelControl4);
+            this.panelControl1.Controls.Add(this.lb_UserName);
+            this.panelControl1.Controls.Add(this.lb_IdImage);
+            this.panelControl1.Controls.Add(this.labelControl5);
+            this.panelControl1.Controls.Add(this.lb_fBatchName);
+            this.panelControl1.Controls.Add(this.labelControl3);
+            this.panelControl1.Controls.Add(this.labelControl2);
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 20);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1344, 27);
+            this.panelControl1.TabIndex = 4;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.tabcontrol);
+            this.panelControl2.Controls.Add(this.panelControl3);
+            this.panelControl2.Controls.Add(this.panelControl4);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl2.Location = new System.Drawing.Point(983, 47);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(361, 675);
+            this.panelControl2.TabIndex = 5;
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.btn_Submit_Logout);
+            this.panelControl3.Controls.Add(this.btn_Start_Submit);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl3.Location = new System.Drawing.Point(2, 641);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(357, 32);
+            this.panelControl3.TabIndex = 0;
+            // 
+            // tabcontrol
+            // 
+            this.tabcontrol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabcontrol.Location = new System.Drawing.Point(2, 28);
+            this.tabcontrol.Name = "tabcontrol";
+            this.tabcontrol.SelectedTabPage = this.tp_Loai_1;
+            this.tabcontrol.Size = new System.Drawing.Size(357, 613);
+            this.tabcontrol.TabIndex = 1;
+            this.tabcontrol.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tp_Loai_1,
+            this.tp_Loai_2,
+            this.tp_Loai_3,
+            this.tp_Loai_4,
+            this.tp_Loai_4_1});
+            // 
+            // tp_Loai_1
+            // 
+            this.tp_Loai_1.Name = "tp_Loai_1";
+            this.tp_Loai_1.Size = new System.Drawing.Size(351, 575);
+            this.tp_Loai_1.Text = "Loại 1";
+            // 
+            // tp_Loai_2
+            // 
+            this.tp_Loai_2.Name = "tp_Loai_2";
+            this.tp_Loai_2.Size = new System.Drawing.Size(351, 575);
+            this.tp_Loai_2.Text = "Loại 2";
+            // 
+            // btn_Start_Submit
+            // 
+            this.btn_Start_Submit.Location = new System.Drawing.Point(54, 5);
+            this.btn_Start_Submit.Name = "btn_Start_Submit";
+            this.btn_Start_Submit.Size = new System.Drawing.Size(90, 21);
+            this.btn_Start_Submit.TabIndex = 0;
+            this.btn_Start_Submit.Text = "Start";
+            // 
+            // btn_Submit_Logout
+            // 
+            this.btn_Submit_Logout.Location = new System.Drawing.Point(184, 5);
+            this.btn_Submit_Logout.Name = "btn_Submit_Logout";
+            this.btn_Submit_Logout.Size = new System.Drawing.Size(90, 21);
+            this.btn_Submit_Logout.TabIndex = 0;
+            this.btn_Submit_Logout.Text = "Submit + Logout";
+            // 
+            // tp_Loai_3
+            // 
+            this.tp_Loai_3.Name = "tp_Loai_3";
+            this.tp_Loai_3.Size = new System.Drawing.Size(351, 585);
+            this.tp_Loai_3.Text = "Loại 3";
+            // 
+            // tp_Loai_4
+            // 
+            this.tp_Loai_4.Name = "tp_Loai_4";
+            this.tp_Loai_4.Size = new System.Drawing.Size(351, 575);
+            this.tp_Loai_4.Text = "Loại 4";
+            // 
+            // tp_Loai_4_1
+            // 
+            this.tp_Loai_4_1.Name = "tp_Loai_4_1";
+            this.tp_Loai_4_1.Size = new System.Drawing.Size(351, 575);
+            this.tp_Loai_4_1.Text = "Loại 4.1";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(12, 6);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(31, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Batch:";
+            // 
+            // lb_fBatchName
+            // 
+            this.lb_fBatchName.Location = new System.Drawing.Point(49, 6);
+            this.lb_fBatchName.Name = "lb_fBatchName";
+            this.lb_fBatchName.Size = new System.Drawing.Size(31, 13);
+            this.lb_fBatchName.TabIndex = 0;
+            this.lb_fBatchName.Text = "Batch:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(207, 6);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(51, 13);
+            this.labelControl2.TabIndex = 0;
+            this.labelControl2.Text = "Tổng hình:";
+            // 
+            // lb_TongSoHinh
+            // 
+            this.lb_TongSoHinh.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.lb_TongSoHinh.Appearance.Options.UseForeColor = true;
+            this.lb_TongSoHinh.Location = new System.Drawing.Point(259, 6);
+            this.lb_TongSoHinh.Name = "lb_TongSoHinh";
+            this.lb_TongSoHinh.Size = new System.Drawing.Size(24, 13);
+            this.lb_TongSoHinh.TabIndex = 0;
+            this.lb_TongSoHinh.Text = "1000";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(319, 6);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(59, 13);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "Số hình còn:";
+            // 
+            // lb_SoHinhConLai
+            // 
+            this.lb_SoHinhConLai.Appearance.ForeColor = System.Drawing.Color.Crimson;
+            this.lb_SoHinhConLai.Appearance.Options.UseForeColor = true;
+            this.lb_SoHinhConLai.Location = new System.Drawing.Point(379, 6);
+            this.lb_SoHinhConLai.Name = "lb_SoHinhConLai";
+            this.lb_SoHinhConLai.Size = new System.Drawing.Size(24, 13);
+            this.lb_SoHinhConLai.TabIndex = 0;
+            this.lb_SoHinhConLai.Text = "1000";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(439, 6);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(58, 13);
+            this.labelControl6.TabIndex = 0;
+            this.labelControl6.Text = "Số hình làm:";
+            // 
+            // lb_SoHinhLamDuoc
+            // 
+            this.lb_SoHinhLamDuoc.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lb_SoHinhLamDuoc.Appearance.Options.UseForeColor = true;
+            this.lb_SoHinhLamDuoc.Location = new System.Drawing.Point(499, 6);
+            this.lb_SoHinhLamDuoc.Name = "lb_SoHinhLamDuoc";
+            this.lb_SoHinhLamDuoc.Size = new System.Drawing.Size(24, 13);
+            this.lb_SoHinhLamDuoc.TabIndex = 0;
+            this.lb_SoHinhLamDuoc.Text = "1000";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(819, 6);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(44, 13);
+            this.labelControl3.TabIndex = 0;
+            this.labelControl3.Text = "IdImage:";
+            // 
+            // lb_IdImage
+            // 
+            this.lb_IdImage.Location = new System.Drawing.Point(869, 6);
+            this.lb_IdImage.Name = "lb_IdImage";
+            this.lb_IdImage.Size = new System.Drawing.Size(40, 13);
+            this.lb_IdImage.TabIndex = 0;
+            this.lb_IdImage.Text = "IdImage";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(1095, 6);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(53, 13);
+            this.labelControl5.TabIndex = 0;
+            this.labelControl5.Text = "UserName:";
+            // 
+            // lb_UserName
+            // 
+            this.lb_UserName.Location = new System.Drawing.Point(1154, 6);
+            this.lb_UserName.Name = "lb_UserName";
+            this.lb_UserName.Size = new System.Drawing.Size(49, 13);
+            this.lb_UserName.TabIndex = 0;
+            this.lb_UserName.Text = "UserName";
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.txt_LoaiPhieu);
+            this.panelControl4.Controls.Add(this.labelControl7);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl4.Location = new System.Drawing.Point(2, 2);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(357, 26);
+            this.panelControl4.TabIndex = 2;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(43, 5);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(52, 13);
+            this.labelControl7.TabIndex = 0;
+            this.labelControl7.Text = "Loại phiếu:";
+            // 
+            // txt_LoaiPhieu
+            // 
+            this.txt_LoaiPhieu.Location = new System.Drawing.Point(101, 2);
+            this.txt_LoaiPhieu.MenuManager = this.barManager1;
+            this.txt_LoaiPhieu.Name = "txt_LoaiPhieu";
+            this.txt_LoaiPhieu.Size = new System.Drawing.Size(189, 20);
+            this.txt_LoaiPhieu.TabIndex = 1;
             // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 420);
+            this.ClientSize = new System.Drawing.Size(1344, 722);
+            this.Controls.Add(this.panelControl2);
+            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "frm_Main";
             this.Text = "frm_Main";
             this.Load += new System.EventHandler(this.frm_Main_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabcontrol)).EndInit();
+            this.tabcontrol.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_LoaiPhieu.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.Bar bar2;
+        private DevExpress.XtraBars.BarSubItem menu_Menu;
+        private DevExpress.XtraBars.BarButtonItem btn_Logout;
+        private DevExpress.XtraBars.BarButtonItem btn_Exit;
+        private DevExpress.XtraBars.BarSubItem menu_QuanLy;
+        private DevExpress.XtraBars.BarButtonItem btn_QuanLyBatch;
+        private DevExpress.XtraBars.BarButtonItem btn_QuanLyUser;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem btn_Check_DESO;
+        private DevExpress.XtraBars.BarButtonItem btn_Check_DEJP;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem btn_Check_NhamPhieu;
+        private DevExpress.XtraBars.BarButtonItem btn_XuatExcel;
+        private DevExpress.XtraBars.BarButtonItem btn_NangSuat;
+        private DevExpress.XtraBars.BarButtonItem btn_TienDo;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraTab.XtraTabControl tabcontrol;
+        private DevExpress.XtraTab.XtraTabPage tp_Loai_1;
+        private DevExpress.XtraTab.XtraTabPage tp_Loai_2;
+        private DevExpress.XtraTab.XtraTabPage tp_Loai_3;
+        private DevExpress.XtraTab.XtraTabPage tp_Loai_4;
+        private DevExpress.XtraTab.XtraTabPage tp_Loai_4_1;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.SimpleButton btn_Submit_Logout;
+        private DevExpress.XtraEditors.SimpleButton btn_Start_Submit;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.LabelControl lb_SoHinhLamDuoc;
+        private DevExpress.XtraEditors.LabelControl lb_SoHinhConLai;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl lb_TongSoHinh;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl lb_fBatchName;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.TextEdit txt_LoaiPhieu;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl lb_UserName;
+        private DevExpress.XtraEditors.LabelControl lb_IdImage;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }
