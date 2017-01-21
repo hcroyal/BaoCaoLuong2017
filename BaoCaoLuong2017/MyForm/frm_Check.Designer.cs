@@ -31,6 +31,9 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_username1 = new System.Windows.Forms.Label();
+            this.btn_Luu_DeSo1 = new DevExpress.XtraEditors.SimpleButton();
             this.tabcontrol_DeSo1 = new DevExpress.XtraTab.XtraTabControl();
             this.tp_Loai_1_DeSo1 = new DevExpress.XtraTab.XtraTabPage();
             this.uc_Loai_11 = new BaoCaoLuonng2017.MyUserControl.uc_Loai_1();
@@ -41,9 +44,6 @@
             this.tp_Loai_4_DeSo1 = new DevExpress.XtraTab.XtraTabPage();
             this.tp_Loai_4_1_DeSo1 = new DevExpress.XtraTab.XtraTabPage();
             this.tp_DEJP1 = new DevExpress.XtraTab.XtraTabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_SuavaLuu_DeSo1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_Luu_DeSo1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabcontrol_DeSo2 = new DevExpress.XtraTab.XtraTabControl();
             this.tp_Loai_1_DeSo2 = new DevExpress.XtraTab.XtraTabPage();
@@ -56,7 +56,7 @@
             this.tp_Loai_4_1_DeSo2 = new DevExpress.XtraTab.XtraTabPage();
             this.tp_DEJP2 = new DevExpress.XtraTab.XtraTabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_SuavaLuu_DeSo2 = new DevExpress.XtraEditors.SimpleButton();
+            this.lb_username2 = new System.Windows.Forms.Label();
             this.btn_Luu_DeSo2 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lb_Loi = new DevExpress.XtraEditors.LabelControl();
@@ -67,18 +67,22 @@
             this.btn_Screen = new DevExpress.XtraEditors.SimpleButton();
             this.uc_PictureBox1 = new BaoCaoLuong2017.MyUserControl.uc_PictureBox();
             this.btn_Start = new DevExpress.XtraEditors.SimpleButton();
-            this.lb_user1 = new DevExpress.XtraEditors.LabelControl();
-            this.lb_user2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelc = new DevExpress.XtraEditors.LabelControl();
+            this.labeld = new DevExpress.XtraEditors.LabelControl();
+            this.labela = new DevExpress.XtraEditors.LabelControl();
+            this.labelb = new DevExpress.XtraEditors.LabelControl();
+            this.btn_SuaVaLuu_User1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_SuaVaLuu_User2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol_DeSo1)).BeginInit();
             this.tabcontrol_DeSo1.SuspendLayout();
             this.tp_Loai_1_DeSo1.SuspendLayout();
             this.tp_Loai_2_DeSo1.SuspendLayout();
             this.tp_Loai_3_DeSo1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol_DeSo2)).BeginInit();
             this.tabcontrol_DeSo2.SuspendLayout();
@@ -116,13 +120,44 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.tabcontrol_DeSo1);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.tabcontrol_DeSo1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(526, 316);
             this.panel1.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lb_username1);
+            this.panel2.Controls.Add(this.btn_SuaVaLuu_User1);
+            this.panel2.Controls.Add(this.btn_Luu_DeSo1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 284);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(526, 32);
+            this.panel2.TabIndex = 0;
+            // 
+            // lb_username1
+            // 
+            this.lb_username1.AutoSize = true;
+            this.lb_username1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_username1.ForeColor = System.Drawing.Color.Maroon;
+            this.lb_username1.Location = new System.Drawing.Point(5, 7);
+            this.lb_username1.Name = "lb_username1";
+            this.lb_username1.Size = new System.Drawing.Size(44, 18);
+            this.lb_username1.TabIndex = 6;
+            this.lb_username1.Text = "label1";
+            // 
+            // btn_Luu_DeSo1
+            // 
+            this.btn_Luu_DeSo1.Location = new System.Drawing.Point(108, 5);
+            this.btn_Luu_DeSo1.Name = "btn_Luu_DeSo1";
+            this.btn_Luu_DeSo1.Size = new System.Drawing.Size(81, 21);
+            this.btn_Luu_DeSo1.TabIndex = 2;
+            this.btn_Luu_DeSo1.Text = "Lưu";
+            this.btn_Luu_DeSo1.Click += new System.EventHandler(this.btn_Luu_DeSo1_Click);
             // 
             // tabcontrol_DeSo1
             // 
@@ -130,7 +165,7 @@
             this.tabcontrol_DeSo1.Location = new System.Drawing.Point(0, 0);
             this.tabcontrol_DeSo1.Name = "tabcontrol_DeSo1";
             this.tabcontrol_DeSo1.SelectedTabPage = this.tp_Loai_1_DeSo1;
-            this.tabcontrol_DeSo1.Size = new System.Drawing.Size(526, 284);
+            this.tabcontrol_DeSo1.Size = new System.Drawing.Size(526, 316);
             this.tabcontrol_DeSo1.TabIndex = 2;
             this.tabcontrol_DeSo1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tp_Loai_1_DeSo1,
@@ -144,7 +179,7 @@
             // 
             this.tp_Loai_1_DeSo1.Controls.Add(this.uc_Loai_11);
             this.tp_Loai_1_DeSo1.Name = "tp_Loai_1_DeSo1";
-            this.tp_Loai_1_DeSo1.Size = new System.Drawing.Size(520, 256);
+            this.tp_Loai_1_DeSo1.Size = new System.Drawing.Size(520, 288);
             this.tp_Loai_1_DeSo1.Text = "Loại 1";
             // 
             // uc_Loai_11
@@ -152,14 +187,14 @@
             this.uc_Loai_11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_11.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_11.Name = "uc_Loai_11";
-            this.uc_Loai_11.Size = new System.Drawing.Size(520, 256);
+            this.uc_Loai_11.Size = new System.Drawing.Size(520, 288);
             this.uc_Loai_11.TabIndex = 0;
             // 
             // tp_Loai_2_DeSo1
             // 
             this.tp_Loai_2_DeSo1.Controls.Add(this.uc_Loai_21);
             this.tp_Loai_2_DeSo1.Name = "tp_Loai_2_DeSo1";
-            this.tp_Loai_2_DeSo1.Size = new System.Drawing.Size(520, 256);
+            this.tp_Loai_2_DeSo1.Size = new System.Drawing.Size(520, 288);
             this.tp_Loai_2_DeSo1.Text = "Loại 2";
             // 
             // uc_Loai_21
@@ -167,14 +202,14 @@
             this.uc_Loai_21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_21.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_21.Name = "uc_Loai_21";
-            this.uc_Loai_21.Size = new System.Drawing.Size(520, 256);
+            this.uc_Loai_21.Size = new System.Drawing.Size(520, 288);
             this.uc_Loai_21.TabIndex = 0;
             // 
             // tp_Loai_3_DeSo1
             // 
             this.tp_Loai_3_DeSo1.Controls.Add(this.uc_Loai_31);
             this.tp_Loai_3_DeSo1.Name = "tp_Loai_3_DeSo1";
-            this.tp_Loai_3_DeSo1.Size = new System.Drawing.Size(520, 256);
+            this.tp_Loai_3_DeSo1.Size = new System.Drawing.Size(520, 288);
             this.tp_Loai_3_DeSo1.Text = "Loại 3";
             // 
             // uc_Loai_31
@@ -182,52 +217,26 @@
             this.uc_Loai_31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_31.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_31.Name = "uc_Loai_31";
-            this.uc_Loai_31.Size = new System.Drawing.Size(520, 256);
+            this.uc_Loai_31.Size = new System.Drawing.Size(520, 288);
             this.uc_Loai_31.TabIndex = 0;
             // 
             // tp_Loai_4_DeSo1
             // 
             this.tp_Loai_4_DeSo1.Name = "tp_Loai_4_DeSo1";
-            this.tp_Loai_4_DeSo1.Size = new System.Drawing.Size(520, 256);
+            this.tp_Loai_4_DeSo1.Size = new System.Drawing.Size(520, 288);
             this.tp_Loai_4_DeSo1.Text = "Loại 4";
             // 
             // tp_Loai_4_1_DeSo1
             // 
             this.tp_Loai_4_1_DeSo1.Name = "tp_Loai_4_1_DeSo1";
-            this.tp_Loai_4_1_DeSo1.Size = new System.Drawing.Size(520, 256);
+            this.tp_Loai_4_1_DeSo1.Size = new System.Drawing.Size(520, 288);
             this.tp_Loai_4_1_DeSo1.Text = "Loại 4.1";
             // 
             // tp_DEJP1
             // 
             this.tp_DEJP1.Name = "tp_DEJP1";
-            this.tp_DEJP1.Size = new System.Drawing.Size(520, 256);
+            this.tp_DEJP1.Size = new System.Drawing.Size(520, 288);
             this.tp_DEJP1.Text = "DEJP";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_SuavaLuu_DeSo1);
-            this.panel2.Controls.Add(this.btn_Luu_DeSo1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 284);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(526, 32);
-            this.panel2.TabIndex = 0;
-            // 
-            // btn_SuavaLuu_DeSo1
-            // 
-            this.btn_SuavaLuu_DeSo1.Location = new System.Drawing.Point(204, 5);
-            this.btn_SuavaLuu_DeSo1.Name = "btn_SuavaLuu_DeSo1";
-            this.btn_SuavaLuu_DeSo1.Size = new System.Drawing.Size(80, 21);
-            this.btn_SuavaLuu_DeSo1.TabIndex = 1;
-            this.btn_SuavaLuu_DeSo1.Text = "Sửa và Lưu";
-            // 
-            // btn_Luu_DeSo1
-            // 
-            this.btn_Luu_DeSo1.Location = new System.Drawing.Point(108, 5);
-            this.btn_Luu_DeSo1.Name = "btn_Luu_DeSo1";
-            this.btn_Luu_DeSo1.Size = new System.Drawing.Size(81, 21);
-            this.btn_Luu_DeSo1.TabIndex = 2;
-            this.btn_Luu_DeSo1.Text = "Lưu";
             // 
             // panel3
             // 
@@ -320,7 +329,8 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btn_SuavaLuu_DeSo2);
+            this.panel4.Controls.Add(this.lb_username2);
+            this.panel4.Controls.Add(this.btn_SuaVaLuu_User2);
             this.panel4.Controls.Add(this.btn_Luu_DeSo2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 286);
@@ -328,13 +338,16 @@
             this.panel4.Size = new System.Drawing.Size(526, 30);
             this.panel4.TabIndex = 0;
             // 
-            // btn_SuavaLuu_DeSo2
+            // lb_username2
             // 
-            this.btn_SuavaLuu_DeSo2.Location = new System.Drawing.Point(202, 4);
-            this.btn_SuavaLuu_DeSo2.Name = "btn_SuavaLuu_DeSo2";
-            this.btn_SuavaLuu_DeSo2.Size = new System.Drawing.Size(85, 21);
-            this.btn_SuavaLuu_DeSo2.TabIndex = 1;
-            this.btn_SuavaLuu_DeSo2.Text = "Sửa và Lưu";
+            this.lb_username2.AutoSize = true;
+            this.lb_username2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_username2.ForeColor = System.Drawing.Color.Maroon;
+            this.lb_username2.Location = new System.Drawing.Point(5, 6);
+            this.lb_username2.Name = "lb_username2";
+            this.lb_username2.Size = new System.Drawing.Size(44, 18);
+            this.lb_username2.TabIndex = 6;
+            this.lb_username2.Text = "label1";
             // 
             // btn_Luu_DeSo2
             // 
@@ -343,6 +356,7 @@
             this.btn_Luu_DeSo2.Size = new System.Drawing.Size(81, 21);
             this.btn_Luu_DeSo2.TabIndex = 2;
             this.btn_Luu_DeSo2.Text = "Lưu";
+            this.btn_Luu_DeSo2.Click += new System.EventHandler(this.btn_Luu_DeSo2_Click);
             // 
             // panelControl2
             // 
@@ -428,21 +442,55 @@
             this.btn_Start.Text = "Start";
             this.btn_Start.Click += new System.EventHandler(this.btn_Start_Click);
             // 
-            // lb_user1
+            // labelc
             // 
-            this.lb_user1.Location = new System.Drawing.Point(306, 4);
-            this.lb_user1.Name = "lb_user1";
-            this.lb_user1.Size = new System.Drawing.Size(30, 13);
-            this.lb_user1.TabIndex = 6;
-            this.lb_user1.Text = "          ";
+            this.labelc.Location = new System.Drawing.Point(306, 4);
+            this.labelc.Name = "labelc";
+            this.labelc.Size = new System.Drawing.Size(21, 13);
+            this.labelc.TabIndex = 6;
+            this.labelc.Text = "user";
             // 
-            // lb_user2
+            // labeld
             // 
-            this.lb_user2.Location = new System.Drawing.Point(305, 4);
-            this.lb_user2.Name = "lb_user2";
-            this.lb_user2.Size = new System.Drawing.Size(45, 13);
-            this.lb_user2.TabIndex = 6;
-            this.lb_user2.Text = "               ";
+            this.labeld.Location = new System.Drawing.Point(305, 4);
+            this.labeld.Name = "labeld";
+            this.labeld.Size = new System.Drawing.Size(45, 13);
+            this.labeld.TabIndex = 6;
+            this.labeld.Text = "               ";
+            // 
+            // labela
+            // 
+            this.labela.Location = new System.Drawing.Point(308, 4);
+            this.labela.Name = "labela";
+            this.labela.Size = new System.Drawing.Size(63, 13);
+            this.labela.TabIndex = 6;
+            this.labela.Text = "labelControl3";
+            // 
+            // labelb
+            // 
+            this.labelb.Location = new System.Drawing.Point(308, 4);
+            this.labelb.Name = "labelb";
+            this.labelb.Size = new System.Drawing.Size(63, 13);
+            this.labelb.TabIndex = 6;
+            this.labelb.Text = "labelControl4";
+            // 
+            // btn_SuaVaLuu_User1
+            // 
+            this.btn_SuaVaLuu_User1.Location = new System.Drawing.Point(357, 7);
+            this.btn_SuaVaLuu_User1.Name = "btn_SuaVaLuu_User1";
+            this.btn_SuaVaLuu_User1.Size = new System.Drawing.Size(81, 21);
+            this.btn_SuaVaLuu_User1.TabIndex = 2;
+            this.btn_SuaVaLuu_User1.Text = "Sửa và Lưu";
+            this.btn_SuaVaLuu_User1.Click += new System.EventHandler(this.btn_SuaVaLuu_User1_Click);
+            // 
+            // btn_SuaVaLuu_User2
+            // 
+            this.btn_SuaVaLuu_User2.Location = new System.Drawing.Point(357, 6);
+            this.btn_SuaVaLuu_User2.Name = "btn_SuaVaLuu_User2";
+            this.btn_SuaVaLuu_User2.Size = new System.Drawing.Size(81, 21);
+            this.btn_SuaVaLuu_User2.TabIndex = 2;
+            this.btn_SuaVaLuu_User2.Text = "Sửa và Lưu";
+            this.btn_SuaVaLuu_User2.Click += new System.EventHandler(this.btn_SuaVaLuu_User2_Click);
             // 
             // frm_Check
             // 
@@ -462,21 +510,21 @@
             this.panelControl1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol_DeSo1)).EndInit();
             this.tabcontrol_DeSo1.ResumeLayout(false);
-            this.tabcontrol_DeSo1.PerformLayout();
             this.tp_Loai_1_DeSo1.ResumeLayout(false);
             this.tp_Loai_2_DeSo1.ResumeLayout(false);
             this.tp_Loai_3_DeSo1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol_DeSo2)).EndInit();
             this.tabcontrol_DeSo2.ResumeLayout(false);
-            this.tabcontrol_DeSo2.PerformLayout();
             this.tp_Loai_1_DeSo2.ResumeLayout(false);
             this.tp_Loai_2_DeSo2.ResumeLayout(false);
             this.tp_Loai_3_DeSo2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
@@ -512,9 +560,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private DevExpress.XtraEditors.SimpleButton btn_SuavaLuu_DeSo1;
         private DevExpress.XtraEditors.SimpleButton btn_Luu_DeSo1;
-        private DevExpress.XtraEditors.SimpleButton btn_SuavaLuu_DeSo2;
         private DevExpress.XtraEditors.SimpleButton btn_Luu_DeSo2;
         private DevExpress.XtraEditors.LabelControl lb_Loi;
         private DevExpress.XtraEditors.LabelControl lb_Image;
@@ -525,7 +571,13 @@
         private DevExpress.XtraEditors.SimpleButton btn_Start;
         private DevExpress.XtraTab.XtraTabPage tp_DEJP1;
         private DevExpress.XtraTab.XtraTabPage tp_DEJP2;
-        private DevExpress.XtraEditors.LabelControl lb_user1;
-        private DevExpress.XtraEditors.LabelControl lb_user2;
+        private DevExpress.XtraEditors.LabelControl labelc;
+        private DevExpress.XtraEditors.LabelControl labeld;
+        private DevExpress.XtraEditors.LabelControl labela;
+        private DevExpress.XtraEditors.LabelControl labelb;
+        private System.Windows.Forms.Label lb_username1;
+        private System.Windows.Forms.Label lb_username2;
+        private DevExpress.XtraEditors.SimpleButton btn_SuaVaLuu_User1;
+        private DevExpress.XtraEditors.SimpleButton btn_SuaVaLuu_User2;
     }
 }

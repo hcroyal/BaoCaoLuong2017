@@ -147,11 +147,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config" />
-    <None Include="DataBaoCaoLuong.dbml.layout">
-      <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
+    <None Include="DataBaoCaoLuong.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataBaoCaoLuong.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="DataEntryBPO.dbml.layout">
       <DependentUpon>DataEntryBPO.dbml</DependentUpon>
+    </None>
+    <None Include="DataBaoCaoLuong.dbml.layout">
+      <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="MyForm\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -197,11 +202,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="DataBaoCaoLuong.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataBaoCaoLuong.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="DataEntryBPO.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataEntryBPO.designer.cs</LastGenOutput>

@@ -181,7 +181,10 @@ namespace BaoCaoLuong2017.MyForm
                     }
                 }
             }
-            catch { MessageBox.Show("Lỗi khi Submit"); }
+            catch (Exception ee)
+            {
+                MessageBox.Show("Lỗi khi Submit" + ee.Message);
+            }
         }
 
         private void btn_QuanLyBatch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
