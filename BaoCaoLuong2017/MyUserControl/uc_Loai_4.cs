@@ -15,5 +15,10 @@ namespace BaoCaoLuong2017.MyUserControl
         {
             InitializeComponent();
         }
+
+        private void uc_Loai_4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

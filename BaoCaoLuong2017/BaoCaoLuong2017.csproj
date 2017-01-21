@@ -46,8 +46,9 @@
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="ImageGlass.ImageBox">
-      <HintPath>..\..\..\PhieuKiemDinh\PhieuKiemDinh\bin\Debug\ImageGlass.ImageBox.dll</HintPath>
+    <Reference Include="ImageGlass.ImageBox, Version=2.0.0.0, Culture=neutral, PublicKeyToken=58daa28b0b2de221, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ImageGlass.ImageBox.dll</HintPath>
     </Reference>
     <Reference Include="LibraryLogin">
       <HintPath>..\..\..\LibraryLogin\LibraryLogin\bin\Debug\LibraryLogin.dll</HintPath>
