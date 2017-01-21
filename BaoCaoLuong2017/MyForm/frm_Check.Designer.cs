@@ -40,6 +40,7 @@
             this.uc_Loai_31 = new BaoCaoLuong2017.MyUserControl.uc_Loai_3();
             this.tp_Loai_4_DeSo1 = new DevExpress.XtraTab.XtraTabPage();
             this.tp_Loai_4_1_DeSo1 = new DevExpress.XtraTab.XtraTabPage();
+            this.tp_DEJP1 = new DevExpress.XtraTab.XtraTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_SuavaLuu_DeSo1 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu_DeSo1 = new DevExpress.XtraEditors.SimpleButton();
@@ -53,6 +54,7 @@
             this.uc_Loai_32 = new BaoCaoLuong2017.MyUserControl.uc_Loai_3();
             this.tp_Loai_4_DeSo2 = new DevExpress.XtraTab.XtraTabPage();
             this.tp_Loai_4_1_DeSo2 = new DevExpress.XtraTab.XtraTabPage();
+            this.tp_DEJP2 = new DevExpress.XtraTab.XtraTabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_SuavaLuu_DeSo2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu_DeSo2 = new DevExpress.XtraEditors.SimpleButton();
@@ -65,8 +67,8 @@
             this.btn_Screen = new DevExpress.XtraEditors.SimpleButton();
             this.uc_PictureBox1 = new BaoCaoLuong2017.MyUserControl.uc_PictureBox();
             this.btn_Start = new DevExpress.XtraEditors.SimpleButton();
-            this.tp_DEJP1 = new DevExpress.XtraTab.XtraTabPage();
-            this.tp_DEJP2 = new DevExpress.XtraTab.XtraTabPage();
+            this.lb_user1 = new DevExpress.XtraEditors.LabelControl();
+            this.lb_user2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -195,6 +197,12 @@
             this.tp_Loai_4_1_DeSo1.Size = new System.Drawing.Size(520, 256);
             this.tp_Loai_4_1_DeSo1.Text = "Loại 4.1";
             // 
+            // tp_DEJP1
+            // 
+            this.tp_DEJP1.Name = "tp_DEJP1";
+            this.tp_DEJP1.Size = new System.Drawing.Size(520, 256);
+            this.tp_DEJP1.Text = "DEJP";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_SuavaLuu_DeSo1);
@@ -303,6 +311,12 @@
             this.tp_Loai_4_1_DeSo2.Name = "tp_Loai_4_1_DeSo2";
             this.tp_Loai_4_1_DeSo2.Size = new System.Drawing.Size(520, 258);
             this.tp_Loai_4_1_DeSo2.Text = "Loại 4.1";
+            // 
+            // tp_DEJP2
+            // 
+            this.tp_DEJP2.Name = "tp_DEJP2";
+            this.tp_DEJP2.Size = new System.Drawing.Size(520, 258);
+            this.tp_DEJP2.Text = "DEJP";
             // 
             // panel4
             // 
@@ -414,17 +428,21 @@
             this.btn_Start.Text = "Start";
             this.btn_Start.Click += new System.EventHandler(this.btn_Start_Click);
             // 
-            // tp_DEJP1
+            // lb_user1
             // 
-            this.tp_DEJP1.Name = "tp_DEJP1";
-            this.tp_DEJP1.Size = new System.Drawing.Size(520, 256);
-            this.tp_DEJP1.Text = "DEJP";
+            this.lb_user1.Location = new System.Drawing.Point(306, 4);
+            this.lb_user1.Name = "lb_user1";
+            this.lb_user1.Size = new System.Drawing.Size(30, 13);
+            this.lb_user1.TabIndex = 6;
+            this.lb_user1.Text = "          ";
             // 
-            // tp_DEJP2
+            // lb_user2
             // 
-            this.tp_DEJP2.Name = "tp_DEJP2";
-            this.tp_DEJP2.Size = new System.Drawing.Size(520, 258);
-            this.tp_DEJP2.Text = "DEJP";
+            this.lb_user2.Location = new System.Drawing.Point(305, 4);
+            this.lb_user2.Name = "lb_user2";
+            this.lb_user2.Size = new System.Drawing.Size(45, 13);
+            this.lb_user2.TabIndex = 6;
+            this.lb_user2.Text = "               ";
             // 
             // frm_Check
             // 
@@ -446,6 +464,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol_DeSo1)).EndInit();
             this.tabcontrol_DeSo1.ResumeLayout(false);
+            this.tabcontrol_DeSo1.PerformLayout();
             this.tp_Loai_1_DeSo1.ResumeLayout(false);
             this.tp_Loai_2_DeSo1.ResumeLayout(false);
             this.tp_Loai_3_DeSo1.ResumeLayout(false);
@@ -453,6 +472,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol_DeSo2)).EndInit();
             this.tabcontrol_DeSo2.ResumeLayout(false);
+            this.tabcontrol_DeSo2.PerformLayout();
             this.tp_Loai_1_DeSo2.ResumeLayout(false);
             this.tp_Loai_2_DeSo2.ResumeLayout(false);
             this.tp_Loai_3_DeSo2.ResumeLayout(false);
@@ -505,5 +525,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_Start;
         private DevExpress.XtraTab.XtraTabPage tp_DEJP1;
         private DevExpress.XtraTab.XtraTabPage tp_DEJP2;
+        private DevExpress.XtraEditors.LabelControl lb_user1;
+        private DevExpress.XtraEditors.LabelControl lb_user2;
     }
 }
