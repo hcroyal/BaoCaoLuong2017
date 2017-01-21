@@ -99,7 +99,7 @@ namespace BaoCaoLuong2017
                     cbb.DisplayMember = "fBatchName";
                     if(cbb.Items.Count<=0)
                     {
-                        cbb.DataSource = Global.db_BCL.GetBatNotFinishDeJP();
+                        cbb.DataSource = Global.db_BCL.GetBatNotFinishDeJP(username);
                         cbb.DisplayMember = "fBatchName";
                     }
                 }
