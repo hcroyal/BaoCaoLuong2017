@@ -24,50 +24,50 @@ namespace BaoCaoLuong2017
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new Form1());
-            //bool temp;
-            //do
-            //{
-            //    temp = false;
-            //    Frm_Login a = new Frm_Login();
-            //    a.lb_programName.Text = "           Dự Án\n           Báo Cáo Lương 2017";
-            //    a.lb_vision.Text = "Phiên bản :";
-            //    a.grb_1.Text = "Thông Tin PC";
-            //    a.lb_machine.Text = "Tên PC :";
-            //    a.lb_user_window.Text = "Tài khoản window:";
-            //    a.lb_ip.Text = "Địa chỉ IP :";
-            //    a.grb_2.Text = "Thông Tin Tài Khoản Đăng Nhập";
-            //    a.lb_username.Text = "Tên đăng nhập :";
-            //    a.lb_password.Text = "Mật khẩu :";
-            //    a.lb_role.Text = "Vai trò :";
-            //    a.lb_date.Text = "Ngày: ";
-            //    a.lb_time.Text = "Giờ: ";
-            //    a.lb_batchno.Text = "BatchName: ";
-            //    a.btn_thoat.Text = "Thoát";
-            //    a.chb_hienthi.Text = "Hiển Thị";
-            //    a.chb_luu.Text = "Lưu";
-            //    a.lb_version.Text = @"1.0";
-            //    a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2016\PHIẾU KIỂM ĐỊNH\Tool";
-            //    a.LoginEvent += a_LoginEvent;
-            //    a.ButtonLoginEven += a_ButtonLoginEven;
-            //    if (a.ShowDialog() == DialogResult.OK)
-            //    {
-            //        Global.StrMachine = a.StrMachine;
-            //        Global.StrUserWindow = a.StrUserWindow;
-            //        Global.StrIpAddress = a.StrIpAddress;
-            //        Global.StrUsername = a.StrUserName;
-            //        Global.StrBatch = a.StrBatch;
-            //        Global.StrRole = a.StrRole;
-            //        Global.Strtoken = a.Token;
-            //        frm_Main f = new frm_Main();
-            //        if (f.ShowDialog() == DialogResult.Yes)
-            //        {
-            //            f.Close();
-            //            temp = true;
-            //        }
-            //    }
-            //}
-            //while (temp);
+            //Application.Run(new frm_Main());
+            bool temp;
+            do
+            {
+                temp = false;
+                Frm_Login a = new Frm_Login();
+                a.lb_programName.Text = "           Dự Án\n           Báo Cáo Lương 2017";
+                a.lb_vision.Text = "Phiên bản :";
+                a.grb_1.Text = "Thông Tin PC";
+                a.lb_machine.Text = "Tên PC :";
+                a.lb_user_window.Text = "Tài khoản window:";
+                a.lb_ip.Text = "Địa chỉ IP :";
+                a.grb_2.Text = "Thông Tin Tài Khoản Đăng Nhập";
+                a.lb_username.Text = "Tên đăng nhập :";
+                a.lb_password.Text = "Mật khẩu :";
+                a.lb_role.Text = "Vai trò :";
+                a.lb_date.Text = "Ngày: ";
+                a.lb_time.Text = "Giờ: ";
+                a.lb_batchno.Text = "BatchName: ";
+                a.btn_thoat.Text = "Thoát";
+                a.chb_hienthi.Text = "Hiển Thị";
+                a.chb_luu.Text = "Lưu";
+                a.lb_version.Text = @"1.0";
+                a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2016\PHIẾU KIỂM ĐỊNH\Tool";
+                a.LoginEvent += a_LoginEvent;
+                a.ButtonLoginEven += a_ButtonLoginEven;
+                if (a.ShowDialog() == DialogResult.OK)
+                {
+                    Global.StrMachine = a.StrMachine;
+                    Global.StrUserWindow = a.StrUserWindow;
+                    Global.StrIpAddress = a.StrIpAddress;
+                    Global.StrUsername = a.StrUserName;
+                    Global.StrBatch = a.StrBatch;
+                    Global.StrRole = a.StrRole;
+                    Global.Strtoken = a.Token;
+                    frm_Main f = new frm_Main();
+                    if (f.ShowDialog() == DialogResult.Yes)
+                    {
+                        f.Close();
+                        temp = true;
+                    }
+                }
+            }
+            while (temp);
         }
         private static void a_ButtonLoginEven(int iLogin, string strMachine, string strUserWindow, string strIpAddress, string strUsername, string password, string strBatch, string strRole, string strToken)
         {
@@ -83,14 +83,18 @@ namespace BaoCaoLuong2017
             {
                 iKiemtraLogin = Global.db_BPO.KiemTraLogin(username, password);
                 strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == "BaoCaoLuong2017" select w.IDVersion).FirstOrDefault();
-                role = (from w in Global.db_BPO.tbl_Users where w.Username==username select w.IDRole).FirstOrDefault().ToUpper();
+                role = (from w in Global.db_BPO.tbl_Users where w.Username==username select w.IDRole).FirstOrDefault();
+                if (!string.IsNullOrEmpty(role))
+                    role = role.ToUpper();
                 if (iKiemtraLogin == 1 && role=="ADMIN" )
                 {
+                   
                     cbb.DataSource = Global.db_BCL.GetBatch(username);
                     cbb.DisplayMember = "fBatchName";
                 }
                 else if (iKiemtraLogin == 1 && role =="DEJP")
                 {
+                    
                     cbb.DataSource = Global.db_BCL.GetBatNotFinish_MissImageDEJP(username);
                     cbb.DisplayMember = "fBatchName";
                     if(cbb.Items.Count<=0)
@@ -102,11 +106,12 @@ namespace BaoCaoLuong2017
                
                 else if (iKiemtraLogin == 1 && role == "DESO")
                 {
+                    
                     cbb.DataSource = Global.db_BCL.GetBatNotFinish_MissImageDESO(username);
                     cbb.DisplayMember = "fBatchName";
                     if (cbb.Items.Count <= 0)
                     {
-                        cbb.DataSource = Global.db_BCL.GetBatNotFinishDeSo();
+                        cbb.DataSource = Global.db_BCL.GetBatNotFinishDeSo(username);
                         cbb.DisplayMember = "fBatchName";
                     }
                 }
@@ -133,7 +138,7 @@ namespace BaoCaoLuong2017
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error connecting to server, please check your connection Internet");
+                MessageBox.Show("Error connecting to server, please check your connection Internet\r\n" + e.Message);
             }
         }
     }

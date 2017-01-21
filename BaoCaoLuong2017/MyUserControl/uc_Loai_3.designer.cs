@@ -96,7 +96,7 @@
         #endregion
         public DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txt_Truong_002;
-        private DevExpress.XtraEditors.TextEdit txt_Truong_003;
+        public DevExpress.XtraEditors.TextEdit txt_Truong_002;
+        public DevExpress.XtraEditors.TextEdit txt_Truong_003;
     }
 }

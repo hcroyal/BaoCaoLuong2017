@@ -37,14 +37,13 @@ namespace BaoCaoLuong2017.MyUserControl
                 imageBox1.Zoom = iZoomValue;
                 imageBox1.ZoomChanged += imageBox1_ZoomChanged;
 
-
             }
             catch (System.Exception)
             {
 
                 return "Error";
             }
-            
+
 
             return "Ok";
         }

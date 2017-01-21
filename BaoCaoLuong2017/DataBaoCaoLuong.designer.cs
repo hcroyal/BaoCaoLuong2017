@@ -246,34 +246,6 @@ namespace BaoCaoLuong2017
 			return ((ISingleResult<GetBatNotFinishDeJPResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeSo")]
-		public ISingleResult<GetBatNotFinishDeSoResult> GetBatNotFinishDeSo()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetBatNotFinishDeSoResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_Loai1")]
-		public int Insert_Loai1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdImage", DbType="NVarChar(255)")] string idImage, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LoaiPhieu", DbType="NVarChar(255)")] string loaiPhieu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_001", DbType="NVarChar(255)")] string truong_001, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_002", DbType="NVarChar(255)")] string truong_002)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, loaiPhieu, truong_001, truong_002);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_Loai2")]
-		public int Insert_Loai2([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdImage", DbType="NVarChar(255)")] string idImage, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LoaiPhieu", DbType="NVarChar(255)")] string loaiPhieu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_002", DbType="NVarChar(255)")] string truong_002, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_003", DbType="NVarChar(255)")] string truong_003, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_004", DbType="NVarChar(255)")] string truong_004)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, loaiPhieu, truong_002, truong_003, truong_004);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_Loai3")]
-		public int Insert_Loai3([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdImage", DbType="NVarChar(255)")] string idImage, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LoaiPhieu", DbType="NVarChar(255)")] string loaiPhieu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_002", DbType="NVarChar(255)")] string truong_002, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_003", DbType="NVarChar(255)")] string truong_003)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, loaiPhieu, truong_002, truong_003);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_Loai4")]
 		public int Insert_Loai4(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdImage", DbType="NVarChar(255)")] string idImage, 
@@ -361,6 +333,41 @@ namespace BaoCaoLuong2017
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, loaiPhieu, truong_001, truong_002, truong_003, truong_004, truong_005, truong_006, truong_008, truong_009, truong_012, truong_013, truong_028, truong_029, truong_030, truong_037, truong_038, truong_039, truong_040, truong_041, truong_042, truong_043, truong_044, truong_045, truong_046, truong_047, truong_048, truong_049, truong_050, truong_051, truong_052, truong_053, truong_057, truong_058, truong_063, truong_064, truong_065, truong_066, truong_077, truong_078, truong_079, truong_080, truong_081, truong_082, truong_083, truong_084, truong_085, truong_086, truong_088, truong_089, truong_090, truong_091, truong_092, truong_093, truong_094, truong_095, truong_096, truong_097, truong_098, truong_099, truong_100, truong_101, truong_102, truong_103, truong_104, truong_105, truong_106, truong_107, truong_108, truong_109, truong_110, truong_158, truong_159, truong_160, truong_161, truong_162, truong_165, truong_166, truong_167, truong_168);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_Loai1")]
+		public int Insert_Loai1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdImage", DbType="NVarChar(255)")] string idImage, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_001", DbType="NVarChar(255)")] string truong_001, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_002", DbType="NVarChar(255)")] string truong_002)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, truong_001, truong_002);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_Loai2")]
+		public int Insert_Loai2([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdImage", DbType="NVarChar(255)")] string idImage, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_002", DbType="NVarChar(255)")] string truong_002, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_003", DbType="NVarChar(255)")] string truong_003, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_004", DbType="NVarChar(255)")] string truong_004)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, truong_002, truong_003, truong_004);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Insert_Loai3")]
+		public int Insert_Loai3([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdImage", DbType="NVarChar(255)")] string idImage, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fBatchName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(255)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_002", DbType="NVarChar(255)")] string truong_002, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Truong_003", DbType="NVarChar(255)")] string truong_003)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idImage, fBatchName, userName, truong_002, truong_003);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LayHinhMoi_DeSo")]
+		public ISingleResult<LayHinhMoi_DeSoResult> LayHinhMoi_DeSo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fbatchname, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fbatchname, username);
+			return ((ISingleResult<LayHinhMoi_DeSoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetBatNotFinishDeSo")]
+		public ISingleResult<GetBatNotFinishDeSoResult> GetBatNotFinishDeSo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(200)")] string username)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username);
+			return ((ISingleResult<GetBatNotFinishDeSoResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -6625,6 +6632,32 @@ namespace BaoCaoLuong2017
 				if ((this._fBatchName != value))
 				{
 					this._fBatchName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class LayHinhMoi_DeSoResult
+	{
+		
+		private string _Column1;
+		
+		public LayHinhMoi_DeSoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="NVarChar(255)")]
+		public string Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
 				}
 			}
 		}

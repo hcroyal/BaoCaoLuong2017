@@ -33,6 +33,10 @@ namespace BaoCaoLuong2017.MyUserControl
             return false;
         }
 
+        public void SaveData_Loai_3(string idimage)
+        {
+            Global.db_BCL.Insert_Loai3(idimage, Global.StrBatch, Global.StrUsername, txt_Truong_002.Text, txt_Truong_003.Text);
+        }
         public void SetValue(string truong_001,string truong_002,string truong_003)
         {
             txt_Truong_002.Text = truong_002;

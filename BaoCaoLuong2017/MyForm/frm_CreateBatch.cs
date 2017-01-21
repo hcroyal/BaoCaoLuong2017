@@ -93,7 +93,7 @@ namespace BaoCaoLuong2017.MyForm
         private void frm_CreateBatch_Load(object sender, EventArgs e)
         {
             txt_UserCreate.Text = Global.StrUsername;
-            txt_DateCreate.Text = DateTime.Now.ToShortDateString() + "  -  " + DateTime.Now.ToShortTimeString();
+            txt_DateCreate.Text = DateTime.Now.ToShortDateString() + "  -  " + DateTime.Now.ToShortTimeString();            
         }
 
         public static string[] GetFilesFrom(string searchFolder, string[] filters, bool isRecursive)
@@ -250,6 +250,30 @@ namespace BaoCaoLuong2017.MyForm
             {
                 UpLoadSingle();
             }
+        }
+
+        private void frm_CreateBatch_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
+        private bool closePending;
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (backgroundWorker1.IsBusy)
+            {
+                closePending = true;
+                backgroundWorker1.CancelAsync();
+                e.Cancel = true;
+                this.Enabled = false;   // or this.Hide()
+                return;
+            }
+            base.OnFormClosing(e);
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (closePending) this.Close();
+            closePending = false;
         }
     }
 }

@@ -72,9 +72,9 @@
       <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
     </Compile>
     <Compile Include="DataEntryBPO.designer.cs">
-      <DependentUpon>DataEntryBPO.dbml</DependentUpon>
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEntryBPO.dbml</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="MyClass\CLHandling_Loai1.cs" />
@@ -144,6 +144,9 @@
     <None Include="DataBaoCaoLuong.dbml.layout">
       <DependentUpon>DataBaoCaoLuong.dbml</DependentUpon>
     </None>
+    <None Include="DataEntryBPO.dbml.layout">
+      <DependentUpon>DataEntryBPO.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="MyForm\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +186,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DataBaoCaoLuong.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -190,12 +194,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="DataEntryBPO.dbml">
-      <SubType>Designer</SubType>
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataEntryBPO.designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataEntryBPO.dbml.layout">
-      <DependentUpon>DataEntryBPO.dbml</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -207,7 +208,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\svn_deleted.png" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
