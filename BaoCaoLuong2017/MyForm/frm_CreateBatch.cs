@@ -162,6 +162,8 @@ namespace BaoCaoLuong2017.MyForm
                     idimage = Path.GetFileName(fi.ToString()),
                     ReadImageDESo = 0,
                     ReadImageDEJP = 0,
+                    CheckedDESo = 0,
+                    CheckedDEJP = 0,
                     TienDoDESO = "Hình chưa nhập",
                     TienDoDEJP = "Hình chưa nhập"
                 };
@@ -220,6 +222,8 @@ namespace BaoCaoLuong2017.MyForm
                         idimage = Path.GetFileName(fi.ToString()),
                         ReadImageDESo = 0,
                         ReadImageDEJP = 0,
+                        CheckedDESo = 0,
+                        CheckedDEJP = 0,
                         TienDoDESO = "Hình chưa nhập",
                         TienDoDEJP = "Hình chưa nhập"
                     };
