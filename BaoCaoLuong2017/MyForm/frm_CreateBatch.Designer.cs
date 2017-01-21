@@ -214,6 +214,7 @@
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // frm_CreateBatch
             // 
@@ -241,6 +242,7 @@
             this.Name = "frm_CreateBatch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo batch mới";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_CreateBatch_FormClosed);
             this.Load += new System.EventHandler(this.frm_CreateBatch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_BatchName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PathFolder.Properties)).EndInit();

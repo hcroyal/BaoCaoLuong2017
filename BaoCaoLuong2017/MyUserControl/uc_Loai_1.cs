@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BaoCaoLuong2017;
 
 namespace BaoCaoLuonng2017.MyUserControl
 {
@@ -15,9 +16,9 @@ namespace BaoCaoLuonng2017.MyUserControl
         }
         public void ResetData()
         {
-            txt_Truong_001.Text = string.Empty;
+            txt_Truong_001.Text = "";
             txt_Truong_001.BackColor = Color.White;
-            txt_Truong_002.Text = string.Empty;
+            txt_Truong_002.Text = "";
             txt_Truong_002.BackColor = Color.White;
         }
 
@@ -65,6 +66,10 @@ namespace BaoCaoLuonng2017.MyUserControl
             }
         }
         
+        public void SaveData_Loai_1(string idimage)
+        {
+            Global.db_BCL.Insert_Loai1(idimage,Global.StrBatch,Global.StrUsername,txt_Truong_001.Text,txt_Truong_002.Text);
+        }
         private void txt_Truong_001_TextChanged(object sender, EventArgs e)
         {
             if (Changed != null)
@@ -79,5 +84,6 @@ namespace BaoCaoLuonng2017.MyUserControl
                 txt_Truong_002.Enabled = false;
             }
         }
+
     }
 }

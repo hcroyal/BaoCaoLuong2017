@@ -15,5 +15,10 @@ namespace BaoCaoLuong2017.MyForm
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            uc_Loai_11.SaveData_Loai_1(textEdit1.Text);
+        }
     }
 }

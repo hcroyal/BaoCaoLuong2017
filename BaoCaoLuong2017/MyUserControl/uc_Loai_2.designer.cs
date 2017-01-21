@@ -123,8 +123,8 @@
         public DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.LabelControl labelControl3;
         public DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txt_Truong_002;
-        private DevExpress.XtraEditors.TextEdit txt_Truong_003;
-        private DevExpress.XtraEditors.TextEdit txt_Truong_004;
+        public DevExpress.XtraEditors.TextEdit txt_Truong_002;
+        public DevExpress.XtraEditors.TextEdit txt_Truong_003;
+        public DevExpress.XtraEditors.TextEdit txt_Truong_004;
     }
 }

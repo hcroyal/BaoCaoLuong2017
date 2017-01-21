@@ -1,20 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DatabaseDataEntryBPO" Class="DataEntryBPODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.10.254\BPOSERVER;Initial Catalog=DatabaseDataEntryBPO;Persist Security Info=True;User ID=sa" SettingsObjectName="BaoCaoLuong2017.Properties.Settings" SettingsPropertyName="DatabaseDataEntryBPOConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.tbl_Role" Member="tbl_Roles">
-    <Type Name="tbl_Role">
-      <Column Name="RoleID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="RoleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_Version" Member="tbl_Versions">
-    <Type Name="tbl_Version">
-      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="IDVersion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="ID_int_auto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="MoTaChucNangMoi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.tbl_User" Member="tbl_Users">
     <Type Name="tbl_User">
       <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -25,38 +10,24 @@
       <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
-  <Function Name="dbo.KiemTraLogin" Method="KiemTraLogin">
-    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.InsertLoginTime" Method="InsertLoginTime">
-    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.GetListUserToKiemDinh" Method="GetListUserToKiemDinh">
-    <ElementType Name="GetListUserToKiemDinhResult">
-      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetListRole" Method="GetListRole">
-    <ElementType Name="GetListRoleResult">
+  <Table Name="dbo.tbl_Version" Member="tbl_Versions">
+    <Type Name="tbl_Version">
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IDVersion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ID_int_auto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MoTaChucNangMoi" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Role" Member="tbl_Roles">
+    <Type Name="tbl_Role">
       <Column Name="RoleID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="RoleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.DeleteUsername" Method="DeleteUsername">
+    </Type>
+  </Table>
+  <Function Name="dbo.KiemTraLogin" Method="KiemTraLogin">
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.UpdateUsername_BaoCaoLuong" Method="UpdateUsername_BaoCaoLuong">
@@ -74,5 +45,34 @@
     <Parameter Name="NhanVien" Parameter="nhanVien" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertLoginTime" Method="InsertLoginTime">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetListRole" Method="GetListRole">
+    <ElementType Name="GetListRoleResult">
+      <Column Name="RoleID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DeleteUsername" Method="DeleteUsername">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetListUserToKiemDinh" Method="GetListUserToKiemDinh">
+    <ElementType Name="GetListUserToKiemDinhResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

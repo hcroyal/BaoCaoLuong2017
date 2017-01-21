@@ -98,7 +98,7 @@
 
         public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txt_Truong_001;
-        private DevExpress.XtraEditors.TextEdit txt_Truong_002;
+        public DevExpress.XtraEditors.TextEdit txt_Truong_001;
+        public DevExpress.XtraEditors.TextEdit txt_Truong_002;
     }
 }

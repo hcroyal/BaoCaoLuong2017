@@ -29,47 +29,41 @@
         private void InitializeComponent()
         {
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.uc_Loai_21 = new BaoCaoLuong2017.MyUserControl.uc_Loai_2();
+            this.button1 = new System.Windows.Forms.Button();
             this.uc_Loai_11 = new BaoCaoLuonng2017.MyUserControl.uc_Loai_1();
-            this.uc_Loai_31 = new BaoCaoLuong2017.MyUserControl.uc_Loai_3();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(33, 229);
+            this.textEdit1.Location = new System.Drawing.Point(377, 64);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(100, 20);
             this.textEdit1.TabIndex = 1;
             // 
-            // uc_Loai_21
+            // button1
             // 
-            this.uc_Loai_21.Location = new System.Drawing.Point(231, 95);
-            this.uc_Loai_21.Name = "uc_Loai_21";
-            this.uc_Loai_21.Size = new System.Drawing.Size(202, 105);
-            this.uc_Loai_21.TabIndex = 2;
+            this.button1.Location = new System.Drawing.Point(400, 203);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // uc_Loai_11
             // 
-            this.uc_Loai_11.Location = new System.Drawing.Point(230, 16);
+            this.uc_Loai_11.Location = new System.Drawing.Point(60, 43);
             this.uc_Loai_11.Name = "uc_Loai_11";
-            this.uc_Loai_11.Size = new System.Drawing.Size(198, 73);
+            this.uc_Loai_11.Size = new System.Drawing.Size(197, 69);
             this.uc_Loai_11.TabIndex = 0;
-            // 
-            // uc_Loai_31
-            // 
-            this.uc_Loai_31.Location = new System.Drawing.Point(230, 206);
-            this.uc_Loai_31.Name = "uc_Loai_31";
-            this.uc_Loai_31.Size = new System.Drawing.Size(197, 77);
-            this.uc_Loai_31.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 289);
-            this.Controls.Add(this.uc_Loai_31);
-            this.Controls.Add(this.uc_Loai_21);
+            this.ClientSize = new System.Drawing.Size(627, 319);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.uc_Loai_11);
             this.Name = "Form1";
@@ -83,7 +77,6 @@
 
         private BaoCaoLuonng2017.MyUserControl.uc_Loai_1 uc_Loai_11;
         private DevExpress.XtraEditors.TextEdit textEdit1;
-        private MyUserControl.uc_Loai_2 uc_Loai_21;
-        private MyUserControl.uc_Loai_3 uc_Loai_31;
+        public System.Windows.Forms.Button button1;
     }
 }

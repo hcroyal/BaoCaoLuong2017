@@ -328,39 +328,6 @@
       <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.GetBatNotFinishDeSo" Method="GetBatNotFinishDeSo">
-    <ElementType Name="GetBatNotFinishDeSoResult">
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.Insert_Loai1" Method="Insert_Loai1">
-    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="LoaiPhieu" Parameter="loaiPhieu" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_001" Parameter="truong_001" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_002" Parameter="truong_002" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Insert_Loai2" Method="Insert_Loai2">
-    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="LoaiPhieu" Parameter="loaiPhieu" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_002" Parameter="truong_002" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_003" Parameter="truong_003" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_004" Parameter="truong_004" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Insert_Loai3" Method="Insert_Loai3">
-    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="LoaiPhieu" Parameter="loaiPhieu" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_002" Parameter="truong_002" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_003" Parameter="truong_003" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.Insert_Loai4" Method="Insert_Loai4">
     <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
@@ -445,5 +412,43 @@
     <Parameter Name="Truong_167" Parameter="truong_167" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="Truong_168" Parameter="truong_168" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Insert_Loai1" Method="Insert_Loai1">
+    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_001" Parameter="truong_001" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_002" Parameter="truong_002" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Insert_Loai2" Method="Insert_Loai2">
+    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_002" Parameter="truong_002" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_003" Parameter="truong_003" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_004" Parameter="truong_004" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Insert_Loai3" Method="Insert_Loai3">
+    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_002" Parameter="truong_002" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_003" Parameter="truong_003" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LayHinhMoi_DeSo" Method="LayHinhMoi_DeSo">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="LayHinhMoi_DeSoResult">
+      <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinishDeSo" Method="GetBatNotFinishDeSo">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="GetBatNotFinishDeSoResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>
