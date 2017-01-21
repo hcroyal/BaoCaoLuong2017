@@ -71,7 +71,7 @@
             this.uc_Loai_31 = new BaoCaoLuong2017.MyUserControl.uc_Loai_3();
             this.tp_Loai_4 = new DevExpress.XtraTab.XtraTabPage();
             this.uc_Loai_41 = new BaoCaoLuong2017.MyUserControl.uc_Loai_4();
-            this.tp_Loai_4_1 = new DevExpress.XtraTab.XtraTabPage();
+            this.tp_DEJP = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
@@ -79,6 +79,7 @@
             this.txt_LoaiPhieu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.uc_PictureBox1 = new BaoCaoLuong2017.MyUserControl.uc_PictureBox();
+            this.uc_DEJP1 = new BaoCaoLuong2017.MyUserControl.uc_DEJP();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -90,6 +91,7 @@
             this.tp_Loai_2.SuspendLayout();
             this.tp_Loai_3.SuspendLayout();
             this.tp_Loai_4.SuspendLayout();
+            this.tp_DEJP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -208,6 +210,7 @@
             this.btn_Check_DEJP.Caption = "Check_DE&JP";
             this.btn_Check_DEJP.Id = 8;
             this.btn_Check_DEJP.Name = "btn_Check_DEJP";
+            this.btn_Check_DEJP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_DEJP_ItemClick);
             // 
             // btn_Check_NhamPhieu
             // 
@@ -407,7 +410,7 @@
             this.tp_Loai_2,
             this.tp_Loai_3,
             this.tp_Loai_4,
-            this.tp_Loai_4_1});
+            this.tp_DEJP});
             // 
             // tp_Loai_1
             // 
@@ -469,11 +472,12 @@
             this.uc_Loai_41.Size = new System.Drawing.Size(533, 585);
             this.uc_Loai_41.TabIndex = 0;
             // 
-            // tp_Loai_4_1
+            // tp_DEJP
             // 
-            this.tp_Loai_4_1.Name = "tp_Loai_4_1";
-            this.tp_Loai_4_1.Size = new System.Drawing.Size(533, 585);
-            this.tp_Loai_4_1.Text = "Loại 4.1";
+            this.tp_DEJP.Controls.Add(this.uc_DEJP1);
+            this.tp_DEJP.Name = "tp_DEJP";
+            this.tp_DEJP.Size = new System.Drawing.Size(533, 585);
+            this.tp_DEJP.Text = "DEJP";
             // 
             // panelControl3
             // 
@@ -537,6 +541,14 @@
             this.uc_PictureBox1.Size = new System.Drawing.Size(801, 675);
             this.uc_PictureBox1.TabIndex = 10;
             // 
+            // uc_DEJP1
+            // 
+            this.uc_DEJP1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_DEJP1.Location = new System.Drawing.Point(0, 0);
+            this.uc_DEJP1.Name = "uc_DEJP1";
+            this.uc_DEJP1.Size = new System.Drawing.Size(533, 585);
+            this.uc_DEJP1.TabIndex = 0;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,6 +580,7 @@
             this.tp_Loai_2.ResumeLayout(false);
             this.tp_Loai_3.ResumeLayout(false);
             this.tp_Loai_4.ResumeLayout(false);
+            this.tp_DEJP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
@@ -606,7 +619,7 @@
         private DevExpress.XtraTab.XtraTabPage tp_Loai_2;
         private DevExpress.XtraTab.XtraTabPage tp_Loai_3;
         private DevExpress.XtraTab.XtraTabPage tp_Loai_4;
-        private DevExpress.XtraTab.XtraTabPage tp_Loai_4_1;
+        private DevExpress.XtraTab.XtraTabPage tp_DEJP;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.SimpleButton btn_Submit_Logout;
         private DevExpress.XtraEditors.SimpleButton btn_Start_Submit;
@@ -631,5 +644,6 @@
         private MyUserControl.uc_Loai_2 uc_Loai_21;
         private MyUserControl.uc_Loai_3 uc_Loai_31;
         private MyUserControl.uc_Loai_4 uc_Loai_41;
+        private MyUserControl.uc_DEJP uc_DEJP1;
     }
 }

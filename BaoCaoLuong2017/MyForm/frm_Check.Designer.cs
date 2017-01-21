@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lb_username1 = new System.Windows.Forms.Label();
+            this.btn_SuaVaLuu_User1 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu_DeSo1 = new DevExpress.XtraEditors.SimpleButton();
             this.tabcontrol_DeSo1 = new DevExpress.XtraTab.XtraTabControl();
             this.tp_Loai_1_DeSo1 = new DevExpress.XtraTab.XtraTabPage();
@@ -57,6 +58,7 @@
             this.tp_DEJP2 = new DevExpress.XtraTab.XtraTabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lb_username2 = new System.Windows.Forms.Label();
+            this.btn_SuaVaLuu_User2 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Luu_DeSo2 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lb_Loi = new DevExpress.XtraEditors.LabelControl();
@@ -71,8 +73,10 @@
             this.labeld = new DevExpress.XtraEditors.LabelControl();
             this.labela = new DevExpress.XtraEditors.LabelControl();
             this.labelb = new DevExpress.XtraEditors.LabelControl();
-            this.btn_SuaVaLuu_User1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_SuaVaLuu_User2 = new DevExpress.XtraEditors.SimpleButton();
+            this.uc_Loai_41 = new BaoCaoLuong2017.MyUserControl.uc_Loai_4();
+            this.uc_Loai_42 = new BaoCaoLuong2017.MyUserControl.uc_Loai_4();
+            this.uc_DEJP1 = new BaoCaoLuong2017.MyUserControl.uc_DEJP();
+            this.uc_DEJP2 = new BaoCaoLuong2017.MyUserControl.uc_DEJP();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,12 +87,16 @@
             this.tp_Loai_1_DeSo1.SuspendLayout();
             this.tp_Loai_2_DeSo1.SuspendLayout();
             this.tp_Loai_3_DeSo1.SuspendLayout();
+            this.tp_Loai_4_DeSo1.SuspendLayout();
+            this.tp_DEJP1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol_DeSo2)).BeginInit();
             this.tabcontrol_DeSo2.SuspendLayout();
             this.tp_Loai_1_DeSo2.SuspendLayout();
             this.tp_Loai_2_DeSo2.SuspendLayout();
             this.tp_Loai_3_DeSo2.SuspendLayout();
+            this.tp_Loai_4_DeSo2.SuspendLayout();
+            this.tp_DEJP2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -98,9 +106,9 @@
             // 
             this.panelControl1.Controls.Add(this.tableLayoutPanel1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl1.Location = new System.Drawing.Point(701, 0);
+            this.panelControl1.Location = new System.Drawing.Point(670, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(536, 648);
+            this.panelControl1.Size = new System.Drawing.Size(567, 751);
             this.panelControl1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -115,7 +123,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(532, 644);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(563, 747);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -125,7 +133,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(526, 316);
+            this.panel1.Size = new System.Drawing.Size(557, 367);
             this.panel1.TabIndex = 4;
             // 
             // panel2
@@ -134,9 +142,9 @@
             this.panel2.Controls.Add(this.btn_SuaVaLuu_User1);
             this.panel2.Controls.Add(this.btn_Luu_DeSo1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 284);
+            this.panel2.Location = new System.Drawing.Point(0, 335);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(526, 32);
+            this.panel2.Size = new System.Drawing.Size(557, 32);
             this.panel2.TabIndex = 0;
             // 
             // lb_username1
@@ -149,6 +157,15 @@
             this.lb_username1.Size = new System.Drawing.Size(44, 18);
             this.lb_username1.TabIndex = 6;
             this.lb_username1.Text = "label1";
+            // 
+            // btn_SuaVaLuu_User1
+            // 
+            this.btn_SuaVaLuu_User1.Location = new System.Drawing.Point(357, 7);
+            this.btn_SuaVaLuu_User1.Name = "btn_SuaVaLuu_User1";
+            this.btn_SuaVaLuu_User1.Size = new System.Drawing.Size(81, 21);
+            this.btn_SuaVaLuu_User1.TabIndex = 2;
+            this.btn_SuaVaLuu_User1.Text = "Sửa và Lưu";
+            this.btn_SuaVaLuu_User1.Click += new System.EventHandler(this.btn_SuaVaLuu_User1_Click);
             // 
             // btn_Luu_DeSo1
             // 
@@ -165,7 +182,7 @@
             this.tabcontrol_DeSo1.Location = new System.Drawing.Point(0, 0);
             this.tabcontrol_DeSo1.Name = "tabcontrol_DeSo1";
             this.tabcontrol_DeSo1.SelectedTabPage = this.tp_Loai_1_DeSo1;
-            this.tabcontrol_DeSo1.Size = new System.Drawing.Size(526, 316);
+            this.tabcontrol_DeSo1.Size = new System.Drawing.Size(557, 367);
             this.tabcontrol_DeSo1.TabIndex = 2;
             this.tabcontrol_DeSo1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tp_Loai_1_DeSo1,
@@ -222,8 +239,10 @@
             // 
             // tp_Loai_4_DeSo1
             // 
+            this.tp_Loai_4_DeSo1.AutoScroll = true;
+            this.tp_Loai_4_DeSo1.Controls.Add(this.uc_Loai_41);
             this.tp_Loai_4_DeSo1.Name = "tp_Loai_4_DeSo1";
-            this.tp_Loai_4_DeSo1.Size = new System.Drawing.Size(520, 288);
+            this.tp_Loai_4_DeSo1.Size = new System.Drawing.Size(551, 339);
             this.tp_Loai_4_DeSo1.Text = "Loại 4";
             // 
             // tp_Loai_4_1_DeSo1
@@ -234,8 +253,9 @@
             // 
             // tp_DEJP1
             // 
+            this.tp_DEJP1.Controls.Add(this.uc_DEJP1);
             this.tp_DEJP1.Name = "tp_DEJP1";
-            this.tp_DEJP1.Size = new System.Drawing.Size(520, 288);
+            this.tp_DEJP1.Size = new System.Drawing.Size(551, 339);
             this.tp_DEJP1.Text = "DEJP";
             // 
             // panel3
@@ -243,9 +263,9 @@
             this.panel3.Controls.Add(this.tabcontrol_DeSo2);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 325);
+            this.panel3.Location = new System.Drawing.Point(3, 376);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(526, 316);
+            this.panel3.Size = new System.Drawing.Size(557, 368);
             this.panel3.TabIndex = 5;
             // 
             // tabcontrol_DeSo2
@@ -254,7 +274,7 @@
             this.tabcontrol_DeSo2.Location = new System.Drawing.Point(0, 0);
             this.tabcontrol_DeSo2.Name = "tabcontrol_DeSo2";
             this.tabcontrol_DeSo2.SelectedTabPage = this.tp_Loai_1_DeSo2;
-            this.tabcontrol_DeSo2.Size = new System.Drawing.Size(526, 286);
+            this.tabcontrol_DeSo2.Size = new System.Drawing.Size(557, 338);
             this.tabcontrol_DeSo2.TabIndex = 3;
             this.tabcontrol_DeSo2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tp_Loai_1_DeSo2,
@@ -268,7 +288,7 @@
             // 
             this.tp_Loai_1_DeSo2.Controls.Add(this.uc_Loai_12);
             this.tp_Loai_1_DeSo2.Name = "tp_Loai_1_DeSo2";
-            this.tp_Loai_1_DeSo2.Size = new System.Drawing.Size(520, 258);
+            this.tp_Loai_1_DeSo2.Size = new System.Drawing.Size(520, 310);
             this.tp_Loai_1_DeSo2.Text = "Loại 1";
             // 
             // uc_Loai_12
@@ -276,14 +296,14 @@
             this.uc_Loai_12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_12.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_12.Name = "uc_Loai_12";
-            this.uc_Loai_12.Size = new System.Drawing.Size(520, 258);
+            this.uc_Loai_12.Size = new System.Drawing.Size(520, 310);
             this.uc_Loai_12.TabIndex = 0;
             // 
             // tp_Loai_2_DeSo2
             // 
             this.tp_Loai_2_DeSo2.Controls.Add(this.uc_Loai_22);
             this.tp_Loai_2_DeSo2.Name = "tp_Loai_2_DeSo2";
-            this.tp_Loai_2_DeSo2.Size = new System.Drawing.Size(520, 258);
+            this.tp_Loai_2_DeSo2.Size = new System.Drawing.Size(520, 310);
             this.tp_Loai_2_DeSo2.Text = "Loại 2";
             // 
             // uc_Loai_22
@@ -291,14 +311,14 @@
             this.uc_Loai_22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_22.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_22.Name = "uc_Loai_22";
-            this.uc_Loai_22.Size = new System.Drawing.Size(520, 258);
+            this.uc_Loai_22.Size = new System.Drawing.Size(520, 310);
             this.uc_Loai_22.TabIndex = 0;
             // 
             // tp_Loai_3_DeSo2
             // 
             this.tp_Loai_3_DeSo2.Controls.Add(this.uc_Loai_32);
             this.tp_Loai_3_DeSo2.Name = "tp_Loai_3_DeSo2";
-            this.tp_Loai_3_DeSo2.Size = new System.Drawing.Size(520, 258);
+            this.tp_Loai_3_DeSo2.Size = new System.Drawing.Size(520, 310);
             this.tp_Loai_3_DeSo2.Text = "Loại 3";
             // 
             // uc_Loai_32
@@ -306,13 +326,14 @@
             this.uc_Loai_32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_32.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_32.Name = "uc_Loai_32";
-            this.uc_Loai_32.Size = new System.Drawing.Size(520, 258);
+            this.uc_Loai_32.Size = new System.Drawing.Size(520, 310);
             this.uc_Loai_32.TabIndex = 0;
             // 
             // tp_Loai_4_DeSo2
             // 
+            this.tp_Loai_4_DeSo2.Controls.Add(this.uc_Loai_42);
             this.tp_Loai_4_DeSo2.Name = "tp_Loai_4_DeSo2";
-            this.tp_Loai_4_DeSo2.Size = new System.Drawing.Size(520, 258);
+            this.tp_Loai_4_DeSo2.Size = new System.Drawing.Size(551, 310);
             this.tp_Loai_4_DeSo2.Text = "Loại 4";
             // 
             // tp_Loai_4_1_DeSo2
@@ -323,8 +344,9 @@
             // 
             // tp_DEJP2
             // 
+            this.tp_DEJP2.Controls.Add(this.uc_DEJP2);
             this.tp_DEJP2.Name = "tp_DEJP2";
-            this.tp_DEJP2.Size = new System.Drawing.Size(520, 258);
+            this.tp_DEJP2.Size = new System.Drawing.Size(551, 310);
             this.tp_DEJP2.Text = "DEJP";
             // 
             // panel4
@@ -333,9 +355,9 @@
             this.panel4.Controls.Add(this.btn_SuaVaLuu_User2);
             this.panel4.Controls.Add(this.btn_Luu_DeSo2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 286);
+            this.panel4.Location = new System.Drawing.Point(0, 338);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(526, 30);
+            this.panel4.Size = new System.Drawing.Size(557, 30);
             this.panel4.TabIndex = 0;
             // 
             // lb_username2
@@ -348,6 +370,15 @@
             this.lb_username2.Size = new System.Drawing.Size(44, 18);
             this.lb_username2.TabIndex = 6;
             this.lb_username2.Text = "label1";
+            // 
+            // btn_SuaVaLuu_User2
+            // 
+            this.btn_SuaVaLuu_User2.Location = new System.Drawing.Point(357, 6);
+            this.btn_SuaVaLuu_User2.Name = "btn_SuaVaLuu_User2";
+            this.btn_SuaVaLuu_User2.Size = new System.Drawing.Size(81, 21);
+            this.btn_SuaVaLuu_User2.TabIndex = 2;
+            this.btn_SuaVaLuu_User2.Text = "Sửa và Lưu";
+            this.btn_SuaVaLuu_User2.Click += new System.EventHandler(this.btn_SuaVaLuu_User2_Click);
             // 
             // btn_Luu_DeSo2
             // 
@@ -369,7 +400,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(701, 36);
+            this.panelControl2.Size = new System.Drawing.Size(670, 36);
             this.panelControl2.TabIndex = 1;
             // 
             // lb_Loi
@@ -429,13 +460,13 @@
             this.uc_PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_PictureBox1.Location = new System.Drawing.Point(0, 36);
             this.uc_PictureBox1.Name = "uc_PictureBox1";
-            this.uc_PictureBox1.Size = new System.Drawing.Size(701, 612);
+            this.uc_PictureBox1.Size = new System.Drawing.Size(670, 715);
             this.uc_PictureBox1.TabIndex = 2;
             // 
             // btn_Start
             // 
             this.btn_Start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Start.Location = new System.Drawing.Point(630, 617);
+            this.btn_Start.Location = new System.Drawing.Point(596, 718);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(70, 30);
             this.btn_Start.TabIndex = 27;
@@ -474,29 +505,46 @@
             this.labelb.TabIndex = 6;
             this.labelb.Text = "labelControl4";
             // 
-            // btn_SuaVaLuu_User1
+            // uc_Loai_41
             // 
-            this.btn_SuaVaLuu_User1.Location = new System.Drawing.Point(357, 7);
-            this.btn_SuaVaLuu_User1.Name = "btn_SuaVaLuu_User1";
-            this.btn_SuaVaLuu_User1.Size = new System.Drawing.Size(81, 21);
-            this.btn_SuaVaLuu_User1.TabIndex = 2;
-            this.btn_SuaVaLuu_User1.Text = "Sửa và Lưu";
-            this.btn_SuaVaLuu_User1.Click += new System.EventHandler(this.btn_SuaVaLuu_User1_Click);
+            this.uc_Loai_41.AutoScroll = true;
+            this.uc_Loai_41.AutoSize = true;
+            this.uc_Loai_41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_Loai_41.Location = new System.Drawing.Point(0, 0);
+            this.uc_Loai_41.Name = "uc_Loai_41";
+            this.uc_Loai_41.Size = new System.Drawing.Size(551, 339);
+            this.uc_Loai_41.TabIndex = 0;
             // 
-            // btn_SuaVaLuu_User2
+            // uc_Loai_42
             // 
-            this.btn_SuaVaLuu_User2.Location = new System.Drawing.Point(357, 6);
-            this.btn_SuaVaLuu_User2.Name = "btn_SuaVaLuu_User2";
-            this.btn_SuaVaLuu_User2.Size = new System.Drawing.Size(81, 21);
-            this.btn_SuaVaLuu_User2.TabIndex = 2;
-            this.btn_SuaVaLuu_User2.Text = "Sửa và Lưu";
-            this.btn_SuaVaLuu_User2.Click += new System.EventHandler(this.btn_SuaVaLuu_User2_Click);
+            this.uc_Loai_42.AutoScroll = true;
+            this.uc_Loai_42.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_Loai_42.Location = new System.Drawing.Point(0, 0);
+            this.uc_Loai_42.Name = "uc_Loai_42";
+            this.uc_Loai_42.Size = new System.Drawing.Size(551, 310);
+            this.uc_Loai_42.TabIndex = 0;
+            // 
+            // uc_DEJP1
+            // 
+            this.uc_DEJP1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_DEJP1.Location = new System.Drawing.Point(0, 0);
+            this.uc_DEJP1.Name = "uc_DEJP1";
+            this.uc_DEJP1.Size = new System.Drawing.Size(551, 339);
+            this.uc_DEJP1.TabIndex = 0;
+            // 
+            // uc_DEJP2
+            // 
+            this.uc_DEJP2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_DEJP2.Location = new System.Drawing.Point(0, 0);
+            this.uc_DEJP2.Name = "uc_DEJP2";
+            this.uc_DEJP2.Size = new System.Drawing.Size(551, 310);
+            this.uc_DEJP2.TabIndex = 0;
             // 
             // frm_Check
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 648);
+            this.ClientSize = new System.Drawing.Size(1237, 751);
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.uc_PictureBox1);
             this.Controls.Add(this.panelControl2);
@@ -517,12 +565,17 @@
             this.tp_Loai_1_DeSo1.ResumeLayout(false);
             this.tp_Loai_2_DeSo1.ResumeLayout(false);
             this.tp_Loai_3_DeSo1.ResumeLayout(false);
+            this.tp_Loai_4_DeSo1.ResumeLayout(false);
+            this.tp_Loai_4_DeSo1.PerformLayout();
+            this.tp_DEJP1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol_DeSo2)).EndInit();
             this.tabcontrol_DeSo2.ResumeLayout(false);
             this.tp_Loai_1_DeSo2.ResumeLayout(false);
             this.tp_Loai_2_DeSo2.ResumeLayout(false);
             this.tp_Loai_3_DeSo2.ResumeLayout(false);
+            this.tp_Loai_4_DeSo2.ResumeLayout(false);
+            this.tp_DEJP2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -579,5 +632,9 @@
         private System.Windows.Forms.Label lb_username2;
         private DevExpress.XtraEditors.SimpleButton btn_SuaVaLuu_User1;
         private DevExpress.XtraEditors.SimpleButton btn_SuaVaLuu_User2;
+        private MyUserControl.uc_Loai_4 uc_Loai_41;
+        private MyUserControl.uc_DEJP uc_DEJP1;
+        private MyUserControl.uc_Loai_4 uc_Loai_42;
+        private MyUserControl.uc_DEJP uc_DEJP2;
     }
 }

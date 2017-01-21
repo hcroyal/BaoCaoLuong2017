@@ -17,6 +17,7 @@ namespace BaoCaoLuong2017
         public static string StrRole ="";
         public static string Strtoken ="";
         public static string StrIdimage = "";
+        public static string StrCheck = "";
         public static string StrPath = @"\\10.10.10.253\BaoCaoLuong2017$";
         public static string Webservice = "http://10.10.10.253:8888/BaoCaoLuong2017/";
     }
