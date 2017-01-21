@@ -94,7 +94,6 @@ namespace BaoCaoLuong2017
                 }
                 else if (iKiemtraLogin == 1 && role =="DEJP")
                 {
-                    
                     cbb.DataSource = Global.db_BCL.GetBatNotFinish_MissImageDEJP(username);
                     cbb.DisplayMember = "fBatchName";
                     if(cbb.Items.Count<=0)
@@ -106,11 +105,12 @@ namespace BaoCaoLuong2017
                
                 else if (iKiemtraLogin == 1 && role == "DESO")
                 {
-                    
+
                     cbb.DataSource = Global.db_BCL.GetBatNotFinish_MissImageDESO(username);
                     cbb.DisplayMember = "fBatchName";
                     if (cbb.Items.Count <= 0)
                     {
+                        
                         cbb.DataSource = Global.db_BCL.GetBatNotFinishDeSo(username);
                         cbb.DisplayMember = "fBatchName";
                     }

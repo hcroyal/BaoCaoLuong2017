@@ -54,8 +54,8 @@
             this.txt_Truong_040 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Truong_077 = new DevExpress.XtraEditors.TextEdit();
-            this.txt_Truong_078 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl101 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_Truong_078 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Truong_052 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
@@ -128,8 +128,8 @@
             this.txt_Truong_050 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Truong_046 = new DevExpress.XtraEditors.TextEdit();
-            this.txt_Truong_159 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl100 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_Truong_159 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Truong_165 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
@@ -197,7 +197,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_039.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_040.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_077.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_078.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_052.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_080.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_082.Properties)).BeginInit();
@@ -234,7 +234,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_051.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_050.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_046.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_159.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_165.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_160.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_166.Properties)).BeginInit();
@@ -512,24 +512,24 @@
             this.txt_Truong_077.Size = new System.Drawing.Size(20, 20);
             this.txt_Truong_077.TabIndex = 13;
             // 
+            // labelControl101
+            // 
+            this.labelControl101.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl101.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
+            this.labelControl101.Appearance.Options.UseFont = true;
+            this.labelControl101.Appearance.Options.UseForeColor = true;
+            this.labelControl101.Location = new System.Drawing.Point(42, 110);
+            this.labelControl101.Name = "labelControl101";
+            this.labelControl101.Size = new System.Drawing.Size(14, 13);
+            this.labelControl101.TabIndex = 0;
+            this.labelControl101.Text = "78";
+            // 
             // txt_Truong_078
             // 
-            this.txt_Truong_078.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Truong_078.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
-            this.txt_Truong_078.Appearance.Options.UseFont = true;
-            this.txt_Truong_078.Appearance.Options.UseForeColor = true;
-            this.txt_Truong_078.Location = new System.Drawing.Point(42, 110);
+            this.txt_Truong_078.Location = new System.Drawing.Point(59, 107);
             this.txt_Truong_078.Name = "txt_Truong_078";
-            this.txt_Truong_078.Size = new System.Drawing.Size(14, 13);
-            this.txt_Truong_078.TabIndex = 0;
-            this.txt_Truong_078.Text = "78";
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(59, 107);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(20, 20);
-            this.textEdit2.TabIndex = 14;
+            this.txt_Truong_078.Size = new System.Drawing.Size(20, 20);
+            this.txt_Truong_078.TabIndex = 14;
             // 
             // labelControl14
             // 
@@ -1044,11 +1044,13 @@
             // 
             this.txt_Truong_108.Location = new System.Drawing.Point(231, 211);
             this.txt_Truong_108.Name = "txt_Truong_108";
+            this.txt_Truong_108.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txt_Truong_108.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txt_Truong_108.Properties.NullText = "";
             this.txt_Truong_108.Size = new System.Drawing.Size(163, 20);
             this.txt_Truong_108.TabIndex = 41;
+            this.txt_Truong_108.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Truong_108_KeyDown);
             // 
             // labelControl41
             // 
@@ -1104,11 +1106,13 @@
             // 
             this.txt_Truong_109.Location = new System.Drawing.Point(231, 237);
             this.txt_Truong_109.Name = "txt_Truong_109";
+            this.txt_Truong_109.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txt_Truong_109.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txt_Truong_109.Properties.NullText = "";
             this.txt_Truong_109.Size = new System.Drawing.Size(163, 20);
             this.txt_Truong_109.TabIndex = 45;
+            this.txt_Truong_109.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Truong_109_KeyDown);
             // 
             // labelControl45
             // 
@@ -1224,24 +1228,24 @@
             this.txt_Truong_046.Size = new System.Drawing.Size(70, 20);
             this.txt_Truong_046.TabIndex = 50;
             // 
+            // labelControl100
+            // 
+            this.labelControl100.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl100.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
+            this.labelControl100.Appearance.Options.UseFont = true;
+            this.labelControl100.Appearance.Options.UseForeColor = true;
+            this.labelControl100.Location = new System.Drawing.Point(1, 292);
+            this.labelControl100.Name = "labelControl100";
+            this.labelControl100.Size = new System.Drawing.Size(21, 13);
+            this.labelControl100.TabIndex = 0;
+            this.labelControl100.Text = "159";
+            // 
             // txt_Truong_159
             // 
-            this.txt_Truong_159.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Truong_159.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
-            this.txt_Truong_159.Appearance.Options.UseFont = true;
-            this.txt_Truong_159.Appearance.Options.UseForeColor = true;
-            this.txt_Truong_159.Location = new System.Drawing.Point(1, 292);
+            this.txt_Truong_159.Location = new System.Drawing.Point(26, 289);
             this.txt_Truong_159.Name = "txt_Truong_159";
-            this.txt_Truong_159.Size = new System.Drawing.Size(21, 13);
-            this.txt_Truong_159.TabIndex = 0;
-            this.txt_Truong_159.Text = "159";
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(26, 289);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(176, 20);
-            this.textEdit3.TabIndex = 51;
+            this.txt_Truong_159.Size = new System.Drawing.Size(176, 20);
+            this.txt_Truong_159.TabIndex = 51;
             // 
             // labelControl51
             // 
@@ -1781,7 +1785,7 @@
             this.Controls.Add(this.txt_Truong_166);
             this.Controls.Add(this.txt_Truong_160);
             this.Controls.Add(this.txt_Truong_165);
-            this.Controls.Add(this.textEdit3);
+            this.Controls.Add(this.txt_Truong_159);
             this.Controls.Add(this.txt_Truong_158);
             this.Controls.Add(this.txt_Truong_046);
             this.Controls.Add(this.txt_Truong_050);
@@ -1825,7 +1829,7 @@
             this.Controls.Add(this.txt_Truong_112);
             this.Controls.Add(this.txt_Truong_030);
             this.Controls.Add(this.txt_Truong_029);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.txt_Truong_078);
             this.Controls.Add(this.txt_Truong_001_2);
             this.Controls.Add(this.txt_Truong_102_2);
             this.Controls.Add(this.txt_Truong_104);
@@ -1863,7 +1867,7 @@
             this.Controls.Add(this.labelControl51);
             this.Controls.Add(this.labelControl52);
             this.Controls.Add(this.labelControl45);
-            this.Controls.Add(this.txt_Truong_159);
+            this.Controls.Add(this.labelControl100);
             this.Controls.Add(this.labelControl48);
             this.Controls.Add(this.labelControl46);
             this.Controls.Add(this.labelControl47);
@@ -1909,7 +1913,7 @@
             this.Controls.Add(this.labelControl72);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl71);
-            this.Controls.Add(this.txt_Truong_078);
+            this.Controls.Add(this.labelControl101);
             this.Controls.Add(this.labelControl38);
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.labelControl13);
@@ -1932,7 +1936,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_039.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_040.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_077.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_078.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_052.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_080.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_082.Properties)).EndInit();
@@ -1969,7 +1973,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_051.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_050.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_046.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_159.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_165.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_160.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_166.Properties)).EndInit();
@@ -2030,8 +2034,8 @@
         private DevExpress.XtraEditors.TextEdit txt_Truong_040;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit txt_Truong_077;
-        private DevExpress.XtraEditors.LabelControl txt_Truong_078;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.LabelControl labelControl101;
+        private DevExpress.XtraEditors.TextEdit txt_Truong_078;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.TextEdit txt_Truong_052;
         private DevExpress.XtraEditors.LabelControl labelControl15;
@@ -2104,8 +2108,8 @@
         private DevExpress.XtraEditors.TextEdit txt_Truong_050;
         private DevExpress.XtraEditors.LabelControl labelControl49;
         private DevExpress.XtraEditors.TextEdit txt_Truong_046;
-        private DevExpress.XtraEditors.LabelControl txt_Truong_159;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.LabelControl labelControl100;
+        private DevExpress.XtraEditors.TextEdit txt_Truong_159;
         private DevExpress.XtraEditors.LabelControl labelControl51;
         private DevExpress.XtraEditors.TextEdit txt_Truong_165;
         private DevExpress.XtraEditors.LabelControl labelControl52;
