@@ -47,56 +47,6 @@
       <Column Name="DateInput" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.tbl_Image" Member="tbl_Images">
-    <Type Name="tbl_Image">
-      <Column Name="idimage" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="fbatchname" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="UserNameDESo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="ReadImageDESo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="UserNameDEJP" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="ReadImageDEJP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CheckedDESo" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CheckedDEJP" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TienDoDESO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="TienDoDEJP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_LogFile" Member="tbl_LogFiles">
-    <Type Name="tbl_LogFile">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Username" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Info" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
-      <Column Name="DateLog" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_MissCheck_DEJP" Member="tbl_MissCheck_DEJPs">
-    <Type Name="tbl_MissCheck_DEJP">
-      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="IdImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DateCheck" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_MissCheck_DESO" Member="tbl_MissCheck_DESOs">
-    <Type Name="tbl_MissCheck_DESO">
-      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="IdImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DateCheck" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tbl_MissImage_DEJP" Member="tbl_MissImage_DEJPs">
-    <Type Name="tbl_MissImage_DEJP">
-      <Column Name="IdImage" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="UserName" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.tbl_DESO" Member="tbl_DESOs">
     <Type Name="tbl_DESO">
       <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
@@ -169,10 +119,9 @@
       <Column Name="Truong_105" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_106" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_107" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_108" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_108" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_109" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_110" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_112" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_158" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_159" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_160" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
@@ -264,7 +213,6 @@
       <Column Name="Truong_108" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_109" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_110" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_112" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_158" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_159" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Truong_160" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
@@ -279,6 +227,56 @@
       <Column Name="Error" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="True" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DateInput" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Image" Member="tbl_Images">
+    <Type Name="tbl_Image">
+      <Column Name="idimage" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fbatchname" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserNameDESo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ReadImageDESo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserNameDEJP" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ReadImageDEJP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CheckedDESo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CheckedDEJP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TienDoDESO" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TienDoDEJP" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_LogFile" Member="tbl_LogFiles">
+    <Type Name="tbl_LogFile">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Info" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="DateLog" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MissCheck_DEJP" Member="tbl_MissCheck_DEJPs">
+    <Type Name="tbl_MissCheck_DEJP">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCheck" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MissCheck_DESO" Member="tbl_MissCheck_DESOs">
+    <Type Name="tbl_MissCheck_DESO">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdImage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCheck" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MissImage_DEJP" Member="tbl_MissImage_DEJPs">
+    <Type Name="tbl_MissImage_DEJP">
+      <Column Name="IdImage" Type="System.String" DbType="NVarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.GetBatch" Method="GetBatch">
@@ -330,11 +328,90 @@
       <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.GetBatNotFinishDeSo" Method="GetBatNotFinishDeSo">
-    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
-    <ElementType Name="GetBatNotFinishDeSoResult">
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-    </ElementType>
+  <Function Name="dbo.Insert_Loai4" Method="Insert_Loai4">
+    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="LoaiPhieu" Parameter="loaiPhieu" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_001" Parameter="truong_001" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_002" Parameter="truong_002" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_003" Parameter="truong_003" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_004" Parameter="truong_004" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_005" Parameter="truong_005" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_006" Parameter="truong_006" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_008" Parameter="truong_008" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_009" Parameter="truong_009" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_012" Parameter="truong_012" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_013" Parameter="truong_013" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_028" Parameter="truong_028" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_029" Parameter="truong_029" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_030" Parameter="truong_030" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_037" Parameter="truong_037" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_038" Parameter="truong_038" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_039" Parameter="truong_039" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_040" Parameter="truong_040" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_041" Parameter="truong_041" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_042" Parameter="truong_042" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_043" Parameter="truong_043" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_044" Parameter="truong_044" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_045" Parameter="truong_045" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_046" Parameter="truong_046" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_047" Parameter="truong_047" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_048" Parameter="truong_048" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_049" Parameter="truong_049" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_050" Parameter="truong_050" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_051" Parameter="truong_051" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_052" Parameter="truong_052" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_053" Parameter="truong_053" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_057" Parameter="truong_057" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_058" Parameter="truong_058" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_063" Parameter="truong_063" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_064" Parameter="truong_064" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_065" Parameter="truong_065" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_066" Parameter="truong_066" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_077" Parameter="truong_077" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_078" Parameter="truong_078" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_079" Parameter="truong_079" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_080" Parameter="truong_080" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_081" Parameter="truong_081" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_082" Parameter="truong_082" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_083" Parameter="truong_083" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_084" Parameter="truong_084" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_085" Parameter="truong_085" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_086" Parameter="truong_086" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_088" Parameter="truong_088" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_089" Parameter="truong_089" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_090" Parameter="truong_090" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_091" Parameter="truong_091" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_092" Parameter="truong_092" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_093" Parameter="truong_093" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_094" Parameter="truong_094" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_095" Parameter="truong_095" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_096" Parameter="truong_096" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_097" Parameter="truong_097" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_098" Parameter="truong_098" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_099" Parameter="truong_099" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_100" Parameter="truong_100" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_101" Parameter="truong_101" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_102" Parameter="truong_102" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_103" Parameter="truong_103" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_104" Parameter="truong_104" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_105" Parameter="truong_105" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_106" Parameter="truong_106" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_107" Parameter="truong_107" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_108" Parameter="truong_108" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_109" Parameter="truong_109" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_110" Parameter="truong_110" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_158" Parameter="truong_158" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_159" Parameter="truong_159" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_160" Parameter="truong_160" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_161" Parameter="truong_161" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_162" Parameter="truong_162" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_165" Parameter="truong_165" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_166" Parameter="truong_166" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_167" Parameter="truong_167" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_168" Parameter="truong_168" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.Insert_Loai1" Method="Insert_Loai1">
     <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
@@ -361,93 +438,17 @@
     <Parameter Name="Truong_003" Parameter="truong_003" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Insert_Loai4" Method="Insert_Loai4">
-    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="LoaiPhieu" Parameter="loaiPhieu" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_004" Parameter="truong_004" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_012" Parameter="truong_012" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_006" Parameter="truong_006" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_009" Parameter="truong_009" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_013" Parameter="truong_013" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_008" Parameter="truong_008" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_003" Parameter="truong_003" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_028" Parameter="truong_028" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_037" Parameter="truong_037" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_038" Parameter="truong_038" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_039" Parameter="truong_039" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_040" Parameter="truong_040" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_077" Parameter="truong_077" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_078" Parameter="truong_078" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_052" Parameter="truong_052" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_080" Parameter="truong_080" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_082" Parameter="truong_082" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_081" Parameter="truong_081" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_079" Parameter="truong_079" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_086" Parameter="truong_086" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_085" Parameter="truong_085" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_084" Parameter="truong_084" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_083" Parameter="truong_083" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_110" Parameter="truong_110" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_047" Parameter="truong_047" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_042" Parameter="truong_042" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_043" Parameter="truong_043" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_045" Parameter="truong_045" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_048" Parameter="truong_048" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_041" Parameter="truong_041" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_029" Parameter="truong_029" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_030" Parameter="truong_030" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_112" Parameter="truong_112" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_063" Parameter="truong_063" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_066" Parameter="truong_066" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_065" Parameter="truong_065" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_064" Parameter="truong_064" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_044" Parameter="truong_044" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_104" Parameter="truong_104" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_106" Parameter="truong_106" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_108" Parameter="truong_108" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_057" Parameter="truong_057" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_053" Parameter="truong_053" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_107" Parameter="truong_107" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_109" Parameter="truong_109" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_058" Parameter="truong_058" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_158" Parameter="truong_158" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_051" Parameter="truong_051" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_046" Parameter="truong_046" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_159" Parameter="truong_159" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_165" Parameter="truong_165" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_160" Parameter="truong_160" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_166" Parameter="truong_166" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_161" Parameter="truong_161" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_167" Parameter="truong_167" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_162" Parameter="truong_162" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_168" Parameter="truong_168" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_088" Parameter="truong_088" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_099" Parameter="truong_099" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_097" Parameter="truong_097" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_098" Parameter="truong_098" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_089" Parameter="truong_089" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_091" Parameter="truong_091" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_090" Parameter="truong_090" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_093" Parameter="truong_093" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_094" Parameter="truong_094" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_095" Parameter="truong_095" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_096" Parameter="truong_096" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_100" Parameter="truong_100" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_101" Parameter="truong_101" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_102" Parameter="truong_102" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_001" Parameter="truong_001" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_005" Parameter="truong_005" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_105" Parameter="truong_105" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="Truong_103" Parameter="truong_103" Type="System.String" DbType="NVarChar(255)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.LayHinhMoi_DeSo" Method="LayHinhMoi_DeSo">
     <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
     <ElementType Name="LayHinhMoi_DeSoResult">
       <Column Name="" Member="Column1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetBatNotFinishDeSo" Method="GetBatNotFinishDeSo">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
+    <ElementType Name="GetBatNotFinishDeSoResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>
