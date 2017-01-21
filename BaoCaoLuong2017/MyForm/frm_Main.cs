@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using BaoCaoLuong2017.MyClass;
-using BaoCaoLuong2017.MyForm;
-using BaoCaoLuong2017.MyUserControl;
-using DevExpress.XtraEditors;
 using BaoCaoLuong2017.Properties;
 
 namespace BaoCaoLuong2017.MyForm
@@ -28,17 +21,18 @@ namespace BaoCaoLuong2017.MyForm
 
         private void btn_Check_DESO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            new frm_Check().ShowDialog();
+            frm_Main_Load(sender, e);
         }
         private void setValue()
         {
             if (Global.StrRole == "DESO")
             {
                 lb_SoHinhConLai.Text = (from w in Global.db_BCL.tbl_Images
-                                      where (w.ReadImageDESo == 0 | w.ReadImageDESo == 1) & w.fbatchname == Global.StrBatch & w.UserNameDESo==Global.StrUsername
+                                      where (w.ReadImageDESo == 0 | w.ReadImageDESo == 1) & w.fbatchname == Global.StrBatch & w.UserNameDESo!=Global.StrUsername
                                       select w.idimage).Count().ToString();
                 lb_SoHinhLamDuoc.Text = (from w in Global.db_BCL.tbl_MissImage_DESOs
-                                       where w.UserName == Global.StrUsername select w.IdImage).Count().ToString();
+                                       where w.UserName == Global.StrUsername & w.fBatchName==Global.StrBatch select w.IdImage).Count().ToString();
             }
             else if (Global.StrRole == "DEJP")
             {
@@ -70,7 +64,7 @@ namespace BaoCaoLuong2017.MyForm
                         lb_IdImage.Text = getFilename;
                         uc_PictureBox1.imageBox1.Image = null;
                         if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename, getFilename,
-                            Properties.Settings.Default.ZoomImage) == "Error")
+                            Settings.Default.ZoomImage) == "Error")
                         {
                             uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
                             return "Error";
@@ -87,7 +81,7 @@ namespace BaoCaoLuong2017.MyForm
                     lb_IdImage.Text = temp;
                     uc_PictureBox1.imageBox1.Image = null;
                     if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + temp, temp,
-                        Properties.Settings.Default.ZoomImage) == "Error")
+                        Settings.Default.ZoomImage) == "Error")
                     {
                         uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
                         return "Error";
@@ -186,12 +180,46 @@ namespace BaoCaoLuong2017.MyForm
 
         private void btn_Submit_Logout_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                if (Global.StrRole == "DESO")
+                {
+                    if (tabcontrol.SelectedTabPage.Name == "tp_Loai_1")
+                    {
+                        if (uc_Loai_11.IsEmpty())
+                        {
+                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                return;
+                        }
+                        uc_Loai_11.SaveData_Loai_1(lb_IdImage.Text);
+                    }
+                    else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_2")
+                    {
+                        if (uc_Loai_21.IsEmpty())
+                        {
+                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                return;
+                        }
+                        uc_Loai_21.SaveData_Loai_2(lb_IdImage.Text);
+                    }
+                    else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_3")
+                    {
+                        if (uc_Loai_31.IsEmpty())
+                        {
+                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                return;
+                        }
+                        uc_Loai_31.SaveData_Loai_3(lb_IdImage.Text);
+                    }
+                    Application.Exit();
+                }
+            }
+            catch { MessageBox.Show("Lỗi khi Submit"); }
         }
 
         private void btn_Logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DialogResult = System.Windows.Forms.DialogResult.Yes;
+            DialogResult = DialogResult.Yes;
         }
     }
 }

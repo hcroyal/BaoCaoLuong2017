@@ -76,6 +76,7 @@
             this.txt_Truong_002.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txt_Truong_002.Size = new System.Drawing.Size(153, 20);
             this.txt_Truong_002.TabIndex = 4;
+            this.txt_Truong_002.TextChanged += new System.EventHandler(this.txt_Truong_002_TextChanged);
             // 
             // uc_Loai_1
             // 
