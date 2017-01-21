@@ -115,6 +115,7 @@ namespace BaoCaoLuong2017.MyForm
                     uc_Loai_11.ResetData();
                     uc_Loai_21.ResetData();
                     uc_Loai_31.ResetData();
+                    uc_Loai_31.ResetData();
                     setValue();
                     btn_Start_Submit.Text = "Submit";
                     btn_Submit_Logout.Visible = true;
@@ -153,6 +154,17 @@ namespace BaoCaoLuong2017.MyForm
                             uc_Loai_31.SaveData_Loai_3(lb_IdImage.Text);
                             uc_Loai_31.ResetData();
                             
+                        }
+                        else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_4")
+                        {
+                            if (uc_Loai_41.IsEmpty())
+                            {
+                                if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                    return;
+                            }
+                            uc_Loai_41.SaveData_Loai_4(lb_IdImage.Text);
+                            uc_Loai_41.ResetData();
+
                         }
                         setValue();
                     }
@@ -211,6 +223,15 @@ namespace BaoCaoLuong2017.MyForm
                         }
                         uc_Loai_31.SaveData_Loai_3(lb_IdImage.Text);
                     }
+                    else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_4")
+                    {
+                        if (uc_Loai_41.IsEmpty())
+                        {
+                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                return;
+                        }
+                        uc_Loai_41.SaveData_Loai_4(lb_IdImage.Text);
+                    }
                     Application.Exit();
                 }
             }
@@ -220,6 +241,14 @@ namespace BaoCaoLuong2017.MyForm
         private void btn_Logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             DialogResult = DialogResult.Yes;
+        }
+
+        private void frm_Main_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode==Keys.Enter)
+            {
+                btn_Start_Submit_Click(null,null);
+            }
         }
     }
 }

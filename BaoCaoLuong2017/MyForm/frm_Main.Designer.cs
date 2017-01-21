@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.components = new System.ComponentModel.Container();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.menu_Menu = new DevExpress.XtraBars.BarSubItem();
             this.btn_Logout = new DevExpress.XtraBars.BarButtonItem();
@@ -69,6 +70,7 @@
             this.tp_Loai_3 = new DevExpress.XtraTab.XtraTabPage();
             this.uc_Loai_31 = new BaoCaoLuong2017.MyUserControl.uc_Loai_3();
             this.tp_Loai_4 = new DevExpress.XtraTab.XtraTabPage();
+            this.uc_Loai_41 = new BaoCaoLuong2017.MyUserControl.uc_Loai_4();
             this.tp_Loai_4_1 = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
@@ -77,7 +79,6 @@
             this.txt_LoaiPhieu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.uc_PictureBox1 = new BaoCaoLuong2017.MyUserControl.uc_PictureBox();
-            this.uc_Loai_41 = new BaoCaoLuong2017.MyUserControl.uc_Loai_4();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -412,7 +413,7 @@
             // 
             this.tp_Loai_1.Controls.Add(this.uc_Loai_11);
             this.tp_Loai_1.Name = "tp_Loai_1";
-            this.tp_Loai_1.Size = new System.Drawing.Size(351, 585);
+            this.tp_Loai_1.Size = new System.Drawing.Size(533, 585);
             this.tp_Loai_1.Text = "Loại 1";
             // 
             // uc_Loai_11
@@ -420,14 +421,14 @@
             this.uc_Loai_11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_11.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_11.Name = "uc_Loai_11";
-            this.uc_Loai_11.Size = new System.Drawing.Size(351, 585);
+            this.uc_Loai_11.Size = new System.Drawing.Size(533, 585);
             this.uc_Loai_11.TabIndex = 0;
             // 
             // tp_Loai_2
             // 
             this.tp_Loai_2.Controls.Add(this.uc_Loai_21);
             this.tp_Loai_2.Name = "tp_Loai_2";
-            this.tp_Loai_2.Size = new System.Drawing.Size(351, 585);
+            this.tp_Loai_2.Size = new System.Drawing.Size(533, 585);
             this.tp_Loai_2.Text = "Loại 2";
             // 
             // uc_Loai_21
@@ -435,14 +436,14 @@
             this.uc_Loai_21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_21.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_21.Name = "uc_Loai_21";
-            this.uc_Loai_21.Size = new System.Drawing.Size(351, 585);
+            this.uc_Loai_21.Size = new System.Drawing.Size(533, 585);
             this.uc_Loai_21.TabIndex = 0;
             // 
             // tp_Loai_3
             // 
             this.tp_Loai_3.Controls.Add(this.uc_Loai_31);
             this.tp_Loai_3.Name = "tp_Loai_3";
-            this.tp_Loai_3.Size = new System.Drawing.Size(351, 585);
+            this.tp_Loai_3.Size = new System.Drawing.Size(533, 585);
             this.tp_Loai_3.Text = "Loại 3";
             // 
             // uc_Loai_31
@@ -450,7 +451,7 @@
             this.uc_Loai_31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_31.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_31.Name = "uc_Loai_31";
-            this.uc_Loai_31.Size = new System.Drawing.Size(351, 585);
+            this.uc_Loai_31.Size = new System.Drawing.Size(533, 585);
             this.uc_Loai_31.TabIndex = 0;
             // 
             // tp_Loai_4
@@ -460,10 +461,18 @@
             this.tp_Loai_4.Size = new System.Drawing.Size(533, 585);
             this.tp_Loai_4.Text = "Loại 4";
             // 
+            // uc_Loai_41
+            // 
+            this.uc_Loai_41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_Loai_41.Location = new System.Drawing.Point(0, 0);
+            this.uc_Loai_41.Name = "uc_Loai_41";
+            this.uc_Loai_41.Size = new System.Drawing.Size(533, 585);
+            this.uc_Loai_41.TabIndex = 0;
+            // 
             // tp_Loai_4_1
             // 
             this.tp_Loai_4_1.Name = "tp_Loai_4_1";
-            this.tp_Loai_4_1.Size = new System.Drawing.Size(351, 585);
+            this.tp_Loai_4_1.Size = new System.Drawing.Size(533, 585);
             this.tp_Loai_4_1.Text = "Loại 4.1";
             // 
             // panelControl3
@@ -528,14 +537,6 @@
             this.uc_PictureBox1.Size = new System.Drawing.Size(801, 675);
             this.uc_PictureBox1.TabIndex = 10;
             // 
-            // uc_Loai_41
-            // 
-            this.uc_Loai_41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_Loai_41.Location = new System.Drawing.Point(0, 0);
-            this.uc_Loai_41.Name = "uc_Loai_41";
-            this.uc_Loai_41.Size = new System.Drawing.Size(533, 585);
-            this.uc_Loai_41.TabIndex = 0;
-            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,11 +549,13 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.KeyPreview = true;
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Main_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_Main_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
