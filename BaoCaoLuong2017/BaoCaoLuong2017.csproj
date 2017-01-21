@@ -87,12 +87,6 @@
     <Compile Include="MyForm\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyForm\frm_Check.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MyForm\frm_Check.Designer.cs">
-      <DependentUpon>frm_Check.cs</DependentUpon>
-    </Compile>
     <Compile Include="MyForm\frm_CreateBatch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +152,6 @@
     </None>
     <EmbeddedResource Include="MyForm\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyForm\frm_Check.resx">
-      <DependentUpon>frm_Check.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_CreateBatch.resx">
       <DependentUpon>frm_CreateBatch.cs</DependentUpon>

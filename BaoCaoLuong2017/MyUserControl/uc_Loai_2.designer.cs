@@ -78,7 +78,6 @@
             this.txt_Truong_002.Properties.MaxLength = 12;
             this.txt_Truong_002.Size = new System.Drawing.Size(153, 20);
             this.txt_Truong_002.TabIndex = 2;
-            this.txt_Truong_002.TextChanged += new System.EventHandler(this.txt_Truong_002_TextChanged);
             // 
             // txt_Truong_003
             // 
@@ -89,7 +88,6 @@
             this.txt_Truong_003.Properties.MaxLength = 12;
             this.txt_Truong_003.Size = new System.Drawing.Size(153, 20);
             this.txt_Truong_003.TabIndex = 3;
-            this.txt_Truong_003.TextChanged += new System.EventHandler(this.txt_Truong_003_TextChanged);
             // 
             // txt_Truong_004
             // 
@@ -100,7 +98,6 @@
             this.txt_Truong_004.Properties.MaxLength = 13;
             this.txt_Truong_004.Size = new System.Drawing.Size(153, 20);
             this.txt_Truong_004.TabIndex = 4;
-            this.txt_Truong_004.TextChanged += new System.EventHandler(this.txt_Truong_004_TextChanged);
             // 
             // uc_Loai_2
             // 
