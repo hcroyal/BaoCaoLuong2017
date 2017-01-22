@@ -162,6 +162,7 @@ namespace BaoCaoLuong2017.MyUserControl
             txt_Truong_110.Text = "";
             txt_Truong_047.Text = "";
             txt_Truong_042.Text = "";
+            txt_Truong_050.Text = "";
             txt_Truong_043.Text = "";
             txt_Truong_045.Text = "";
             txt_Truong_048.Text = "";

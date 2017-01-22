@@ -112,6 +112,8 @@ namespace BaoCaoLuong2017.MyForm
                         return "Error";
                     }
                 }
+                tabcontrol.SelectedTabPage = tp_Loai_4;
+                uc_Loai_41.txt_Truong_004.Focus();
             }
             else if (Global.StrRole == "DEJP")
             {
@@ -155,6 +157,8 @@ namespace BaoCaoLuong2017.MyForm
                         return "Error";
                     }
                 }
+                tabcontrol.SelectedTabPage = tp_DEJP;
+                uc_DEJP1.txt_Truong_002.Focus();
             }
             return "OK";
         }
@@ -356,5 +360,27 @@ namespace BaoCaoLuong2017.MyForm
         private void btn_XuatExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             new frm_ExportExcel().ShowDialog();}
+
+        private void btn_QuanLyUser_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frm_User().ShowDialog();
+        }
+
+        private void txt_LoaiPhieu_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_LoaiPhieu.Text == "1")
+                tabcontrol.SelectedTabPage = tp_Loai_1;
+            if (txt_LoaiPhieu.Text == "2")
+                tabcontrol.SelectedTabPage = tp_Loai_2;
+            if (txt_LoaiPhieu.Text == "3")
+                tabcontrol.SelectedTabPage = tp_Loai_3;
+            if (txt_LoaiPhieu.Text == "4")
+                tabcontrol.SelectedTabPage = tp_Loai_4;
+        }
+
+        private void btn_Check_NhamPhieu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

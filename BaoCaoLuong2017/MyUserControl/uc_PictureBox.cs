@@ -77,5 +77,25 @@ namespace BaoCaoLuong2017.MyUserControl
         {
             imageBox1.AllowZoom = false;
         }
+
+        private void btn_Xoaytrai_Click(object sender, EventArgs e)
+        {
+            if (imageBox1.Image != null)
+            {
+                Bitmap bmp = new Bitmap(imageBox1.Image);
+                bmp.RotateFlip(RotateFlipType.Rotate90FlipXY);
+                imageBox1.Image = bmp;
+            }
+        }
+
+        private void btn_xoayphai_Click(object sender, EventArgs e)
+        {
+            if (imageBox1.Image != null)
+            {
+                Bitmap bmp = new Bitmap(imageBox1.Image);
+                bmp.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                imageBox1.Image = bmp;
+            }
+        }
     }
 }

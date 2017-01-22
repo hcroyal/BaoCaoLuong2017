@@ -249,6 +249,7 @@
             this.gridColumn1.Caption = "Username";
             this.gridColumn1.FieldName = "Username";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 142;
@@ -258,6 +259,7 @@
             this.gridColumn4.Caption = "Nhân Viên";
             this.gridColumn4.FieldName = "FullName";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
             this.gridColumn4.Width = 142;
@@ -267,6 +269,7 @@
             this.gridColumn2.Caption = "Password";
             this.gridColumn2.FieldName = "Password";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
             this.gridColumn2.Width = 142;
@@ -276,6 +279,7 @@
             this.gridColumn3.Caption = "ID Role";
             this.gridColumn3.FieldName = "IDRole";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             this.gridColumn3.Width = 142;
@@ -285,6 +289,7 @@
             this.gridColumn5.Caption = "Group_Level";
             this.gridColumn5.FieldName = "Group_Level";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 142;

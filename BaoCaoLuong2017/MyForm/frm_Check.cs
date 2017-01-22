@@ -29,9 +29,9 @@ namespace BaoCaoLuong2017.MyForm
 
                 uc_Loai_41.ResetData();
                 uc_Loai_42.ResetData();
-                
+
             }
-            else if(Global.StrCheck == "CHECKDEJP")
+            else if (Global.StrCheck == "CHECKDEJP")
             {
                 uc_DEJP1.ResetData();
                 uc_DEJP2.ResetData();
@@ -75,24 +75,24 @@ namespace BaoCaoLuong2017.MyForm
             try
             {
                 lb_fBatchName.Text = Global.StrBatch;
-                tp_Loai_1_DeSo1.PageVisible=false;
-                tp_Loai_2_DeSo1.PageVisible=false;
-                tp_Loai_3_DeSo1.PageVisible=false;
-                tp_Loai_4_DeSo1.PageVisible=false;
-                tp_Loai_4_1_DeSo1.PageVisible=false;
-                tp_DEJP1.PageVisible=false;;
+                tp_Loai_1_DeSo1.PageVisible = false;
+                tp_Loai_2_DeSo1.PageVisible = false;
+                tp_Loai_3_DeSo1.PageVisible = false;
+                tp_Loai_4_DeSo1.PageVisible = false;
+                tp_Loai_4_1_DeSo1.PageVisible = false;
+                tp_DEJP1.PageVisible = false; ;
 
-                tp_Loai_1_DeSo2.PageVisible=false;
-                tp_Loai_2_DeSo2.PageVisible=false;
-                tp_Loai_3_DeSo2.PageVisible=false;
-                tp_Loai_4_DeSo2.PageVisible=false;
-                tp_Loai_4_1_DeSo2.PageVisible=false;
-                tp_DEJP2.PageVisible=false;
+                tp_Loai_1_DeSo2.PageVisible = false;
+                tp_Loai_2_DeSo2.PageVisible = false;
+                tp_Loai_3_DeSo2.PageVisible = false;
+                tp_Loai_4_DeSo2.PageVisible = false;
+                tp_Loai_4_1_DeSo2.PageVisible = false;
+                tp_DEJP2.PageVisible = false;
 
 
                 if (Global.StrCheck == "CHECKDESO")
                 {
-                    var soloi =((from w in Global.db_BCL.tbl_DESOs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
+                    var soloi = ((from w in Global.db_BCL.tbl_DESOs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
                     lb_Loi.Text = soloi + " Lỗi";
 
                     tp_Loai_1_DeSo1.PageVisible = true;
@@ -124,18 +124,18 @@ namespace BaoCaoLuong2017.MyForm
                 else if (Global.StrCheck == "CHECKDEJP")
                 {
                     tp_DEJP1.PageVisible = true;
-                    
+
                     tp_DEJP2.PageVisible = true;
 
                     btn_Luu_DeSo1.Visible = false;
                     btn_Luu_DeSo2.Visible = false;
-                    var soloi =((from w in Global.db_BCL.tbl_DEJPs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
+                    var soloi = ((from w in Global.db_BCL.tbl_DEJPs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
                     lb_Loi.Text = soloi + " Lỗi";
                     uc_DEJP1.Changed += Uc_DEJP1_Changed;
                     uc_DEJP2.Changed += Uc_DEJP2_Changed;
                 }
             }
-            catch( Exception i)
+            catch (Exception i)
             {
                 MessageBox.Show("Lỗi" + i);
             }
@@ -187,8 +187,8 @@ namespace BaoCaoLuong2017.MyForm
                 if (check > 0)
                 {
                     var listUser = (from w in Global.db_BCL.tbl_MissImage_DESOs
-                                     where w.fBatchName == Global.StrBatch && w.Submit == 0
-                                     select w.UserName).ToList();
+                                    where w.fBatchName == Global.StrBatch && w.Submit == 0
+                                    select w.UserName).ToList();
                     string sss = "";
                     foreach (var item in listUser)
                     {
@@ -219,7 +219,7 @@ namespace BaoCaoLuong2017.MyForm
                 btn_SuaVaLuu_User1.Visible = false;
                 btn_SuaVaLuu_User2.Visible = false;
             }
-            else if(Global.StrCheck == "CHECKDEJP")
+            else if (Global.StrCheck == "CHECKDEJP")
             {
                 var nhap = (from w in Global.db_BCL.tbl_Images
                             where w.fbatchname == Global.StrBatch && w.ReadImageDEJP == 2
@@ -275,7 +275,7 @@ namespace BaoCaoLuong2017.MyForm
 
         private void Load_DeJP(string strBatch, string idimage)
         {
-           
+
             var deso = (from w in Global.db_BCL.tbl_DEJPs
                         where w.fBatchName == strBatch && w.IdImage == idimage
                         select new
@@ -286,18 +286,18 @@ namespace BaoCaoLuong2017.MyForm
                         }).ToList();
             lb_username1.Text = deso[0].UserName;
             lb_username2.Text = deso[1].UserName;
-            
-                
+
+
             uc_DEJP1.txt_Truong_002.Text = deso[0].Truong_002;
             uc_DEJP2.txt_Truong_002.Text = deso[1].Truong_002;
-           
-           
+
+
             Compare_TextBox(uc_DEJP1.txt_Truong_002, uc_DEJP2.txt_Truong_002);
-        
+
             var soloi = ((from w in Global.db_BCL.tbl_DEJPs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
             lb_Loi.Text = soloi + " Lỗi";
-        
-    }
+
+        }
 
         private string GetImage_DeJP()
         {
@@ -336,6 +336,8 @@ namespace BaoCaoLuong2017.MyForm
             return "ok";
         }
 
+        public static string loaiphieu_user1;
+        public static string Loaiphieu_user2;
         private void Load_DeSo(string strBatch, string idimage)
         {
             var deso = (from w in Global.db_BCL.tbl_DESOs
@@ -426,8 +428,11 @@ namespace BaoCaoLuong2017.MyForm
                         }).ToList();
             lb_username1.Text = deso[0].UserName;
             lb_username2.Text = deso[1].UserName;
-           
-            if(deso[0].LoaiPhieu == "Loai1")
+
+            loaiphieu_user1 = deso[0].LoaiPhieu;
+            Loaiphieu_user2 = deso[1].LoaiPhieu;
+
+            if (deso[0].LoaiPhieu == "Loai1")
             {
                 tabcontrol_DeSo1.SelectedTabPage = tp_Loai_1_DeSo1;
 
@@ -457,8 +462,8 @@ namespace BaoCaoLuong2017.MyForm
 
                 tp_DEJP1.PageVisible = false;
 
-                uc_Loai_41.txt_Truong_001_1.Text = deso[0].Truong_001?.Substring(0,1);
-                uc_Loai_41.txt_Truong_001_2.Text = deso[0].Truong_001?.Substring(1,6);
+                uc_Loai_41.txt_Truong_001_1.Text = deso[0].Truong_001?.Substring(0, 1);
+                uc_Loai_41.txt_Truong_001_2.Text = deso[0].Truong_001?.Substring(1, 6);
                 uc_Loai_41.txt_Truong_003.Text = deso[0].Truong_003;
                 uc_Loai_41.txt_Truong_004.Text = deso[0].Truong_004;
                 uc_Loai_41.txt_Truong_005.Text = deso[0].Truong_005;
@@ -535,7 +540,7 @@ namespace BaoCaoLuong2017.MyForm
                 uc_Loai_41.txt_Truong_166.Text = deso[0].Truong_166;
                 uc_Loai_41.txt_Truong_167.Text = deso[0].Truong_167;
                 uc_Loai_41.txt_Truong_168.Text = deso[0].Truong_168;
-                
+
             }
 
 
@@ -557,7 +562,7 @@ namespace BaoCaoLuong2017.MyForm
             else if (deso[1].LoaiPhieu == "Loai3")
             {
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_3_DeSo2;
-                
+
                 uc_Loai_32.txt_Truong_002.Text = deso[1].Truong_002;
                 uc_Loai_32.txt_Truong_003.Text = deso[1].Truong_003;
 
@@ -744,7 +749,7 @@ namespace BaoCaoLuong2017.MyForm
         private string GetImage_DeSo()
         {
             var temp = (from w in Global.db_BCL.tbl_MissCheck_DESOs
-                        where w.fBatchName == Global.StrBatch && w.UserName == Global.StrUsername &&  w.Submit == 0
+                        where w.fBatchName == Global.StrBatch && w.UserName == Global.StrUsername && w.Submit == 0
                         select w.IdImage).FirstOrDefault();
             if (string.IsNullOrEmpty(temp))
             {
@@ -753,15 +758,33 @@ namespace BaoCaoLuong2017.MyForm
                      select w.Column1).FirstOrDefault();
                 if (string.IsNullOrEmpty(getFilename))
                 {
-                    return "NULL";
+                    //lấy hình nhầm loại
+                    var getFilename_nhamloaiphieu = (from w in Global.db_BCL.GetImageCheckNhapLoaiPhieu(Global.StrBatch, Global.StrUsername) select w.Column1).FirstOrDefault();
+
+                    if (string.IsNullOrEmpty(getFilename_nhamloaiphieu))
+                    {
+                        return "NULL";
+                    }
+
+                    lb_Image.Text = getFilename_nhamloaiphieu;
+                    uc_PictureBox1.imageBox1.Image = null;
+                    if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename_nhamloaiphieu, getFilename_nhamloaiphieu,
+                                Properties.Settings.Default.ZoomImage) == "Error")
+                    {
+                        uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                        return "Error";
+                    }
                 }
-                lb_Image.Text = getFilename;
-                uc_PictureBox1.imageBox1.Image = null;
-                if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename, getFilename,
-                            Properties.Settings.Default.ZoomImage) == "Error")
+                else
                 {
-                    uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
-                    return "Error";
+                    lb_Image.Text = getFilename;
+                    uc_PictureBox1.imageBox1.Image = null;
+                    if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename, getFilename,
+                                Properties.Settings.Default.ZoomImage) == "Error")
+                    {
+                        uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
+                        return "Error";
+                    }
                 }
             }
             else
@@ -777,7 +800,7 @@ namespace BaoCaoLuong2017.MyForm
             }
             return "ok";
         }
-        
+
         private void Uc_Loai_11_Changed(object sender, EventArgs e)
         {
             btn_Luu_DeSo1.Visible = false;
@@ -814,9 +837,84 @@ namespace BaoCaoLuong2017.MyForm
 
         private void btn_Luu_DeSo1_Click(object sender, EventArgs e)
         {
-            if (Global.StrCheck=="CHECKDESO")
+            if (loaiphieu_user1 == Loaiphieu_user2)
             {
-                Global.db_BCL.LuuDESo(lb_Image.Text, Global.StrBatch, lb_username1.Text, lb_username2.Text, Global.StrUsername);
+                if (Global.StrCheck == "CHECKDESO")
+                {
+                    Global.db_BCL.LuuDESo(lb_Image.Text, Global.StrBatch, lb_username1.Text, lb_username2.Text, Global.StrUsername);
+                    ResetData();
+                    string temp = GetImage_DeSo();
+
+                    if (temp == "NULL")
+                    {
+                        uc_PictureBox1.imageBox1.Dispose();
+                        MessageBox.Show("Hết Hình!");
+                        btn_Luu_DeSo1.Visible = false;
+                        btn_Luu_DeSo2.Visible = false;
+                        btn_SuaVaLuu_User1.Visible = false;
+                        btn_SuaVaLuu_User2.Visible = false;
+                        return;
+                    }
+                    if (temp == "Error")
+                    {
+                        MessageBox.Show("Lỗi load hình");
+                        btn_Luu_DeSo1.Visible = false;
+                        btn_Luu_DeSo2.Visible = false;
+                        btn_SuaVaLuu_User1.Visible = false;
+                        btn_SuaVaLuu_User2.Visible = false;
+                        return;
+                    }
+                    Load_DeSo(Global.StrBatch, lb_Image.Text);
+                    btn_Luu_DeSo1.Visible = true;
+                    btn_Luu_DeSo2.Visible = true;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
+                }
+                else if (Global.StrCheck == "CHECKDEJP")
+                {
+                    Global.db_BCL.LuuDEJP(lb_Image.Text, Global.StrBatch, lb_username1.Text, lb_username2.Text, Global.StrUsername);
+                    ResetData();
+                    string temp = GetImage_DeJP();
+
+                    if (temp == "NULL")
+                    {
+                        uc_PictureBox1.imageBox1.Dispose();
+                        MessageBox.Show("Hết Hình!");
+                        btn_Luu_DeSo1.Visible = false;
+                        btn_Luu_DeSo2.Visible = false;
+                        btn_SuaVaLuu_User1.Visible = false;
+                        btn_SuaVaLuu_User2.Visible = false;
+                        return;
+                    }
+                    if (temp == "Error")
+                    {
+                        MessageBox.Show("Lỗi load hình");
+                        btn_Luu_DeSo1.Visible = false;
+                        btn_Luu_DeSo2.Visible = false;
+                        btn_SuaVaLuu_User1.Visible = false;
+                        btn_SuaVaLuu_User2.Visible = false;
+                        return;
+                    }
+                    Load_DeJP(Global.StrBatch, lb_Image.Text);
+                    btn_Luu_DeSo1.Visible = true;
+                    btn_Luu_DeSo2.Visible = true;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
+                }
+            }
+            else
+            {
+                string loaiphieu = "";
+                if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_1_DeSo1)
+                    loaiphieu = "Loai1";
+                if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_2_DeSo1)
+                    loaiphieu = "Loai2";
+                if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_3_DeSo1)
+                    loaiphieu = "Loai3";
+                if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_DeSo1)
+                    loaiphieu = "Loai4";
+
+                Global.db_BCL.LuuDESo_Nhamloaiphieu(lb_Image.Text, Global.StrBatch, lb_username1.Text, lb_username2.Text, Global.StrUsername, loaiphieu);
                 ResetData();
                 string temp = GetImage_DeSo();
 
@@ -845,47 +943,88 @@ namespace BaoCaoLuong2017.MyForm
                 btn_SuaVaLuu_User1.Visible = false;
                 btn_SuaVaLuu_User2.Visible = false;
             }
-            else if (Global.StrCheck == "CHECKDEJP")
-            {
-                Global.db_BCL.LuuDEJP(lb_Image.Text, Global.StrBatch, lb_username1.Text, lb_username2.Text, Global.StrUsername);
-                ResetData();
-                string temp = GetImage_DeJP();
-
-                if (temp == "NULL")
-                {
-                    uc_PictureBox1.imageBox1.Dispose();
-                    MessageBox.Show("Hết Hình!");
-                    btn_Luu_DeSo1.Visible = false;
-                    btn_Luu_DeSo2.Visible = false;
-                    btn_SuaVaLuu_User1.Visible = false;
-                    btn_SuaVaLuu_User2.Visible = false;
-                    return;
-                }
-                if (temp == "Error")
-                {
-                    MessageBox.Show("Lỗi load hình");
-                    btn_Luu_DeSo1.Visible = false;
-                    btn_Luu_DeSo2.Visible = false;
-                    btn_SuaVaLuu_User1.Visible = false;
-                    btn_SuaVaLuu_User2.Visible = false;
-                    return;
-                }
-                Load_DeJP(Global.StrBatch, lb_Image.Text);
-                btn_Luu_DeSo1.Visible = true;
-                btn_Luu_DeSo2.Visible = true;
-                btn_SuaVaLuu_User1.Visible = false;
-                btn_SuaVaLuu_User2.Visible = false;
-            }
-
-
-
         }
 
         private void btn_Luu_DeSo2_Click(object sender, EventArgs e)
         {
-            if (Global.StrCheck=="CHECKDESO")
+            if (loaiphieu_user1 == Loaiphieu_user2)
             {
-                Global.db_BCL.LuuDESo(lb_Image.Text, Global.StrBatch, lb_username2.Text, lb_username1.Text, Global.StrUsername);
+                if (Global.StrCheck == "CHECKDESO")
+                {
+                    Global.db_BCL.LuuDESo(lb_Image.Text, Global.StrBatch, lb_username2.Text, lb_username1.Text, Global.StrUsername);
+                    ResetData();
+                    string temp = GetImage_DeSo();
+
+                    if (temp == "NULL")
+                    {
+                        uc_PictureBox1.imageBox1.Dispose();
+                        MessageBox.Show("Hết Hình!");
+                        btn_Luu_DeSo1.Visible = false;
+                        btn_Luu_DeSo2.Visible = false;
+                        btn_SuaVaLuu_User1.Visible = false;
+                        btn_SuaVaLuu_User2.Visible = false;
+                        return;
+                    }
+                    if (temp == "Error")
+                    {
+                        MessageBox.Show("Lỗi load hình");
+                        btn_Luu_DeSo1.Visible = false;
+                        btn_Luu_DeSo2.Visible = false;
+                        btn_SuaVaLuu_User1.Visible = false;
+                        btn_SuaVaLuu_User2.Visible = false;
+                        return;
+                    }
+                    Load_DeSo(Global.StrBatch, lb_Image.Text);
+                    btn_Luu_DeSo1.Visible = true;
+                    btn_Luu_DeSo2.Visible = true;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
+                }
+                else if (Global.StrCheck == "CHECKDEJP")
+                {
+                    Global.db_BCL.LuuDEJP(lb_Image.Text, Global.StrBatch, lb_username2.Text, lb_username1.Text, Global.StrUsername);
+                    ResetData();
+                    string temp = GetImage_DeJP();
+
+                    if (temp == "NULL")
+                    {
+                        uc_PictureBox1.imageBox1.Dispose();
+                        MessageBox.Show("Hết Hình!");
+                        btn_Luu_DeSo1.Visible = false;
+                        btn_Luu_DeSo2.Visible = false;
+                        btn_SuaVaLuu_User1.Visible = false;
+                        btn_SuaVaLuu_User2.Visible = false;
+                        return;
+                    }
+                    if (temp == "Error")
+                    {
+                        MessageBox.Show("Lỗi load hình");
+                        btn_Luu_DeSo1.Visible = false;
+                        btn_Luu_DeSo2.Visible = false;
+                        btn_SuaVaLuu_User1.Visible = false;
+                        btn_SuaVaLuu_User2.Visible = false;
+                        return;
+                    }
+                    Load_DeJP(Global.StrBatch, lb_Image.Text);
+                    btn_Luu_DeSo1.Visible = true;
+                    btn_Luu_DeSo2.Visible = true;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
+                }
+            }
+            else
+            {
+                string loaiphieu = "";
+                if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_1_DeSo2)
+                    loaiphieu = "Loai1";
+                if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_2_DeSo2)
+                    loaiphieu = "Loai2";
+                if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_3_DeSo2)
+                    loaiphieu = "Loai3";
+                if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_4_DeSo2)
+                    loaiphieu = "Loai4";
+
+                Global.db_BCL.LuuDESo_Nhamloaiphieu(lb_Image.Text, Global.StrBatch, lb_username2.Text, lb_username1.Text, Global.StrUsername, loaiphieu);
                 ResetData();
                 string temp = GetImage_DeSo();
 
@@ -914,43 +1053,12 @@ namespace BaoCaoLuong2017.MyForm
                 btn_SuaVaLuu_User1.Visible = false;
                 btn_SuaVaLuu_User2.Visible = false;
             }
-            else if(Global.StrCheck=="CHECKDEJP")
-            {
-                Global.db_BCL.LuuDEJP(lb_Image.Text, Global.StrBatch, lb_username2.Text, lb_username1.Text, Global.StrUsername);
-                ResetData();
-                string temp = GetImage_DeJP();
-
-                if (temp == "NULL")
-                {
-                    uc_PictureBox1.imageBox1.Dispose();
-                    MessageBox.Show("Hết Hình!");
-                    btn_Luu_DeSo1.Visible = false;
-                    btn_Luu_DeSo2.Visible = false;
-                    btn_SuaVaLuu_User1.Visible = false;
-                    btn_SuaVaLuu_User2.Visible = false;
-                    return;
-                }
-                if (temp == "Error")
-                {
-                    MessageBox.Show("Lỗi load hình");
-                    btn_Luu_DeSo1.Visible = false;
-                    btn_Luu_DeSo2.Visible = false;
-                    btn_SuaVaLuu_User1.Visible = false;
-                    btn_SuaVaLuu_User2.Visible = false;
-                    return;
-                }
-                Load_DeJP(Global.StrBatch, lb_Image.Text);
-                btn_Luu_DeSo1.Visible = true;
-                btn_Luu_DeSo2.Visible = true;
-                btn_SuaVaLuu_User1.Visible = false;
-                btn_SuaVaLuu_User2.Visible = false;
-            }
-           
         }
 
         private void btn_SuaVaLuu_User1_Click(object sender, EventArgs e)
         {
-            if (Global.StrCheck=="CHECKDESO")
+
+            if (Global.StrCheck == "CHECKDESO")
             {
                 if (tabcontrol_DeSo1.SelectedTabPage.Name == "tp_Loai_1_DeSo1")
                     Global.db_BCL.SuaVaLuu_deso(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_Loai_11.txt_Truong_001.Text, uc_Loai_11.txt_Truong_002.Text,
@@ -1088,9 +1196,9 @@ namespace BaoCaoLuong2017.MyForm
             }
             else if (Global.StrCheck == "CHECKDEJP")
             {
-                
+
                 Global.db_BCL.SuaVaLuu_DEJP(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_DEJP1.txt_Truong_002.Text, "Loai4");
-               
+
                 ResetData();
                 if (GetImage_DeJP() == "NULL")
                 {
@@ -1108,12 +1216,12 @@ namespace BaoCaoLuong2017.MyForm
                 btn_SuaVaLuu_User1.Visible = false;
                 btn_SuaVaLuu_User2.Visible = false;
             }
-           
+
         }
 
         private void btn_SuaVaLuu_User2_Click(object sender, EventArgs e)
         {
-            if (Global.StrCheck=="CHECKDESO")
+            if (Global.StrCheck == "CHECKDESO")
             {
                 if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_1_DeSo2")
                     Global.db_BCL.SuaVaLuu_deso(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_Loai_12.txt_Truong_001.Text, uc_Loai_12.txt_Truong_002.Text,
@@ -1251,9 +1359,9 @@ namespace BaoCaoLuong2017.MyForm
             }
             else if (Global.StrCheck == "CHECKDEJP")
             {
-                
+
                 Global.db_BCL.SuaVaLuu_DEJP(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_DEJP2.txt_Truong_002.Text, "Loai4");
-                
+
                 ResetData();
                 if (GetImage_DeJP() == "NULL")
                 {
@@ -1268,10 +1376,8 @@ namespace BaoCaoLuong2017.MyForm
                 Load_DeJP(Global.StrBatch, lb_Image.Text);
                 btn_Luu_DeSo1.Visible = true;
                 btn_Luu_DeSo2.Visible = true;
-                btn_SuaVaLuu_User1.Visible = false;btn_SuaVaLuu_User2.Visible = false;
+                btn_SuaVaLuu_User1.Visible = false; btn_SuaVaLuu_User2.Visible = false;
             }
         }
-
-            
     }
 }

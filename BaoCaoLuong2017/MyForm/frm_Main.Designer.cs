@@ -187,6 +187,7 @@
             this.btn_QuanLyUser.Caption = "&Quản lý User";
             this.btn_QuanLyUser.Id = 5;
             this.btn_QuanLyUser.Name = "btn_QuanLyUser";
+            this.btn_QuanLyUser.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_QuanLyUser_ItemClick);
             // 
             // barSubItem1
             // 
@@ -217,6 +218,7 @@
             this.btn_Check_NhamPhieu.Caption = "Check_Nhầm &Phiếu";
             this.btn_Check_NhamPhieu.Id = 9;
             this.btn_Check_NhamPhieu.Name = "btn_Check_NhamPhieu";
+            this.btn_Check_NhamPhieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_NhamPhieu_ItemClick);
             // 
             // btn_XuatExcel
             // 
@@ -533,6 +535,7 @@
             this.txt_LoaiPhieu.Name = "txt_LoaiPhieu";
             this.txt_LoaiPhieu.Size = new System.Drawing.Size(189, 20);
             this.txt_LoaiPhieu.TabIndex = 1;
+            this.txt_LoaiPhieu.TextChanged += new System.EventHandler(this.txt_LoaiPhieu_TextChanged);
             // 
             // labelControl7
             // 
