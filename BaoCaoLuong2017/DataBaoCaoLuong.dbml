@@ -281,9 +281,237 @@
       <Column Name="Submit" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Function Name="dbo.ExportExcel" Method="ExportExcel">
+    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="ExportExcelResult">
+      <Column Name="IdImage" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="loaiphieu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_001" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong002" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_003" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_004" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_005" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_006" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_007" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_008" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_009" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_010" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_011" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_012" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_013" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_014" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_015" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_016" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_017" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_018" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_019" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_020" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_021" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_022" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_023" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_024" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_025" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_026" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_027" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_028" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_029" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_030" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_031" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_032" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_033" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_034" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_035" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_036" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_037" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_038" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_039" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_040" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_041" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_042" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_043" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_044" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_045" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_046" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_047" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_048" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_049" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_050" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_051" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_052" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_053" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_054" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_055" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_056" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_057" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_058" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_059" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_060" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_061" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_062" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_063" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_064" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_065" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_066" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_067" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_068" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_069" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_070" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_071" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_072" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_073" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_074" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_075" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_076" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_077" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_078" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_079" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_080" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_081" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_082" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_083" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_084" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_085" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_086" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_087" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_088" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_089" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_090" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_091" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_092" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_093" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_094" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_095" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_096" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_097" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_098" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_099" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_100" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_101" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_102" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_103" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_104" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_105" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_106" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_107" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_108" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_109" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_110" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_111" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_112" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_113" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_114" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_115" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_116" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_117" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_118" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_119" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_120" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_121" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_122" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_123" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_124" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_125" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_126" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_127" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_128" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_129" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_130" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_131" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_132" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_133" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_134" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_135" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_136" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_137" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_138" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_139" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_140" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_141" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_142" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_143" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_144" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_145" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_146" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_147" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_148" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_149" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_150" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_151" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_152" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_153" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_154" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_155" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_156" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_157" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_158" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_159" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_160" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_161" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_162" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_163" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_164" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_165" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_166" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_167" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_168" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Truong_1671" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_1681" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_169" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_170" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_171" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_172" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_173" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_174" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_175" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_176" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_177" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_178" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_179" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_180" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_181" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_182" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_183" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_184" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_185" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_186" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_187" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_188" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_189" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_190" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_191" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_192" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_193" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_194" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_195" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_196" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_197" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_198" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_199" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_200" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_201" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_202" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_203" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_204" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_205" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_206" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_207" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_208" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_209" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_210" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_211" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_212" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_213" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Truong_214" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.XoaBatch" Method="XoaBatch">
     <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetBatch" Method="GetBatch">
+    <ElementType Name="GetBatchResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
   <Function Name="dbo.GetBatNotFinish_MissImageCheckerDEJP" Method="GetBatNotFinish_MissImageCheckerDEJP">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(100)" />
@@ -310,25 +538,27 @@
     </ElementType>
   </Function>
   <Function Name="dbo.GetBatNotFinishCheckerDeJP" Method="GetBatNotFinishCheckerDeJP">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
     <ElementType Name="GetBatNotFinishCheckerDeJPResult">
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.GetBatNotFinishCheckerDeSo" Method="GetBatNotFinishCheckerDeSo">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
     <ElementType Name="GetBatNotFinishCheckerDeSoResult">
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.GetBatNotFinishDeJP" Method="GetBatNotFinishDeJP">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
     <ElementType Name="GetBatNotFinishDeJPResult">
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="fbatchname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.GetBatNotFinishDeSo" Method="GetBatNotFinishDeSo">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(200)" />
     <ElementType Name="GetBatNotFinishDeSoResult">
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="fbatchname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.ImageCheck_DeJP" Method="ImageCheck_DeJP">
@@ -587,233 +817,5 @@
     <Parameter Name="Truong_168" Parameter="truong_168" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="LoaiPhieu" Parameter="loaiPhieu" Type="System.String" DbType="NVarChar(255)" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.GetBatch" Method="GetBatch">
-    <ElementType Name="GetBatchResult">
-      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ExportExcel" Method="ExportExcel">
-    <Parameter Name="fbatchname" Type="System.String" DbType="NVarChar(255)" />
-    <ElementType Name="ExportExcelResult">
-      <Column Name="IdImage" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="loaiphieu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_001" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong002" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_003" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_004" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_005" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_006" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_007" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_008" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_009" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_010" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_011" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_012" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_013" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_014" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_015" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_016" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_017" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_018" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_019" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_020" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_021" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_022" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_023" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_024" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_025" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_026" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_027" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_028" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_029" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_030" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_031" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_032" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_033" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_034" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_035" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_036" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_037" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_038" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_039" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_040" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_041" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_042" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_043" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_044" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_045" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_046" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_047" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_048" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_049" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_050" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_051" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_052" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_053" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_054" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_055" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_056" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_057" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_058" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_059" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_060" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_061" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_062" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_063" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_064" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_065" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_066" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_067" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_068" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_069" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_070" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_071" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_072" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_073" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_074" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_075" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_076" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_077" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_078" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_079" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_080" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_081" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_082" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_083" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_084" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_085" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_086" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_087" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_088" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_089" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_090" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_091" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_092" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_093" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_094" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_095" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_096" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_097" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_098" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_099" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_100" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_101" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_102" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_103" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_104" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_105" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_106" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_107" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_108" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_109" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_110" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_111" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_112" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_113" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_114" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_115" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_116" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_117" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_118" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_119" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_120" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_121" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_122" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_123" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_124" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_125" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_126" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_127" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_128" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_129" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_130" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_131" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_132" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_133" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_134" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_135" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_136" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_137" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_138" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_139" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_140" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_141" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_142" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_143" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_144" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_145" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_146" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_147" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_148" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_149" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_150" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_151" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_152" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_153" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_154" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_155" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_156" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_157" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_158" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_159" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_160" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_161" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_162" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_163" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_164" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_165" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_166" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_167" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_168" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Truong_1671" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_1681" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_169" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_170" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_171" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_172" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_173" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_174" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_175" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_176" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_177" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_178" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_179" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_180" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_181" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_182" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_183" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_184" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_185" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_186" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_187" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_188" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_189" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_190" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_191" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_192" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_193" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_194" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_195" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_196" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_197" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_198" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_199" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_200" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_201" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_202" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_203" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_204" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_205" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_206" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_207" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_208" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_209" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_210" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_211" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_212" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_213" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Truong_214" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-    </ElementType>
   </Function>
 </Database>

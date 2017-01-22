@@ -167,6 +167,7 @@ namespace BaoCaoLuong2017.MyForm
 
         private void btn_Start_Click(object sender, EventArgs e)
         {
+
             if (Global.StrCheck == "CHECKDESO")
             {
                 var nhap = (from w in Global.db_BCL.tbl_Images
@@ -215,8 +216,8 @@ namespace BaoCaoLuong2017.MyForm
                 Load_DeSo(Global.StrBatch, lb_Image.Text);
                 btn_Luu_DeSo1.Visible = true;
                 btn_Luu_DeSo2.Visible = true;
-                btn_SuaVaLuu_User1.Visible = true;
-                btn_SuaVaLuu_User2.Visible = true;
+                btn_SuaVaLuu_User1.Visible = false;
+                btn_SuaVaLuu_User2.Visible = false;
             }
             else if(Global.StrCheck == "CHECKDEJP")
             {
@@ -266,8 +267,8 @@ namespace BaoCaoLuong2017.MyForm
                 Load_DeJP(Global.StrBatch, lb_Image.Text);
                 btn_Luu_DeSo1.Visible = true;
                 btn_Luu_DeSo2.Visible = true;
-                btn_SuaVaLuu_User1.Visible = true;
-                btn_SuaVaLuu_User2.Visible = true;
+                btn_SuaVaLuu_User1.Visible = false;
+                btn_SuaVaLuu_User2.Visible = false;
             }
             btn_Start.Visible = false;
         }
@@ -650,11 +651,11 @@ namespace BaoCaoLuong2017.MyForm
             Compare_TextBox(uc_Loai_11.txt_Truong_002, uc_Loai_12.txt_Truong_002);
 
             Compare_TextBox(uc_Loai_21.txt_Truong_002, uc_Loai_22.txt_Truong_002);
-            Compare_TextBox(uc_Loai_21.txt_Truong_002, uc_Loai_22.txt_Truong_002);
-            Compare_TextBox(uc_Loai_21.txt_Truong_002, uc_Loai_22.txt_Truong_002);
+            Compare_TextBox(uc_Loai_21.txt_Truong_003, uc_Loai_22.txt_Truong_003);
+            Compare_TextBox(uc_Loai_21.txt_Truong_004, uc_Loai_22.txt_Truong_004);
 
             Compare_TextBox(uc_Loai_31.txt_Truong_002, uc_Loai_32.txt_Truong_002);
-            Compare_TextBox(uc_Loai_31.txt_Truong_002, uc_Loai_32.txt_Truong_002);
+            Compare_TextBox(uc_Loai_31.txt_Truong_003, uc_Loai_32.txt_Truong_003);
 
             Compare_TextBox(uc_Loai_41.txt_Truong_001_1, uc_Loai_42.txt_Truong_001_1);
             Compare_TextBox(uc_Loai_41.txt_Truong_001_2, uc_Loai_42.txt_Truong_001_2);
@@ -823,11 +824,19 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     uc_PictureBox1.imageBox1.Dispose();
                     MessageBox.Show("Hết Hình!");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 if (temp == "Error")
                 {
                     MessageBox.Show("Lỗi load hình");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 Load_DeSo(Global.StrBatch, lb_Image.Text);
@@ -846,11 +855,19 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     uc_PictureBox1.imageBox1.Dispose();
                     MessageBox.Show("Hết Hình!");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 if (temp == "Error")
                 {
                     MessageBox.Show("Lỗi load hình");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 Load_DeJP(Global.StrBatch, lb_Image.Text);
@@ -876,11 +893,19 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     uc_PictureBox1.imageBox1.Dispose();
                     MessageBox.Show("Hết Hình!");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 if (temp == "Error")
                 {
                     MessageBox.Show("Lỗi load hình");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 Load_DeSo(Global.StrBatch, lb_Image.Text);
@@ -899,11 +924,19 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     uc_PictureBox1.imageBox1.Dispose();
                     MessageBox.Show("Hết Hình!");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 if (temp == "Error")
                 {
                     MessageBox.Show("Lỗi load hình");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 Load_DeJP(Global.StrBatch, lb_Image.Text);
@@ -1041,6 +1074,10 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     uc_PictureBox1.imageBox1.Dispose();
                     MessageBox.Show("Hết Hình!");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 Load_DeSo(Global.StrBatch, lb_Image.Text);
@@ -1059,6 +1096,10 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     uc_PictureBox1.imageBox1.Dispose();
                     MessageBox.Show("Hết Hình!");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 Load_DeJP(Global.StrBatch, lb_Image.Text);
@@ -1196,6 +1237,10 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     uc_PictureBox1.imageBox1.Dispose();
                     MessageBox.Show("Hết Hình!");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 Load_DeSo(Global.StrBatch, lb_Image.Text);
@@ -1214,6 +1259,10 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     uc_PictureBox1.imageBox1.Dispose();
                     MessageBox.Show("Hết Hình!");
+                    btn_Luu_DeSo1.Visible = false;
+                    btn_Luu_DeSo2.Visible = false;
+                    btn_SuaVaLuu_User1.Visible = false;
+                    btn_SuaVaLuu_User2.Visible = false;
                     return;
                 }
                 Load_DeJP(Global.StrBatch, lb_Image.Text);
