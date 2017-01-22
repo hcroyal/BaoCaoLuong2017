@@ -72,6 +72,7 @@
             this.tp_Loai_4 = new DevExpress.XtraTab.XtraTabPage();
             this.uc_Loai_41 = new BaoCaoLuong2017.MyUserControl.uc_Loai_4();
             this.tp_DEJP = new DevExpress.XtraTab.XtraTabPage();
+            this.uc_DEJP1 = new BaoCaoLuong2017.MyUserControl.uc_DEJP();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
@@ -79,7 +80,6 @@
             this.txt_LoaiPhieu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.uc_PictureBox1 = new BaoCaoLuong2017.MyUserControl.uc_PictureBox();
-            this.uc_DEJP1 = new BaoCaoLuong2017.MyUserControl.uc_DEJP();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -223,6 +223,7 @@
             this.btn_XuatExcel.Caption = "&Xuất Excel";
             this.btn_XuatExcel.Id = 10;
             this.btn_XuatExcel.Name = "btn_XuatExcel";
+            this.btn_XuatExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_XuatExcel_ItemClick);
             // 
             // btn_NangSuat
             // 
@@ -479,6 +480,14 @@
             this.tp_DEJP.Size = new System.Drawing.Size(533, 585);
             this.tp_DEJP.Text = "DEJP";
             // 
+            // uc_DEJP1
+            // 
+            this.uc_DEJP1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_DEJP1.Location = new System.Drawing.Point(0, 0);
+            this.uc_DEJP1.Name = "uc_DEJP1";
+            this.uc_DEJP1.Size = new System.Drawing.Size(533, 585);
+            this.uc_DEJP1.TabIndex = 0;
+            // 
             // panelControl3
             // 
             this.panelControl3.Controls.Add(this.btn_Submit_Logout);
@@ -540,14 +549,6 @@
             this.uc_PictureBox1.Name = "uc_PictureBox1";
             this.uc_PictureBox1.Size = new System.Drawing.Size(801, 675);
             this.uc_PictureBox1.TabIndex = 10;
-            // 
-            // uc_DEJP1
-            // 
-            this.uc_DEJP1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_DEJP1.Location = new System.Drawing.Point(0, 0);
-            this.uc_DEJP1.Name = "uc_DEJP1";
-            this.uc_DEJP1.Size = new System.Drawing.Size(533, 585);
-            this.uc_DEJP1.TabIndex = 0;
             // 
             // frm_Main
             // 

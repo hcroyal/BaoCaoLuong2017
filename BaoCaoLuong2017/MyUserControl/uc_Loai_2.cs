@@ -61,5 +61,7 @@ namespace BaoCaoLuong2017.MyUserControl
             if (Changed != null)
                 Changed(sender, e);
         }
+
+       
     }
 }

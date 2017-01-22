@@ -133,101 +133,751 @@ namespace BaoCaoLuong2017.MyForm
                 Microsoft.Office.Interop.Excel.Workbook book = App.Workbooks.Open(strfilename, 0, true, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
                 Microsoft.Office.Interop.Excel.Sheets _sheet = (Microsoft.Office.Interop.Excel.Sheets)book.Sheets;
                 Microsoft.Office.Interop.Excel.Worksheet wrksheet = (Microsoft.Office.Interop.Excel.Worksheet)book.ActiveSheet;
+                
+                string truongso1_tobia = "";
+                string dulieu_truong2_loai1 = "";
+                string loaiphieu = "";
+                bool truong3_loai2_trong = false;
+                string dulieu_truong3_loai2 = "";
+                string dulieu_truong4_loai2 = "";
+                int hangloai2 = 0;
+                int hangloai2_truong4 = 0;
                 int h = 2;
                 foreach (DataGridViewRow dr in dataGridView1.Rows)
                 {
-                    for (int i = 0; i <= 15; i++)
+                    
+                    for (int i = 0; i <= 217; i++)
                     {
-                        if (i == 2)
+                        if (i==0)
                         {
-                            if (string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                            wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                        }
+                        else if (i == 1)
+                        {
+                            if (dr.Cells[i].ToString() == "Loai1")
                             {
-                                wrksheet.Cells[h, i + 1] = "0";
+                                loaiphieu = "1";
                             }
-                            else if (dr.Cells[i].Value.ToString() == "1")
+                            else if (dr.Cells[i].ToString() == "Loai2")
                             {
-                                wrksheet.Cells[h, i + 1] = "0";
+                                loaiphieu = "2";
                             }
-                            else if (dr.Cells[i].Value.ToString() == "2")
+                            else if (dr.Cells[i].ToString() == "Loai3")
                             {
-                                wrksheet.Cells[h, i + 1] = "1";
-                            }
-                            else if (dr.Cells[i].Value.ToString() == "3")
-                            {
-                                wrksheet.Cells[h, i + 1] = "2";
+                                loaiphieu = "3";
                             }
                             else
                             {
-                                wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                loaiphieu = "4";
                             }
-
+                            wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                        }
+                        else if (i == 2)
+                        {
+                            switch (loaiphieu)
+                            {
+                                case "1":
+                                    wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                    truongso1_tobia = dr.Cells[i].Value.ToString();
+                                    break;
+                                case "2":
+                                    wrksheet.Cells[h, i + 1] = truongso1_tobia;
+                                    break;
+                                case "3":
+                                    wrksheet.Cells[h, i + 1] = truongso1_tobia;
+                                    break;
+                                case "4":
+                                    if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        if (dr.Cells[i].Value.ToString() == "?")
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "?";
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                    }
+                                    break;
+                            }
+                        }
+                        else if (i == 3)
+                        {
+                            switch (loaiphieu)
+                            {
+                                case "1":
+                                    wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                                    if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                        dulieu_truong2_loai1 = dr.Cells[i].Value.ToString();
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                        dulieu_truong2_loai1 = "";
+                                    }
+                                    break;
+                                case "2":
+                                    if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        if (dr.Cells[i].Value.ToString()=="?")
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "?";
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                    }
+                                    break;
+                                case "3":
+                                    if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        if (dr.Cells[i].Value.ToString() == "?")
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "?";
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                    }
+                                    break;
+                                case "4":
+                                    wrksheet.Cells[h, i + 1] = dr.Cells[i].Value?.ToString();
+                                    break;
+                            }
+                            
                         }
                         else if (i == 4)
                         {
-                            if (string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                            switch (loaiphieu)
                             {
-                                wrksheet.Cells[h, i + 1] = "0";
-                            }
-                            else
-                            {
-                                wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                case "1":
+                                    wrksheet.Cells[h, i + 1] = "";
+                                    break;
+                                case "2":
+                                    if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        if (dr.Cells[i].Value.ToString() == "?")
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "?";
+                                            dulieu_truong3_loai2 = "?";
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                            dulieu_truong3_loai2 = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                        }
+                                        truong3_loai2_trong = false;
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                        dulieu_truong3_loai2 = "";
+                                        truong3_loai2_trong = true;
+                                    }
+                                    hangloai2 = h;
+                                    break;
+                                case "3":
+                                    if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        if (dr.Cells[i].Value.ToString() == "?")
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "?";
+                                            if (truong3_loai2_trong)
+                                            {
+                                                wrksheet.Cells[hangloai2, i + 2] = "?";
+                                            }
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                            if (truong3_loai2_trong)
+                                            {
+                                                wrksheet.Cells[hangloai2, i + 2] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "333333333333";
+                                        if (truong3_loai2_trong)
+                                        {
+                                            wrksheet.Cells[hangloai2, i + 1] = "333333333333";
+                                        }
+                                    }
+                                    break;
+                                case "4":
+                                    if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        if (dr.Cells[i].Value.ToString() == "?")
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "?";
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                    }
+                                    break;
                             }
                         }
                         else if (i == 5)
                         {
-                            if (string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                            switch (loaiphieu)
                             {
-                                wrksheet.Cells[h, i + 1] = "0";
-                            }
-                            else
-                            {
-                                wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                case "1":
+                                    wrksheet.Cells[h, i + 1] = "";
+                                    break;
+                                case "2":
+                                    if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        if (dr.Cells[i].Value.ToString() == "?")
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "?";
+                                            dulieu_truong4_loai2 = "?";
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                            dulieu_truong4_loai2 = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString(), 12, "0");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                        dulieu_truong4_loai2 = "";
+                                    }
+                                    hangloai2_truong4 = h;
+                                    break;
+                                case "3":
+                                    wrksheet.Cells[h, i + 1] = "";
+                                    break;
+                                case "4":
+                                    wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value?.ToString() : "";
+                                    break;
                             }
                         }
                         else if (i == 6)
                         {
-                            if (string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                            if (loaiphieu=="4")
                             {
-                                wrksheet.Cells[h, i + 1] = "0";
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dulieu_truong4_loai2 != dr.Cells[i].Value.ToString())
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "9999999999999";
+                                        wrksheet.Cells[hangloai2_truong4, i + 1] = "9999999999999";
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                    }
+                                }
+                                else
+                                {
+                                    if (!string.IsNullOrEmpty(dulieu_truong4_loai2))
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "9999999999999";
+                                        wrksheet.Cells[hangloai2_truong4, i + 1] = "9999999999999";
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                    }
+                                }
                             }
                             else
                             {
-                                wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value?.ToString(): "";
                             }
                         }
                         else if (i == 7)
                         {
-                            if (string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                            if (loaiphieu=="4")
                             {
-                                wrksheet.Cells[h, i + 1] = "0";
-                            }
-                            else if (dr.Cells[i].Value.ToString() == "1")
-                            {
-                                wrksheet.Cells[h, i + 1] = "0";
-                            }
-                            else if (dr.Cells[i].Value.ToString() == "2")
-                            {
-                                wrksheet.Cells[h, i + 1] = "1";
+                                if (truongso1_tobia=="06" || truongso1_tobia == "07")
+                                {
+                                    wrksheet.Cells[h, i + 1] = "4091953036";
+                                }
+                                else
+                                {
+                                    if (string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                    {
+                                        if (dulieu_truong3_loai2 !="")
+                                        {
+                                            wrksheet.Cells[h, i + 1] = dulieu_truong3_loai2;
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "3333333333333";
+                                        }
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                    }
+                                }
                             }
                             else
                             {
-                                wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
                             }
                         }
-                        else if (i == 14 || i == 15)
+                        else if (i == 13)
                         {
-                            if (dr.Cells[i].Value.ToString() == "1")
+                            if (loaiphieu == "4")
                             {
-                                wrksheet.Cells[h, 15] = "X";
+                                if (truongso1_tobia!="06"||truongso1_tobia !="07")
+                                {
+                                    wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
                             }
                             else
                             {
-                                continue;
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 14)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (dulieu_truong2_loai1 != "")
+                                {
+                                    wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 38||i==39|| i == 40|| i == 41|| i == 42|| i == 43|| i == 44|| i == 45|| i == 46|| i == 47|| i == 48|| i == 49|| i == 51|| i == 52|| i == 53|| i == 54|| i == 58|| i == 59|| i == 64|| i == 65|| i == 66|| i == 67)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dr.Cells[i].Value.ToString()=="?")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "?";
+                                    }
+                                    else if (dr.Cells[i].Value.ToString()!="0")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",",""),8,"0");
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                    }
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i==79)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                                    wrksheet.Cells[h, i] = "";
+                                    
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 80 || i == 81 || i == 82 || i == 83 || i == 84 || i == 85 || i == 86 || i == 87)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dr.Cells[i].Value.ToString() == "?")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "?";
+                                    }
+                                    else if (dr.Cells[i].Value.ToString() != "0")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 2, "0");
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "";
+                                    }
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i==93)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[107].Value.ToString()))
+                                {
+                                    if (dr.Cells[107].Value.ToString() != "?")
+                                    {
+                                        int temp = int.Parse(dr.Cells[107].Value.ToString());
+                                        if (temp>260401)
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "1";
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "";
+                                        }
+                                    }
+                                }
+                                if (!string.IsNullOrEmpty(dr.Cells[108].Value.ToString()))
+                                {
+                                    if (dr.Cells[108].Value.ToString() != "?")
+                                    {
+                                        int temp = int.Parse(dr.Cells[108].Value.ToString());
+                                        if (temp > 260401)
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "1";
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, i + 1] = "";
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 101)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[102].Value.ToString()))
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 103 || i == 107 || i == 108)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dr.Cells[i].Value.ToString() == "?")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "?";
+                                    }
+                                    else 
+                                    {
+                                        wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 8, "0");
+                                    }
+                                    
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 111)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dr.Cells[i].Value.ToString() == "?")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "?";
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 2, "0");
+                                    }
+
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 159)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dr.Cells[i].Value.ToString() == "?")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "?";
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 12, "0");
+                                    }
+
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 160||i==161||i==162)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dr.Cells[i].Value.ToString() == "?")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "?";
+                                    }
+                                    else
+                                    {
+                                        wrksheet.Cells[h, i + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 12, "0");
+                                    }
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 163)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dr.Cells[i].Value.ToString() == "?")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "?";
+                                    }
+                                    else
+                                    {
+                                        if (dr.Cells[160].Value.ToString()=="")
+                                        {
+                                            if (dr.Cells[161].Value.ToString() == "")
+                                            {
+                                                if (dr.Cells[162].Value.ToString() == "")
+                                                {
+                                                    wrksheet.Cells[h, 160 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 12, "0");
+                                                    wrksheet.Cells[h, i + 1] = "";
+                                                }
+                                                else
+                                                {
+                                                    if (dr.Cells[160].Value.ToString() == "")
+                                                    {
+                                                        if (dr.Cells[161].Value.ToString()=="")
+                                                        {
+                                                            wrksheet.Cells[h, 160 + 1] =ThemKyTubatKyPhiatruoc(dr.Cells[162].Value.ToString().Replace(",", ""), 12,"0");
+                                                            wrksheet.Cells[h, 161 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, 162 + 1] = "";
+                                                            wrksheet.Cells[h, i + 1] = "";
+                                                        }
+                                                        else
+                                                        {
+                                                            wrksheet.Cells[h, 160 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[161].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, 161 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[162].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, 162 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[163].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, i + 1] = "";
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        wrksheet.Cells[h, 163 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[163].Value.ToString().Replace(",", ""), 12, "0");
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (dr.Cells[160].Value.ToString() == "")
+                                                {
+                                                    wrksheet.Cells[h, 160 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[161].Value.ToString().Replace(",", ""), 12, "0");
+                                                    wrksheet.Cells[h, 161 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[162].Value.ToString().Replace(",", ""), 12, "0");
+                                                    wrksheet.Cells[h, 162 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[163].Value.ToString().Replace(",", ""), 12, "0");
+                                                    wrksheet.Cells[h, i + 1] = "";
+                                                }
+                                                else
+                                                {
+                                                    wrksheet.Cells[h, 163 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[163].Value.ToString().Replace(",", ""), 12, "0");
+
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, 163 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[163].Value.ToString().Replace(",", ""), 12, "0");
+                                        }
+
+                                    }
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
+                            }
+                        }
+                        else if (i == 169)
+                        {
+                            if (loaiphieu == "4")
+                            {
+                                if (!string.IsNullOrEmpty(dr.Cells[i].Value.ToString()))
+                                {
+                                    if (dr.Cells[i].Value.ToString() == "?")
+                                    {
+                                        wrksheet.Cells[h, i + 1] = "?";
+                                    }
+                                    else
+                                    {
+                                        if (dr.Cells[166].Value.ToString() == "")
+                                        {
+                                            if (dr.Cells[167].Value.ToString() == "")
+                                            {
+                                                if (dr.Cells[168].Value.ToString() == "")
+                                                {
+                                                    wrksheet.Cells[h, 166 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 12, "0");
+                                                    wrksheet.Cells[h, i + 1] = "";
+                                                }
+                                                else
+                                                {
+                                                    if (dr.Cells[166].Value.ToString() == "")
+                                                    {
+                                                        if (dr.Cells[167].Value.ToString() == "")
+                                                        {
+                                                            wrksheet.Cells[h, 166 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[167].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, 167 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[i].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, 168 + 1] = "";
+                                                            wrksheet.Cells[h, i + 1] = "";
+                                                        }
+                                                        else
+                                                        {
+                                                            wrksheet.Cells[h, 166 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[167].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, 167 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[168].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, 168 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[169].Value.ToString().Replace(",", ""), 12, "0");
+                                                            wrksheet.Cells[h, i + 1] = "";
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        wrksheet.Cells[h, 169 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[169].Value.ToString().Replace(",", ""), 12, "0");
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (dr.Cells[166].Value.ToString() == "")
+                                                {
+                                                    wrksheet.Cells[h, 166 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[166].Value.ToString().Replace(",", ""), 12, "0");
+                                                    wrksheet.Cells[h, 167 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[167].Value.ToString().Replace(",", ""), 12, "0");
+                                                    wrksheet.Cells[h, 168 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[168].Value.ToString().Replace(",", ""), 12, "0");
+                                                    wrksheet.Cells[h, i + 1] = "";
+                                                }
+                                                else
+                                                {
+                                                    wrksheet.Cells[h, 169 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[169].Value.ToString().Replace(",", ""), 12, "0");
+
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            wrksheet.Cells[h, 169 + 1] = ThemKyTubatKyPhiatruoc(dr.Cells[169].Value.ToString().Replace(",", ""), 12, "0");
+                                        }
+
+                                    }
+                                }
+                                else
+                                {
+                                    wrksheet.Cells[h, i + 1] = "";
+                                }
+                            }
+                            else
+                            {
+                                wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString() : "";
                             }
                         }
                         else
                         {
-                            wrksheet.Cells[h, i + 1] = dr.Cells[i].Value.ToString();
+                            wrksheet.Cells[h, i + 1] = !string.IsNullOrEmpty(dr.Cells[i].Value.ToString()) ? dr.Cells[i].Value.ToString(): "";
                         }
                     }
                     h++;
@@ -260,6 +910,23 @@ namespace BaoCaoLuong2017.MyForm
                 return false;
             }
 
+        }
+        private String getcharacter(int n, String str)
+        {
+            String kq = "";
+            for (int i = 1; i <= n; i++)
+            {
+                kq = kq.Insert(kq.Length, str);
+            }
+
+            return kq;
+        }
+        private String ThemKyTubatKyPhiatruoc(String input, int iByte, string str)
+        {
+            if (input.Length >= iByte)
+                return input.Substring(input.Length - iByte, iByte);
+
+            return input.Insert(0, getcharacter(iByte - input.Length, str));
         }
     }
 }
