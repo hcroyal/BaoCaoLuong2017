@@ -89,7 +89,7 @@ namespace BaoCaoLuong2017
                 if (iKiemtraLogin == 1 && role=="ADMIN" )
                 {
                    
-                    cbb.DataSource = Global.db_BCL.GetBatch(username);
+                    cbb.DataSource = Global.db_BCL.GetBatch();
                     cbb.DisplayMember = "fBatchName";
                 }
                 else if (iKiemtraLogin == 1 && role =="DEJP")
