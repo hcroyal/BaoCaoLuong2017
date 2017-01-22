@@ -352,5 +352,9 @@ namespace BaoCaoLuong2017.MyForm
             Global.StrCheck = "CHECKDEJP";
             new frm_Check().ShowDialog();
         }
+
+        private void btn_XuatExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frm_ExportExcel().ShowDialog();}
     }
 }
