@@ -144,6 +144,7 @@
             this.txt_Truong_046 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_004.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_012.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_006.Properties)).BeginInit();
@@ -1545,6 +1546,18 @@
             this.labelControl49.TabIndex = 125;
             this.labelControl49.Text = "46";
             // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Appearance.Options.UseForeColor = true;
+            this.labelControl7.Location = new System.Drawing.Point(481, 398);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(3, 13);
+            this.labelControl7.TabIndex = 0;
+            this.labelControl7.Text = ".";
+            // 
             // uc_Loai_42
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1655,6 +1668,7 @@
             this.Controls.Add(this.labelControl31);
             this.Controls.Add(this.labelControl15);
             this.Controls.Add(this.labelControl30);
+            this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl72);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl71);
@@ -1666,7 +1680,7 @@
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl1);
             this.Name = "uc_Loai_42";
-            this.Size = new System.Drawing.Size(508, 372);
+            this.Size = new System.Drawing.Size(508, 411);
             this.Load += new System.EventHandler(this.uc_Loai_4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_004.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_012.Properties)).EndInit();
@@ -1848,5 +1862,6 @@
         public DevExpress.XtraEditors.TextEdit txt_Truong_046;
         public DevExpress.XtraEditors.LabelControl labelControl34;
         public DevExpress.XtraEditors.LabelControl labelControl49;
+        public DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

@@ -1871,15 +1871,59 @@ namespace BaoCaoLuong2017.MyForm
             if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.HorizontalScroll)
                 uc_Loai_41.HorizontalScroll.Value = e.NewValue;
             else if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.VerticalScroll)
-                uc_Loai_42.VerticalScroll.Value = e.NewValue;
+                this.uc_Loai_42.VerticalScroll.Value = e.NewValue;
         }
 
         private void uc_Loai_42_Scroll(object sender, ScrollEventArgs e)
         {
             if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.HorizontalScroll)
-                uc_Loai_41.HorizontalScroll.Value = e.NewValue;
+                this.uc_Loai_42.HorizontalScroll.Value = e.NewValue;
             else if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.VerticalScroll)
-                uc_Loai_42.VerticalScroll.Value = e.NewValue;
+                this.uc_Loai_41.VerticalScroll.Value = e.NewValue;
+        }
+
+        private void uc_Loai_421_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.HorizontalScroll)
+                uc_Loai_421.HorizontalScroll.Value = e.NewValue;
+            else if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.VerticalScroll)
+                uc_Loai_422.VerticalScroll.Value = e.NewValue;
+        }
+
+        private void uc_Loai_422_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.HorizontalScroll)
+                uc_Loai_422.HorizontalScroll.Value = e.NewValue;
+            else if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.VerticalScroll)
+                uc_Loai_421.VerticalScroll.Value = e.NewValue;
+        }
+
+        private void tabcontrol_DeSo2_Click(object sender, EventArgs e)
+        {
+            if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_1_DeSo2)
+                tabcontrol_DeSo1.SelectedTabPage = tp_Loai_1_DeSo1;
+            else if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_2_DeSo2)
+                tabcontrol_DeSo1.SelectedTabPage = tp_Loai_2_DeSo1;
+            else if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_3_DeSo2)
+                tabcontrol_DeSo1.SelectedTabPage = tp_Loai_3_DeSo1;
+            else if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_4_DeSo2)
+                tabcontrol_DeSo1.SelectedTabPage = tp_Loai_4_DeSo1;
+            else if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_4_2_DeSo2)
+                tabcontrol_DeSo1.SelectedTabPage = tp_Loai_4_2_DeSo1;
+        }
+
+        private void tabcontrol_DeSo1_Click(object sender, EventArgs e)
+        {
+            if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_1_DeSo1)
+                tabcontrol_DeSo2.SelectedTabPage = tp_Loai_1_DeSo2;
+            else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_2_DeSo1)
+                tabcontrol_DeSo2.SelectedTabPage = tp_Loai_2_DeSo2;
+            else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_3_DeSo1)
+                tabcontrol_DeSo2.SelectedTabPage = tp_Loai_3_DeSo2;
+            else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_DeSo1)
+                tabcontrol_DeSo2.SelectedTabPage = tp_Loai_4_DeSo2;
+            else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_2_DeSo1)
+                tabcontrol_DeSo2.SelectedTabPage = tp_Loai_4_2_DeSo2;
         }
     }
 }

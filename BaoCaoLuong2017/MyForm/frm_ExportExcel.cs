@@ -453,17 +453,31 @@ namespace BaoCaoLuong2017.MyForm
 
                             //truong 102:
                             if (!string.IsNullOrEmpty(dr.Cells[103].Value == null ? "" : dr.Cells[103].Value.ToString()))
-                                wrksheet.Cells[h, 104] =ThemKyTubatKyPhiatruoc(dr.Cells[103].Value.ToString(),8,"0");
-
+                            {
+                                if (dr.Cells[103].Value.ToString().IndexOf('?') <= 0)
+                                    wrksheet.Cells[h, 104] = ThemKyTubatKyPhiatruoc(dr.Cells[103].Value.ToString(), 8, "0"); 
+                                else
+                                    wrksheet.Cells[h, 104] = "?";
+                            }
                             wrksheet.Cells[h, 105] = "";//truong 103
                             wrksheet.Cells[h, 106] = dr.Cells[105].Value == null ? "" : dr.Cells[105].Value.ToString();
                             wrksheet.Cells[h, 107] = dr.Cells[106].Value == null ? "" : dr.Cells[106].Value.ToString();
 
-                            if (!string.IsNullOrEmpty(dr.Cells[107].Value == null ? "" : dr.Cells[107].Value.ToString()))
-                                wrksheet.Cells[h, 108] = ThemKyTubatKyPhiatruoc(dr.Cells[107].Value.ToString(), 8, "0");//truong so 106
+                            if (!string.IsNullOrEmpty(dr.Cells[107].Value == null ? "" : dr.Cells[107].Value.ToString()))//truong so 106
+                            {
+                                if (dr.Cells[107].Value.ToString().IndexOf('?') <= 0)
+                                    wrksheet.Cells[h, 108] = ThemKyTubatKyPhiatruoc(dr.Cells[107].Value.ToString(), 8, "0");
+                                else
+                                    wrksheet.Cells[h, 108] = "?";
+                            }
 
-                            if (!string.IsNullOrEmpty(dr.Cells[108].Value == null ? "" : dr.Cells[108].Value.ToString()))
-                                wrksheet.Cells[h, 109] = ThemKyTubatKyPhiatruoc(dr.Cells[108].Value.ToString(), 8, "0") ;//truong so 107
+                            if (!string.IsNullOrEmpty(dr.Cells[108].Value == null ? "" : dr.Cells[108].Value.ToString()))//truong so 107
+                            {
+                                if (dr.Cells[108].Value.ToString().IndexOf('?') <= 0)
+                                    wrksheet.Cells[h, 109] = ThemKyTubatKyPhiatruoc(dr.Cells[108].Value.ToString(), 8, "0");
+                                else
+                                    wrksheet.Cells[h, 109] = "?";
+                            }
 
                             wrksheet.Cells[h, 110] = dr.Cells[109].Value == null ? "" : dr.Cells[109].Value.ToString();
                             wrksheet.Cells[h, 111] = dr.Cells[110].Value == null ? "" : dr.Cells[110].Value.ToString();

@@ -195,6 +195,7 @@
             this.tp_Loai_4_DeSo1,
             this.tp_Loai_4_2_DeSo1,
             this.tp_DEJP1});
+            this.tabcontrol_DeSo1.Click += new System.EventHandler(this.tabcontrol_DeSo1_Click);
             // 
             // tp_Loai_1_DeSo1
             // 
@@ -276,6 +277,7 @@
             this.uc_Loai_421.Name = "uc_Loai_421";
             this.uc_Loai_421.Size = new System.Drawing.Size(551, 310);
             this.uc_Loai_421.TabIndex = 0;
+            this.uc_Loai_421.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uc_Loai_421_Scroll);
             // 
             // tp_DEJP1
             // 
@@ -317,6 +319,7 @@
             this.tp_Loai_4_DeSo2,
             this.tp_Loai_4_2_DeSo2,
             this.tp_DEJP2});
+            this.tabcontrol_DeSo2.Click += new System.EventHandler(this.tabcontrol_DeSo2_Click);
             // 
             // tp_Loai_1_DeSo2
             // 
@@ -396,6 +399,7 @@
             this.uc_Loai_422.Name = "uc_Loai_422";
             this.uc_Loai_422.Size = new System.Drawing.Size(551, 305);
             this.uc_Loai_422.TabIndex = 0;
+            this.uc_Loai_422.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uc_Loai_422_Scroll);
             // 
             // tp_DEJP2
             // 
