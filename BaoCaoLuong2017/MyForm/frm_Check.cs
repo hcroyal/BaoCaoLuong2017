@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using BaoCaoLuong2017.MyLog;
 using DevExpress.XtraEditors;
 namespace BaoCaoLuong2017.MyForm
 {
@@ -143,6 +144,7 @@ namespace BaoCaoLuong2017.MyForm
             }
             catch (Exception i)
             {
+                LogFile.WriteLog(Global.StrUsername + ".txt", i.Message);
                 MessageBox.Show("Lỗi" + i);
             }
         }
@@ -1078,6 +1080,7 @@ namespace BaoCaoLuong2017.MyForm
                         uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
                         return "Error";
                     }
+                    
                 }
             }
             else

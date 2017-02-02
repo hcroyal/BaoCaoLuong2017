@@ -6,6 +6,7 @@ using BaoCaoLuong2017.MyClass;
 using BaoCaoLuong2017.Properties;
 using DevExpress.XtraTab;
 using System.IO;
+using BaoCaoLuong2017.MyLog;
 
 namespace BaoCaoLuong2017.MyForm
 {
@@ -15,6 +16,7 @@ namespace BaoCaoLuong2017.MyForm
         {
             InitializeComponent();
         }
+        LogFile log = new LogFile();
         CLHandling_Loai1 Class_Loai_1 = new CLHandling_Loai1();
         private void frm_Main_Load(object sender, EventArgs e)
         {
@@ -53,10 +55,10 @@ namespace BaoCaoLuong2017.MyForm
                 Global.TenHinhThu2 = (from w in Global.db_BCL.tbl_Batches where w.fBatchName == Global.StrBatch select w.TeninhThu2).FirstOrDefault().ToString();
                 Global.GiaTriTruongSo4 = (from w in Global.db_BCL.tbl_Batches where w.fBatchName == Global.StrBatch select w.GiaTriTruongSo4).FirstOrDefault().ToString();
             }
-            catch (Exception)
+            catch (Exception i)
             {
+                LogFile.WriteLog(Global.StrUsername + ".txt", i.Message);
 
-                
             }
            
         }
@@ -103,8 +105,7 @@ namespace BaoCaoLuong2017.MyForm
                         if (string.IsNullOrEmpty(getFilename))
                         {
                             return "NULL";
-                        }
-                        lb_IdImage.Text = getFilename;
+                        }lb_IdImage.Text = getFilename;
                         uc_PictureBox1.imageBox1.Image = null;
                         if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + getFilename, getFilename,
                             Settings.Default.ZoomImage) == "Error")
@@ -114,8 +115,9 @@ namespace BaoCaoLuong2017.MyForm
 
                         }
                     }
-                    catch (Exception)
+                    catch (Exception i)
                     {
+                        LogFile.WriteLog(Global.StrUsername + ".txt", i.Message);
                         return "NULL";
                     }
                 }
@@ -124,8 +126,7 @@ namespace BaoCaoLuong2017.MyForm
                     lb_IdImage.Text = temp;
                     uc_PictureBox1.imageBox1.Image = null;
                     if (uc_PictureBox1.LoadImage(Global.Webservice + Global.StrBatch + "/" + temp, temp,
-                        Settings.Default.ZoomImage) == "Error")
-                    {
+                        Settings.Default.ZoomImage) == "Error"){
                         uc_PictureBox1.imageBox1.Image = Resources.svn_deleted;
                         return "Error";
                     }
@@ -158,8 +159,9 @@ namespace BaoCaoLuong2017.MyForm
 
                         }
                     }
-                    catch (Exception)
+                    catch (Exception i)
                     {
+                        LogFile.WriteLog(Global.StrUsername + ".txt", i.Message);
                         return "NULL";
                     }
                 }
@@ -195,9 +197,9 @@ namespace BaoCaoLuong2017.MyForm
                 //return (int.Parse(Global.GiaTriTruongSo4) + (int.Parse(strImageName) - int.Parse(Global.TenHinhThu2)) * 10).ToString();
                  
             }
-            catch (Exception )
+            catch (Exception i)
             {
-
+                LogFile.WriteLog(Global.StrUsername + ".txt", i.Message);
                 return "";
             }
             
@@ -214,6 +216,7 @@ namespace BaoCaoLuong2017.MyForm
                         MessageBox.Show("Vui lòng đăng nhập lại và chọn Batch!");
                         return;
                     }
+                    
                     string temp = GetImage();
                     if (temp == "NULL")
                     {
@@ -320,9 +323,10 @@ namespace BaoCaoLuong2017.MyForm
                     uc_Loai_41.txt_Truong_004.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
                 }
             }
-            catch (Exception ee)
+            catch (Exception i)
             {
-                MessageBox.Show("Lỗi khi Submit" + ee.Message);
+                LogFile.WriteLog(Global.StrUsername + ".txt", i.Message);
+                MessageBox.Show("Lỗi khi Submit" + i.Message);
             }
         }
 
@@ -342,7 +346,11 @@ namespace BaoCaoLuong2017.MyForm
                     {
                         if (uc_Loai_11.IsEmpty())
                         {
-                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                            if (
+                                MessageBox.Show(
+                                    "Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>",
+                                    "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
+                                System.Windows.Forms.DialogResult.No)
                                 return;
                         }
                         uc_Loai_11.SaveData_Loai_1(lb_IdImage.Text);
@@ -351,7 +359,11 @@ namespace BaoCaoLuong2017.MyForm
                     {
                         if (uc_Loai_21.IsEmpty())
                         {
-                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                            if (
+                                MessageBox.Show(
+                                    "Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>",
+                                    "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
+                                System.Windows.Forms.DialogResult.No)
                                 return;
                         }
                         uc_Loai_21.SaveData_Loai_2(lb_IdImage.Text);
@@ -360,7 +372,11 @@ namespace BaoCaoLuong2017.MyForm
                     {
                         if (uc_Loai_31.IsEmpty())
                         {
-                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                            if (
+                                MessageBox.Show(
+                                    "Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>",
+                                    "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
+                                System.Windows.Forms.DialogResult.No)
                                 return;
                         }
                         uc_Loai_31.SaveData_Loai_3(lb_IdImage.Text);
@@ -369,7 +385,11 @@ namespace BaoCaoLuong2017.MyForm
                     {
                         if (uc_Loai_41.IsEmpty())
                         {
-                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                            if (
+                                MessageBox.Show(
+                                    "Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>",
+                                    "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
+                                System.Windows.Forms.DialogResult.No)
                                 return;
                         }
                         uc_Loai_41.SaveData_Loai_4(lb_IdImage.Text);
@@ -380,7 +400,11 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     if (uc_DEJP1.IsEmpty())
                     {
-                        if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                        if (
+                            MessageBox.Show(
+                                "Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>",
+                                "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
+                            System.Windows.Forms.DialogResult.No)
                             return;
                     }
                     uc_DEJP1.SaveData_DEJP(lb_IdImage.Text);
@@ -389,7 +413,11 @@ namespace BaoCaoLuong2017.MyForm
                 }
                 DialogResult = DialogResult.Yes;
             }
-            catch(Exception i) { MessageBox.Show("Lỗi khi Submit : "+i.Message); }
+            catch (Exception i)
+            {
+                LogFile.WriteLog(Global.StrUsername + ".txt", i.Message);
+                MessageBox.Show("Lỗi khi Submit : "+i.Message);
+            }
         }
 
         private void btn_Logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

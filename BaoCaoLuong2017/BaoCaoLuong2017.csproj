@@ -137,6 +137,7 @@
     <Compile Include="MyForm\frm_User.designer.cs">
       <DependentUpon>frm_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyLog\LogFile.cs" />
     <Compile Include="MyUserControl\uc_DEJP.cs">
       <SubType>UserControl</SubType>
     </Compile>
