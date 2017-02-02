@@ -46,7 +46,7 @@ namespace BaoCaoLuong2017
                 a.btn_thoat.Text = "Thoát";
                 a.chb_hienthi.Text = "Hiển Thị";
                 a.chb_luu.Text = "Lưu";
-                a.lb_version.Text = @"1.9.5";
+                a.lb_version.Text = @"1.9.6";
                 a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2017\BAO-CAO-LUONG2017";
                 a.LoginEvent += a_LoginEvent;
                 a.ButtonLoginEven += a_ButtonLoginEven;
@@ -55,8 +55,7 @@ namespace BaoCaoLuong2017
                     Global.StrMachine = a.StrMachine;
                     Global.StrUserWindow = a.StrUserWindow;
                     Global.StrIpAddress = a.StrIpAddress;
-                    Global.StrUsername = a.StrUserName;
-                    Global.StrBatch = a.StrBatch;
+                    Global.StrUsername = a.StrUserName;Global.StrBatch = a.StrBatch;
                     Global.StrRole = a.StrRole;
                     Global.Strtoken = a.Token;
                     frm_Main f = new frm_Main();

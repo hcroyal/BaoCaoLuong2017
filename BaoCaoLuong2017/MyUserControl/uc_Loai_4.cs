@@ -1382,5 +1382,23 @@ namespace BaoCaoLuong2017.MyUserControl
         {
 
         }
+
+        private void txt_Truong_077_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_100_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_101_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
     }
 }

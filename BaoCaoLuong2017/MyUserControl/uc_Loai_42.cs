@@ -1010,5 +1010,23 @@ namespace BaoCaoLuong2017.MyUserControl
             if(!string.IsNullOrEmpty(txt_Truong_001_2.Text))
                 doimautrongkhoang((TextEdit)sender, 6, 6);
         }
+
+        private void txt_Truong_077_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_100_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_101_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
     }
 }
