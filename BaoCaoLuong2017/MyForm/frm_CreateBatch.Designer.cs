@@ -48,6 +48,10 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.lb_SoLuongHinh = new DevExpress.XtraEditors.LabelControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_TruongSo4 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_TenHinhThu2 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_BatchName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_PathFolder.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Location.Properties)).BeginInit();
@@ -55,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateCreate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ImagePath.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenHinhThu2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -184,9 +190,9 @@
             // 
             // btn_CreateBatch
             // 
-            this.btn_CreateBatch.Location = new System.Drawing.Point(221, 367);
+            this.btn_CreateBatch.Location = new System.Drawing.Point(221, 416);
             this.btn_CreateBatch.Name = "btn_CreateBatch";
-            this.btn_CreateBatch.Size = new System.Drawing.Size(164, 93);
+            this.btn_CreateBatch.Size = new System.Drawing.Size(164, 44);
             this.btn_CreateBatch.TabIndex = 4;
             this.btn_CreateBatch.Text = "Tạo Batch";
             this.btn_CreateBatch.Click += new System.EventHandler(this.btn_CreateBatch_Click);
@@ -216,6 +222,36 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(30, 332);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(62, 13);
+            this.labelControl8.TabIndex = 1;
+            this.labelControl8.Text = "Truong So 4:";
+            // 
+            // txt_TruongSo4
+            // 
+            this.txt_TruongSo4.Location = new System.Drawing.Point(137, 329);
+            this.txt_TruongSo4.Name = "txt_TruongSo4";
+            this.txt_TruongSo4.Size = new System.Drawing.Size(356, 20);
+            this.txt_TruongSo4.TabIndex = 2;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(30, 376);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(73, 13);
+            this.labelControl9.TabIndex = 1;
+            this.labelControl9.Text = "Ten hinh thu 2:";
+            // 
+            // txt_TenHinhThu2
+            // 
+            this.txt_TenHinhThu2.Location = new System.Drawing.Point(137, 373);
+            this.txt_TenHinhThu2.Name = "txt_TenHinhThu2";
+            this.txt_TenHinhThu2.Size = new System.Drawing.Size(356, 20);
+            this.txt_TenHinhThu2.TabIndex = 2;
+            // 
             // frm_CreateBatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,11 +265,15 @@
             this.Controls.Add(this.txt_ImagePath);
             this.Controls.Add(this.txt_DateCreate);
             this.Controls.Add(this.txt_UserCreate);
+            this.Controls.Add(this.txt_TenHinhThu2);
+            this.Controls.Add(this.txt_TruongSo4);
             this.Controls.Add(this.txt_Location);
             this.Controls.Add(this.txt_PathFolder);
             this.Controls.Add(this.txt_BatchName);
             this.Controls.Add(this.labelControl7);
+            this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.labelControl6);
+            this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
@@ -251,6 +291,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_DateCreate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_ImagePath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TruongSo4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenHinhThu2.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +320,9 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private DevExpress.XtraEditors.LabelControl lb_SoLuongHinh;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.TextEdit txt_TruongSo4;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.TextEdit txt_TenHinhThu2;
     }
 }

@@ -186,7 +186,6 @@
             // 
             // btn_suauser
             // 
-            this.btn_suauser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_suauser.Location = new System.Drawing.Point(531, 103);
             this.btn_suauser.Name = "btn_suauser";
             this.btn_suauser.Size = new System.Drawing.Size(75, 23);
@@ -196,7 +195,6 @@
             // 
             // btn_themuser
             // 
-            this.btn_themuser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_themuser.Location = new System.Drawing.Point(449, 103);
             this.btn_themuser.Name = "btn_themuser";
             this.btn_themuser.Size = new System.Drawing.Size(75, 23);

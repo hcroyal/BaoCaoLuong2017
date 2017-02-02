@@ -21,6 +21,12 @@ namespace BaoCaoLuong2017.MyUserControl
         {
 
         }
+
+        public void setRandom()
+        {
+            Random rd = new Random();
+            txt_Truong_002.Text = rd.Next(40, 700).ToString();
+        }
         public void ResetData()
         {
             txt_Truong_002.Text = string.Empty;

@@ -126,7 +126,11 @@ namespace BaoCaoLuong2017.MyForm
                         fdatecreated = DateTime.Now,
                         fPathPicture = txt_ImagePath.Text,
                         fLocation = txt_Location.Text,
-                        fSoLuongAnh = soluonghinh.ToString()
+                        fSoLuongAnh = soluonghinh.ToString(),
+                        GiaTriTruongSo4 = txt_TruongSo4.Text,
+                        TeninhThu2 = txt_TenHinhThu2.Text
+
+                        
 
                     };
                     Global.db_BCL.tbl_Batches.InsertOnSubmit(fBatch);

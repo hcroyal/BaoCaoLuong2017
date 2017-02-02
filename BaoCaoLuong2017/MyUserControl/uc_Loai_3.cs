@@ -47,7 +47,17 @@ namespace BaoCaoLuong2017.MyUserControl
         private void txt_Truong_003_TextChanged(object sender, EventArgs e)
         {
             if (txt_Truong_003.Text.Length == 10 || txt_Truong_003.Text == "?" || string.IsNullOrEmpty(txt_Truong_003.Text))
+            {
                 txt_Truong_003.BackColor = Color.White;
+                //luon luon bat dau bang so 4 hoac so 99
+                if (txt_Truong_003.Text.Length > 1)
+                    if (txt_Truong_003.Text[0].ToString() != "4")
+                        if ((txt_Truong_003.Text[0].ToString() + txt_Truong_003.Text[1].ToString()) != "99")
+                        {
+                            txt_Truong_003.BackColor = Color.Red;
+                        }
+            }
+                
             else
                 txt_Truong_003.BackColor = Color.Red;
             if (Changed != null)

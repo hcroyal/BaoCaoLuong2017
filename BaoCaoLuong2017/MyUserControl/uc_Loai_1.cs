@@ -54,5 +54,10 @@ namespace BaoCaoLuonng2017.MyUserControl
             if (Changed != null)
                 Changed(sender, e);
         }
+
+        private void uc_Loai_1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -71,6 +71,66 @@ namespace BaoCaoLuong2017.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Productivity {
+            get {
+                object obj = ResourceManager.GetObject("Productivity", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Productivity_DEJP {
+            get {
+                object obj = ResourceManager.GetObject("Productivity_DEJP", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Productivity_Loai1 {
+            get {
+                object obj = ResourceManager.GetObject("Productivity_Loai1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Productivity_Loai2 {
+            get {
+                object obj = ResourceManager.GetObject("Productivity_Loai2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Productivity_Loai3 {
+            get {
+                object obj = ResourceManager.GetObject("Productivity_Loai3", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Productivity_Loai4 {
+            get {
+                object obj = ResourceManager.GetObject("Productivity_Loai4", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap svn_deleted {

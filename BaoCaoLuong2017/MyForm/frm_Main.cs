@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using BaoCaoLuong2017.MyClass;
 using BaoCaoLuong2017.Properties;
 using DevExpress.XtraTab;
+using System.IO;
 
 namespace BaoCaoLuong2017.MyForm
 {
@@ -23,6 +24,7 @@ namespace BaoCaoLuong2017.MyForm
             tabcontrol.TabPages.Remove(tp_Loai_2);
             tabcontrol.TabPages.Remove(tp_Loai_3);
             tabcontrol.TabPages.Remove(tp_Loai_4);
+            tabcontrol.TabPages.Remove(tp_Loai_42);
             tabcontrol.TabPages.Remove(tp_DEJP);
             menu_QuanLy.Enabled = false;
             lb_TongSoHinh.Text = (from w in Global.db_BCL.tbl_Images where w.fbatchname == Global.StrBatch select w.idimage).Count().ToString();
@@ -33,6 +35,8 @@ namespace BaoCaoLuong2017.MyForm
                 tabcontrol.TabPages.Add(tp_Loai_2);
                 tabcontrol.TabPages.Add(tp_Loai_3);
                 tabcontrol.TabPages.Add(tp_Loai_4);
+                tabcontrol.TabPages.Add(tp_Loai_42);
+                tabcontrol.SelectedTabPage = tp_Loai_4;
             }
             else if (Global.StrRole == "DEJP")
             {
@@ -40,8 +44,21 @@ namespace BaoCaoLuong2017.MyForm
             }
             else
             {
+                btn_Start_Submit.Enabled = false;
+                btn_Submit_Logout.Enabled = false;
                 menu_QuanLy.Enabled = true;
             }
+            try
+            {
+                Global.TenHinhThu2 = (from w in Global.db_BCL.tbl_Batches where w.fBatchName == Global.StrBatch select w.TeninhThu2).FirstOrDefault().ToString();
+                Global.GiaTriTruongSo4 = (from w in Global.db_BCL.tbl_Batches where w.fBatchName == Global.StrBatch select w.GiaTriTruongSo4).FirstOrDefault().ToString();
+            }
+            catch (Exception)
+            {
+
+                
+            }
+           
         }
 
         private void btn_Check_DESO_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -54,24 +71,25 @@ namespace BaoCaoLuong2017.MyForm
             if (Global.StrRole == "DESO")
             {
                 lb_SoHinhConLai.Text = (from w in Global.db_BCL.tbl_Images
-                                      where (w.ReadImageDESo == 0 | w.ReadImageDESo == 1) & w.fbatchname == Global.StrBatch & w.UserNameDESo!=Global.StrUsername
+                                      where w.ReadImageDESo <2 && w.fbatchname == Global.StrBatch && w.UserNameDESo!=Global.StrUsername
                                       select w.idimage).Count().ToString();
                 lb_SoHinhLamDuoc.Text = (from w in Global.db_BCL.tbl_MissImage_DESOs
-                                       where w.UserName == Global.StrUsername & w.fBatchName==Global.StrBatch select w.IdImage).Count().ToString();
+                                       where w.UserName == Global.StrUsername && w.fBatchName==Global.StrBatch select w.IdImage).Count().ToString();
             }
             else if (Global.StrRole == "DEJP")
             {
                 lb_SoHinhConLai.Text = (from w in Global.db_BCL.tbl_Images
-                                      where (w.ReadImageDEJP == 0 | w.ReadImageDEJP == 1) & w.fbatchname == Global.StrBatch & w.UserNameDESo == Global.StrUsername
+                                      where w.ReadImageDEJP <2 && w.fbatchname == Global.StrBatch && w.UserNameDEJP == Global.StrUsername
                                         select w.idimage).Count().ToString();
                 lb_SoHinhLamDuoc.Text = (from w in Global.db_BCL.tbl_MissImage_DEJPs
-                                       where w.UserName == lb_UserName.Text select w.IdImage).Count().ToString();
+                                       where w.UserName == lb_UserName.Text && w.fBatchName==lb_fBatchName.Text select w.IdImage).Count().ToString();
             }
         }
         public string GetImage()
         {
             if (Global.StrRole == "DESO")
             {
+                tabcontrol.SelectedTabPage = tp_Loai_4;
                 string temp = (from w in Global.db_BCL.tbl_MissImage_DESOs
                                where w.fBatchName == Global.StrBatch && w.UserName == Global.StrUsername && w.Submit == 0
                                select w.IdImage).FirstOrDefault();
@@ -112,7 +130,6 @@ namespace BaoCaoLuong2017.MyForm
                         return "Error";
                     }
                 }
-                tabcontrol.SelectedTabPage = tp_Loai_4;
                 uc_Loai_41.txt_Truong_004.Focus();
             }
             else if (Global.StrRole == "DEJP")
@@ -162,10 +179,34 @@ namespace BaoCaoLuong2017.MyForm
             }
             return "OK";
         }
+
+
+        private string GetAutoTruongSo4(string strImageName)
+        {
+            try
+            {
+
+                long giatriso4 = long.Parse(Global.GiaTriTruongSo4);
+                long tenhinh = long.Parse(strImageName);
+                long tenhinhthu2 = long.Parse(Global.TenHinhThu2);
+
+                return (giatriso4 + (tenhinh - tenhinhthu2) * 10).ToString();
+
+                //return (int.Parse(Global.GiaTriTruongSo4) + (int.Parse(strImageName) - int.Parse(Global.TenHinhThu2)) * 10).ToString();
+                 
+            }
+            catch (Exception )
+            {
+
+                return "";
+            }
+            
+        }
         private void btn_Start_Submit_Click(object sender, EventArgs e)
         {
             try
             {
+                setValue();
                 if (btn_Start_Submit.Text == "Start")
                 {
                     if (string.IsNullOrEmpty(Global.StrBatch))
@@ -188,9 +229,12 @@ namespace BaoCaoLuong2017.MyForm
                     uc_Loai_21.ResetData();
                     uc_Loai_31.ResetData();
                     uc_Loai_41.ResetData();
-                    setValue();
+                    uc_Loai_421.ResetData();
                     btn_Start_Submit.Text = "Submit";
                     btn_Submit_Logout.Visible = true;
+                    uc_Loai_21.txt_Truong_002.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
+                    uc_Loai_31.txt_Truong_002.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
+                    uc_Loai_41.txt_Truong_004.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
                 }
                 else
                 {
@@ -232,14 +276,22 @@ namespace BaoCaoLuong2017.MyForm
                                     return;
                             }
                             uc_Loai_41.SaveData_Loai_4(lb_IdImage.Text);
-                            
-
+                        }
+                        else if (tabcontrol.SelectedTabPage== tp_Loai_42)
+                        {
+                            if (uc_Loai_421.IsEmpty())
+                            {
+                                if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                    return;
+                            }
+                            uc_Loai_421.SaveData_Loai_42(lb_IdImage.Text);
                         }
                         uc_Loai_11.ResetData();
                         uc_Loai_21.ResetData();
                         uc_Loai_31.ResetData();
                         uc_Loai_41.ResetData();
-                        setValue();
+                        uc_Loai_421.ResetData();
+                        
                     }
                     else if (Global.StrRole == "DEJP")
                     {
@@ -251,7 +303,6 @@ namespace BaoCaoLuong2017.MyForm
                         }
                         uc_DEJP1.SaveData_DEJP(lb_IdImage.Text);
                         uc_DEJP1.ResetData();
-                        setValue();
                     }
                     string temp = GetImage();
                     if (temp == "NULL")
@@ -264,6 +315,9 @@ namespace BaoCaoLuong2017.MyForm
                         MessageBox.Show("Không thể load hình!");
                         btn_Logout_ItemClick(null, null);
                     }
+                    uc_Loai_21.txt_Truong_002.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
+                    uc_Loai_31.txt_Truong_002.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
+                    uc_Loai_41.txt_Truong_004.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
                 }
             }
             catch (Exception ee)
@@ -333,9 +387,9 @@ namespace BaoCaoLuong2017.MyForm
 
 
                 }
-                Application.Exit();
+                DialogResult = DialogResult.Yes;
             }
-            catch { MessageBox.Show("Lỗi khi Submit"); }
+            catch(Exception i) { MessageBox.Show("Lỗi khi Submit : "+i.Message); }
         }
 
         private void btn_Logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -348,6 +402,19 @@ namespace BaoCaoLuong2017.MyForm
             if (e.Control && e.KeyCode==Keys.Enter)
             {
                 btn_Start_Submit_Click(null,null);
+            }
+            if(e.Control && e.KeyCode==Keys.Tab)
+            {
+                if (tabcontrol.SelectedTabPage == tp_Loai_1)
+                    tabcontrol.SelectedTabPage = tp_Loai_2;
+                else if (tabcontrol.SelectedTabPage == tp_Loai_2)
+                    tabcontrol.SelectedTabPage = tp_Loai_3;
+                else if (tabcontrol.SelectedTabPage == tp_Loai_3)
+                    tabcontrol.SelectedTabPage = tp_Loai_4;
+                else if (tabcontrol.SelectedTabPage == tp_Loai_4)
+                    tabcontrol.SelectedTabPage = tp_Loai_42;
+                else if (tabcontrol.SelectedTabPage == tp_Loai_42)
+                    tabcontrol.SelectedTabPage = tp_Loai_1;
             }
         }
 
@@ -368,19 +435,60 @@ namespace BaoCaoLuong2017.MyForm
 
         private void txt_LoaiPhieu_TextChanged(object sender, EventArgs e)
         {
-            if (txt_LoaiPhieu.Text == "1")
-                tabcontrol.SelectedTabPage = tp_Loai_1;
-            if (txt_LoaiPhieu.Text == "2")
-                tabcontrol.SelectedTabPage = tp_Loai_2;
-            if (txt_LoaiPhieu.Text == "3")
-                tabcontrol.SelectedTabPage = tp_Loai_3;
-            if (txt_LoaiPhieu.Text == "4")
-                tabcontrol.SelectedTabPage = tp_Loai_4;
+            if (Global.StrRole != "DEJP" && Global.StrRole != "CHECKERDEJP")
+            {
+                if (txt_LoaiPhieu.Text == "1")
+                    tabcontrol.SelectedTabPage = tp_Loai_1;
+                if (txt_LoaiPhieu.Text == "2")
+                    tabcontrol.SelectedTabPage = tp_Loai_2;
+                if (txt_LoaiPhieu.Text == "3")
+                    tabcontrol.SelectedTabPage = tp_Loai_3;
+                if (txt_LoaiPhieu.Text == "4")
+                    tabcontrol.SelectedTabPage = tp_Loai_4;
+                if (txt_LoaiPhieu.Text == "5")
+                    tabcontrol.SelectedTabPage = tp_Loai_42;
+            }
         }
 
         private void btn_Check_NhamPhieu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+
+        private void btn_NangSuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frm_NangSuat().ShowDialog();
+        }
+
+        private void btn_Exit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ZoomImage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+           
+        }
+        
+        private void btn_Zoom_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            new frm_ChangeZoom().ShowDialog();
+        }
+
+        private void tabcontrol_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.Tab)
+            {
+                frm_Main_KeyDown(sender, e);
+                frm_Main_KeyDown(sender, e);
+                frm_Main_KeyDown(sender, e);
+                frm_Main_KeyDown(sender, e);
+            }
         }
     }
 }

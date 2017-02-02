@@ -38,21 +38,25 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
             this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(9, 8);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(11, 16);
+            this.labelControl1.Size = new System.Drawing.Size(12, 16);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "1.";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
             this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.Location = new System.Drawing.Point(9, 40);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(11, 16);
+            this.labelControl2.Size = new System.Drawing.Size(12, 16);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "2.";
             // 
@@ -88,6 +92,7 @@
             this.Controls.Add(this.labelControl1);
             this.Name = "uc_Loai_1";
             this.Size = new System.Drawing.Size(197, 69);
+            this.Load += new System.EventHandler(this.uc_Loai_1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_001.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_002.Properties)).EndInit();
             this.ResumeLayout(false);

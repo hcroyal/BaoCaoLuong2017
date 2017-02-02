@@ -89,23 +89,23 @@ namespace BaoCaoLuong2017.MyForm
         
         private void gridView1_GotFocus(object sender, EventArgs e)
         {
-            string Username, Password, grouplevel, roleid, idnhanvien;
+            //string Username, Password, grouplevel, roleid, idnhanvien;
 
-            Username = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Username") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Username").ToString() : "";
-            grouplevel = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Group_Level") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Group_Level").ToString() : "";
-            Password = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString() : "";
-            roleid = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IDRole") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IDRole").ToString() : "";
-            idnhanvien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FullName") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FullName").ToString() : "";
+            //Username = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Username") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Username").ToString() : "";
+            //grouplevel = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Group_Level") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Group_Level").ToString() : "";
+            //Password = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString() : "";
+            //roleid = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IDRole") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IDRole").ToString() : "";
+            //idnhanvien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FullName") != null ? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FullName").ToString() : "";
 
-            txt_username.Text = Username;
-            txt_password.Text = Password;
-            txt_grouplevel.Text = grouplevel;
-            txt_FullName.Text = idnhanvien;
+            //txt_username.Text = Username;
+            //txt_password.Text = Password;
+            //txt_grouplevel.Text = grouplevel;
+            //txt_FullName.Text = idnhanvien;
 
-            cbb_idrole.DataSource = Global.db_BPO.GetListRole();
-            cbb_idrole.DisplayMember = "RoleName";
-            cbb_idrole.ValueMember = "RoleID";
-            cbb_idrole.SelectedValue = roleid;
+            //cbb_idrole.DataSource = Global.db_BPO.GetListRole();
+            //cbb_idrole.DisplayMember = "RoleName";
+            //cbb_idrole.ValueMember = "RoleID";
+            //cbb_idrole.SelectedValue = roleid;
         }
     }
 }

@@ -89,6 +89,12 @@
     <Compile Include="MyForm\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_ChangeZoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_ChangeZoom.designer.cs">
+      <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_Check.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="MyForm\frm_ManagerBatch.Designer.cs">
       <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForm\frm_NangSuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_NangSuat.designer.cs">
+      <DependentUpon>frm_NangSuat.cs</DependentUpon>
     </Compile>
     <Compile Include="MyForm\frm_User.cs">
       <SubType>Form</SubType>
@@ -155,6 +167,12 @@
     <Compile Include="MyUserControl\uc_Loai_4.Designer.cs">
       <DependentUpon>uc_Loai_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\uc_Loai_42.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\uc_Loai_42.designer.cs">
+      <DependentUpon>uc_Loai_42.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\uc_PictureBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -178,6 +196,9 @@
     <EmbeddedResource Include="MyForm\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_ChangeZoom.resx">
+      <DependentUpon>frm_ChangeZoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Check.resx">
       <DependentUpon>frm_Check.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_ManagerBatch.resx">
       <DependentUpon>frm_ManagerBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_NangSuat.resx">
+      <DependentUpon>frm_NangSuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_User.resx">
       <DependentUpon>frm_User.cs</DependentUpon>
@@ -210,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\uc_Loai_4.resx">
       <DependentUpon>uc_Loai_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\uc_Loai_42.resx">
+      <DependentUpon>uc_Loai_42.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyUserControl\uc_PictureBox.resx">
       <DependentUpon>uc_PictureBox.cs</DependentUpon>
@@ -242,6 +269,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ExportExcel.xls" />
+    <None Include="Resources\Productivity.xls" />
+    <None Include="Resources\Productivity_DEJP.xls" />
+    <None Include="Resources\Productivity_Loai1.xls" />
+    <None Include="Resources\Productivity_Loai2.xls" />
+    <None Include="Resources\Productivity_Loai3.xls" />
+    <None Include="Resources\Productivity_Loai4.xls" />
     <None Include="Resources\svn_deleted.png" />
   </ItemGroup>
   <ItemGroup>

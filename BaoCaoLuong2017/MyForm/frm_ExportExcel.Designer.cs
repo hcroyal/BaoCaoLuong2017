@@ -33,6 +33,7 @@
             this.cbb_Batch = new System.Windows.Forms.ComboBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.lb_SoDong_trongExcel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,21 +43,23 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 102);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 102);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(167, 78);
+            this.dataGridView1.Size = new System.Drawing.Size(1062, 423);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.Visible = false;
             // 
             // simpleButton1
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(202, 113);
+            this.simpleButton1.Location = new System.Drawing.Point(618, 60);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(102, 67);
+            this.simpleButton1.Size = new System.Drawing.Size(102, 33);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "Xuất Excel";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -81,11 +84,21 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Chọn Batch";
             // 
+            // lb_SoDong_trongExcel
+            // 
+            this.lb_SoDong_trongExcel.AutoSize = true;
+            this.lb_SoDong_trongExcel.Location = new System.Drawing.Point(559, 72);
+            this.lb_SoDong_trongExcel.Name = "lb_SoDong_trongExcel";
+            this.lb_SoDong_trongExcel.Size = new System.Drawing.Size(19, 13);
+            this.lb_SoDong_trongExcel.TabIndex = 8;
+            this.lb_SoDong_trongExcel.Text = "...";
+            // 
             // frm_ExportExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 205);
+            this.ClientSize = new System.Drawing.Size(1074, 528);
+            this.Controls.Add(this.lb_SoDong_trongExcel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.cbb_Batch);
@@ -106,5 +119,6 @@
         private System.Windows.Forms.ComboBox cbb_Batch;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Label lb_SoDong_trongExcel;
     }
 }

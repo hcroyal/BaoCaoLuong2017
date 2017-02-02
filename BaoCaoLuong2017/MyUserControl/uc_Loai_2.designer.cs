@@ -41,33 +41,39 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
             this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.Location = new System.Drawing.Point(8, 10);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(11, 16);
+            this.labelControl2.Size = new System.Drawing.Size(12, 16);
             this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "2.";
+            this.labelControl2.Text = "4.";
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
             this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.Location = new System.Drawing.Point(8, 41);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(11, 16);
+            this.labelControl3.Size = new System.Drawing.Size(12, 16);
             this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "3.";
+            this.labelControl3.Text = "6.";
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
             this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.Location = new System.Drawing.Point(8, 72);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(11, 16);
+            this.labelControl4.Size = new System.Drawing.Size(12, 16);
             this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "4.";
+            this.labelControl4.Text = "5.";
             // 
             // txt_Truong_002
             // 
@@ -100,6 +106,7 @@
             this.txt_Truong_004.Properties.MaxLength = 13;
             this.txt_Truong_004.Size = new System.Drawing.Size(153, 20);
             this.txt_Truong_004.TabIndex = 4;
+            this.txt_Truong_004.EditValueChanged += new System.EventHandler(this.txt_Truong_004_EditValueChanged);
             this.txt_Truong_004.TextChanged += new System.EventHandler(this.txt_Truong_004_TextChanged);
             // 
             // uc_Loai_2

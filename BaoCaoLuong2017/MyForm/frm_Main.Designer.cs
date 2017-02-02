@@ -40,14 +40,17 @@
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.btn_Check_DESO = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Check_DEJP = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_Check_NhamPhieu = new DevExpress.XtraBars.BarButtonItem();
             this.btn_XuatExcel = new DevExpress.XtraBars.BarButtonItem();
             this.btn_NangSuat = new DevExpress.XtraBars.BarButtonItem();
             this.btn_TienDo = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_Zoom = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btn_Check_NhamPhieu = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_ZoomImage = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lb_SoHinhLamDuoc = new DevExpress.XtraEditors.LabelControl();
             this.lb_SoHinhConLai = new DevExpress.XtraEditors.LabelControl();
@@ -73,6 +76,8 @@
             this.uc_Loai_41 = new BaoCaoLuong2017.MyUserControl.uc_Loai_4();
             this.tp_DEJP = new DevExpress.XtraTab.XtraTabPage();
             this.uc_DEJP1 = new BaoCaoLuong2017.MyUserControl.uc_DEJP();
+            this.tp_Loai_42 = new DevExpress.XtraTab.XtraTabPage();
+            this.uc_Loai_421 = new BaoCaoLuong2017.MyUserControl.uc_Loai_42();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
@@ -92,6 +97,7 @@
             this.tp_Loai_3.SuspendLayout();
             this.tp_Loai_4.SuspendLayout();
             this.tp_DEJP.SuspendLayout();
+            this.tp_Loai_42.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -121,9 +127,12 @@
             this.btn_Check_NhamPhieu,
             this.btn_XuatExcel,
             this.btn_NangSuat,
-            this.btn_TienDo});
+            this.btn_TienDo,
+            this.btn_ZoomImage,
+            this.barButtonItem1,
+            this.btn_Zoom});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 13;
+            this.barManager1.MaxItemId = 16;
             // 
             // bar2
             // 
@@ -133,7 +142,8 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.menu_Menu),
-            new DevExpress.XtraBars.LinkPersistInfo(this.menu_QuanLy)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.menu_QuanLy),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Zoom)});
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
@@ -161,6 +171,7 @@
             this.btn_Exit.Caption = "&Exit";
             this.btn_Exit.Id = 2;
             this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Exit_ItemClick);
             // 
             // menu_QuanLy
             // 
@@ -195,8 +206,7 @@
             this.barSubItem1.Id = 6;
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DESO),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DEJP),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_NhamPhieu)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Check_DEJP)});
             this.barSubItem1.Name = "barSubItem1";
             // 
             // btn_Check_DESO
@@ -213,13 +223,6 @@
             this.btn_Check_DEJP.Name = "btn_Check_DEJP";
             this.btn_Check_DEJP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_DEJP_ItemClick);
             // 
-            // btn_Check_NhamPhieu
-            // 
-            this.btn_Check_NhamPhieu.Caption = "Check_Nhầm &Phiếu";
-            this.btn_Check_NhamPhieu.Id = 9;
-            this.btn_Check_NhamPhieu.Name = "btn_Check_NhamPhieu";
-            this.btn_Check_NhamPhieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_NhamPhieu_ItemClick);
-            // 
             // btn_XuatExcel
             // 
             this.btn_XuatExcel.Caption = "&Xuất Excel";
@@ -232,12 +235,20 @@
             this.btn_NangSuat.Caption = "&Năng suất";
             this.btn_NangSuat.Id = 11;
             this.btn_NangSuat.Name = "btn_NangSuat";
+            this.btn_NangSuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_NangSuat_ItemClick);
             // 
             // btn_TienDo
             // 
             this.btn_TienDo.Caption = "&Tiến độ";
             this.btn_TienDo.Id = 12;
             this.btn_TienDo.Name = "btn_TienDo";
+            // 
+            // btn_Zoom
+            // 
+            this.btn_Zoom.Caption = "Zoom Image";
+            this.btn_Zoom.Id = 15;
+            this.btn_Zoom.Name = "btn_Zoom";
+            this.btn_Zoom.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Zoom_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -266,6 +277,25 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1344, 20);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 702);
+            // 
+            // btn_Check_NhamPhieu
+            // 
+            this.btn_Check_NhamPhieu.Caption = "Check_Nhầm &Phiếu";
+            this.btn_Check_NhamPhieu.Id = 9;
+            this.btn_Check_NhamPhieu.Name = "btn_Check_NhamPhieu";
+            this.btn_Check_NhamPhieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Check_NhamPhieu_ItemClick);
+            // 
+            // btn_ZoomImage
+            // 
+            this.btn_ZoomImage.Caption = "&Zoom Image";
+            this.btn_ZoomImage.Id = 13;
+            this.btn_ZoomImage.Name = "btn_ZoomImage";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 14;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // panelControl1
             // 
@@ -413,7 +443,9 @@
             this.tp_Loai_2,
             this.tp_Loai_3,
             this.tp_Loai_4,
-            this.tp_DEJP});
+            this.tp_DEJP,
+            this.tp_Loai_42});
+            this.tabcontrol.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabcontrol_KeyDown);
             // 
             // tp_Loai_1
             // 
@@ -489,6 +521,21 @@
             this.uc_DEJP1.Name = "uc_DEJP1";
             this.uc_DEJP1.Size = new System.Drawing.Size(533, 585);
             this.uc_DEJP1.TabIndex = 0;
+            // 
+            // tp_Loai_42
+            // 
+            this.tp_Loai_42.Controls.Add(this.uc_Loai_421);
+            this.tp_Loai_42.Name = "tp_Loai_42";
+            this.tp_Loai_42.Size = new System.Drawing.Size(533, 585);
+            this.tp_Loai_42.Text = "Loại 4.2";
+            // 
+            // uc_Loai_421
+            // 
+            this.uc_Loai_421.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uc_Loai_421.Location = new System.Drawing.Point(0, 0);
+            this.uc_Loai_421.Name = "uc_Loai_421";
+            this.uc_Loai_421.Size = new System.Drawing.Size(533, 585);
+            this.uc_Loai_421.TabIndex = 0;
             // 
             // panelControl3
             // 
@@ -568,7 +615,7 @@
             this.KeyPreview = true;
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_Main";
+            this.Text = "Báo Cáo Lương 2017";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_Main_KeyDown);
@@ -585,6 +632,7 @@
             this.tp_Loai_3.ResumeLayout(false);
             this.tp_Loai_4.ResumeLayout(false);
             this.tp_DEJP.ResumeLayout(false);
+            this.tp_Loai_42.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
@@ -649,5 +697,10 @@
         private MyUserControl.uc_Loai_3 uc_Loai_31;
         private MyUserControl.uc_Loai_4 uc_Loai_41;
         private MyUserControl.uc_DEJP uc_DEJP1;
+        private DevExpress.XtraTab.XtraTabPage tp_Loai_42;
+        private MyUserControl.uc_Loai_42 uc_Loai_421;
+        private DevExpress.XtraBars.BarButtonItem btn_ZoomImage;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btn_Zoom;
     }
 }
