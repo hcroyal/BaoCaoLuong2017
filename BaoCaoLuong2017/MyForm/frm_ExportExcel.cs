@@ -130,7 +130,7 @@ namespace BaoCaoLuong2017.MyForm
 
             {
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = Global.db_BCL.ExportExcel(cbb_Batch.Text);
+                dataGridView1.DataSource = Global.db_BCL.ExportExcel_new(cbb_Batch.Text);
                 Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel.Workbook book = App.Workbooks.Open(strfilename, 0, true, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
                 Microsoft.Office.Interop.Excel.Sheets _sheet = (Microsoft.Office.Interop.Excel.Sheets)book.Sheets;
@@ -482,6 +482,14 @@ namespace BaoCaoLuong2017.MyForm
                             wrksheet.Cells[h, 110] = dr.Cells[109].Value == null ? "" : dr.Cells[109].Value.ToString();
                             wrksheet.Cells[h, 111] = dr.Cells[110].Value == null ? "" : dr.Cells[110].Value.ToString();
                             wrksheet.Cells[h, 112] = (dr.Cells[111].Value == null ? "" : dr.Cells[111].Value.ToString());
+
+                            for (int i = 127; i <= 140; i++)
+                            {
+                                if ((dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString()) == "0")
+                                    wrksheet.Cells[h, i + 2] = "";
+                                else
+                                    wrksheet.Cells[h, i + 2] = dr.Cells[i + 1].Value.ToString().Replace(",", "");
+                            }
 
                             wrksheet.Cells[h, 160] = dr.Cells[159].Value == null ? "" : dr.Cells[159].Value.ToString();//truong so 158
                             wrksheet.Cells[h, 165] = "";

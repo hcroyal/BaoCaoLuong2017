@@ -65,6 +65,22 @@ namespace BaoCaoLuong2017.MyUserControl
             txt_Truong_045.GotFocus += Txt_Truong_001_1_GotFocus;
             txt_Truong_048.GotFocus += Txt_Truong_001_1_GotFocus;
             txt_Truong_041.GotFocus += Txt_Truong_001_1_GotFocus;
+
+            txt_Truong_130.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_135.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_126.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_131.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_136.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_127.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_132.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_137.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_128.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_133.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_138.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_129.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_134.GotFocus += Txt_Truong_001_1_GotFocus;
+            txt_Truong_139.GotFocus += Txt_Truong_001_1_GotFocus;
+
             txt_Truong_029.GotFocus += Txt_Truong_001_1_GotFocus;
             txt_Truong_030.GotFocus += Txt_Truong_001_1_GotFocus;
             txt_Truong_112.GotFocus += Txt_Truong_001_1_GotFocus;
@@ -106,9 +122,6 @@ namespace BaoCaoLuong2017.MyUserControl
             txt_Truong_005.GotFocus  += Txt_Truong_001_1_GotFocus;
             txt_Truong_105.GotFocus += Txt_Truong_001_1_GotFocus;
             txt_Truong_103.GotFocus += Txt_Truong_001_1_GotFocus;
-
-
-
             txt_Truong_158.LostFocus += Txt_Truong_158_LostFocus;
             txt_Truong_159.LostFocus += Txt_Truong_158_LostFocus;
             txt_Truong_160.LostFocus += Txt_Truong_158_LostFocus;
@@ -190,6 +203,22 @@ namespace BaoCaoLuong2017.MyUserControl
             txt_Truong_045.Text = "";
             txt_Truong_048.Text = "";
             txt_Truong_041.Text = "";
+
+            txt_Truong_130.Text = "";
+            txt_Truong_135.Text = "";
+            txt_Truong_126.Text = "";
+            txt_Truong_131.Text = "";
+            txt_Truong_136.Text = "";
+            txt_Truong_127.Text = "";
+            txt_Truong_132.Text = "";
+            txt_Truong_137.Text = "";
+            txt_Truong_128.Text = "";
+            txt_Truong_133.Text = "";
+            txt_Truong_138.Text = "";
+            txt_Truong_129.Text = "";
+            txt_Truong_134.Text = "";
+            txt_Truong_139.Text = "";
+
             txt_Truong_029.Text = "";
             txt_Truong_030.Text = "";
             txt_Truong_112.Text = "";
@@ -272,6 +301,22 @@ namespace BaoCaoLuong2017.MyUserControl
                 string.IsNullOrEmpty(txt_Truong_045.Text) &&
                 string.IsNullOrEmpty(txt_Truong_048.Text) &&
                 string.IsNullOrEmpty(txt_Truong_041.Text) &&
+
+                string.IsNullOrEmpty(txt_Truong_130.Text) &&
+                string.IsNullOrEmpty(txt_Truong_135.Text) &&
+                string.IsNullOrEmpty(txt_Truong_126.Text) &&
+                string.IsNullOrEmpty(txt_Truong_131.Text) &&
+                string.IsNullOrEmpty(txt_Truong_136.Text) &&
+                string.IsNullOrEmpty(txt_Truong_127.Text) &&
+                string.IsNullOrEmpty(txt_Truong_132.Text) &&
+                string.IsNullOrEmpty(txt_Truong_137.Text) &&
+                string.IsNullOrEmpty(txt_Truong_128.Text) &&
+                string.IsNullOrEmpty(txt_Truong_133.Text) &&
+                string.IsNullOrEmpty(txt_Truong_138.Text) &&
+                string.IsNullOrEmpty(txt_Truong_129.Text) &&
+                string.IsNullOrEmpty(txt_Truong_134.Text) &&
+                string.IsNullOrEmpty(txt_Truong_139.Text) &&
+
                 string.IsNullOrEmpty(txt_Truong_029.Text) &&
                 string.IsNullOrEmpty(txt_Truong_030.Text) &&
                 string.IsNullOrEmpty(txt_Truong_112.Text) &&
@@ -327,7 +372,7 @@ namespace BaoCaoLuong2017.MyUserControl
         {
             string txtTruong001 = txt_Truong_001_1.Text + txt_Truong_001_2.Text;
             string txtTruong102 = txt_Truong_102_1.Text + txt_Truong_102_2.Text;
-            Global.db_BCL.Insert_Loai4(idImage,Global.StrBatch,Global.StrUsername,"Loai4",
+            Global.db_BCL.Insert_Loai4_new(idImage,Global.StrBatch,Global.StrUsername,"Loai4",
                 txt_Truong_004.Text,
                 txt_Truong_012.Text,
                 txt_Truong_006.Text,
@@ -358,6 +403,22 @@ namespace BaoCaoLuong2017.MyUserControl
                 txt_Truong_045.Text?.Replace(",", ""),
                 txt_Truong_048.Text?.Replace(",", ""),
                 txt_Truong_041.Text?.Replace(",", ""),
+
+                txt_Truong_130.Text?.Replace(",", ""),
+                txt_Truong_135.Text?.Replace(",", ""),
+                txt_Truong_126.Text?.Replace(",", ""),
+                txt_Truong_131.Text?.Replace(",", ""),
+                txt_Truong_136.Text?.Replace(",", ""),
+                txt_Truong_127.Text?.Replace(",", ""),
+                txt_Truong_132.Text?.Replace(",", ""),
+                txt_Truong_137.Text?.Replace(",", ""),
+                txt_Truong_128.Text?.Replace(",", ""),
+                txt_Truong_133.Text?.Replace(",", ""),
+                txt_Truong_138.Text?.Replace(",", ""),
+                txt_Truong_129.Text?.Replace(",", ""),
+                txt_Truong_134.Text?.Replace(",", ""),
+                txt_Truong_139.Text?.Replace(",", ""),
+
                 txt_Truong_029.Text,
                 txt_Truong_030.Text,
                 txt_Truong_112.Text,
@@ -518,16 +579,42 @@ namespace BaoCaoLuong2017.MyUserControl
       
         private void curency(TextEdit txt)
         {
-            if (txt.SelectionLength != txt.Text.Length)
+            string t;
+            if (txt.Text.Length>0)
             {
-                if (!string.IsNullOrEmpty(txt.Text) && txt.Text != "?")
+                if (txt.Text.Substring(0,1)=="-")
                 {
-                    System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
-                    int valueBefore = Int32.Parse(txt.Text, System.Globalization.NumberStyles.AllowThousands);
-                    txt.Text = String.Format(culture, "{0:N0}", valueBefore);
-                    txt.Select(txt.Text.Length, 0);
+                    if (txt.Text.Length > 1)
+                    {
+                        t = txt.Text.Substring(1, txt.Text.Length - 1);
+                        if (txt.SelectionLength != txt.Text.Length)
+                        {
+                            if (txt.Text != "?")
+                            {
+                                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                                int valueBefore = Int32.Parse(t, System.Globalization.NumberStyles.AllowThousands);
+                                txt.Text = "-" + String.Format(culture, "{0:N0}", valueBefore);
+                                txt.Select(txt.Text.Length, 0);
+                            }
+                        }
+                    }
+                    
+                }
+                else
+                {
+                    if (txt.SelectionLength != txt.Text.Length)
+                    {
+                        if (txt.Text != "?")
+                        {
+                            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                            int valueBefore = Int32.Parse(txt.Text, System.Globalization.NumberStyles.AllowThousands);
+                            txt.Text = String.Format(culture, "{0:N0}", valueBefore);
+                            txt.Select(txt.Text.Length, 0);
+                        }
+                    }
                 }
             }
+            
         }
         private void txt_Truong_037_KeyUp(object sender, KeyEventArgs e)
         {
@@ -654,14 +741,14 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_041_KeyUp(object sender, KeyEventArgs e)
         {
-            //try
-            //{
-            //    curency(txt_Truong_041);
-            //}
-            //catch
-            //{
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
 
-            //}
+            }
         }
 
         private void txt_Truong_063_KeyUp(object sender, KeyEventArgs e)
@@ -798,19 +885,44 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void doimautrongkhoang(TextEdit txt, int so_nho, int so_lon)
         {
-            
-            if (!string.IsNullOrEmpty(txt.Text)|| txt.Text != "?")
+            if (txt.Text.Length>0)
             {
-                if (txt.Text.Length>=so_nho&&txt.Text.Length<=so_lon)
+                if (txt.Text != "?")
                 {
-                    txt.ForeColor = Color.Black;
-                    txt.BackColor = Color.White;
+                    if (txt.Text.Substring(0, 1) == "-")
+                    {
+                        if (txt.Text.Length >= so_nho && txt.Text.Length <= so_lon + 1)
+                        {
+                            txt.ForeColor = Color.Black;
+                            txt.BackColor = Color.White;
+
+                        }
+                        else
+                        {
+                            txt.ForeColor = Color.White;
+                            txt.BackColor = Color.Red;
+                        }
+                    }
+                    else
+                    {
+                        if (txt.Text.Length >= so_nho && txt.Text.Length <= so_lon)
+                        {
+                            txt.ForeColor = Color.Black;
+                            txt.BackColor = Color.White;
+
+                        }
+                        else
+                        {
+                            txt.ForeColor = Color.White;
+                            txt.BackColor = Color.Red;
+                        }
+                    }
                     
                 }
                 else
                 {
-                    txt.ForeColor = Color.White;
-                    txt.BackColor = Color.Red;
+                    txt.ForeColor = Color.Black;
+                    txt.BackColor = Color.White;
                 }
             }
             else
@@ -818,6 +930,8 @@ namespace BaoCaoLuong2017.MyUserControl
                 txt.ForeColor = Color.Black;
                 txt.BackColor = Color.White;
             }
+
+
         }
 
         private void txt_Truong_004_EditValueChanged(object sender, EventArgs e)
@@ -1039,7 +1153,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_041_EditValueChanged(object sender, EventArgs e)
         {
-            //doimautrongkhoang((TextEdit)sender, 0, 10);
+            doimautrongkhoang((TextEdit)sender, 0, 10);
             if (Changed != null)
                 Changed(sender, e);
         }
@@ -1378,11 +1492,6 @@ namespace BaoCaoLuong2017.MyUserControl
                 doimautrongkhoang((TextEdit)sender, 6, 6);
         }
 
-        private void txt_Truong_158_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txt_Truong_077_EditValueChanged(object sender, EventArgs e)
         {
             if (Changed != null)
@@ -1396,6 +1505,90 @@ namespace BaoCaoLuong2017.MyUserControl
         }
 
         private void txt_Truong_101_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_078_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_108_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_109_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_088_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_099_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_097_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_098_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_089_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_091_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_090_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_093_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_094_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_095_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_096_EditValueChanged(object sender, EventArgs e)
         {
             if (Changed != null)
                 Changed(sender, e);
