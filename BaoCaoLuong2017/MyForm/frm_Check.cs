@@ -1734,6 +1734,11 @@ namespace BaoCaoLuong2017.MyForm
             }
             else if (Global.StrCheck == "CHECKDEJP")
             {
+                if (uc_DEJP1.bSubmit)
+                {
+                    MessageBox.Show("Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
+                    return;
+                }
 
                 Global.db_BCL.SuaVaLuu_DEJP(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_DEJP1.txt_Truong_002.Text, "Loai4");
 
@@ -2017,7 +2022,10 @@ namespace BaoCaoLuong2017.MyForm
             }
             else if (Global.StrCheck == "CHECKDEJP")
             {
-
+                if (uc_DEJP2.bSubmit)
+                {
+                    MessageBox.Show("Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
+                    return;}
                 Global.db_BCL.SuaVaLuu_DEJP(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_DEJP2.txt_Truong_002.Text, "Loai4");
 
                 ResetData();

@@ -7,6 +7,7 @@ using BaoCaoLuong2017.Properties;
 using DevExpress.XtraTab;
 using System.IO;
 using BaoCaoLuong2017.MyLog;
+using BaoCaoLuong2017.MyUserControl;
 
 namespace BaoCaoLuong2017.MyForm
 {
@@ -304,6 +305,11 @@ namespace BaoCaoLuong2017.MyForm
                             if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
                                 return;
                         }
+                        if (uc_DEJP1.bSubmit)
+                        {
+                            MessageBox.Show("Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
+                            return;
+                        }
                         uc_DEJP1.SaveData_DEJP(lb_IdImage.Text);
                         uc_DEJP1.ResetData();
                     }
@@ -406,6 +412,11 @@ namespace BaoCaoLuong2017.MyForm
                                 "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
                             System.Windows.Forms.DialogResult.No)
                             return;
+                    }
+                    if (uc_DEJP1.bSubmit)
+                    {
+                        MessageBox.Show("Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
+                        return;
                     }
                     uc_DEJP1.SaveData_DEJP(lb_IdImage.Text);
 
