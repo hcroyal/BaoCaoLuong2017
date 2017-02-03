@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
+﻿using BaoCaoLuong2017.Properties;
+using System;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using BaoCaoLuong2017.Properties;
+
 namespace BaoCaoLuong2017.MyForm
 {
     public partial class frm_ChangeZoom : DevExpress.XtraEditors.XtraForm
@@ -19,7 +13,7 @@ namespace BaoCaoLuong2017.MyForm
 
         private void frm_ChangeZoom_Load(object sender, EventArgs e)
         {
-            trackBarControl1.EditValue =Settings.Default.ZoomImage;
+            trackBarControl1.EditValue = Settings.Default.ZoomImage;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

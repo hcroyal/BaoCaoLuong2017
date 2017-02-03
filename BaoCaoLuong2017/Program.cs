@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BaoCaoLuong2017.MyForm;
+using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
+using LibraryLogin;
+using System;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.UserSkins;
-using DevExpress.Skins;
-using DevExpress.LookAndFeel;
-using LibraryLogin;
-using BaoCaoLuong2017.MyForm;
 
 namespace BaoCaoLuong2017
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -55,7 +54,7 @@ namespace BaoCaoLuong2017
                     Global.StrMachine = a.StrMachine;
                     Global.StrUserWindow = a.StrUserWindow;
                     Global.StrIpAddress = a.StrIpAddress;
-                    Global.StrUsername = a.StrUserName;Global.StrBatch = a.StrBatch;
+                    Global.StrUsername = a.StrUserName; Global.StrBatch = a.StrBatch;
                     Global.StrRole = a.StrRole;
                     Global.Strtoken = a.Token;
                     frm_Main f = new frm_Main();
@@ -68,6 +67,7 @@ namespace BaoCaoLuong2017
             }
             while (temp);
         }
+
         private static void a_ButtonLoginEven(int iLogin, string strMachine, string strUserWindow, string strIpAddress, string strUsername, string password, string strBatch, string strRole, string strToken)
         {
             if (iLogin == 1)
@@ -76,27 +76,26 @@ namespace BaoCaoLuong2017
                 //Global.deBPO.UpdateToken_TableUser(strUsername, strToken);
             }
         }
+
         private static void a_LoginEvent(string username, string password, ref string strVersion, ref int iKiemtraLogin, ref string role, ref ComboBox cbb)
         {
             try
             {
                 iKiemtraLogin = Global.db_BPO.KiemTraLogin(username, password);
                 strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == "BaoCaoLuong2017" select w.IDVersion).FirstOrDefault();
-                role = (from w in Global.db_BPO.tbl_Users where w.Username==username select w.IDRole).FirstOrDefault();
+                role = (from w in Global.db_BPO.tbl_Users where w.Username == username select w.IDRole).FirstOrDefault();
                 if (!string.IsNullOrEmpty(role))
                     role = role.ToUpper();
-                if (iKiemtraLogin == 1 && role=="ADMIN" )
+                if (iKiemtraLogin == 1 && role == "ADMIN")
                 {
-                   
                     cbb.DataSource = Global.db_BCL.GetBatch();
                     cbb.DisplayMember = "fBatchName";
                 }
-                else if (iKiemtraLogin == 1 && role =="DEJP")
+                else if (iKiemtraLogin == 1 && role == "DEJP")
                 {
                     cbb.DataSource = Global.db_BCL.GetBatNotFinishDeJP(username);
                     cbb.DisplayMember = "fBatchName";
                 }
-               
                 else if (iKiemtraLogin == 1 && role == "DESO")
                 {
                     cbb.DataSource = Global.db_BCL.GetBatNotFinishDeSo(username);

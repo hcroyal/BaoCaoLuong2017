@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace BaoCaoLuong2017.MyForm
 {
@@ -48,7 +45,8 @@ namespace BaoCaoLuong2017.MyForm
             {
                 _lFileNames = dlg.FileNames;
                 txt_ImagePath.Text = Path.GetDirectoryName(dlg.FileName);
-            }soluonghinh = 0;
+            }
+            soluonghinh = 0;
             soluonghinh = dlg.FileNames.Length;
             lb_SoLuongHinh.Text = dlg.FileNames.Length + " files ";
         }
@@ -93,7 +91,7 @@ namespace BaoCaoLuong2017.MyForm
         private void frm_CreateBatch_Load(object sender, EventArgs e)
         {
             txt_UserCreate.Text = Global.StrUsername;
-            txt_DateCreate.Text = DateTime.Now.ToShortDateString() + "  -  " + DateTime.Now.ToShortTimeString();            
+            txt_DateCreate.Text = DateTime.Now.ToShortDateString() + "  -  " + DateTime.Now.ToShortTimeString();
         }
 
         public static string[] GetFilesFrom(string searchFolder, string[] filters, bool isRecursive)
@@ -114,7 +112,7 @@ namespace BaoCaoLuong2017.MyForm
             progressBarControl1.Properties.PercentView = true;
             progressBarControl1.Properties.Maximum = _lFileNames.Length;
             progressBarControl1.Properties.Minimum = 0;
-            var batch = (from w in Global.db_BCL.tbl_Batches.Where(w => w.fBatchName == txt_BatchName.Text)select w.fBatchName).FirstOrDefault();
+            var batch = (from w in Global.db_BCL.tbl_Batches.Where(w => w.fBatchName == txt_BatchName.Text) select w.fBatchName).FirstOrDefault();
             if (!string.IsNullOrEmpty(txt_ImagePath.Text))
             {
                 if (string.IsNullOrEmpty(batch))
@@ -129,9 +127,6 @@ namespace BaoCaoLuong2017.MyForm
                         fSoLuongAnh = soluonghinh.ToString(),
                         GiaTriTruongSo4 = txt_TruongSo4.Text,
                         TeninhThu2 = txt_TenHinhThu2.Text
-
-                        
-
                     };
                     Global.db_BCL.tbl_Batches.InsertOnSubmit(fBatch);
                     Global.db_BCL.SubmitChanges();
@@ -183,12 +178,10 @@ namespace BaoCaoLuong2017.MyForm
             txt_BatchName.Text = "";
             txt_ImagePath.Text = "";
             lb_SoLuongHinh.Text = "";
-            
         }
+
         private void UpLoadMulti()
         {
-            
-
             List<string> lStrBath = new List<string>();
             lStrBath.AddRange(Directory.GetDirectories(txt_PathFolder.Text));
             progressBarControl1.EditValue = 0;
@@ -206,7 +199,6 @@ namespace BaoCaoLuong2017.MyForm
                     fPathPicture = item,
                     fLocation = txt_Location.Text,
                     fSoLuongAnh = Directory.GetFiles(item).Length.ToString()
-
                 };
                 Global.db_BCL.tbl_Batches.InsertOnSubmit(fBatch);
                 Global.db_BCL.SubmitChanges();
@@ -263,6 +255,7 @@ namespace BaoCaoLuong2017.MyForm
         private void frm_CreateBatch_FormClosed(object sender, FormClosedEventArgs e)
         {
         }
+
         private bool closePending;
 
         protected override void OnFormClosing(FormClosingEventArgs e)
