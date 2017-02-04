@@ -232,7 +232,7 @@ namespace BaoCaoLuong2017.MyForm
                             //insert loai 3
 
                             if (string.IsNullOrEmpty(dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "")
-                                && string.IsNullOrEmpty(dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : "")
+                                && string.IsNullOrEmpty(dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : "")
                                 )
                                 break;
 
@@ -246,10 +246,10 @@ namespace BaoCaoLuong2017.MyForm
 
                             if (truongso1_tobia == "06" || truongso1_tobia == "07")
                                 wrksheet.Cells[h, 8] = "4091953036";
-                            else if (string.IsNullOrEmpty(dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : ""))
+                            else if (string.IsNullOrEmpty(dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : ""))
                                 wrksheet.Cells[h, 8] = TruongSo06Loai2;
                             else
-                                wrksheet.Cells[h, 8] = TruongSo06Loai3 = dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : "";//truong so 6 moi -4 cu
+                                wrksheet.Cells[h, 8] = TruongSo06Loai3 = dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : "";//truong so 6 moi -4 cu
                             hLoaiBa = h;
 
                             wrksheet.Cells[h, 12] = "9";
