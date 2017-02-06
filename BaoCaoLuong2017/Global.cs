@@ -17,5 +17,6 @@
         public static string Webservice = "http://10.10.10.248:8888/BaoCaoLuong2017/";
         public static string TenHinhThu2 = "";
         public static string GiaTriTruongSo4 = "";
+        public static string StrIdProject = "BaoCaoLuong2017";
     }
 }

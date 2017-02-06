@@ -210,6 +210,16 @@ namespace BaoCaoLuong2017.MyForm
             try
             {
                 setValue();
+                //Kiểm tra token
+                var token = (from w in Global.db_BPO.tbl_TokenLogins
+                             where w.UserName == Global.StrUsername && w.IDProject == Global.StrIdProject
+                             select w.Token).FirstOrDefault();
+
+                if (token != Global.Strtoken)
+                {
+                    MessageBox.Show("User đã đăng nhập ở PC khác, bạn vui lòng đăng nhập lại!");
+                    DialogResult = DialogResult.Yes;
+                }
                 if (btn_Start_Submit.Text == "Start")
                 {
                     if (string.IsNullOrEmpty(Global.StrBatch))
@@ -279,6 +289,11 @@ namespace BaoCaoLuong2017.MyForm
                                 if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
                                     return;
                             }
+                            if (uc_Loai_41.bSubmit)
+                            {
+                                MessageBox.Show("Trường 8 Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
+                                return;
+                            }
                             uc_Loai_41.SaveData_Loai_4(lb_IdImage.Text);
                         }
                         else if (tabcontrol.SelectedTabPage== tp_Loai_42)
@@ -288,6 +303,12 @@ namespace BaoCaoLuong2017.MyForm
                                 if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
                                     return;
                             }
+                            if (uc_Loai_421.bSubmit)
+                            {
+                                MessageBox.Show("Trường 8 Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
+                                return;
+                            }
+
                             uc_Loai_421.SaveData_Loai_42(lb_IdImage.Text);
                         }
                         uc_Loai_11.ResetData();
@@ -310,6 +331,7 @@ namespace BaoCaoLuong2017.MyForm
                             MessageBox.Show("Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
                             return;
                         }
+                        
                         uc_DEJP1.SaveData_DEJP(lb_IdImage.Text);
                         uc_DEJP1.ResetData();
                     }
@@ -398,7 +420,27 @@ namespace BaoCaoLuong2017.MyForm
                                 System.Windows.Forms.DialogResult.No)
                                 return;
                         }
+                        if (uc_Loai_41.bSubmit)
+                        {
+                            MessageBox.Show("Trường 8 Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
+                            return;
+                        }
                         uc_Loai_41.SaveData_Loai_4(lb_IdImage.Text);
+                    }
+                    else if (tabcontrol.SelectedTabPage == tp_Loai_42)
+                    {
+                        if (uc_Loai_421.IsEmpty())
+                        {
+                            if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
+                                return;
+                        }
+                        if (uc_Loai_421.bSubmit)
+                        {
+                            MessageBox.Show("Trường 8 Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
+                            return;
+                        }
+
+                        uc_Loai_421.SaveData_Loai_42(lb_IdImage.Text);
                     }
 
                 }
@@ -422,7 +464,8 @@ namespace BaoCaoLuong2017.MyForm
 
 
                 }
-                DialogResult = DialogResult.Yes;
+
+                btn_Logout_ItemClick(null, null);
             }
             catch (Exception i)
             {
@@ -433,6 +476,7 @@ namespace BaoCaoLuong2017.MyForm
 
         private void btn_Logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            Global.db_BPO.ResetToken(Global.StrUsername, Global.StrIdProject);
             DialogResult = DialogResult.Yes;
         }
 

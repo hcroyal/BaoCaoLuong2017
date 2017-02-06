@@ -25,6 +25,15 @@
       <Column Name="GhiChu" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.tbl_TokenLogin" Member="tbl_TokenLogins">
+    <Type Name="tbl_TokenLogin">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IDProject" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateLogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.KiemTraLogin" Method="KiemTraLogin">
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="password" Type="System.String" DbType="NVarChar(100)" />
@@ -74,5 +83,16 @@
       <Column Name="IDRole" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.updateToken" Method="updateToken">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ResetToken" Method="ResetToken">
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>
