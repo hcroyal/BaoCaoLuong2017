@@ -46,7 +46,7 @@ namespace BaoCaoLuong2017
                 a.btn_thoat.Text = "Thoát";
                 a.chb_hienthi.Text = "Hiển Thị";
                 a.chb_luu.Text = "Lưu";
-                a.lb_version.Text = @"2.0.5";
+                a.lb_version.Text = @"2.0.6";
                 a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2017\BAO-CAO-LUONG2017";
                 a.LoginEvent += a_LoginEvent;
                 a.ButtonLoginEven += a_ButtonLoginEven;
