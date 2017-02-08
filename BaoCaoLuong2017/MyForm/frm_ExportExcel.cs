@@ -155,10 +155,7 @@ namespace BaoCaoLuong2017.MyForm
                     //i = 1 --> dr.Cells[i] la laoi hinh
 
                     //loại phiếu
-                    if (h == 145)
-                    {
-                        MessageBox.Show("");
-                    }
+                    
                     switch (dr.Cells[1].Value.ToString())
                     {
                         case "Loai1":
@@ -197,6 +194,7 @@ namespace BaoCaoLuong2017.MyForm
                             //insert loai 2
                             TruongSo06Loai3 = "";
                             TruongSo06Loai4 = "";
+                            hLoaiBa = 0;
 
                             //bo qua neu rong
                             if (string.IsNullOrEmpty(dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "")
@@ -308,6 +306,7 @@ namespace BaoCaoLuong2017.MyForm
                                     wrksheet.Cells[hLoaiHai, 8] = TruongSo06Loai3;
                                 if (string.IsNullOrEmpty(TruongSo06Loai3) && hLoaiBa > 0)
                                 {
+                                    
                                     wrksheet.Cells[hLoaiBa, 8] = TruongSo06Loai2;
                                 }
                             }
