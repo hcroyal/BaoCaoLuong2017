@@ -251,12 +251,18 @@ namespace BaoCaoLuong2017.MyUserControl
                                         "６",
                                         "７",
                                         "８",
-                                        "９",
+                                        "９",                                        
                                         "ｬ",
                                         "ｭ",
                                         "ｮ",
+                                        "ｧ",
+                                        "ｨ",
+                                        "ｩ",
+                                        "ｪ",
+                                        "ｫ",
                                         "　",
-                                        "ｰ"
+                                        "ｰ",
+                                        "ｯ"
                                         };
 
         private void uc_Loai_4_Load(object sender, EventArgs e)
@@ -1198,19 +1204,48 @@ namespace BaoCaoLuong2017.MyUserControl
 
             if (!string.IsNullOrEmpty(txt_Truong_008.Text))
             {
-                string result = lChar.Find(s => s == txt_Truong_008.Text[txt_Truong_008.Text.Length - 1].ToString());
-                if (!string.IsNullOrEmpty(result))
+                if (txt_Truong_008.Text.Length >= 2)
                 {
-                    txt_Truong_008.BackColor = Color.Red;
-                    bSubmit = true;
-                    txt_Truong_008.Properties.MaxLength = txt_Truong_008.Text.Length;
+                    if (txt_Truong_008.Text.Substring(txt_Truong_008.Text.Length - 2, 2) == "  ")
+                    {
+                        txt_Truong_008.BackColor = Color.Red;
+                        bSubmit = true;
+                        txt_Truong_008.Properties.MaxLength = txt_Truong_008.Text.Length;
+                    }
+                    else
+                    {
+                        string result = lChar.Find(s => s == txt_Truong_008.Text[txt_Truong_008.Text.Length - 1].ToString());
+                        if (!string.IsNullOrEmpty(result))
+                        {
+                            txt_Truong_008.BackColor = Color.Red;
+                            bSubmit = true;
+                            txt_Truong_008.Properties.MaxLength = txt_Truong_008.Text.Length;
+                        }
+                        else
+                        {
+                            txt_Truong_008.BackColor = Color.White;
+                            bSubmit = false;
+                            txt_Truong_008.Properties.MaxLength = 0;
+                        }
+                    }
                 }
                 else
                 {
-                    txt_Truong_008.BackColor = Color.White;
-                    bSubmit = false;
-                    txt_Truong_008.Properties.MaxLength = 0;
+                    string result = lChar.Find(s => s == txt_Truong_008.Text[txt_Truong_008.Text.Length - 1].ToString());
+                    if (!string.IsNullOrEmpty(result))
+                    {
+                        txt_Truong_008.BackColor = Color.Red;
+                        bSubmit = true;
+                        txt_Truong_008.Properties.MaxLength = txt_Truong_008.Text.Length;
+                    }
+                    else
+                    {
+                        txt_Truong_008.BackColor = Color.White;
+                        bSubmit = false;
+                        txt_Truong_008.Properties.MaxLength = 0;
+                    }
                 }
+
             }
             else
             {
@@ -1218,6 +1253,7 @@ namespace BaoCaoLuong2017.MyUserControl
                 bSubmit = false;
                 txt_Truong_008.Properties.MaxLength = 0;
             }
+
 
             if (txt_Truong_008.Text == "0")
                 txt_Truong_008.BackColor = Color.Red;

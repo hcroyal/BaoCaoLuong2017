@@ -247,8 +247,14 @@ namespace BaoCaoLuong2017.MyUserControl
                                         "ｬ",
                                         "ｭ",
                                         "ｮ",
+                                        "ｧ",
+                                        "ｨ",
+                                        "ｩ",
+                                        "ｪ",
+                                        "ｫ",
                                         "　",
-                                        "ｰ"
+                                        "ｰ",
+                                        "ｯ"
                                         };
 
         public uc_DEJP()
@@ -283,20 +289,49 @@ namespace BaoCaoLuong2017.MyUserControl
         {
             if (!string.IsNullOrEmpty(txt_Truong_002.Text))
             {
-                string result = lChar.Find(s => s == txt_Truong_002.Text[txt_Truong_002.Text.Length - 1].ToString());
-                if (!string.IsNullOrEmpty(result))
+                if (txt_Truong_002.Text.Length>=2)
                 {
-                    txt_Truong_002.BackColor = Color.Red;
-                    bSubmit = true;
-                    txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
+                    if (txt_Truong_002.Text.Substring(txt_Truong_002.Text.Length-2,2)== "  ")
+                    {
+                        txt_Truong_002.BackColor = Color.Red;
+                        bSubmit = true;
+                        txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
+                    }
+                    else
+                    {
+                        string result = lChar.Find(s => s == txt_Truong_002.Text[txt_Truong_002.Text.Length - 1].ToString());
+                        if (!string.IsNullOrEmpty(result))
+                        {
+                            txt_Truong_002.BackColor = Color.Red;
+                            bSubmit = true;
+                            txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
+                        }
+                        else
+                        {
+                            txt_Truong_002.BackColor = Color.White;
+                            bSubmit = false;
+                            txt_Truong_002.Properties.MaxLength = 0;
+                        }
+                    }
                 }
                 else
                 {
-                    txt_Truong_002.BackColor = Color.White;
-                    bSubmit = false;
-                    txt_Truong_002.Properties.MaxLength = 0;
+                    string result = lChar.Find(s => s == txt_Truong_002.Text[txt_Truong_002.Text.Length - 1].ToString());
+                    if (!string.IsNullOrEmpty(result))
+                    {
+                        txt_Truong_002.BackColor = Color.Red;
+                        bSubmit = true;
+                        txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
+                    }
+                    else
+                    {
+                        txt_Truong_002.BackColor = Color.White;
+                        bSubmit = false;
+                        txt_Truong_002.Properties.MaxLength = 0;
+                    }
                 }
-            }
+                
+            }           
             else
             {
                 txt_Truong_002.BackColor = Color.White;

@@ -460,7 +460,7 @@ namespace BaoCaoLuong2017.MyForm
                             wrksheet.Cells[h, 111] = dr.Cells[110].Value == null ? "" : dr.Cells[110].Value.ToString();
                             wrksheet.Cells[h, 112] = (dr.Cells[111].Value == null ? "" : dr.Cells[111].Value.ToString());
 
-                            for (int i = 127; i <= 140; i++)
+                            for (int i = 126; i <= 139; i++)
                             {
                                 if ((dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString()) == "0")
                                     wrksheet.Cells[h, i + 2] = "";
