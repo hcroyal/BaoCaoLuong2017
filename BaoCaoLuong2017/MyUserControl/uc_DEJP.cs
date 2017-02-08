@@ -294,6 +294,7 @@ namespace BaoCaoLuong2017.MyUserControl
                     if (txt_Truong_002.Text.Substring(txt_Truong_002.Text.Length-2,2)== "  ")
                     {
                         txt_Truong_002.BackColor = Color.Red;
+                        txt_Truong_002.ForeColor = Color.White;
                         bSubmit = true;
                         txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
                     }
@@ -303,12 +304,14 @@ namespace BaoCaoLuong2017.MyUserControl
                         if (!string.IsNullOrEmpty(result))
                         {
                             txt_Truong_002.BackColor = Color.Red;
+                            txt_Truong_002.ForeColor = Color.White;
                             bSubmit = true;
                             txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
                         }
                         else
                         {
                             txt_Truong_002.BackColor = Color.White;
+                            txt_Truong_002.ForeColor = Color.Black;
                             bSubmit = false;
                             txt_Truong_002.Properties.MaxLength = 0;
                         }
@@ -320,12 +323,14 @@ namespace BaoCaoLuong2017.MyUserControl
                     if (!string.IsNullOrEmpty(result))
                     {
                         txt_Truong_002.BackColor = Color.Red;
+                        txt_Truong_002.ForeColor = Color.White;
                         bSubmit = true;
                         txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
                     }
                     else
                     {
                         txt_Truong_002.BackColor = Color.White;
+                        txt_Truong_002.ForeColor = Color.Black;
                         bSubmit = false;
                         txt_Truong_002.Properties.MaxLength = 0;
                     }
@@ -335,6 +340,7 @@ namespace BaoCaoLuong2017.MyUserControl
             else
             {
                 txt_Truong_002.BackColor = Color.White;
+                txt_Truong_002.ForeColor = Color.Black;
                 bSubmit = false;
                 txt_Truong_002.Properties.MaxLength = 0;
             }

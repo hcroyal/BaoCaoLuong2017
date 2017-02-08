@@ -1209,6 +1209,7 @@ namespace BaoCaoLuong2017.MyUserControl
                     if (txt_Truong_008.Text.Substring(txt_Truong_008.Text.Length - 2, 2) == "  ")
                     {
                         txt_Truong_008.BackColor = Color.Red;
+                        txt_Truong_008.ForeColor = Color.White;
                         bSubmit = true;
                         txt_Truong_008.Properties.MaxLength = txt_Truong_008.Text.Length;
                     }
@@ -1218,29 +1219,37 @@ namespace BaoCaoLuong2017.MyUserControl
                         if (!string.IsNullOrEmpty(result))
                         {
                             txt_Truong_008.BackColor = Color.Red;
+                            txt_Truong_008.ForeColor = Color.White;
                             bSubmit = true;
                             txt_Truong_008.Properties.MaxLength = txt_Truong_008.Text.Length;
                         }
                         else
                         {
                             txt_Truong_008.BackColor = Color.White;
+                            txt_Truong_008.ForeColor = Color.Black;
                             bSubmit = false;
                             txt_Truong_008.Properties.MaxLength = 0;
+                            doimautrongkhoang((TextEdit)sender, 0, 25);
                         }
+                        
                     }
+                    
                 }
+                
                 else
                 {
                     string result = lChar.Find(s => s == txt_Truong_008.Text[txt_Truong_008.Text.Length - 1].ToString());
                     if (!string.IsNullOrEmpty(result))
                     {
                         txt_Truong_008.BackColor = Color.Red;
+                        txt_Truong_008.ForeColor = Color.White;
                         bSubmit = true;
                         txt_Truong_008.Properties.MaxLength = txt_Truong_008.Text.Length;
                     }
                     else
                     {
                         txt_Truong_008.BackColor = Color.White;
+                        txt_Truong_008.ForeColor = Color.Black;
                         bSubmit = false;
                         txt_Truong_008.Properties.MaxLength = 0;
                     }
@@ -1250,13 +1259,16 @@ namespace BaoCaoLuong2017.MyUserControl
             else
             {
                 txt_Truong_008.BackColor = Color.White;
+                txt_Truong_008.ForeColor = Color.Black;
                 bSubmit = false;
                 txt_Truong_008.Properties.MaxLength = 0;
             }
 
-
             if (txt_Truong_008.Text == "0")
+            {
                 txt_Truong_008.BackColor = Color.Red;
+                txt_Truong_008.ForeColor = Color.White;
+            }
 
             if (Changed != null)
                 Changed(sender, e);

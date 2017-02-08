@@ -378,7 +378,7 @@
             // 
             this.txt_Truong_008.Location = new System.Drawing.Point(300, 30);
             this.txt_Truong_008.Name = "txt_Truong_008";
-            this.txt_Truong_008.Size = new System.Drawing.Size(100, 20);
+            this.txt_Truong_008.Size = new System.Drawing.Size(192, 20);
             this.txt_Truong_008.TabIndex = 4;
             this.txt_Truong_008.EditValueChanged += new System.EventHandler(this.txt_Truong_008_EditValueChanged);
             // 
