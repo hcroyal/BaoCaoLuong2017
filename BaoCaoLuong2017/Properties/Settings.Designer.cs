@@ -67,5 +67,17 @@ namespace BaoCaoLuong2017.Properties {
                 this["ZoomImage"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ApplicationSkinName {
+            get {
+                return ((string)(this["ApplicationSkinName"]));
+            }
+            set {
+                this["ApplicationSkinName"] = value;
+            }
+        }
     }
 }

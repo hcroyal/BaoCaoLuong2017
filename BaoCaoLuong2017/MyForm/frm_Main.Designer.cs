@@ -85,6 +85,7 @@
             this.txt_LoaiPhieu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.uc_PictureBox1 = new BaoCaoLuong2017.MyUserControl.uc_PictureBox();
+            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -130,9 +131,10 @@
             this.btn_TienDo,
             this.btn_ZoomImage,
             this.barButtonItem1,
-            this.btn_Zoom});
+            this.btn_Zoom,
+            this.skinBarSubItem1});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 16;
+            this.barManager1.MaxItemId = 17;
             // 
             // bar2
             // 
@@ -143,7 +145,8 @@
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.menu_Menu),
             new DevExpress.XtraBars.LinkPersistInfo(this.menu_QuanLy),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Zoom)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btn_Zoom),
+            new DevExpress.XtraBars.LinkPersistInfo(this.skinBarSubItem1)});
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
@@ -600,6 +603,12 @@
             this.uc_PictureBox1.Size = new System.Drawing.Size(801, 675);
             this.uc_PictureBox1.TabIndex = 10;
             // 
+            // skinBarSubItem1
+            // 
+            this.skinBarSubItem1.Caption = "&Đổi Themes";
+            this.skinBarSubItem1.Id = 16;
+            this.skinBarSubItem1.Name = "skinBarSubItem1";
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -617,6 +626,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Báo Cáo Lương 2017";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.frm_Main_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_Main_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -702,5 +712,6 @@
         private DevExpress.XtraBars.BarButtonItem btn_ZoomImage;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btn_Zoom;
+        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
     }
 }

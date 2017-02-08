@@ -25,6 +25,7 @@ namespace BaoCaoLuong2017.MyForm
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+
             var nhap = (from w in Global.db_BCL.tbl_Images
                         where w.fbatchname == cbb_Batch.Text && w.ReadImageDESo == 2
                         select w.idimage).Count();
@@ -190,7 +191,8 @@ namespace BaoCaoLuong2017.MyForm
 
                         case "Loai2":
                             //insert loai 2
-
+                            TruongSo06Loai3 = "";
+                            TruongSo06Loai4 = "";
                             //bo qua neu rong
                             if (string.IsNullOrEmpty(dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "")
                                 && string.IsNullOrEmpty(dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : "")
@@ -230,7 +232,7 @@ namespace BaoCaoLuong2017.MyForm
 
                         case "Loai3":
                             //insert loai 3
-
+                            TruongSo06Loai4 = "";
                             if (string.IsNullOrEmpty(dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "")
                                 && string.IsNullOrEmpty(dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : "")
                                 )
@@ -244,6 +246,7 @@ namespace BaoCaoLuong2017.MyForm
                             wrksheet.Cells[h, 6] = dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "";//truong so 4 moi - 2 cu
                             wrksheet.Cells[h, 7] = "";
 
+                            //Bắt đầu trường số 6
                             if (truongso1_tobia == "06" || truongso1_tobia == "07")
                                 wrksheet.Cells[h, 8] = "4091953036";
                             else if (string.IsNullOrEmpty(dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : ""))
@@ -276,6 +279,7 @@ namespace BaoCaoLuong2017.MyForm
                                 wrksheet.Cells[h, 7] = dr.Cells[6].Value != null ? dr.Cells[6].Value.ToString() : "";//truong so 5
                             }
 
+                            //Trường số 6
                             if (truongso1_tobia == "06" || truongso1_tobia == "07")
                             {
                                 wrksheet.Cells[h, 8] = "4091953036";//thi truong so 6 = "4091953036"

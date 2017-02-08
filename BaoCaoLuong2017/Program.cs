@@ -6,6 +6,7 @@ using LibraryLogin;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using BaoCaoLuong2017.Properties;
 
 namespace BaoCaoLuong2017
 {
@@ -22,7 +23,7 @@ namespace BaoCaoLuong2017
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
+            UserLookAndFeel.Default.SetSkinStyle(Settings.Default.ApplicationSkinName);
             //Application.Run(new frm_Main());
             bool temp;
             do
@@ -45,7 +46,7 @@ namespace BaoCaoLuong2017
                 a.btn_thoat.Text = "Thoát";
                 a.chb_hienthi.Text = "Hiển Thị";
                 a.chb_luu.Text = "Lưu";
-                a.lb_version.Text = @"2.0.4";
+                a.lb_version.Text = @"2.0.5";
                 a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2017\BAO-CAO-LUONG2017";
                 a.LoginEvent += a_LoginEvent;
                 a.ButtonLoginEven += a_ButtonLoginEven;

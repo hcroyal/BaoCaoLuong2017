@@ -8,6 +8,7 @@ using DevExpress.XtraTab;
 using System.IO;
 using BaoCaoLuong2017.MyLog;
 using BaoCaoLuong2017.MyUserControl;
+using DevExpress.LookAndFeel;
 
 namespace BaoCaoLuong2017.MyForm
 {
@@ -21,6 +22,7 @@ namespace BaoCaoLuong2017.MyForm
         CLHandling_Loai1 Class_Loai_1 = new CLHandling_Loai1();
         private void frm_Main_Load(object sender, EventArgs e)
         {
+            UserLookAndFeel.Default.SkinName = Settings.Default.ApplicationSkinName;
             lb_fBatchName.Text = Global.StrBatch;
             lb_UserName.Text = Global.StrUsername;
             tabcontrol.TabPages.Remove(tp_Loai_1);
@@ -572,6 +574,12 @@ namespace BaoCaoLuong2017.MyForm
                 frm_Main_KeyDown(sender, e);
                 frm_Main_KeyDown(sender, e);
             }
+        }
+
+        private void frm_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.ApplicationSkinName = UserLookAndFeel.Default.SkinName;
+            Settings.Default.Save();
         }
     }
 }
