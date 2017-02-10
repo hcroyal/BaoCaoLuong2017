@@ -55,15 +55,6 @@
     <Parameter Name="GroupLevel" Parameter="groupLevel" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.InsertLoginTime" Method="InsertLoginTime">
-    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.GetListRole" Method="GetListRole">
     <ElementType Name="GetListRoleResult">
       <Column Name="RoleID" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
@@ -84,6 +75,14 @@
       <Column Name="Group_Level" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.UpdateTimeLastRequest" Method="UpdateTimeLastRequest">
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateTimeLogout" Method="UpdateTimeLogout">
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.updateToken" Method="updateToken">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
@@ -93,6 +92,21 @@
   <Function Name="dbo.ResetToken" Method="ResetToken">
     <Parameter Name="username" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="idproject" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertLoginTime" Method="InsertLoginTime">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TimeLogin" Parameter="timeLogin" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="WindowUser" Parameter="windowUser" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MachineName" Parameter="machineName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateTimeFree" Method="UpdateTimeFree">
+    <Parameter Name="Token" Parameter="token" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="freetime" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

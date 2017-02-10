@@ -117,6 +117,12 @@
     <Compile Include="MyForm\frm_ExportExcel.Designer.cs">
       <DependentUpon>frm_ExportExcel.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyForm\frm_FreeTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyForm\frm_FreeTime.Designer.cs">
+      <DependentUpon>frm_FreeTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyForm\frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_ExportExcel.resx">
       <DependentUpon>frm_ExportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm\frm_FreeTime.resx">
+      <DependentUpon>frm_FreeTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm\frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>

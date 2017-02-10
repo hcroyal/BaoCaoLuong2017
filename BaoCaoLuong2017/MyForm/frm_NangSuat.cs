@@ -117,6 +117,7 @@ namespace BaoCaoLuong2017.MyForm
                     wrksheet.Cells[h + 2, 5] = dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "";
                     wrksheet.Cells[h + 2, 6] = dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : "";
                     wrksheet.Cells[h + 2, 7] = dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : "";
+                    wrksheet.Cells[h + 2, 8] = dr.Cells[6].Value != null ? dr.Cells[6].Value.ToString() : "";
 
                     h++;
                 }

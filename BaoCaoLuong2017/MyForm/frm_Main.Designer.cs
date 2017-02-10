@@ -44,6 +44,7 @@
             this.btn_NangSuat = new DevExpress.XtraBars.BarButtonItem();
             this.btn_TienDo = new DevExpress.XtraBars.BarButtonItem();
             this.btn_Zoom = new DevExpress.XtraBars.BarButtonItem();
+            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -79,13 +80,14 @@
             this.tp_Loai_42 = new DevExpress.XtraTab.XtraTabPage();
             this.uc_Loai_421 = new BaoCaoLuong2017.MyUserControl.uc_Loai_42();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.btn_Pause = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Submit_Logout = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Start_Submit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.txt_LoaiPhieu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.uc_PictureBox1 = new BaoCaoLuong2017.MyUserControl.uc_PictureBox();
-            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -252,6 +254,12 @@
             this.btn_Zoom.Id = 15;
             this.btn_Zoom.Name = "btn_Zoom";
             this.btn_Zoom.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_Zoom_ItemClick);
+            // 
+            // skinBarSubItem1
+            // 
+            this.skinBarSubItem1.Caption = "&Đổi Themes";
+            this.skinBarSubItem1.Id = 16;
+            this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
             // barDockControlTop
             // 
@@ -542,6 +550,7 @@
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.btn_Pause);
             this.panelControl3.Controls.Add(this.btn_Submit_Logout);
             this.panelControl3.Controls.Add(this.btn_Start_Submit);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -549,6 +558,15 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(539, 32);
             this.panelControl3.TabIndex = 0;
+            // 
+            // btn_Pause
+            // 
+            this.btn_Pause.Location = new System.Drawing.Point(351, 4);
+            this.btn_Pause.Name = "btn_Pause";
+            this.btn_Pause.Size = new System.Drawing.Size(95, 23);
+            this.btn_Pause.TabIndex = 1;
+            this.btn_Pause.Text = "Tạm dừng (ESC)";
+            this.btn_Pause.Click += new System.EventHandler(this.btn_Pause_Click);
             // 
             // btn_Submit_Logout
             // 
@@ -603,11 +621,10 @@
             this.uc_PictureBox1.Size = new System.Drawing.Size(801, 675);
             this.uc_PictureBox1.TabIndex = 10;
             // 
-            // skinBarSubItem1
+            // timer1
             // 
-            this.skinBarSubItem1.Caption = "&Đổi Themes";
-            this.skinBarSubItem1.Id = 16;
-            this.skinBarSubItem1.Name = "skinBarSubItem1";
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_Main
             // 
@@ -713,5 +730,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btn_Zoom;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
+        private System.Windows.Forms.Timer timer1;
+        private DevExpress.XtraEditors.SimpleButton btn_Pause;
     }
 }

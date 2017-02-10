@@ -18,5 +18,6 @@
         public static string TenHinhThu2 = "";
         public static string GiaTriTruongSo4 = "";
         public static string StrIdProject = "BaoCaoLuong2017";
+        public static int FreeTime = 0;
     }
 }

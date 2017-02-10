@@ -1049,18 +1049,6 @@
     <Parameter Name="LoaiPhieu42" Parameter="loaiPhieu42" Type="System.Boolean" DbType="Bit" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.NangSuatDeJP" Method="NangSuatDeJP">
-    <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="NangSuatDeJPResult">
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="SoPhieuNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PhieuDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PhieuSai" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="HieuSuat" Type="System.Double" DbType="Float" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.NangSuatDeSo_Loai1" Method="NangSuatDeSo_Loai1">
     <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
@@ -1531,6 +1519,19 @@
       <Column Name="Truong_213" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
       <Column Name="Truong_214" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
       <Column Name="tenpast" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NangSuatDeJP" Method="NangSuatDeJP">
+    <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="NangSuatDeJPResult">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SoPhieuNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhieuDung" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhieuSai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGian" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="HieuSuat" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

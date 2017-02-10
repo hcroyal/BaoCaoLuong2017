@@ -241,6 +241,7 @@ namespace BaoCaoLuong2017.MyForm
                         MessageBox.Show("Không thể load hình!");
                         btn_Logout_ItemClick(null, null);
                     }
+                    timer1.Start();
                     uc_Loai_11.ResetData();
                     uc_Loai_21.ResetData();
                     uc_Loai_31.ResetData();
@@ -478,7 +479,6 @@ namespace BaoCaoLuong2017.MyForm
 
         private void btn_Logout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Global.db_BPO.ResetToken(Global.StrUsername, Global.StrIdProject);
             DialogResult = DialogResult.Yes;
         }
 
@@ -500,6 +500,11 @@ namespace BaoCaoLuong2017.MyForm
                     tabcontrol.SelectedTabPage = tp_Loai_42;
                 else if (tabcontrol.SelectedTabPage == tp_Loai_42)
                     tabcontrol.SelectedTabPage = tp_Loai_1;
+            }
+            if (e.KeyCode==Keys.Escape)
+            {
+                new frm_FreeTime().ShowDialog();
+                Global.db_BPO.UpdateTimeFree(Global.Strtoken, Global.FreeTime);
             }
         }
 
@@ -578,8 +583,21 @@ namespace BaoCaoLuong2017.MyForm
 
         private void frm_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Global.db_BPO.UpdateTimeLogout(Global.Strtoken);
+            Global.db_BPO.ResetToken(Global.StrUsername, Global.StrIdProject,Global.Strtoken);
             Settings.Default.ApplicationSkinName = UserLookAndFeel.Default.SkinName;
             Settings.Default.Save();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Global.db_BPO.UpdateTimeLastRequest(Global.Strtoken);
+        }
+
+        private void btn_Pause_Click(object sender, EventArgs e)
+        {
+            new frm_FreeTime().ShowDialog();
+            Global.db_BPO.UpdateTimeFree(Global.Strtoken, Global.FreeTime);
         }
     }
 }
