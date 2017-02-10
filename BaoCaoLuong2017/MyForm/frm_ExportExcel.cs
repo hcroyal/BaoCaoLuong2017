@@ -314,6 +314,11 @@ namespace BaoCaoLuong2017.MyForm
                             if (string.IsNullOrEmpty(TruongSo06Loai4) || truongso1_tobia == "12" || truongso1_tobia == "13" || truongso1_tobia == "14" || truongso1_tobia == "15")
                                 wrksheet.Cells[h, 8] = TruongSo06Loai2;
 
+                            if (TruongSo06Loai4=="?")
+                            {
+                                wrksheet.Cells[h, 8] = TruongSo06Loai4;
+                            }
+
                             //else if (string.IsNullOrEmpty(TruongSo06Loai2) && string.IsNullOrEmpty(dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : ""))
                             //{
                             //    wrksheet.Cells[h, 8] = "333333333333";
