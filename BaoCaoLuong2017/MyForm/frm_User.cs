@@ -12,7 +12,7 @@ namespace BaoCaoLuong2017.MyForm
 
         private void frm_User_Load(object sender, EventArgs e)
         {
-            dgv_listuser.DataSource = Global.db_BPO.GetListUserToKiemDinh();
+            dgv_listuser.DataSource = Global.db_BPO.GetListUser();
             cbb_idrole.DataSource = Global.db_BPO.GetListRole();
             cbb_idrole.DisplayMember = "RoleName";
             cbb_idrole.ValueMember = "RoleID";
@@ -49,7 +49,7 @@ namespace BaoCaoLuong2017.MyForm
 
             if (!string.IsNullOrEmpty(roleid)&&!string.IsNullOrEmpty(nhanvien)&& !string.IsNullOrEmpty(txt_username.Text)&&!string.IsNullOrEmpty(txt_password.Text))
             {
-                r = Global.db_BPO.InsertUsername_BapCaoLuong(txt_username.Text, txt_password.Text, roleid,nhanvien, txt_grouplevel.Text);
+                r = Global.db_BPO.InsertUsername(txt_username.Text, txt_password.Text, roleid,nhanvien, txt_grouplevel.Text);
                 if (r == 0)
                 {
                     MessageBox.Show("UserName đã tồn tại, Vui lòng nhập UserName khác !");

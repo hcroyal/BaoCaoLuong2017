@@ -88,6 +88,7 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.uc_PictureBox1 = new BaoCaoLuong2017.MyUserControl.uc_PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -564,7 +565,7 @@
             this.btn_Pause.Location = new System.Drawing.Point(351, 4);
             this.btn_Pause.Name = "btn_Pause";
             this.btn_Pause.Size = new System.Drawing.Size(95, 23);
-            this.btn_Pause.TabIndex = 1;
+            this.btn_Pause.TabIndex = 3;
             this.btn_Pause.Text = "Tạm dừng (ESC)";
             this.btn_Pause.Click += new System.EventHandler(this.btn_Pause_Click);
             // 
@@ -573,7 +574,7 @@
             this.btn_Submit_Logout.Location = new System.Drawing.Point(184, 5);
             this.btn_Submit_Logout.Name = "btn_Submit_Logout";
             this.btn_Submit_Logout.Size = new System.Drawing.Size(90, 21);
-            this.btn_Submit_Logout.TabIndex = 0;
+            this.btn_Submit_Logout.TabIndex = 1;
             this.btn_Submit_Logout.Text = "Submit + Logout";
             this.btn_Submit_Logout.Click += new System.EventHandler(this.btn_Submit_Logout_Click);
             // 
@@ -625,6 +626,10 @@
             // 
             this.timer1.Interval = 10000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // frm_Main
             // 
@@ -732,5 +737,6 @@
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.SimpleButton btn_Pause;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

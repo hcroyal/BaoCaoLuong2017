@@ -211,6 +211,7 @@ namespace BaoCaoLuong2017.MyForm
         {
             try
             {
+                Global.db_BPO.UpdateTimeLastRequest(Global.Strtoken);
                 setValue();
                 //Kiểm tra token
                 var token = (from w in Global.db_BPO.tbl_TokenLogins
@@ -241,7 +242,8 @@ namespace BaoCaoLuong2017.MyForm
                         MessageBox.Show("Không thể load hình!");
                         btn_Logout_ItemClick(null, null);
                     }
-                    timer1.Start();
+                    
+                    //backgroundWorker1.RunWorkerAsync();
                     uc_Loai_11.ResetData();
                     uc_Loai_21.ResetData();
                     uc_Loai_31.ResetData();
@@ -591,13 +593,18 @@ namespace BaoCaoLuong2017.MyForm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Global.db_BPO.UpdateTimeLastRequest(Global.Strtoken);
+            //Global.db_BPO.UpdateTimeLastRequest(Global.Strtoken);
         }
 
         private void btn_Pause_Click(object sender, EventArgs e)
         {
             new frm_FreeTime().ShowDialog();
             Global.db_BPO.UpdateTimeFree(Global.Strtoken, Global.FreeTime);
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            //timer1.Start();
         }
     }
 }
