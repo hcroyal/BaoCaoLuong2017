@@ -101,5 +101,16 @@ namespace BaoCaoLuong2017.Properties {
                 return ((string)(this["BaoCaoLuong2017ConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.10.10.248\\BPOSERVER;Initial Catalog=BaoCaoLuong2017_CityS;User ID=" +
+            "sa;Password=BPO@DN#2013")]
+        public string BaoCaoLuong2017_CitySConnectionString {
+            get {
+                return ((string)(this["BaoCaoLuong2017_CitySConnectionString"]));
+            }
+        }
     }
 }
