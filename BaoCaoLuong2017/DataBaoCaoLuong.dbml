@@ -1547,4 +1547,20 @@
     <Parameter Name="LoaiPhieu42" Parameter="loaiPhieu42" Type="System.Boolean" DbType="Bit" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Insert_Loai2_New" Method="Insert_Loai2_New">
+    <Parameter Name="IdImage" Parameter="idImage" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="fBatchName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_001" Parameter="truong_001" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_002" Parameter="truong_002" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_003" Parameter="truong_003" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_004" Parameter="truong_004" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_005" Parameter="truong_005" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_006" Parameter="truong_006" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_007" Parameter="truong_007" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_008" Parameter="truong_008" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_009" Parameter="truong_009" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Truong_010" Parameter="truong_010" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

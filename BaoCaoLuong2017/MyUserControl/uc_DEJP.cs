@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace BaoCaoLuong2017.MyUserControl
 {
@@ -274,77 +275,110 @@ namespace BaoCaoLuong2017.MyUserControl
 
         public void ResetData()
         {
+            txt_Truong_001.Text = string.Empty;
             txt_Truong_002.Text = string.Empty;
+            txt_Truong_003.Text = string.Empty;
+            txt_Truong_004.Text = string.Empty;
+            txt_Truong_005.Text = string.Empty;
+            txt_Truong_006.Text = string.Empty;
+            txt_Truong_007.Text = string.Empty;
+            txt_Truong_008.Text = string.Empty;
+            txt_Truong_009.Text = string.Empty;
+            txt_Truong_010.Text = string.Empty;
+
+            txt_Truong_001.BackColor = Color.White;
             txt_Truong_002.BackColor = Color.White;
+            txt_Truong_003.BackColor = Color.White;
+            txt_Truong_004.BackColor = Color.White;
+            txt_Truong_005.BackColor = Color.White;
+            txt_Truong_006.BackColor = Color.White;
+            txt_Truong_007.BackColor = Color.White;
+            txt_Truong_008.BackColor = Color.White;
+            txt_Truong_009.BackColor = Color.White;
+            txt_Truong_010.BackColor = Color.White;
+
         }
 
         public bool IsEmpty()
         {
-            if (string.IsNullOrEmpty(txt_Truong_002.Text))
+            if (string.IsNullOrEmpty(txt_Truong_001.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_002.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_003.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_004.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_005.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_006.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_007.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_008.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_009.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_010.Text)
+                )
                 return true;
             return false;
         }
-
-        private void txt_Truong_002_EditValueChanged(object sender, EventArgs e)
+        private void doimautrongkhoang(TextEdit txt, int so_nho, int so_lon)
         {
-            if (!string.IsNullOrEmpty(txt_Truong_002.Text))
+            if (!string.IsNullOrEmpty(txt.Text))
             {
-                if (txt_Truong_002.Text.Length>=2)
+                if (txt.Text.Length >= 2)
                 {
-                    if (txt_Truong_002.Text.Substring(txt_Truong_002.Text.Length-2,2)== "  ")
+                    if (txt.Text.Substring(txt.Text.Length - 2, 2) == "  ")
                     {
-                        txt_Truong_002.BackColor = Color.Red;
-                        txt_Truong_002.ForeColor = Color.White;
+                        txt.BackColor = Color.Red;
+                        txt.ForeColor = Color.White;
                         bSubmit = true;
-                        txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
+                        txt.Properties.MaxLength = txt.Text.Length;
                     }
                     else
                     {
-                        string result = lChar.Find(s => s == txt_Truong_002.Text[txt_Truong_002.Text.Length - 1].ToString());
+                        string result = lChar.Find(s => s == txt.Text[txt.Text.Length - 1].ToString());
                         if (!string.IsNullOrEmpty(result))
                         {
-                            txt_Truong_002.BackColor = Color.Red;
-                            txt_Truong_002.ForeColor = Color.White;
+                            txt.BackColor = Color.Red;
+                            txt.ForeColor = Color.White;
                             bSubmit = true;
-                            txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
+                            txt.Properties.MaxLength = txt.Text.Length;
                         }
                         else
                         {
-                            txt_Truong_002.BackColor = Color.White;
-                            txt_Truong_002.ForeColor = Color.Black;
+                            txt.BackColor = Color.White;
+                            txt.ForeColor = Color.Black;
                             bSubmit = false;
-                            txt_Truong_002.Properties.MaxLength = 0;
+                            txt.Properties.MaxLength = 0;
                         }
                     }
                 }
                 else
                 {
-                    string result = lChar.Find(s => s == txt_Truong_002.Text[txt_Truong_002.Text.Length - 1].ToString());
+                    string result = lChar.Find(s => s == txt.Text[txt.Text.Length - 1].ToString());
                     if (!string.IsNullOrEmpty(result))
                     {
-                        txt_Truong_002.BackColor = Color.Red;
-                        txt_Truong_002.ForeColor = Color.White;
+                        txt.BackColor = Color.Red;
+                        txt.ForeColor = Color.White;
                         bSubmit = true;
-                        txt_Truong_002.Properties.MaxLength = txt_Truong_002.Text.Length;
+                        txt.Properties.MaxLength = txt.Text.Length;
                     }
                     else
                     {
-                        txt_Truong_002.BackColor = Color.White;
-                        txt_Truong_002.ForeColor = Color.Black;
+                        txt.BackColor = Color.White;
+                        txt.ForeColor = Color.Black;
                         bSubmit = false;
-                        txt_Truong_002.Properties.MaxLength = 0;
+                        txt.Properties.MaxLength = 0;
                     }
                 }
-                
-            }           
+
+            }
             else
             {
-                txt_Truong_002.BackColor = Color.White;
-                txt_Truong_002.ForeColor = Color.Black;
+                txt.BackColor = Color.White;
+                txt.ForeColor = Color.Black;
                 bSubmit = false;
-                txt_Truong_002.Properties.MaxLength = 0;
+                txt.Properties.MaxLength = 0;
             }
-
+        }
+        private void txt_Truong_002_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 25);
+            
             if (Changed != null)
                 Changed(sender, e);
         }
@@ -352,6 +386,11 @@ namespace BaoCaoLuong2017.MyUserControl
         public void SaveData_DEJP(string idimage)
         {
             Global.db_BCL.Insert_DEJP(idimage, Global.StrBatch, Global.StrUsername, txt_Truong_002.Text);
+        }
+
+        private void labelControl8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

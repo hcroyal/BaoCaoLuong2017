@@ -25,9 +25,7 @@ namespace BaoCaoLuong2017.MyForm
             UserLookAndFeel.Default.SkinName = Settings.Default.ApplicationSkinName;
             lb_fBatchName.Text = Global.StrBatch;
             lb_UserName.Text = Global.StrUsername;
-            tabcontrol.TabPages.Remove(tp_Loai_1);
             tabcontrol.TabPages.Remove(tp_Loai_2);
-            tabcontrol.TabPages.Remove(tp_Loai_3);
             tabcontrol.TabPages.Remove(tp_Loai_4);
             tabcontrol.TabPages.Remove(tp_Loai_42);
             tabcontrol.TabPages.Remove(tp_DEJP);
@@ -36,9 +34,7 @@ namespace BaoCaoLuong2017.MyForm
             setValue();
             if (Global.StrRole=="DESO")
             {
-                tabcontrol.TabPages.Add(tp_Loai_1);
                 tabcontrol.TabPages.Add(tp_Loai_2);
-                tabcontrol.TabPages.Add(tp_Loai_3);
                 tabcontrol.TabPages.Add(tp_Loai_4);
                 tabcontrol.TabPages.Add(tp_Loai_42);
                 tabcontrol.SelectedTabPage = tp_Loai_4;
@@ -244,31 +240,19 @@ namespace BaoCaoLuong2017.MyForm
                     }
                     
                     //backgroundWorker1.RunWorkerAsync();
-                    uc_Loai_11.ResetData();
                     uc_Loai_21.ResetData();
-                    uc_Loai_31.ResetData();
                     uc_Loai_41.ResetData();
                     uc_Loai_421.ResetData();
                     btn_Start_Submit.Text = "Submit";
                     btn_Submit_Logout.Visible = true;
-                    uc_Loai_21.txt_Truong_002.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
-                    uc_Loai_31.txt_Truong_002.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
+                    uc_Loai_21.txt_Truong_004.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
                     uc_Loai_41.txt_Truong_004.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
                 }
                 else
                 {
                     if (Global.StrRole == "DESO")
                     {
-                        if (tabcontrol.SelectedTabPage.Name == "tp_Loai_1")
-                        {
-                            if (uc_Loai_11.IsEmpty())
-                            {
-                                if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                                    return;
-                            }
-                            uc_Loai_11.SaveData_Loai_1(lb_IdImage.Text);
-                        }
-                        else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_2")
+                        if (tabcontrol.SelectedTabPage.Name == "tp_Loai_2")
                         {
                             if (uc_Loai_21.IsEmpty())
                             {
@@ -276,16 +260,6 @@ namespace BaoCaoLuong2017.MyForm
                                     return;
                             }
                             uc_Loai_21.SaveData_Loai_2(lb_IdImage.Text);
-                        }
-                        else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_3")
-                        {
-                            if (uc_Loai_31.IsEmpty())
-                            {
-                                if (MessageBox.Show("Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.No)
-                                    return;
-                            }
-                            uc_Loai_31.SaveData_Loai_3(lb_IdImage.Text);
-                            
                         }
                         else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_4")
                         {
@@ -316,9 +290,7 @@ namespace BaoCaoLuong2017.MyForm
 
                             uc_Loai_421.SaveData_Loai_42(lb_IdImage.Text);
                         }
-                        uc_Loai_11.ResetData();
                         uc_Loai_21.ResetData();
-                        uc_Loai_31.ResetData();
                         uc_Loai_41.ResetData();
                         uc_Loai_421.ResetData();
                         
@@ -351,8 +323,7 @@ namespace BaoCaoLuong2017.MyForm
                         MessageBox.Show("Không thể load hình!");
                         btn_Logout_ItemClick(null, null);
                     }
-                    uc_Loai_21.txt_Truong_002.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
-                    uc_Loai_31.txt_Truong_002.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
+                    uc_Loai_21.txt_Truong_004.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
                     uc_Loai_41.txt_Truong_004.Text = GetAutoTruongSo4(Path.GetFileNameWithoutExtension(lb_IdImage.Text));//truong soo 4 new 
                 }
             }
@@ -375,20 +346,7 @@ namespace BaoCaoLuong2017.MyForm
             {
                 if (Global.StrRole == "DESO")
                 {
-                    if (tabcontrol.SelectedTabPage.Name == "tp_Loai_1")
-                    {
-                        if (uc_Loai_11.IsEmpty())
-                        {
-                            if (
-                                MessageBox.Show(
-                                    "Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>",
-                                    "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
-                                System.Windows.Forms.DialogResult.No)
-                                return;
-                        }
-                        uc_Loai_11.SaveData_Loai_1(lb_IdImage.Text);
-                    }
-                    else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_2")
+                    if (tabcontrol.SelectedTabPage.Name == "tp_Loai_2")
                     {
                         if (uc_Loai_21.IsEmpty())
                         {
@@ -400,19 +358,6 @@ namespace BaoCaoLuong2017.MyForm
                                 return;
                         }
                         uc_Loai_21.SaveData_Loai_2(lb_IdImage.Text);
-                    }
-                    else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_3")
-                    {
-                        if (uc_Loai_31.IsEmpty())
-                        {
-                            if (
-                                MessageBox.Show(
-                                    "Bạn đang để trống 1 hoặc nhiều trường. Bạn có muốn submit không? \r\nYes = Submit và chuyển qua hình khác<Nhấn Enter>\r\nNo = nhập lại trường trống cho hình này.<nhấn phím N>",
-                                    "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) ==
-                                System.Windows.Forms.DialogResult.No)
-                                return;
-                        }
-                        uc_Loai_31.SaveData_Loai_3(lb_IdImage.Text);
                     }
                     else if (tabcontrol.SelectedTabPage.Name == "tp_Loai_4")
                     {
@@ -492,16 +437,12 @@ namespace BaoCaoLuong2017.MyForm
             }
             if(e.Control && e.KeyCode==Keys.Tab)
             {
-                if (tabcontrol.SelectedTabPage == tp_Loai_1)
-                    tabcontrol.SelectedTabPage = tp_Loai_2;
-                else if (tabcontrol.SelectedTabPage == tp_Loai_2)
-                    tabcontrol.SelectedTabPage = tp_Loai_3;
-                else if (tabcontrol.SelectedTabPage == tp_Loai_3)
+                if (tabcontrol.SelectedTabPage == tp_Loai_2)
                     tabcontrol.SelectedTabPage = tp_Loai_4;
                 else if (tabcontrol.SelectedTabPage == tp_Loai_4)
                     tabcontrol.SelectedTabPage = tp_Loai_42;
                 else if (tabcontrol.SelectedTabPage == tp_Loai_42)
-                    tabcontrol.SelectedTabPage = tp_Loai_1;
+                    tabcontrol.SelectedTabPage = tp_Loai_2;
             }
             if (e.KeyCode==Keys.Escape)
             {
@@ -529,12 +470,8 @@ namespace BaoCaoLuong2017.MyForm
         {
             if (Global.StrRole != "DEJP" && Global.StrRole != "CHECKERDEJP")
             {
-                if (txt_LoaiPhieu.Text == "1")
-                    tabcontrol.SelectedTabPage = tp_Loai_1;
                 if (txt_LoaiPhieu.Text == "2")
                     tabcontrol.SelectedTabPage = tp_Loai_2;
-                if (txt_LoaiPhieu.Text == "3")
-                    tabcontrol.SelectedTabPage = tp_Loai_3;
                 if (txt_LoaiPhieu.Text == "4")
                     tabcontrol.SelectedTabPage = tp_Loai_4;
                 if (txt_LoaiPhieu.Text == "5")

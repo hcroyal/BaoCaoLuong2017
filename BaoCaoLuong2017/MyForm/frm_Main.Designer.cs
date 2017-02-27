@@ -67,12 +67,8 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.tabcontrol = new DevExpress.XtraTab.XtraTabControl();
-            this.tp_Loai_1 = new DevExpress.XtraTab.XtraTabPage();
-            this.uc_Loai_11 = new BaoCaoLuonng2017.MyUserControl.uc_Loai_1();
             this.tp_Loai_2 = new DevExpress.XtraTab.XtraTabPage();
             this.uc_Loai_21 = new BaoCaoLuong2017.MyUserControl.uc_Loai_2();
-            this.tp_Loai_3 = new DevExpress.XtraTab.XtraTabPage();
-            this.uc_Loai_31 = new BaoCaoLuong2017.MyUserControl.uc_Loai_3();
             this.tp_Loai_4 = new DevExpress.XtraTab.XtraTabPage();
             this.uc_Loai_41 = new BaoCaoLuong2017.MyUserControl.uc_Loai_4();
             this.tp_DEJP = new DevExpress.XtraTab.XtraTabPage();
@@ -96,9 +92,7 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol)).BeginInit();
             this.tabcontrol.SuspendLayout();
-            this.tp_Loai_1.SuspendLayout();
             this.tp_Loai_2.SuspendLayout();
-            this.tp_Loai_3.SuspendLayout();
             this.tp_Loai_4.SuspendLayout();
             this.tp_DEJP.SuspendLayout();
             this.tp_Loai_42.SuspendLayout();
@@ -447,32 +441,15 @@
             this.tabcontrol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabcontrol.Location = new System.Drawing.Point(2, 28);
             this.tabcontrol.Name = "tabcontrol";
-            this.tabcontrol.SelectedTabPage = this.tp_Loai_1;
+            this.tabcontrol.SelectedTabPage = this.tp_Loai_2;
             this.tabcontrol.Size = new System.Drawing.Size(539, 613);
             this.tabcontrol.TabIndex = 1;
             this.tabcontrol.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tp_Loai_1,
             this.tp_Loai_2,
-            this.tp_Loai_3,
             this.tp_Loai_4,
             this.tp_DEJP,
             this.tp_Loai_42});
             this.tabcontrol.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabcontrol_KeyDown);
-            // 
-            // tp_Loai_1
-            // 
-            this.tp_Loai_1.Controls.Add(this.uc_Loai_11);
-            this.tp_Loai_1.Name = "tp_Loai_1";
-            this.tp_Loai_1.Size = new System.Drawing.Size(533, 585);
-            this.tp_Loai_1.Text = "Loại 1";
-            // 
-            // uc_Loai_11
-            // 
-            this.uc_Loai_11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_Loai_11.Location = new System.Drawing.Point(0, 0);
-            this.uc_Loai_11.Name = "uc_Loai_11";
-            this.uc_Loai_11.Size = new System.Drawing.Size(533, 585);
-            this.uc_Loai_11.TabIndex = 0;
             // 
             // tp_Loai_2
             // 
@@ -488,21 +465,6 @@
             this.uc_Loai_21.Name = "uc_Loai_21";
             this.uc_Loai_21.Size = new System.Drawing.Size(533, 585);
             this.uc_Loai_21.TabIndex = 0;
-            // 
-            // tp_Loai_3
-            // 
-            this.tp_Loai_3.Controls.Add(this.uc_Loai_31);
-            this.tp_Loai_3.Name = "tp_Loai_3";
-            this.tp_Loai_3.Size = new System.Drawing.Size(533, 585);
-            this.tp_Loai_3.Text = "Loại 3";
-            // 
-            // uc_Loai_31
-            // 
-            this.uc_Loai_31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uc_Loai_31.Location = new System.Drawing.Point(0, 0);
-            this.uc_Loai_31.Name = "uc_Loai_31";
-            this.uc_Loai_31.Size = new System.Drawing.Size(533, 585);
-            this.uc_Loai_31.TabIndex = 0;
             // 
             // tp_Loai_4
             // 
@@ -659,9 +621,7 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabcontrol)).EndInit();
             this.tabcontrol.ResumeLayout(false);
-            this.tp_Loai_1.ResumeLayout(false);
             this.tp_Loai_2.ResumeLayout(false);
-            this.tp_Loai_3.ResumeLayout(false);
             this.tp_Loai_4.ResumeLayout(false);
             this.tp_DEJP.ResumeLayout(false);
             this.tp_Loai_42.ResumeLayout(false);
@@ -699,9 +659,7 @@
         private DevExpress.XtraBars.BarButtonItem btn_TienDo;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraTab.XtraTabControl tabcontrol;
-        private DevExpress.XtraTab.XtraTabPage tp_Loai_1;
         private DevExpress.XtraTab.XtraTabPage tp_Loai_2;
-        private DevExpress.XtraTab.XtraTabPage tp_Loai_3;
         private DevExpress.XtraTab.XtraTabPage tp_Loai_4;
         private DevExpress.XtraTab.XtraTabPage tp_DEJP;
         private DevExpress.XtraEditors.PanelControl panelControl3;
@@ -724,9 +682,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private MyUserControl.uc_PictureBox uc_PictureBox1;
-        private BaoCaoLuonng2017.MyUserControl.uc_Loai_1 uc_Loai_11;
         private MyUserControl.uc_Loai_2 uc_Loai_21;
-        private MyUserControl.uc_Loai_3 uc_Loai_31;
         private MyUserControl.uc_Loai_4 uc_Loai_41;
         private MyUserControl.uc_DEJP uc_DEJP1;
         private DevExpress.XtraTab.XtraTabPage tp_Loai_42;

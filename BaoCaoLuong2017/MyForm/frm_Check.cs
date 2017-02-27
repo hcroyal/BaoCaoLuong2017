@@ -479,9 +479,9 @@ namespace BaoCaoLuong2017.MyForm
             {
                 tabcontrol_DeSo1.SelectedTabPage = tp_Loai_2_DeSo1;
 
-                uc_Loai_21.txt_Truong_002.Text = deso[0].Truong_002;
-                uc_Loai_21.txt_Truong_003.Text = deso[0].Truong_003;
-                uc_Loai_21.txt_Truong_004.Text = deso[0].Truong_004;
+                uc_Loai_21.txt_Truong_004.Text = deso[0].Truong_002;
+                uc_Loai_21.txt_Truong_006.Text = deso[0].Truong_003;
+                uc_Loai_21.txt_Truong_005.Text = deso[0].Truong_004;
             }
             else if (deso[0].LoaiPhieu == "Loai3")
             {
@@ -512,9 +512,9 @@ namespace BaoCaoLuong2017.MyForm
                 uc_Loai_41.txt_Truong_003.Text = deso[0].Truong_003;
                 uc_Loai_41.txt_Truong_004.Text = deso[0].Truong_004;
                 uc_Loai_41.txt_Truong_005.Text = deso[0].Truong_005;
-                uc_Loai_41.txt_Truong_006.Text = deso[0].Truong_006;
-                uc_Loai_41.txt_Truong_008.Text = deso[0].Truong_008;
-                uc_Loai_41.txt_Truong_009.Text = deso[0].Truong_009;
+                uc_Loai_41.txt_Truong_006_.Text = deso[0].Truong_006;
+                uc_Loai_41.txt_Truong_008_.Text = deso[0].Truong_008;
+                uc_Loai_41.txt_Truong_009_.Text = deso[0].Truong_009;
                 uc_Loai_41.txt_Truong_012.Text = deso[0].Truong_012;
                 uc_Loai_41.txt_Truong_013.Text = deso[0].Truong_013;
                 uc_Loai_41.txt_Truong_028.Text = deso[0].Truong_028;
@@ -720,9 +720,9 @@ namespace BaoCaoLuong2017.MyForm
             {
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_2_DeSo2;
 
-                uc_Loai_22.txt_Truong_002.Text = deso[1].Truong_002;
-                uc_Loai_22.txt_Truong_003.Text = deso[1].Truong_003;
-                uc_Loai_22.txt_Truong_004.Text = deso[1].Truong_004;
+                uc_Loai_22.txt_Truong_004.Text = deso[1].Truong_002;
+                uc_Loai_22.txt_Truong_006.Text = deso[1].Truong_003;
+                uc_Loai_22.txt_Truong_005.Text = deso[1].Truong_004;
             }
             else if (deso[1].LoaiPhieu == "Loai3")
             {
@@ -748,9 +748,9 @@ namespace BaoCaoLuong2017.MyForm
                 uc_Loai_42.txt_Truong_003.Text = deso[1].Truong_003;
                 uc_Loai_42.txt_Truong_004.Text = deso[1].Truong_004;
                 uc_Loai_42.txt_Truong_005.Text = deso[1].Truong_005;
-                uc_Loai_42.txt_Truong_006.Text = deso[1].Truong_006;
-                uc_Loai_42.txt_Truong_008.Text = deso[1].Truong_008;
-                uc_Loai_42.txt_Truong_009.Text = deso[1].Truong_009;
+                uc_Loai_42.txt_Truong_006_.Text = deso[1].Truong_006;
+                uc_Loai_42.txt_Truong_008_.Text = deso[1].Truong_008;
+                uc_Loai_42.txt_Truong_009_.Text = deso[1].Truong_009;
                 uc_Loai_42.txt_Truong_012.Text = deso[1].Truong_012;
                 uc_Loai_42.txt_Truong_013.Text = deso[1].Truong_013;
                 uc_Loai_42.txt_Truong_028.Text = deso[1].Truong_028;
@@ -950,9 +950,9 @@ namespace BaoCaoLuong2017.MyForm
             Compare_TextBox(uc_Loai_11.txt_Truong_001, uc_Loai_12.txt_Truong_001);
             Compare_TextBox(uc_Loai_11.txt_Truong_002, uc_Loai_12.txt_Truong_002);
 
-            Compare_TextBox(uc_Loai_21.txt_Truong_002, uc_Loai_22.txt_Truong_002);
-            Compare_TextBox(uc_Loai_21.txt_Truong_003, uc_Loai_22.txt_Truong_003);
             Compare_TextBox(uc_Loai_21.txt_Truong_004, uc_Loai_22.txt_Truong_004);
+            Compare_TextBox(uc_Loai_21.txt_Truong_006, uc_Loai_22.txt_Truong_006);
+            Compare_TextBox(uc_Loai_21.txt_Truong_005, uc_Loai_22.txt_Truong_005);
 
             Compare_TextBox(uc_Loai_31.txt_Truong_002, uc_Loai_32.txt_Truong_002);
             Compare_TextBox(uc_Loai_31.txt_Truong_003, uc_Loai_32.txt_Truong_003);
@@ -962,9 +962,9 @@ namespace BaoCaoLuong2017.MyForm
             Compare_TextBox(uc_Loai_41.txt_Truong_003, uc_Loai_42.txt_Truong_003);
             Compare_TextBox(uc_Loai_41.txt_Truong_004, uc_Loai_42.txt_Truong_004);
             Compare_TextBox(uc_Loai_41.txt_Truong_005, uc_Loai_42.txt_Truong_005);
-            Compare_TextBox(uc_Loai_41.txt_Truong_006, uc_Loai_42.txt_Truong_006);
-            Compare_TextBox(uc_Loai_41.txt_Truong_008, uc_Loai_42.txt_Truong_008);
-            Compare_TextBox(uc_Loai_41.txt_Truong_009, uc_Loai_42.txt_Truong_009);
+            Compare_TextBox(uc_Loai_41.txt_Truong_006_, uc_Loai_42.txt_Truong_006_);
+            Compare_TextBox(uc_Loai_41.txt_Truong_008_, uc_Loai_42.txt_Truong_008_);
+            Compare_TextBox(uc_Loai_41.txt_Truong_009_, uc_Loai_42.txt_Truong_009_);
             Compare_TextBox(uc_Loai_41.txt_Truong_012, uc_Loai_42.txt_Truong_012);
             Compare_TextBox(uc_Loai_41.txt_Truong_013, uc_Loai_42.txt_Truong_013);
             Compare_TextBox(uc_Loai_41.txt_Truong_028, uc_Loai_42.txt_Truong_028);
@@ -1468,8 +1468,8 @@ namespace BaoCaoLuong2017.MyForm
                         "", "", "", "", "", "", "", "", "", "",
                         "", "", "", "", "", "", "", "Loai1", false);
                 else if (tabcontrol_DeSo1.SelectedTabPage.Name == "tp_Loai_2_DeSo1")
-                    Global.db_BCL.SuaVaLuu_deso(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, "", uc_Loai_21.txt_Truong_002.Text, uc_Loai_21.txt_Truong_003.Text,
-                        uc_Loai_21.txt_Truong_004.Text, "", "", "", "", "", "", "", "", "",
+                    Global.db_BCL.SuaVaLuu_deso(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, "", uc_Loai_21.txt_Truong_004.Text, uc_Loai_21.txt_Truong_006.Text,
+                        uc_Loai_21.txt_Truong_005.Text, "", "", "", "", "", "", "", "", "",
                         "", "", "", "", "", "", "", "", "", "",
                         "", "", "", "", "", "", "", "", "", "",
                         "", "", "", "", "", "", "", "", "", "",
@@ -1498,9 +1498,9 @@ namespace BaoCaoLuong2017.MyForm
                         uc_Loai_41.txt_Truong_003.Text,
                         uc_Loai_41.txt_Truong_004.Text,
                         uc_Loai_41.txt_Truong_005.Text,
-                        uc_Loai_41.txt_Truong_006.Text,
-                        uc_Loai_41.txt_Truong_008.Text,
-                        uc_Loai_41.txt_Truong_009.Text,
+                        uc_Loai_41.txt_Truong_006_.Text,
+                        uc_Loai_41.txt_Truong_008_.Text,
+                        uc_Loai_41.txt_Truong_009_.Text,
                         uc_Loai_41.txt_Truong_012.Text,
                         uc_Loai_41.txt_Truong_013.Text,
                         uc_Loai_41.txt_Truong_028.Text,
@@ -1753,8 +1753,8 @@ namespace BaoCaoLuong2017.MyForm
                         "", "", "", "", "", "", "", "", "", "",
                         "", "", "", "", "", "", "", "Loai1", false);
                 else if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_2_DeSo2")
-                    Global.db_BCL.SuaVaLuu_deso(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, "", uc_Loai_22.txt_Truong_002.Text, uc_Loai_22.txt_Truong_003.Text,
-                        uc_Loai_22.txt_Truong_004.Text, "", "", "", "", "", "", "", "", "",
+                    Global.db_BCL.SuaVaLuu_deso(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, "", uc_Loai_22.txt_Truong_004.Text, uc_Loai_22.txt_Truong_006.Text,
+                        uc_Loai_22.txt_Truong_005.Text, "", "", "", "", "", "", "", "", "",
                         "", "", "", "", "", "", "", "", "", "",
                         "", "", "", "", "", "", "", "", "", "",
                         "", "", "", "", "", "", "", "", "", "",
@@ -1783,9 +1783,9 @@ namespace BaoCaoLuong2017.MyForm
                         uc_Loai_42.txt_Truong_003.Text,
                         uc_Loai_42.txt_Truong_004.Text,
                         uc_Loai_42.txt_Truong_005.Text,
-                        uc_Loai_42.txt_Truong_006.Text,
-                        uc_Loai_42.txt_Truong_008.Text,
-                        uc_Loai_42.txt_Truong_009.Text,
+                        uc_Loai_42.txt_Truong_006_.Text,
+                        uc_Loai_42.txt_Truong_008_.Text,
+                        uc_Loai_42.txt_Truong_009_.Text,
                         uc_Loai_42.txt_Truong_012.Text,
                         uc_Loai_42.txt_Truong_013.Text,
                         uc_Loai_42.txt_Truong_028.Text,

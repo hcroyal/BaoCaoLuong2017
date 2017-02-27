@@ -16,25 +16,46 @@ namespace BaoCaoLuong2017.MyUserControl
         }
         public void ResetData()
         {
+            txt_Truong_001.Text = string.Empty;
+            txt_Truong_001.BackColor = Color.White;
             txt_Truong_002.Text = string.Empty;
             txt_Truong_002.BackColor = Color.White;
             txt_Truong_003.Text = string.Empty;
             txt_Truong_003.BackColor = Color.White;
             txt_Truong_004.Text = string.Empty;
             txt_Truong_004.BackColor = Color.White;
+            txt_Truong_005.Text = string.Empty;
+            txt_Truong_005.BackColor = Color.White;
+            txt_Truong_006.Text = string.Empty;
+            txt_Truong_006.BackColor = Color.White;
+            txt_Truong_007.Text = string.Empty;
+            txt_Truong_007.BackColor = Color.White;
+            txt_Truong_008.Text = string.Empty;
+            txt_Truong_008.BackColor = Color.White;
+            txt_Truong_009.Text = string.Empty;
+            txt_Truong_009.BackColor = Color.White;
+            txt_Truong_010.Text = string.Empty;
+            txt_Truong_010.BackColor = Color.White;
         }
 
         public bool IsEmpty()
         {
-            if (string.IsNullOrEmpty(txt_Truong_002.Text)&&
-                string.IsNullOrEmpty(txt_Truong_003.Text)&&
-                string.IsNullOrEmpty(txt_Truong_004.Text))
+            if (string.IsNullOrEmpty(txt_Truong_001.Text) &&
+                string.IsNullOrEmpty(txt_Truong_002.Text) &&
+                string.IsNullOrEmpty(txt_Truong_003.Text) &&
+                string.IsNullOrEmpty(txt_Truong_004.Text) &&
+                string.IsNullOrEmpty(txt_Truong_005.Text) &&
+                string.IsNullOrEmpty(txt_Truong_006.Text) &&
+                string.IsNullOrEmpty(txt_Truong_007.Text) &&
+                string.IsNullOrEmpty(txt_Truong_008.Text) &&
+                string.IsNullOrEmpty(txt_Truong_009.Text) &&
+                string.IsNullOrEmpty(txt_Truong_010.Text))
                 return true;
             return false;
         }
         public void SaveData_Loai_2(string idimage)
         {
-            Global.db_BCL.Insert_Loai2(idimage, Global.StrBatch, Global.StrUsername, txt_Truong_002.Text, txt_Truong_003.Text, txt_Truong_004.Text);
+            Global.db_BCL.Insert_Loai2_New(idimage, Global.StrBatch, Global.StrUsername,txt_Truong_001.Text,txt_Truong_002.Text,txt_Truong_003.Text, txt_Truong_004.Text,txt_Truong_005.Text, txt_Truong_006.Text, txt_Truong_007.Text, txt_Truong_008.Text, txt_Truong_009.Text, txt_Truong_010.Text);
         }
        public bool Lenght12(TextEdit txt)
         {
@@ -131,80 +152,137 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch { return false; }
         }
-        private void txt_Truong_003_TextChanged(object sender, EventArgs e)
-        {
-            if (txt_Truong_003.Text.Length == 10 || txt_Truong_003.Text == "?" || string.IsNullOrEmpty(txt_Truong_003.Text))
-            {
-                txt_Truong_003.BackColor = Color.White;
-                //luon luon bat dau bang so 4 hoac so 99
-                if(txt_Truong_003.Text.Length > 1)
-                if (txt_Truong_003.Text[0].ToString() != "4")
-                        if((txt_Truong_003.Text[0].ToString() + txt_Truong_003.Text[1].ToString()) != "99")
-                {
-                    txt_Truong_003.BackColor = Color.Red;
-                }
-                
-            }
+      
+        //private void txt_Truong_004_TextChanged(object sender, EventArgs e)
+        //{
+        //    if (Changed != null)
+        //        Changed(sender, e);
             
-            else
-                txt_Truong_003.BackColor = Color.Red;
+        //    //if (!(Lenght12(txt_Truong_004) || Lenght13(txt_Truong_004)) && (txt_Truong_004.Text.Length == 12 || txt_Truong_004.Text.Length == 13))
+        //    //{
+        //    //    txt_Truong_004.BackColor = Color.LimeGreen;
+        //    //}
+        //    //else
+        //    //{
+        //        if (txt_Truong_005.Text.Length == 12 || txt_Truong_005.Text.Length == 13 || txt_Truong_005.Text == "?" || string.IsNullOrEmpty(txt_Truong_005.Text))
+        //            txt_Truong_005.BackColor = Color.White;
+        //        else
+        //            txt_Truong_005.BackColor = Color.Red;
+        //    //}
+
+
+        //    if (txt_Truong_005.Text.Length == 12)
+        //    {
+        //        if (!Lenght12(txt_Truong_005))
+        //            txt_Truong_005.BackColor = Color.LimeGreen;
+        //    }
+        //    else
+        //        if(txt_Truong_005.Text.Length == 13)
+        //            if(!Lenght13(txt_Truong_005))
+        //            txt_Truong_005.BackColor = Color.LimeGreen;
+
+        //    //txt_Truong_004.BackColor = Color.White;
+        //}
+
+        
+        private void txt_Truong_001_EditValueChanged(object sender, EventArgs e)
+        {
             if (Changed != null)
                 Changed(sender, e);
-
-
-                   
         }
-        
-        private void txt_Truong_002_TextChanged(object sender, EventArgs e)
+
+        private void txt_Truong_002_EditValueChanged(object sender, EventArgs e)
         {
-            if (txt_Truong_002.Text.Length == 12 || txt_Truong_002.Text == "?" || string.IsNullOrEmpty(txt_Truong_002.Text))
+            if (txt_Truong_002.Text.Length == 8 || txt_Truong_002.Text == "?" || string.IsNullOrEmpty(txt_Truong_002.Text))
                 txt_Truong_002.BackColor = Color.White;
             else
                 txt_Truong_002.BackColor = Color.Red;
             if (Changed != null)
                 Changed(sender, e);
         }
-
-        private void txt_Truong_004_TextChanged(object sender, EventArgs e)
+        private void txt_Truong_003_EditValueChanged(object sender, EventArgs e)
         {
+            if (txt_Truong_003.Text.Length == 13 || txt_Truong_003.Text == "?" || string.IsNullOrEmpty(txt_Truong_003.Text))
+                txt_Truong_003.BackColor = Color.White;
+            else
+                txt_Truong_003.BackColor = Color.Red;
             if (Changed != null)
                 Changed(sender, e);
-
-            
-               
-
-
-            //if (!(Lenght12(txt_Truong_004) || Lenght13(txt_Truong_004)) && (txt_Truong_004.Text.Length == 12 || txt_Truong_004.Text.Length == 13))
-            //{
-            //    txt_Truong_004.BackColor = Color.LimeGreen;
-            //}
-            //else
-            //{
-                if (txt_Truong_004.Text.Length == 12 || txt_Truong_004.Text.Length == 13 || txt_Truong_004.Text == "?" || string.IsNullOrEmpty(txt_Truong_004.Text))
-                    txt_Truong_004.BackColor = Color.White;
-                else
-                    txt_Truong_004.BackColor = Color.Red;
-            //}
-
-
-            if (txt_Truong_004.Text.Length == 12)
-            {
-                if (!Lenght12(txt_Truong_004))
-                    txt_Truong_004.BackColor = Color.LimeGreen;
-            }
-            else
-                if(txt_Truong_004.Text.Length == 13)
-                    if(!Lenght13(txt_Truong_004))
-                    txt_Truong_004.BackColor = Color.LimeGreen;
-
-            //txt_Truong_004.BackColor = Color.White;
         }
 
         private void txt_Truong_004_EditValueChanged(object sender, EventArgs e)
         {
-
+            if (txt_Truong_004.Text.Length == 5 || txt_Truong_004.Text == "?" || string.IsNullOrEmpty(txt_Truong_004.Text))
+                txt_Truong_004.BackColor = Color.White;
+            else
+                txt_Truong_004.BackColor = Color.Red;
+            if (Changed != null)
+                Changed(sender, e);
         }
 
+        private void txt_Truong_005_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Truong_005.Text.Length == 5 || txt_Truong_005.Text == "?" || string.IsNullOrEmpty(txt_Truong_005.Text))
+                txt_Truong_005.BackColor = Color.White;
+            else
+                txt_Truong_005.BackColor = Color.Red;
+            if (Changed != null)
+                Changed(sender, e);
+        }
 
+        private void txt_Truong_006_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Truong_006.Text.Length == 5 || txt_Truong_006.Text == "?" || string.IsNullOrEmpty(txt_Truong_006.Text))
+                txt_Truong_006.BackColor = Color.White;
+            else
+                txt_Truong_006.BackColor = Color.Red;
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_007_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Truong_007.Text.Length == 5 || txt_Truong_007.Text == "?" || string.IsNullOrEmpty(txt_Truong_007.Text))
+                txt_Truong_007.BackColor = Color.White;
+            else
+                txt_Truong_007.BackColor = Color.Red;
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_008_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Truong_008.Text.Length == 1 || txt_Truong_008.Text == "?" || string.IsNullOrEmpty(txt_Truong_008.Text))
+                txt_Truong_008.BackColor = Color.White;
+            else
+                txt_Truong_008.BackColor = Color.Red;
+            if (Changed != null)
+                Changed(sender, e);
+        }
+      
+        private void txt_Truong_009_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Truong_009.Text.Length == 1 || txt_Truong_009.Text == "?" || string.IsNullOrEmpty(txt_Truong_009.Text))
+                txt_Truong_009.BackColor = Color.White;
+            else
+                txt_Truong_009.BackColor = Color.Red;
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_010_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txt_Truong_010.Text.Length == 1 || txt_Truong_010.Text == "?" || string.IsNullOrEmpty(txt_Truong_010.Text))
+                txt_Truong_010.BackColor = Color.White;
+            else
+                txt_Truong_010.BackColor = Color.Red;
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void uc_Loai_2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
