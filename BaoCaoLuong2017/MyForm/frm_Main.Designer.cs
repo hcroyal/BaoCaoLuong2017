@@ -455,7 +455,7 @@
             // 
             this.tp_Loai_2.Controls.Add(this.uc_Loai_21);
             this.tp_Loai_2.Name = "tp_Loai_2";
-            this.tp_Loai_2.Size = new System.Drawing.Size(533, 585);
+            this.tp_Loai_2.Size = new System.Drawing.Size(573, 585);
             this.tp_Loai_2.Text = "Loại 2";
             // 
             // uc_Loai_21
@@ -463,7 +463,7 @@
             this.uc_Loai_21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_21.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_21.Name = "uc_Loai_21";
-            this.uc_Loai_21.Size = new System.Drawing.Size(533, 585);
+            this.uc_Loai_21.Size = new System.Drawing.Size(573, 585);
             this.uc_Loai_21.TabIndex = 0;
             // 
             // tp_Loai_4
@@ -485,7 +485,7 @@
             // 
             this.tp_DEJP.Controls.Add(this.uc_DEJP1);
             this.tp_DEJP.Name = "tp_DEJP";
-            this.tp_DEJP.Size = new System.Drawing.Size(533, 585);
+            this.tp_DEJP.Size = new System.Drawing.Size(573, 585);
             this.tp_DEJP.Text = "DEJP";
             // 
             // uc_DEJP1
@@ -493,14 +493,14 @@
             this.uc_DEJP1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_DEJP1.Location = new System.Drawing.Point(0, 0);
             this.uc_DEJP1.Name = "uc_DEJP1";
-            this.uc_DEJP1.Size = new System.Drawing.Size(533, 585);
+            this.uc_DEJP1.Size = new System.Drawing.Size(573, 585);
             this.uc_DEJP1.TabIndex = 0;
             // 
             // tp_Loai_42
             // 
             this.tp_Loai_42.Controls.Add(this.uc_Loai_421);
             this.tp_Loai_42.Name = "tp_Loai_42";
-            this.tp_Loai_42.Size = new System.Drawing.Size(533, 585);
+            this.tp_Loai_42.Size = new System.Drawing.Size(573, 585);
             this.tp_Loai_42.Text = "Loại 5";
             // 
             // uc_Loai_421
@@ -508,7 +508,7 @@
             this.uc_Loai_421.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_421.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_421.Name = "uc_Loai_421";
-            this.uc_Loai_421.Size = new System.Drawing.Size(533, 585);
+            this.uc_Loai_421.Size = new System.Drawing.Size(573, 585);
             this.uc_Loai_421.TabIndex = 0;
             // 
             // panelControl3
@@ -608,7 +608,7 @@
             this.KeyPreview = true;
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Báo Cáo Lương 2017";
+            this.Text = "Báo Cáo Lương 2017 City_S";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.frm_Main_Load);

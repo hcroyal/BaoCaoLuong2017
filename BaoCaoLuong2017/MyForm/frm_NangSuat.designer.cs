@@ -29,15 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_NangSuat));
-            this.gridControl_Loai1 = new DevExpress.XtraGrid.GridControl();
-            this.dgv_Loai1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dtp_EndDay = new System.Windows.Forms.DateTimePicker();
@@ -46,7 +37,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.tp_DeSo_Loai1 = new DevExpress.XtraTab.XtraTabPage();
             this.tp_DeSo_Loai2 = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_Loai2 = new DevExpress.XtraGrid.GridControl();
             this.dgv_Loai2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -57,16 +47,6 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tp_DeSo_Loai3 = new DevExpress.XtraTab.XtraTabPage();
-            this.gridControl_Loai3 = new DevExpress.XtraGrid.GridControl();
-            this.dgv_Loai3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tp_DeSo_Loai4 = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl_Loai4 = new DevExpress.XtraGrid.GridControl();
             this.dgv_Loai4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -87,20 +67,14 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Loai1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Loai1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            this.tp_DeSo_Loai1.SuspendLayout();
             this.tp_DeSo_Loai2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_Loai2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Loai2)).BeginInit();
-            this.tp_DeSo_Loai3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Loai3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Loai3)).BeginInit();
             this.tp_DeSo_Loai4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_Loai4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Loai4)).BeginInit();
@@ -108,96 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_DeJP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DeJP)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridControl_Loai1
-            // 
-            this.gridControl_Loai1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_Loai1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl_Loai1.MainView = this.dgv_Loai1;
-            this.gridControl_Loai1.Name = "gridControl_Loai1";
-            this.gridControl_Loai1.Size = new System.Drawing.Size(923, 531);
-            this.gridControl_Loai1.TabIndex = 3;
-            this.gridControl_Loai1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgv_Loai1});
-            // 
-            // dgv_Loai1
-            // 
-            this.dgv_Loai1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn6,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn32,
-            this.gridColumn5});
-            this.dgv_Loai1.GridControl = this.gridControl_Loai1;
-            this.dgv_Loai1.Name = "dgv_Loai1";
-            this.dgv_Loai1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
-            this.dgv_Loai1.OptionsBehavior.Editable = false;
-            this.dgv_Loai1.OptionsFind.AlwaysVisible = true;
-            this.dgv_Loai1.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "UserName";
-            this.gridColumn1.FieldName = "UserName";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 116;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Họ và tên";
-            this.gridColumn2.FieldName = "FullName";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 184;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Số phiếu nhập được";
-            this.gridColumn6.FieldName = "SoPhieuNhap";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 2;
-            this.gridColumn6.Width = 116;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Số phiếu đúng";
-            this.gridColumn3.FieldName = "PhieuDung";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 102;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Số phiếu sai";
-            this.gridColumn4.FieldName = "PhieuSai";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 94;
-            // 
-            // gridColumn32
-            // 
-            this.gridColumn32.Caption = "Thời gian";
-            this.gridColumn32.FieldName = "ThoiGian";
-            this.gridColumn32.Name = "gridColumn32";
-            this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 5;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Hiệu suất (%)";
-            this.gridColumn5.FieldName = "HieuSuat";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 84;
             // 
             // panelControl1
             // 
@@ -277,23 +161,13 @@
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 88);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.tp_DeSo_Loai1;
+            this.xtraTabControl1.SelectedTabPage = this.tp_DeSo_Loai2;
             this.xtraTabControl1.Size = new System.Drawing.Size(929, 559);
             this.xtraTabControl1.TabIndex = 3;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tp_DeSo_Loai1,
             this.tp_DeSo_Loai2,
-            this.tp_DeSo_Loai3,
             this.tp_DeSo_Loai4,
             this.tp_DeJP});
-            this.xtraTabControl1.Visible = false;
-            // 
-            // tp_DeSo_Loai1
-            // 
-            this.tp_DeSo_Loai1.Controls.Add(this.gridControl_Loai1);
-            this.tp_DeSo_Loai1.Name = "tp_DeSo_Loai1";
-            this.tp_DeSo_Loai1.Size = new System.Drawing.Size(923, 531);
-            this.tp_DeSo_Loai1.Text = "DeSo Loại 1";
             // 
             // tp_DeSo_Loai2
             // 
@@ -391,103 +265,6 @@
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 6;
             this.gridColumn18.Width = 84;
-            // 
-            // tp_DeSo_Loai3
-            // 
-            this.tp_DeSo_Loai3.Controls.Add(this.gridControl_Loai3);
-            this.tp_DeSo_Loai3.Name = "tp_DeSo_Loai3";
-            this.tp_DeSo_Loai3.Size = new System.Drawing.Size(923, 531);
-            this.tp_DeSo_Loai3.Text = "DeSo Loại 3";
-            // 
-            // gridControl_Loai3
-            // 
-            this.gridControl_Loai3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_Loai3.Location = new System.Drawing.Point(0, 0);
-            this.gridControl_Loai3.MainView = this.dgv_Loai3;
-            this.gridControl_Loai3.Name = "gridControl_Loai3";
-            this.gridControl_Loai3.Size = new System.Drawing.Size(923, 531);
-            this.gridControl_Loai3.TabIndex = 5;
-            this.gridControl_Loai3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgv_Loai3});
-            // 
-            // dgv_Loai3
-            // 
-            this.dgv_Loai3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn19,
-            this.gridColumn20,
-            this.gridColumn21,
-            this.gridColumn22,
-            this.gridColumn23,
-            this.gridColumn34,
-            this.gridColumn24});
-            this.dgv_Loai3.GridControl = this.gridControl_Loai3;
-            this.dgv_Loai3.Name = "dgv_Loai3";
-            this.dgv_Loai3.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
-            this.dgv_Loai3.OptionsBehavior.Editable = false;
-            this.dgv_Loai3.OptionsFind.AlwaysVisible = true;
-            this.dgv_Loai3.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn19
-            // 
-            this.gridColumn19.Caption = "UserName";
-            this.gridColumn19.FieldName = "UserName";
-            this.gridColumn19.Name = "gridColumn19";
-            this.gridColumn19.Visible = true;
-            this.gridColumn19.VisibleIndex = 0;
-            this.gridColumn19.Width = 116;
-            // 
-            // gridColumn20
-            // 
-            this.gridColumn20.Caption = "Họ và tên";
-            this.gridColumn20.FieldName = "FullName";
-            this.gridColumn20.Name = "gridColumn20";
-            this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 1;
-            this.gridColumn20.Width = 184;
-            // 
-            // gridColumn21
-            // 
-            this.gridColumn21.Caption = "Số phiếu nhập được";
-            this.gridColumn21.FieldName = "SoPhieuNhap";
-            this.gridColumn21.Name = "gridColumn21";
-            this.gridColumn21.Visible = true;
-            this.gridColumn21.VisibleIndex = 2;
-            this.gridColumn21.Width = 116;
-            // 
-            // gridColumn22
-            // 
-            this.gridColumn22.Caption = "Số phiếu đúng";
-            this.gridColumn22.FieldName = "PhieuDung";
-            this.gridColumn22.Name = "gridColumn22";
-            this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 3;
-            this.gridColumn22.Width = 102;
-            // 
-            // gridColumn23
-            // 
-            this.gridColumn23.Caption = "Số phiếu sai";
-            this.gridColumn23.FieldName = "PhieuSai";
-            this.gridColumn23.Name = "gridColumn23";
-            this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 4;
-            this.gridColumn23.Width = 94;
-            // 
-            // gridColumn34
-            // 
-            this.gridColumn34.Caption = "Thời gian";
-            this.gridColumn34.FieldName = "ThoiGian";
-            this.gridColumn34.Name = "gridColumn34";
-            this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 5;
-            // 
-            // gridColumn24
-            // 
-            this.gridColumn24.Caption = "Hiệu suất (%)";
-            this.gridColumn24.FieldName = "HieuSuat";
-            this.gridColumn24.Name = "gridColumn24";
-            this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 6;
-            this.gridColumn24.Width = 84;
             // 
             // tp_DeSo_Loai4
             // 
@@ -695,21 +472,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Năng suất";
             this.Load += new System.EventHandler(this.frm_NangSuat_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Loai1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Loai1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.tp_DeSo_Loai1.ResumeLayout(false);
             this.tp_DeSo_Loai2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_Loai2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Loai2)).EndInit();
-            this.tp_DeSo_Loai3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl_Loai3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Loai3)).EndInit();
             this.tp_DeSo_Loai4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_Loai4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Loai4)).EndInit();
@@ -721,9 +492,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl gridControl_Loai1;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgv_Loai1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dtp_EndDay;
@@ -731,16 +499,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage tp_DeSo_Loai1;
         private DevExpress.XtraTab.XtraTabPage tp_DeSo_Loai2;
-        private DevExpress.XtraTab.XtraTabPage tp_DeSo_Loai3;
         private DevExpress.XtraTab.XtraTabPage tp_DeSo_Loai4;
         private DevExpress.XtraTab.XtraTabPage tp_DeJP;
         private DevExpress.XtraGrid.GridControl gridControl_DeJP;
@@ -759,14 +519,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
-        private DevExpress.XtraGrid.GridControl gridControl_Loai3;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgv_Loai3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
         private DevExpress.XtraGrid.GridControl gridControl_Loai4;
         private DevExpress.XtraGrid.Views.Grid.GridView dgv_Loai4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
@@ -776,9 +528,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
     }
 }

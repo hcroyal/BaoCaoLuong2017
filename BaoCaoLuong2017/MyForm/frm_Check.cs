@@ -874,7 +874,7 @@ namespace BaoCaoLuong2017.MyForm
                         loaiphieu = "Loai4";
                     if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_2_DeSo1)
                     {
-                        loaiphieu = "Loai4";
+                        loaiphieu = "Loai5";
                         loaiphieu42 = true;
                     }
 
@@ -990,7 +990,7 @@ namespace BaoCaoLuong2017.MyForm
                         loaiphieu = "Loai4";
                     if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_4_2_DeSo2)
                     {
-                        loaiphieu = "Loai4";
+                        loaiphieu = "Loai5";
                         loaiphieu42 = true;
                     }
 

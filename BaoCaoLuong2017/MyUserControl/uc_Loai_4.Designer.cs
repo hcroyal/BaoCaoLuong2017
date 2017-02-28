@@ -325,6 +325,7 @@
             this.txt_Truong_001.Location = new System.Drawing.Point(21, 3);
             this.txt_Truong_001.Name = "txt_Truong_001";
             this.txt_Truong_001.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.txt_Truong_001.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Truong_001.Size = new System.Drawing.Size(366, 20);
             this.txt_Truong_001.TabIndex = 1;
             this.txt_Truong_001.EditValueChanged += new System.EventHandler(this.txt_Truong_001_EditValueChanged);

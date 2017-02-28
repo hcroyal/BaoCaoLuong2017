@@ -34,9 +34,9 @@ namespace BaoCaoLuong2017.MyForm
         }
         private void LoadDataGrid(DateTime TuNgay, DateTime DenNgay)
         {
-            gridControl_Loai1.DataSource = Global.db_BCL.NangSuatDeSo_Loai1(TuNgay, DenNgay);
+            //gridControl_Loai1.DataSource = Global.db_BCL.NangSuatDeSo_Loai1(TuNgay, DenNgay);
             gridControl_Loai2.DataSource = Global.db_BCL.NangSuatDeSo_Loai2(TuNgay, DenNgay);
-            gridControl_Loai3.DataSource = Global.db_BCL.NangSuatDeSo_Loai3(TuNgay, DenNgay);
+            //gridControl_Loai3.DataSource = Global.db_BCL.NangSuatDeSo_Loai3(TuNgay, DenNgay);
             gridControl_Loai4.DataSource = Global.db_BCL.NangSuatDeSo_Loai4(TuNgay, DenNgay);
             gridControl_DeJP.DataSource = Global.db_BCL.NangSuatDeJP(TuNgay, DenNgay);
             //gridView1.RowCellStyle += GridView1_RowCellStyle;
@@ -65,7 +65,7 @@ namespace BaoCaoLuong2017.MyForm
 
             firstDateTime = DateTime.Parse(firstdate);
             lastDateTime = DateTime.Parse(lastdate);
-            gridControl_Loai1.DataSource = null;
+            //gridControl_Loai1.DataSource = null;
             gridControl_DeJP.DataSource = null;
             if (firstDateTime >= lastDateTime)
             {
@@ -84,7 +84,7 @@ namespace BaoCaoLuong2017.MyForm
 
             firstDateTime = DateTime.Parse(firstdate);
             lastDateTime = DateTime.Parse(lastdate);
-            gridControl_Loai1.DataSource = null;
+            //gridControl_Loai1.DataSource = null;
             gridControl_DeJP.DataSource = null;
             if (firstDateTime > lastDateTime)
             {
@@ -126,11 +126,11 @@ namespace BaoCaoLuong2017.MyForm
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
                 saveFileDialog1.Title = "Save Excel Files";
                 saveFileDialog1.Filter = "Excel files (*.xls)|*.xls";
-                if (xtraTabControl1.SelectedTabPage==tp_DeSo_Loai1)
-                {
-                    saveFileDialog1.FileName = "NangSuat_DeSo_Loai1_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
-                }
-                else if(xtraTabControl1.SelectedTabPage==tp_DeJP)
+                //if (xtraTabControl1.SelectedTabPage==tp_DeSo_Loai1)
+                //{
+                //    saveFileDialog1.FileName = "NangSuat_DeSo_Loai1_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
+                //}
+                if(xtraTabControl1.SelectedTabPage==tp_DeJP)
                 {
                     saveFileDialog1.FileName = "NangSuat_DeJP_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
                 }
@@ -138,10 +138,10 @@ namespace BaoCaoLuong2017.MyForm
                 {
                     saveFileDialog1.FileName = "NangSuat_DeSo_Loai2_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
                 }
-                else if (xtraTabControl1.SelectedTabPage==tp_DeSo_Loai3)
-                {
-                    saveFileDialog1.FileName = "NangSuat_DeSo_Loai3_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
-                }
+                //else if (xtraTabControl1.SelectedTabPage==tp_DeSo_Loai3)
+                //{
+                //    saveFileDialog1.FileName = "NangSuat_DeSo_Loai3_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
+                //}
                 else
                     saveFileDialog1.FileName = "NangSuat_DeSo_Loai4_" + dtp_FirstDay.Value.Day + "-" + dtp_EndDay.Value.Day;
 
@@ -176,21 +176,21 @@ namespace BaoCaoLuong2017.MyForm
             firstDateTime = DateTime.Parse(firstdate);
             lastDateTime = DateTime.Parse(lastdate);
             
-            if (xtraTabControl1.SelectedTabPage == tp_DeSo_Loai1)
-            {
-                dataGridView1.DataSource = Global.db_BCL.NangSuatDeSo_Loai1(firstDateTime, lastDateTime);
-                if (!System.IO.File.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai1.xls"))
-                {
-                    System.IO.File.Delete(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai1.xls");
-                    System.IO.File.WriteAllBytes((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Productivity_Loai1.xls"), Properties.Resources.Productivity_Loai1);
-                }
-                else
-                {
-                    System.IO.File.WriteAllBytes((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Productivity_Loai1.xls"), Properties.Resources.Productivity_Loai1);
-                }
-                TableToExcel((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai1.xls"), dataGridView1);
-            }
-            else if(xtraTabControl1.SelectedTabPage==tp_DeJP)
+            //if (xtraTabControl1.SelectedTabPage == tp_DeSo_Loai1)
+            //{
+            //    dataGridView1.DataSource = Global.db_BCL.NangSuatDeSo_Loai1(firstDateTime, lastDateTime);
+            //    if (!System.IO.File.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai1.xls"))
+            //    {
+            //        System.IO.File.Delete(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai1.xls");
+            //        System.IO.File.WriteAllBytes((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Productivity_Loai1.xls"), Properties.Resources.Productivity_Loai1);
+            //    }
+            //    else
+            //    {
+            //        System.IO.File.WriteAllBytes((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Productivity_Loai1.xls"), Properties.Resources.Productivity_Loai1);
+            //    }
+            //    TableToExcel((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai1.xls"), dataGridView1);
+            //}
+            if(xtraTabControl1.SelectedTabPage==tp_DeJP)
             {
                 dataGridView1.DataSource = Global.db_BCL.NangSuatDeJP(firstDateTime, lastDateTime);
                 if (!System.IO.File.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_DEJP.xls"))
@@ -218,20 +218,20 @@ namespace BaoCaoLuong2017.MyForm
                 }
                 TableToExcel((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai2.xls"), dataGridView1);
             }
-            else if(xtraTabControl1.SelectedTabPage==tp_DeSo_Loai3)
-            {
-                dataGridView1.DataSource = Global.db_BCL.NangSuatDeSo_Loai3(firstDateTime, lastDateTime);
-                if (!System.IO.File.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai3.xls"))
-                {
-                    System.IO.File.Delete(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai3.xls");
-                    System.IO.File.WriteAllBytes((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Productivity_Loai3.xls"), Properties.Resources.Productivity_Loai3);
-                }
-                else
-                {
-                    System.IO.File.WriteAllBytes((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Productivity_Loai3.xls"), Properties.Resources.Productivity_Loai3);
-                }
-                TableToExcel((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai3.xls"), dataGridView1);
-            }
+            //else if(xtraTabControl1.SelectedTabPage==tp_DeSo_Loai3)
+            //{
+            //    dataGridView1.DataSource = Global.db_BCL.NangSuatDeSo_Loai3(firstDateTime, lastDateTime);
+            //    if (!System.IO.File.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai3.xls"))
+            //    {
+            //        System.IO.File.Delete(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai3.xls");
+            //        System.IO.File.WriteAllBytes((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Productivity_Loai3.xls"), Properties.Resources.Productivity_Loai3);
+            //    }
+            //    else
+            //    {
+            //        System.IO.File.WriteAllBytes((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Productivity_Loai3.xls"), Properties.Resources.Productivity_Loai3);
+            //    }
+            //    TableToExcel((System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\Productivity_Loai3.xls"), dataGridView1);
+            //}
             else
             {
                 dataGridView1.DataSource = Global.db_BCL.NangSuatDeSo_Loai4(firstDateTime, lastDateTime);
