@@ -13,8 +13,8 @@
         public static string Strtoken = "";
         public static string StrIdimage = "";
         public static string StrCheck = "";
-        public static string StrPath = @"\\10.10.10.248\BaoCaoLuong2017$";
-        public static string Webservice = "http://10.10.10.248:8888/BaoCaoLuong2017/";
+        public static string StrPath = @"\\10.10.10.248\BaoCaoLuong2017_CityS$";
+        public static string Webservice = "http://10.10.10.248:8888/BaoCaoLuong2017_CityS/";
         public static string TenHinhThu2 = "";
         public static string GiaTriTruongSo4 = "";
         public static string StrIdProject = "BaoCaoLuong2017_CityS";

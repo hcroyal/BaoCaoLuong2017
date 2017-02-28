@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using BaoCaoLuonng2017.MyUserControl;
+﻿using BaoCaoLuonng2017.MyUserControl;
 using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace BaoCaoLuong2017.MyUserControl
 {
     public partial class uc_Loai_42 : UserControl
     {
         public event AllTextChange Changed;
+
         public uc_Loai_42()
         {
             InitializeComponent();
         }
+
         public bool bSubmit = false;
 
         private List<string> lChar = new List<string>
@@ -267,7 +265,6 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void uc_Loai_4_Load(object sender, EventArgs e)
         {
-
             txt_Truong_001_1.GotFocus += Txt_Truong_001_1_GotFocus;
             txt_Truong_001_2.GotFocus += Txt_Truong_001_1_GotFocus;
             txt_Truong_102_1.GotFocus += Txt_Truong_001_1_GotFocus;
@@ -343,10 +340,9 @@ namespace BaoCaoLuong2017.MyUserControl
             txt_Truong_101.GotFocus += Txt_Truong_001_1_GotFocus;
         }
 
-  
         private void Txt_Truong_001_1_GotFocus(object sender, EventArgs e)
         {
-            ((TextEdit) sender).SelectAll();
+            ((TextEdit)sender).SelectAll();
         }
 
         public class Category
@@ -354,7 +350,7 @@ namespace BaoCaoLuong2017.MyUserControl
             public string Value_JP { get; set; }
             public string Value_SO { get; set; }
         }
-        
+
         public void ResetData()
         {
             txt_Truong_004.Text = "";
@@ -431,8 +427,8 @@ namespace BaoCaoLuong2017.MyUserControl
             txt_Truong_102_2.Text = "";
             txt_Truong_001_1.Text = "";
             txt_Truong_001_2.Text = "";
-
         }
+
         public bool IsEmpty()
         {
             if (string.IsNullOrEmpty(txt_Truong_004.Text) &&
@@ -507,7 +503,7 @@ namespace BaoCaoLuong2017.MyUserControl
                 string.IsNullOrEmpty(txt_Truong_102_1.Text) &&
                 string.IsNullOrEmpty(txt_Truong_102_2.Text) &&
                 string.IsNullOrEmpty(txt_Truong_001_1.Text) &&
-                string.IsNullOrEmpty(txt_Truong_001_2.Text) )
+                string.IsNullOrEmpty(txt_Truong_001_2.Text))
                 return true;
             return false;
         }
@@ -611,7 +607,7 @@ namespace BaoCaoLuong2017.MyUserControl
                 "",
                 true);
         }
-        
+
         private void curency(TextEdit txt)
         {
             string t;
@@ -633,7 +629,6 @@ namespace BaoCaoLuong2017.MyUserControl
                             }
                         }
                     }
-
                 }
                 else
                 {
@@ -650,6 +645,7 @@ namespace BaoCaoLuong2017.MyUserControl
                 }
             }
         }
+
         private void txt_Truong_037_KeyUp(object sender, KeyEventArgs e)
         {
             try
@@ -658,12 +654,8 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-                
             }
-           
         }
-
-        
 
         private void txt_Truong_038_KeyUp(object sender, KeyEventArgs e)
         {
@@ -673,7 +665,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -685,7 +676,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -697,7 +687,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -709,7 +698,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -721,7 +709,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -733,7 +720,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -745,7 +731,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -757,7 +742,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -769,7 +753,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -781,7 +764,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -793,7 +775,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -805,7 +786,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -817,7 +797,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -829,7 +808,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -841,10 +819,9 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
-        
+
         private void txt_Truong_053_KeyUp(object sender, KeyEventArgs e)
         {
             try
@@ -853,10 +830,9 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
-        
+
         private void txt_Truong_051_KeyUp(object sender, KeyEventArgs e)
         {
             try
@@ -865,7 +841,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -877,7 +852,6 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
@@ -889,13 +863,12 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch
             {
-
             }
         }
 
         private void doimautrongkhoang(TextEdit txt, int so_nho, int so_lon)
         {
-            if (txt.Text.Length>0)
+            if (txt.Text.Length > 0)
             {
                 if (txt.Text != "?")
                 {
@@ -905,7 +878,6 @@ namespace BaoCaoLuong2017.MyUserControl
                         {
                             txt.ForeColor = Color.Black;
                             txt.BackColor = Color.White;
-
                         }
                         else
                         {
@@ -919,7 +891,6 @@ namespace BaoCaoLuong2017.MyUserControl
                         {
                             txt.ForeColor = Color.Black;
                             txt.BackColor = Color.White;
-
                         }
                         else
                         {
@@ -939,26 +910,25 @@ namespace BaoCaoLuong2017.MyUserControl
                 txt.ForeColor = Color.Black;
                 txt.BackColor = Color.White;
             }
-
         }
 
         private void txt_Truong_004_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit) sender, 0,12);
+            doimautrongkhoang((TextEdit)sender, 0, 12);
             if (Changed != null)
                 Changed(sender, e);
         }
 
         private void txt_Truong_012_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit) sender, 0, 1);
+            doimautrongkhoang((TextEdit)sender, 0, 1);
             if (Changed != null)
                 Changed(sender, e);
         }
 
         private void txt_Truong_006_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit) sender, 0, 12);
+            doimautrongkhoang((TextEdit)sender, 0, 12);
             if (Changed != null)
                 Changed(sender, e);
         }
@@ -979,8 +949,6 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_008_EditValueChanged(object sender, EventArgs e)
         {
-            
-
             if (!string.IsNullOrEmpty(txt_Truong_008.Text))
             {
                 if (txt_Truong_008.Text.Length >= 2)
@@ -1030,7 +998,6 @@ namespace BaoCaoLuong2017.MyUserControl
                         txt_Truong_008.Properties.MaxLength = 0;
                     }
                 }
-
             }
             else
             {
@@ -1045,7 +1012,7 @@ namespace BaoCaoLuong2017.MyUserControl
                 txt_Truong_008.BackColor = Color.Red;
                 txt_Truong_008.ForeColor = Color.White;
             }
-                
+
             if (Changed != null)
                 Changed(sender, e);
         }
@@ -1431,7 +1398,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_001_2_TextChanged(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(txt_Truong_001_2.Text))
+            if (!string.IsNullOrEmpty(txt_Truong_001_2.Text))
                 doimautrongkhoang((TextEdit)sender, 6, 6);
         }
 

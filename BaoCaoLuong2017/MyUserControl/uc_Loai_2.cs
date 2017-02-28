@@ -1,19 +1,21 @@
-﻿using System;
+﻿using BaoCaoLuonng2017.MyUserControl;
+using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using BaoCaoLuonng2017.MyUserControl;
-using System.Collections.Generic;
 
 namespace BaoCaoLuong2017.MyUserControl
 {
     public partial class uc_Loai_2 : UserControl
     {
         public event AllTextChange Changed;
+
         public uc_Loai_2()
         {
             InitializeComponent();
         }
+
         public void ResetData()
         {
             txt_Truong_001.Text = string.Empty;
@@ -53,11 +55,13 @@ namespace BaoCaoLuong2017.MyUserControl
                 return true;
             return false;
         }
+
         public void SaveData_Loai_2(string idimage)
         {
-            Global.db_BCL.Insert_Loai2_New(idimage, Global.StrBatch, Global.StrUsername,txt_Truong_001.Text,txt_Truong_002.Text,txt_Truong_003.Text, txt_Truong_004.Text,txt_Truong_005.Text, txt_Truong_006.Text, txt_Truong_007.Text, txt_Truong_008.Text, txt_Truong_009.Text, txt_Truong_010.Text);
+            Global.db_BCL.Insert_Loai2_New(idimage, Global.StrBatch, Global.StrUsername, txt_Truong_001.Text, txt_Truong_002.Text, txt_Truong_003.Text, txt_Truong_004.Text, txt_Truong_005.Text, txt_Truong_006.Text, txt_Truong_007.Text, txt_Truong_008.Text, txt_Truong_009.Text, txt_Truong_010.Text);
         }
-       public bool Lenght12(TextEdit txt)
+
+        public bool Lenght12(TextEdit txt)
         {
             try
             {
@@ -72,9 +76,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
                 if (P.Count != 12)
                 {
-
                     txt.BackColor = Color.Red;
-
                 }
 
                 List<int> Q = new List<int> { 6, 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 };
@@ -105,8 +107,8 @@ namespace BaoCaoLuong2017.MyUserControl
                     return false;
             }
             catch { return false; }
-
         }
+
         public bool Lenght13(TextEdit txt)
         {
             try
@@ -152,12 +154,12 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch { return false; }
         }
-      
+
         //private void txt_Truong_004_TextChanged(object sender, EventArgs e)
         //{
         //    if (Changed != null)
         //        Changed(sender, e);
-            
+
         //    //if (!(Lenght12(txt_Truong_004) || Lenght13(txt_Truong_004)) && (txt_Truong_004.Text.Length == 12 || txt_Truong_004.Text.Length == 13))
         //    //{
         //    //    txt_Truong_004.BackColor = Color.LimeGreen;
@@ -169,7 +171,6 @@ namespace BaoCaoLuong2017.MyUserControl
         //        else
         //            txt_Truong_005.BackColor = Color.Red;
         //    //}
-
 
         //    if (txt_Truong_005.Text.Length == 12)
         //    {
@@ -184,7 +185,6 @@ namespace BaoCaoLuong2017.MyUserControl
         //    //txt_Truong_004.BackColor = Color.White;
         //}
 
-        
         private void txt_Truong_001_EditValueChanged(object sender, EventArgs e)
         {
             if (Changed != null)
@@ -200,6 +200,7 @@ namespace BaoCaoLuong2017.MyUserControl
             if (Changed != null)
                 Changed(sender, e);
         }
+
         private void txt_Truong_003_EditValueChanged(object sender, EventArgs e)
         {
             if (txt_Truong_003.Text.Length == 13 || txt_Truong_003.Text == "?" || string.IsNullOrEmpty(txt_Truong_003.Text))
@@ -212,7 +213,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_004_EditValueChanged(object sender, EventArgs e)
         {
-            if (txt_Truong_004.Text.Length == 5 || txt_Truong_004.Text == "?" || string.IsNullOrEmpty(txt_Truong_004.Text))
+            if (txt_Truong_004.Text.Length <= 5 || txt_Truong_004.Text == "?" || string.IsNullOrEmpty(txt_Truong_004.Text))
                 txt_Truong_004.BackColor = Color.White;
             else
                 txt_Truong_004.BackColor = Color.Red;
@@ -222,7 +223,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_005_EditValueChanged(object sender, EventArgs e)
         {
-            if (txt_Truong_005.Text.Length == 5 || txt_Truong_005.Text == "?" || string.IsNullOrEmpty(txt_Truong_005.Text))
+            if (txt_Truong_005.Text.Length <= 5 || txt_Truong_005.Text == "?" || string.IsNullOrEmpty(txt_Truong_005.Text))
                 txt_Truong_005.BackColor = Color.White;
             else
                 txt_Truong_005.BackColor = Color.Red;
@@ -232,7 +233,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_006_EditValueChanged(object sender, EventArgs e)
         {
-            if (txt_Truong_006.Text.Length == 5 || txt_Truong_006.Text == "?" || string.IsNullOrEmpty(txt_Truong_006.Text))
+            if (txt_Truong_006.Text.Length <= 5 || txt_Truong_006.Text == "?" || string.IsNullOrEmpty(txt_Truong_006.Text))
                 txt_Truong_006.BackColor = Color.White;
             else
                 txt_Truong_006.BackColor = Color.Red;
@@ -242,7 +243,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_007_EditValueChanged(object sender, EventArgs e)
         {
-            if (txt_Truong_007.Text.Length == 5 || txt_Truong_007.Text == "?" || string.IsNullOrEmpty(txt_Truong_007.Text))
+            if (txt_Truong_007.Text.Length <= 5 || txt_Truong_007.Text == "?" || string.IsNullOrEmpty(txt_Truong_007.Text))
                 txt_Truong_007.BackColor = Color.White;
             else
                 txt_Truong_007.BackColor = Color.Red;
@@ -259,7 +260,7 @@ namespace BaoCaoLuong2017.MyUserControl
             if (Changed != null)
                 Changed(sender, e);
         }
-      
+
         private void txt_Truong_009_EditValueChanged(object sender, EventArgs e)
         {
             if (txt_Truong_009.Text.Length == 1 || txt_Truong_009.Text == "?" || string.IsNullOrEmpty(txt_Truong_009.Text))
@@ -282,7 +283,6 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void uc_Loai_2_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

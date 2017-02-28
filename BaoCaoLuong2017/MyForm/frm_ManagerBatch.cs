@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Linq;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace BaoCaoLuong2017.MyForm
 {
@@ -29,14 +24,12 @@ namespace BaoCaoLuong2017.MyForm
             gridControl1.DataSource = temp;
         }
 
-        
-
         private void btn_TaoBatch_Click(object sender, EventArgs e)
         {
             new frm_CreateBatch().ShowDialog();
             RefreshBatch();
         }
-        
+
         private void repositoryItemButtonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             string fbatchname = gridView1.GetFocusedRowCellValue("fBatchName").ToString();
@@ -48,15 +41,11 @@ namespace BaoCaoLuong2017.MyForm
                     Global.db_BCL.XoaBatch(fbatchname);
                     Directory.Delete(temp, true);
                     MessageBox.Show("Đã xóa batch thành công!");
-
                 }
                 catch (Exception)
                 {
-
                     MessageBox.Show("Xóa batch bị lỗi!");
-
                 }
-
             }
             RefreshBatch();
         }

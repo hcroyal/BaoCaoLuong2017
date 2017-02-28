@@ -372,6 +372,7 @@ namespace BaoCaoLuong2017.MyUserControl
             category.Add(new Category() { Value_JP = "震（特）", Value_SO = "14" });
             category.Add(new Category() { Value_JP = "特", Value_SO = "11" });
             category.Add(new Category() { Value_JP = "特定", Value_SO = "11" });
+            category.Add(new Category() { Value_JP = "?", Value_SO = "?" });
         }
 
         public void ResetData()
@@ -1337,7 +1338,7 @@ namespace BaoCaoLuong2017.MyUserControl
         }
         private void txt_Truong_051_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 7);
+            doimautrongkhoang((TextEdit)sender, 0, 6);
             if (Changed != null)
                 Changed(sender, e);
         }
@@ -1366,7 +1367,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_054_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 7);
+            doimautrongkhoang((TextEdit)sender, 0, 6);
             if (Changed != null)
                 Changed(sender, e);
         }

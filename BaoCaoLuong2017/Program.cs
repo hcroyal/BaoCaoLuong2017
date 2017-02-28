@@ -1,4 +1,5 @@
 ﻿using BaoCaoLuong2017.MyForm;
+using BaoCaoLuong2017.Properties;
 using DevExpress.LookAndFeel;
 using DevExpress.Skins;
 using DevExpress.UserSkins;
@@ -6,7 +7,6 @@ using LibraryLogin;
 using System;
 using System.Linq;
 using System.Windows.Forms;
-using BaoCaoLuong2017.Properties;
 
 namespace BaoCaoLuong2017
 {
@@ -46,7 +46,7 @@ namespace BaoCaoLuong2017
                 a.btn_thoat.Text = "Thoát";
                 a.chb_hienthi.Text = "Hiển Thị";
                 a.chb_luu.Text = "Lưu";
-                a.lb_version.Text = @"1.0";
+                a.lb_version.Text = @"1.1";
                 a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2017\BAO-CAO-LUONG-TP_S";
                 a.LoginEvent += a_LoginEvent;
                 a.ButtonLoginEven += a_ButtonLoginEven;
@@ -73,8 +73,6 @@ namespace BaoCaoLuong2017
         {
             if (iLogin == 1)
             {
-               
-                
                 //Kiểm tra Token
 
                 bool has = Global.db_BPO.tbl_TokenLogins.Any(w => w.UserName == strUsername && w.IDProject == Global.StrIdProject);
@@ -100,7 +98,6 @@ namespace BaoCaoLuong2017
                             LoginOk = false;
                         }
                     }
-
                 }
                 else
                 {

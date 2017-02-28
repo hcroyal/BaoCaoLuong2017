@@ -324,7 +324,6 @@ namespace BaoCaoLuong2017.MyForm
             uc_DEJP1.txt_Truong_072.Text = deso[0].Truong_072;
             uc_DEJP1.txt_Truong_074.Text = deso[0].Truong_074;
 
-
             uc_DEJP2.txt_Truong_003.Text = deso[1].Truong_003;
             uc_DEJP2.txt_Truong_056.Text = deso[1].Truong_056;
             uc_DEJP2.txt_Truong_060.Text = deso[1].Truong_060;
@@ -467,7 +466,7 @@ namespace BaoCaoLuong2017.MyForm
                             w.Truong_073,
                             w.Truong_074,
                             w.Truong_075,
-                            
+
                             w.LoaiPhieu4_2
                         }).ToList();
             lb_username1.Text = deso[0].UserName;
@@ -478,7 +477,6 @@ namespace BaoCaoLuong2017.MyForm
             Loaiphieu42_user1 = deso[0].LoaiPhieu4_2.Value;
             Loaiphieu42_user2 = deso[1].LoaiPhieu4_2.Value;
 
-           
             if (deso[0].LoaiPhieu == "Loai2")
             {
                 tabcontrol_DeSo1.SelectedTabPage = tp_Loai_2_DeSo1;
@@ -494,7 +492,6 @@ namespace BaoCaoLuong2017.MyForm
                 uc_Loai_21.txt_Truong_009.Text = deso[0].Truong_009;
                 uc_Loai_21.txt_Truong_010.Text = deso[0].Truong_010;
             }
-           
             else if (deso[0].LoaiPhieu == "Loai4" && deso[0].LoaiPhieu4_2 == false)
             {
                 tabcontrol_DeSo1.SelectedTabPage = tp_Loai_4_DeSo1;
@@ -562,15 +559,12 @@ namespace BaoCaoLuong2017.MyForm
                 uc_Loai_41.txt_Truong_071.Text = deso[0].Truong_071;
                 uc_Loai_41.txt_Truong_073.Text = deso[0].Truong_073;
                 uc_Loai_41.txt_Truong_075.Text = deso[0].Truong_075;
-               
             }
             else if (deso[0].LoaiPhieu == "Loai5" && deso[0].LoaiPhieu4_2 == true)
             {
                 tabcontrol_DeSo1.SelectedTabPage = tp_Loai_4_2_DeSo1;
 
                 tp_DEJP1.PageVisible = false;
-
-
             }
 
             if (deso[1].LoaiPhieu == "Loai2")
@@ -588,7 +582,6 @@ namespace BaoCaoLuong2017.MyForm
                 uc_Loai_22.txt_Truong_009.Text = deso[1].Truong_009;
                 uc_Loai_22.txt_Truong_010.Text = deso[1].Truong_010;
             }
-           
             else if (deso[1].LoaiPhieu == "Loai4" && deso[1].LoaiPhieu4_2 == false)
             {
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_4_DeSo2;
@@ -660,11 +653,9 @@ namespace BaoCaoLuong2017.MyForm
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_4_2_DeSo2;
 
                 tp_DEJP2.PageVisible = false;
-
-               
             }
 
-           //loại 2
+            //loại 2
             Compare_TextBox(uc_Loai_21.txt_Truong_001, uc_Loai_22.txt_Truong_001);
             Compare_TextBox(uc_Loai_21.txt_Truong_002, uc_Loai_22.txt_Truong_002);
             Compare_TextBox(uc_Loai_21.txt_Truong_003, uc_Loai_22.txt_Truong_003);
@@ -738,9 +729,6 @@ namespace BaoCaoLuong2017.MyForm
             Compare_TextBox(uc_Loai_41.txt_Truong_071, uc_Loai_42.txt_Truong_071);
             Compare_TextBox(uc_Loai_41.txt_Truong_073, uc_Loai_42.txt_Truong_073);
             Compare_TextBox(uc_Loai_41.txt_Truong_075, uc_Loai_42.txt_Truong_075);
-            
-
-          
 
             var soloi = ((from w in Global.db_BCL.tbl_DESOs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
             lb_Loi.Text = soloi + " Lỗi";
@@ -1073,11 +1061,10 @@ namespace BaoCaoLuong2017.MyForm
         {
             if (Global.StrCheck == "CHECKDESO")
             {
-               
                 if (tabcontrol_DeSo1.SelectedTabPage.Name == "tp_Loai_2_DeSo1")
                     Global.db_BCL.SuaVaLuu_deso_new(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername,
-                        uc_Loai_21.txt_Truong_001.Text, 
-                        uc_Loai_21.txt_Truong_002.Text, 
+                        uc_Loai_21.txt_Truong_001.Text,
+                        uc_Loai_21.txt_Truong_002.Text,
                         uc_Loai_21.txt_Truong_003.Text,
                         uc_Loai_21.txt_Truong_004.Text,
                         uc_Loai_21.txt_Truong_005.Text,
@@ -1152,10 +1139,8 @@ namespace BaoCaoLuong2017.MyForm
                         "",
                         "",
                         "Loai2", false);
-               
                 else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_DeSo1)
                 {
-
                     Global.db_BCL.SuaVaLuu_deso_new(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch,
                         Global.StrUsername,
                         uc_Loai_41.txt_Truong_001.Text,
@@ -1237,7 +1222,6 @@ namespace BaoCaoLuong2017.MyForm
                 }
                 else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_2_DeSo1)
                 {
-
                     Global.db_BCL.SuaVaLuu_deso_new(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch,
                         Global.StrUsername,
                         "",
@@ -1343,7 +1327,7 @@ namespace BaoCaoLuong2017.MyForm
                     return;
                 }
 
-                Global.db_BCL.SuaVaLuu_DEJP(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, 
+                Global.db_BCL.SuaVaLuu_DEJP(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername,
                     uc_DEJP1.txt_Truong_003.Text,
                     uc_DEJP1.txt_Truong_056.Text,
                     uc_DEJP1.txt_Truong_060.Text,
@@ -1382,8 +1366,8 @@ namespace BaoCaoLuong2017.MyForm
             {
                 if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_2_DeSo2")
                     Global.db_BCL.SuaVaLuu_deso_new(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername,
-                        uc_Loai_22.txt_Truong_001.Text, 
-                        uc_Loai_22.txt_Truong_002.Text, 
+                        uc_Loai_22.txt_Truong_001.Text,
+                        uc_Loai_22.txt_Truong_002.Text,
                         uc_Loai_22.txt_Truong_003.Text,
                         uc_Loai_22.txt_Truong_004.Text,
                         uc_Loai_22.txt_Truong_005.Text,
@@ -1458,10 +1442,8 @@ namespace BaoCaoLuong2017.MyForm
                         "",
                         "",
                         "Loai2", false);
-                
                 else if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_4_DeSo2")
                 {
-
                     Global.db_BCL.SuaVaLuu_deso_new(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch,
                         Global.StrUsername,
                         uc_Loai_42.txt_Truong_001.Text,
@@ -1647,7 +1629,7 @@ namespace BaoCaoLuong2017.MyForm
                     MessageBox.Show("Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
                     return;
                 }
-                Global.db_BCL.SuaVaLuu_DEJP(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, 
+                Global.db_BCL.SuaVaLuu_DEJP(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername,
                     uc_DEJP2.txt_Truong_003.Text,
                     uc_DEJP2.txt_Truong_056.Text,
                     uc_DEJP2.txt_Truong_060.Text,

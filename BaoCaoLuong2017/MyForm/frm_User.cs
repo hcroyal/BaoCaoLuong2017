@@ -17,6 +17,7 @@ namespace BaoCaoLuong2017.MyForm
             cbb_idrole.DisplayMember = "RoleName";
             cbb_idrole.ValueMember = "RoleID";
         }
+
         private void btn_suauser_Click(object sender, EventArgs e)
         {
             string roleid, nhanvien;
@@ -37,19 +38,18 @@ namespace BaoCaoLuong2017.MyForm
                 MessageBox.Show("Nhập đầy đủ thông tin trước khi lưu !");
             }
         }
-        
+
         private void btn_themuser_Click(object sender, EventArgs e)
         {
-
             string roleid, nhanvien;
             int r;
 
             nhanvien = txt_FullName.Text;
             roleid = cbb_idrole.SelectedValue != null ? cbb_idrole.SelectedValue.ToString() : "";
 
-            if (!string.IsNullOrEmpty(roleid)&&!string.IsNullOrEmpty(nhanvien)&& !string.IsNullOrEmpty(txt_username.Text)&&!string.IsNullOrEmpty(txt_password.Text))
+            if (!string.IsNullOrEmpty(roleid) && !string.IsNullOrEmpty(nhanvien) && !string.IsNullOrEmpty(txt_username.Text) && !string.IsNullOrEmpty(txt_password.Text))
             {
-                r = Global.db_BPO.InsertUsername(txt_username.Text, txt_password.Text, roleid,nhanvien, txt_grouplevel.Text);
+                r = Global.db_BPO.InsertUsername(txt_username.Text, txt_password.Text, roleid, nhanvien, txt_grouplevel.Text);
                 if (r == 0)
                 {
                     MessageBox.Show("UserName đã tồn tại, Vui lòng nhập UserName khác !");
@@ -72,10 +72,10 @@ namespace BaoCaoLuong2017.MyForm
         private void btn_delete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             string username = gridView1.GetFocusedRowCellValue("Username") != null ? gridView1.GetFocusedRowCellValue("Username").ToString() : "";
-            DialogResult thongbao = MessageBox.Show("Bạn chắc chắn muốn xóa UserName '" +username + "'", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult thongbao = MessageBox.Show("Bạn chắc chắn muốn xóa UserName '" + username + "'", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (thongbao == DialogResult.Yes)
             {
-                if(!string.IsNullOrEmpty(username))
+                if (!string.IsNullOrEmpty(username))
                 {
                     Global.db_BPO.DeleteUsername(username);
                     frm_User_Load(sender, e);
@@ -86,7 +86,7 @@ namespace BaoCaoLuong2017.MyForm
                 }
             }
         }
-        
+
         private void gridView1_GotFocus(object sender, EventArgs e)
         {
             //string Username, Password, grouplevel, roleid, idnhanvien;

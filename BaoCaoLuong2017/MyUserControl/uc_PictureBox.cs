@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace BaoCaoLuong2017.MyUserControl
@@ -13,19 +8,21 @@ namespace BaoCaoLuong2017.MyUserControl
     {
         public int iZoomMinimum = 10;
         public int iZoomMax = 500;
+
         public uc_PictureBox()
         {
             InitializeComponent();
         }
+
         public void AllowZoom(bool b)
         {
             imageBox1.AllowZoom = b;
         }
+
         public String LoadImage(String strURL, String strFileName, int iZoomValue)
         {
             try
             {
-
                 PictureBox temp = new PictureBox();
                 temp.Load(strURL);
                 this.imageBox1.Image = temp.Image;
@@ -36,14 +33,11 @@ namespace BaoCaoLuong2017.MyUserControl
 
                 imageBox1.Zoom = iZoomValue;
                 imageBox1.ZoomChanged += imageBox1_ZoomChanged;
-
             }
             catch (System.Exception)
             {
-
                 return "Error";
             }
-
 
             return "Ok";
         }
@@ -54,7 +48,7 @@ namespace BaoCaoLuong2017.MyUserControl
             iZoomMax = max;
         }
 
-        void imageBox1_ZoomChanged(object sender, EventArgs e)
+        private void imageBox1_ZoomChanged(object sender, EventArgs e)
         {
             if (imageBox1.Zoom < iZoomMinimum)
                 imageBox1.Zoom = iZoomMinimum;
@@ -64,7 +58,6 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void imageBox1_MouseMove(object sender, MouseEventArgs e)
         {
-
             imageBox1.SizeMode = ImageGlass.ImageBoxSizeMode.Normal;
         }
 

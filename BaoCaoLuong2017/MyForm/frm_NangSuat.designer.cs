@@ -286,6 +286,7 @@
             this.tp_DeSo_Loai3,
             this.tp_DeSo_Loai4,
             this.tp_DeJP});
+            this.xtraTabControl1.Visible = false;
             // 
             // tp_DeSo_Loai1
             // 
