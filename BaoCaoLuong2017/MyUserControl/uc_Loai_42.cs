@@ -516,7 +516,7 @@ namespace BaoCaoLuong2017.MyUserControl
         {
             string txtTruong001 = txt_Truong_001_1.Text + txt_Truong_001_2.Text;
             string txtTruong102 = txt_Truong_102_1.Text + txt_Truong_102_2.Text;
-            Global.db_BCL.Insert_Loai42_new(idImage, Global.StrBatch, Global.StrUsername, "Loai4",
+            Global.db_BCL.Insert_Loai42_new(idImage, Global.StrBatch, Global.StrUsername, "Loai5",
                 txt_Truong_004.Text,
                 txt_Truong_012.Text,
                 txt_Truong_006.Text,

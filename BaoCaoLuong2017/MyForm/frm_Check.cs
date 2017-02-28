@@ -299,15 +299,44 @@ namespace BaoCaoLuong2017.MyForm
                         {
                             w.UserName,
                             w.LoaiPhieu,
-                            w.Truong_002
+                            w.Truong_003,
+                            w.Truong_056,
+                            w.Truong_060,
+                            w.Truong_062,
+                            w.Truong_064,
+                            w.Truong_066,
+                            w.Truong_068,
+                            w.Truong_070,
+                            w.Truong_072,
+                            w.Truong_074
                         }).ToList();
             lb_username1.Text = deso[0].UserName;
             lb_username2.Text = deso[1].UserName;
 
-            uc_DEJP1.txt_Truong_002.Text = deso[0].Truong_002;
-            uc_DEJP2.txt_Truong_002.Text = deso[1].Truong_002;
+            uc_DEJP1.txt_Truong_003.Text = deso[0].Truong_003;
+            uc_DEJP1.txt_Truong_056.Text = deso[0].Truong_056;
+            uc_DEJP1.txt_Truong_060.Text = deso[0].Truong_060;
+            uc_DEJP1.txt_Truong_062.Text = deso[0].Truong_062;
+            uc_DEJP1.txt_Truong_064.Text = deso[0].Truong_064;
+            uc_DEJP1.txt_Truong_066.Text = deso[0].Truong_066;
+            uc_DEJP1.txt_Truong_068.Text = deso[0].Truong_068;
+            uc_DEJP1.txt_Truong_070.Text = deso[0].Truong_070;
+            uc_DEJP1.txt_Truong_072.Text = deso[0].Truong_072;
+            uc_DEJP1.txt_Truong_074.Text = deso[0].Truong_074;
 
-            Compare_TextBox(uc_DEJP1.txt_Truong_002, uc_DEJP2.txt_Truong_002);
+
+            uc_DEJP2.txt_Truong_003.Text = deso[1].Truong_003;
+            uc_DEJP2.txt_Truong_056.Text = deso[1].Truong_056;
+            uc_DEJP2.txt_Truong_060.Text = deso[1].Truong_060;
+            uc_DEJP2.txt_Truong_062.Text = deso[1].Truong_062;
+            uc_DEJP2.txt_Truong_064.Text = deso[1].Truong_064;
+            uc_DEJP2.txt_Truong_066.Text = deso[1].Truong_066;
+            uc_DEJP2.txt_Truong_068.Text = deso[1].Truong_068;
+            uc_DEJP2.txt_Truong_070.Text = deso[1].Truong_070;
+            uc_DEJP2.txt_Truong_072.Text = deso[1].Truong_072;
+            uc_DEJP2.txt_Truong_074.Text = deso[1].Truong_074;
+
+            Compare_TextBox(uc_DEJP1.txt_Truong_056, uc_DEJP2.txt_Truong_056);
 
             var soloi = ((from w in Global.db_BCL.tbl_DEJPs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
             lb_Loi.Text = soloi + " Lỗi";
@@ -369,13 +398,36 @@ namespace BaoCaoLuong2017.MyForm
                             w.Truong_004,
                             w.Truong_005,
                             w.Truong_006,
+                            w.Truong_007,
                             w.Truong_008,
                             w.Truong_009,
+                            w.Truong_010,
+                            w.Truong_011,
                             w.Truong_012,
                             w.Truong_013,
+                            w.Truong_014,
+                            w.Truong_015,
+                            w.Truong_016,
+                            w.Truong_017,
+                            w.Truong_018,
+                            w.Truong_019,
+                            w.Truong_020,
+                            w.Truong_021,
+                            w.Truong_022,
+                            w.Truong_023,
+                            w.Truong_024,
+                            w.Truong_025,
+                            w.Truong_026,
+                            w.Truong_027,
                             w.Truong_028,
                             w.Truong_029,
                             w.Truong_030,
+                            w.Truong_031,
+                            w.Truong_032,
+                            w.Truong_033,
+                            w.Truong_034,
+                            w.Truong_035,
+                            w.Truong_036,
                             w.Truong_037,
                             w.Truong_038,
                             w.Truong_039,
@@ -393,71 +445,29 @@ namespace BaoCaoLuong2017.MyForm
                             w.Truong_051,
                             w.Truong_052,
                             w.Truong_053,
+                            w.Truong_054,
+                            w.Truong_055,
+                            w.Truong_056,
                             w.Truong_057,
                             w.Truong_058,
+                            w.Truong_059,
+                            w.Truong_060,
+                            w.Truong_061,
+                            w.Truong_062,
                             w.Truong_063,
                             w.Truong_064,
                             w.Truong_065,
                             w.Truong_066,
-                            w.Truong_077,
-                            w.Truong_078,
-                            w.Truong_079,
-                            w.Truong_080,
-                            w.Truong_081,
-                            w.Truong_082,
-                            w.Truong_083,
-                            w.Truong_084,
-                            w.Truong_085,
-                            w.Truong_086,
-                            w.Truong_088,
-                            w.Truong_089,
-                            w.Truong_090,
-                            w.Truong_091,
-                            w.Truong_092,
-                            w.Truong_093,
-                            w.Truong_094,
-                            w.Truong_095,
-                            w.Truong_096,
-                            w.Truong_097,
-                            w.Truong_098,
-                            w.Truong_099,
-                            w.Truong_100,
-                            w.Truong_101,
-                            w.Truong_102,
-                            w.Truong_103,
-                            w.Truong_104,
-                            w.Truong_105,
-                            w.Truong_106,
-                            w.Truong_107,
-                            w.Truong_108,
-                            w.Truong_109,
-                            w.Truong_110,
-                            w.Truong_112,
-
-                            w.Truong_126,
-                            w.Truong_127,
-                            w.Truong_128,
-                            w.Truong_129,
-                            w.Truong_130,
-                            w.Truong_131,
-                            w.Truong_132,
-                            w.Truong_133,
-                            w.Truong_134,
-                            w.Truong_135,
-                            w.Truong_136,
-                            w.Truong_137,
-                            w.Truong_138,
-                            w.Truong_139,
-
-                            w.Truong_158,
-                            w.Truong_159,
-                            w.Truong_160,
-                            w.Truong_161,
-                            w.Truong_162,
-                            w.Truong_165,
-                            w.Truong_166,
-                            w.Truong_167,
-                            w.Truong_168,
+                            w.Truong_067,
+                            w.Truong_068,
+                            w.Truong_069,
+                            w.Truong_070,
+                            w.Truong_071,
+                            w.Truong_072,
+                            w.Truong_073,
+                            w.Truong_074,
+                            w.Truong_075,
+                            
                             w.LoaiPhieu4_2
                         }).ToList();
             lb_username1.Text = deso[0].UserName;
@@ -468,663 +478,269 @@ namespace BaoCaoLuong2017.MyForm
             Loaiphieu42_user1 = deso[0].LoaiPhieu4_2.Value;
             Loaiphieu42_user2 = deso[1].LoaiPhieu4_2.Value;
 
-            if (deso[0].LoaiPhieu == "Loai1")
-            {
-                tabcontrol_DeSo1.SelectedTabPage = tp_Loai_1_DeSo1;
-
-                uc_Loai_11.txt_Truong_001.Text = deso[0].Truong_001;
-                uc_Loai_11.txt_Truong_002.Text = deso[0].Truong_002;
-            }
-            else if (deso[0].LoaiPhieu == "Loai2")
+           
+            if (deso[0].LoaiPhieu == "Loai2")
             {
                 tabcontrol_DeSo1.SelectedTabPage = tp_Loai_2_DeSo1;
 
-                uc_Loai_21.txt_Truong_004.Text = deso[0].Truong_002;
-                uc_Loai_21.txt_Truong_006.Text = deso[0].Truong_003;
-                uc_Loai_21.txt_Truong_005.Text = deso[0].Truong_004;
+                uc_Loai_21.txt_Truong_001.Text = deso[0].Truong_001;
+                uc_Loai_21.txt_Truong_002.Text = deso[0].Truong_002;
+                uc_Loai_21.txt_Truong_003.Text = deso[0].Truong_003;
+                uc_Loai_21.txt_Truong_004.Text = deso[0].Truong_004;
+                uc_Loai_21.txt_Truong_005.Text = deso[0].Truong_005;
+                uc_Loai_21.txt_Truong_006.Text = deso[0].Truong_006;
+                uc_Loai_21.txt_Truong_007.Text = deso[0].Truong_007;
+                uc_Loai_21.txt_Truong_008.Text = deso[0].Truong_008;
+                uc_Loai_21.txt_Truong_009.Text = deso[0].Truong_009;
+                uc_Loai_21.txt_Truong_010.Text = deso[0].Truong_010;
             }
-            else if (deso[0].LoaiPhieu == "Loai3")
-            {
-                tabcontrol_DeSo1.SelectedTabPage = tp_Loai_3_DeSo1;
-
-                tp_DEJP1.PageVisible = false;
-
-                uc_Loai_31.txt_Truong_002.Text = deso[0].Truong_002;
-                uc_Loai_31.txt_Truong_003.Text = deso[0].Truong_003;
-            }
+           
             else if (deso[0].LoaiPhieu == "Loai4" && deso[0].LoaiPhieu4_2 == false)
             {
                 tabcontrol_DeSo1.SelectedTabPage = tp_Loai_4_DeSo1;
 
                 tp_DEJP1.PageVisible = false;
 
-                if (deso[0].Truong_001.Length > 1)
-                {
-                    uc_Loai_41.txt_Truong_001_1.Text = deso[0].Truong_001?.Substring(0, 1);
-                    uc_Loai_41.txt_Truong_001_2.Text = deso[0].Truong_001?.Substring(1, deso[0].Truong_001.Length - 1);
-                }
-                else
-                {
-                    uc_Loai_41.txt_Truong_001_1.Text = string.IsNullOrEmpty(deso[0].Truong_001) ? "" : deso[0].Truong_001;
-                    uc_Loai_41.txt_Truong_001_2.Text = "";
-                }
-
-                uc_Loai_41.txt_Truong_003.Text = deso[0].Truong_003;
+                uc_Loai_41.txt_Truong_001.Text = deso[0].Truong_001;
+                uc_Loai_41.txt_Truong_002.Text = deso[0].Truong_002;
                 uc_Loai_41.txt_Truong_004.Text = deso[0].Truong_004;
                 uc_Loai_41.txt_Truong_005.Text = deso[0].Truong_005;
-                uc_Loai_41.txt_Truong_006_.Text = deso[0].Truong_006;
-                uc_Loai_41.txt_Truong_008_.Text = deso[0].Truong_008;
-                uc_Loai_41.txt_Truong_009_.Text = deso[0].Truong_009;
+                uc_Loai_41.txt_Truong_006.Text = deso[0].Truong_006;
+                uc_Loai_41.txt_Truong_007.Text = deso[0].Truong_007;
+                uc_Loai_41.txt_Truong_008.Text = deso[0].Truong_008;
+                uc_Loai_41.txt_Truong_009.Text = deso[0].Truong_009;
+                uc_Loai_41.txt_Truong_010.Text = deso[0].Truong_010;
+                uc_Loai_41.txt_Truong_011.Text = deso[0].Truong_011;
                 uc_Loai_41.txt_Truong_012.Text = deso[0].Truong_012;
                 uc_Loai_41.txt_Truong_013.Text = deso[0].Truong_013;
+                uc_Loai_41.txt_Truong_014.Text = deso[0].Truong_014;
+                uc_Loai_41.txt_Truong_015.Text = deso[0].Truong_015;
+                uc_Loai_41.txt_Truong_016.Text = deso[0].Truong_016;
+                uc_Loai_41.txt_Truong_017.Text = deso[0].Truong_017;
+                uc_Loai_41.txt_Truong_018.Text = deso[0].Truong_018;
+                uc_Loai_41.txt_Truong_019.Text = deso[0].Truong_019;
+                uc_Loai_41.txt_Truong_020.Text = deso[0].Truong_020;
+                uc_Loai_41.txt_Truong_021.Text = deso[0].Truong_021;
+                uc_Loai_41.txt_Truong_022.Text = deso[0].Truong_022;
+                uc_Loai_41.txt_Truong_023.Text = deso[0].Truong_023;
+                uc_Loai_41.txt_Truong_024.Text = deso[0].Truong_024;
+                uc_Loai_41.txt_Truong_025.Text = deso[0].Truong_025;
+                uc_Loai_41.txt_Truong_026.Text = deso[0].Truong_026;
+                uc_Loai_41.txt_Truong_027.Text = deso[0].Truong_027;
                 uc_Loai_41.txt_Truong_028.Text = deso[0].Truong_028;
                 uc_Loai_41.txt_Truong_029.Text = deso[0].Truong_029;
                 uc_Loai_41.txt_Truong_030.Text = deso[0].Truong_030;
-                uc_Loai_41.txt_Truong_037.Text = deso[0].Truong_037;
-                uc_Loai_41.txt_Truong_038.Text = deso[0].Truong_038;
-                uc_Loai_41.txt_Truong_039.Text = deso[0].Truong_039;
+                uc_Loai_41.txt_Truong_031.Text = deso[0].Truong_031;
+                uc_Loai_41.txt_Truong_032.Text = deso[0].Truong_032;
+                uc_Loai_41.txt_Truong_033.Text = deso[0].Truong_033;
+                uc_Loai_41.txt_Truong_034.Text = deso[0].Truong_034;
+                uc_Loai_41.txt_Truong_035.Text = deso[0].Truong_035;
+                uc_Loai_41.txt_Truong_036.Text = deso[0].Truong_036;
+                uc_Loai_41.txt_Truong_0373839.Text = deso[0].Truong_037;
                 uc_Loai_41.txt_Truong_040.Text = deso[0].Truong_040;
-                uc_Loai_41.txt_Truong_041.Text = deso[0].Truong_041;
-                uc_Loai_41.txt_Truong_042.Text = deso[0].Truong_042;
-                uc_Loai_41.txt_Truong_043.Text = deso[0].Truong_043;
+                uc_Loai_41.txt_Truong_0414243.Text = deso[0].Truong_041;
                 uc_Loai_41.txt_Truong_044.Text = deso[0].Truong_044;
                 uc_Loai_41.txt_Truong_045.Text = deso[0].Truong_045;
                 uc_Loai_41.txt_Truong_046.Text = deso[0].Truong_046;
                 uc_Loai_41.txt_Truong_047.Text = deso[0].Truong_047;
                 uc_Loai_41.txt_Truong_048.Text = deso[0].Truong_048;
+                uc_Loai_41.txt_Truong_049.Text = deso[0].Truong_049;
                 uc_Loai_41.txt_Truong_050.Text = deso[0].Truong_050;
                 uc_Loai_41.txt_Truong_051.Text = deso[0].Truong_051;
-                uc_Loai_41.txt_Truong_052.Text = deso[0].Truong_052;
+                uc_Loai_41.txt_Truong_052.EditValue = deso[0].Truong_052;
                 uc_Loai_41.txt_Truong_053.Text = deso[0].Truong_053;
+                uc_Loai_41.txt_Truong_054.Text = deso[0].Truong_054;
+                uc_Loai_41.txt_Truong_055.EditValue = deso[0].Truong_055;
                 uc_Loai_41.txt_Truong_057.Text = deso[0].Truong_057;
                 uc_Loai_41.txt_Truong_058.Text = deso[0].Truong_058;
+                uc_Loai_41.txt_Truong_059.Text = deso[0].Truong_059;
+                uc_Loai_41.txt_Truong_061.Text = deso[0].Truong_061;
                 uc_Loai_41.txt_Truong_063.Text = deso[0].Truong_063;
-                uc_Loai_41.txt_Truong_064.Text = deso[0].Truong_064;
                 uc_Loai_41.txt_Truong_065.Text = deso[0].Truong_065;
-                uc_Loai_41.txt_Truong_066.Text = deso[0].Truong_066;
-                uc_Loai_41.txt_Truong_077.Text = deso[0].Truong_077;
-                uc_Loai_41.txt_Truong_078.Text = deso[0].Truong_078;
-                uc_Loai_41.txt_Truong_079.Text = deso[0].Truong_079;
-                uc_Loai_41.txt_Truong_080.Text = deso[0].Truong_080;
-                uc_Loai_41.txt_Truong_081.Text = deso[0].Truong_081;
-                uc_Loai_41.txt_Truong_082.Text = deso[0].Truong_082;
-                uc_Loai_41.txt_Truong_083.Text = deso[0].Truong_083;
-                uc_Loai_41.txt_Truong_084.Text = deso[0].Truong_084;
-                uc_Loai_41.txt_Truong_085.Text = deso[0].Truong_085;
-                uc_Loai_41.txt_Truong_086.Text = deso[0].Truong_086;
-                uc_Loai_41.txt_Truong_088.Text = deso[0].Truong_088;
-                uc_Loai_41.txt_Truong_089.Text = deso[0].Truong_089;
-                uc_Loai_41.txt_Truong_090.Text = deso[0].Truong_090;
-                uc_Loai_41.txt_Truong_091.Text = deso[0].Truong_091;
-                uc_Loai_41.txt_Truong_093.Text = deso[0].Truong_093;
-                uc_Loai_41.txt_Truong_094.Text = deso[0].Truong_094;
-                uc_Loai_41.txt_Truong_095.Text = deso[0].Truong_095;
-                uc_Loai_41.txt_Truong_096.Text = deso[0].Truong_096;
-                uc_Loai_41.txt_Truong_097.Text = deso[0].Truong_097;
-                uc_Loai_41.txt_Truong_098.Text = deso[0].Truong_098;
-                uc_Loai_41.txt_Truong_099.Text = deso[0].Truong_099;
-                uc_Loai_41.txt_Truong_100.Text = deso[0].Truong_100;
-                uc_Loai_41.txt_Truong_101.Text = deso[0].Truong_101;
-                if (deso[0].Truong_102.Length > 1)
-                {
-                    uc_Loai_41.txt_Truong_102_1.Text = deso[0].Truong_102?.Substring(0, 1);
-                    uc_Loai_41.txt_Truong_102_2.Text = deso[0].Truong_102?.Substring(1, deso[0].Truong_102.Length - 1);
-                }
-                else
-                {
-                    uc_Loai_41.txt_Truong_102_1.Text = string.IsNullOrEmpty(deso[0].Truong_102) ? "" : deso[0].Truong_102;
-                    uc_Loai_41.txt_Truong_102_2.Text = "";
-                }
-                uc_Loai_41.txt_Truong_103.Text = deso[0].Truong_103;
-                uc_Loai_41.txt_Truong_104.Text = deso[0].Truong_104;
-                uc_Loai_41.txt_Truong_105.Text = deso[0].Truong_105;
-                uc_Loai_41.txt_Truong_106.Text = deso[0].Truong_106;
-                uc_Loai_41.txt_Truong_107.Text = deso[0].Truong_107;
-                uc_Loai_41.txt_Truong_108.EditValue = deso[0].Truong_108;
-                uc_Loai_41.txt_Truong_109.EditValue = deso[0].Truong_109;
-                uc_Loai_41.txt_Truong_110.Text = deso[0].Truong_110;
-                uc_Loai_41.txt_Truong_112.Text = deso[0].Truong_112;
-
-                uc_Loai_41.txt_Truong_126.Text = deso[0].Truong_126;
-                uc_Loai_41.txt_Truong_127.Text = deso[0].Truong_127;
-                uc_Loai_41.txt_Truong_128.Text = deso[0].Truong_128;
-                uc_Loai_41.txt_Truong_129.Text = deso[0].Truong_129;
-                uc_Loai_41.txt_Truong_130.Text = deso[0].Truong_130;
-                uc_Loai_41.txt_Truong_131.Text = deso[0].Truong_131;
-                uc_Loai_41.txt_Truong_132.Text = deso[0].Truong_132;
-                uc_Loai_41.txt_Truong_133.Text = deso[0].Truong_133;
-                uc_Loai_41.txt_Truong_134.Text = deso[0].Truong_134;
-                uc_Loai_41.txt_Truong_135.Text = deso[0].Truong_135;
-                uc_Loai_41.txt_Truong_136.Text = deso[0].Truong_136;
-                uc_Loai_41.txt_Truong_137.Text = deso[0].Truong_137;
-                uc_Loai_41.txt_Truong_138.Text = deso[0].Truong_138;
-                uc_Loai_41.txt_Truong_139.Text = deso[0].Truong_139;
-
-                uc_Loai_41.txt_Truong_158.Text = deso[0].Truong_158;
-                uc_Loai_41.txt_Truong_159.Text = deso[0].Truong_159;
-                uc_Loai_41.txt_Truong_160.Text = deso[0].Truong_160;
-                uc_Loai_41.txt_Truong_161.Text = deso[0].Truong_161;
-                uc_Loai_41.txt_Truong_162.Text = deso[0].Truong_162;
-                uc_Loai_41.txt_Truong_165.Text = deso[0].Truong_165;
-                uc_Loai_41.txt_Truong_166.Text = deso[0].Truong_166;
-                uc_Loai_41.txt_Truong_167.Text = deso[0].Truong_167;
-                uc_Loai_41.txt_Truong_168.Text = deso[0].Truong_168;
+                uc_Loai_41.txt_Truong_067.Text = deso[0].Truong_067;
+                uc_Loai_41.txt_Truong_069.Text = deso[0].Truong_069;
+                uc_Loai_41.txt_Truong_071.Text = deso[0].Truong_071;
+                uc_Loai_41.txt_Truong_073.Text = deso[0].Truong_073;
+                uc_Loai_41.txt_Truong_075.Text = deso[0].Truong_075;
+               
             }
-            else if (deso[0].LoaiPhieu == "Loai4" && deso[0].LoaiPhieu4_2 == true)
+            else if (deso[0].LoaiPhieu == "Loai5" && deso[0].LoaiPhieu4_2 == true)
             {
                 tabcontrol_DeSo1.SelectedTabPage = tp_Loai_4_2_DeSo1;
 
                 tp_DEJP1.PageVisible = false;
 
-                if (deso[0].Truong_001.Length > 1)
-                {
-                    uc_Loai_421.txt_Truong_001_1.Text = deso[0].Truong_001?.Substring(0, 1);
-                    uc_Loai_421.txt_Truong_001_2.Text = deso[0].Truong_001?.Substring(1, deso[0].Truong_001.Length - 1);
-                }
-                else
-                {
-                    uc_Loai_421.txt_Truong_001_1.Text = string.IsNullOrEmpty(deso[0].Truong_001) ? "" : deso[0].Truong_001;
-                    uc_Loai_421.txt_Truong_001_2.Text = "";
-                }
 
-                uc_Loai_421.txt_Truong_004.Text = deso[0].Truong_004;
-                uc_Loai_421.txt_Truong_006.Text = deso[0].Truong_006;
-                uc_Loai_421.txt_Truong_008.Text = deso[0].Truong_008;
-                uc_Loai_421.txt_Truong_009.Text = deso[0].Truong_009;
-                uc_Loai_421.txt_Truong_012.Text = deso[0].Truong_012;
-                uc_Loai_421.txt_Truong_013.Text = deso[0].Truong_013;
-                uc_Loai_421.txt_Truong_028.Text = deso[0].Truong_028;
-                uc_Loai_421.txt_Truong_029.Text = deso[0].Truong_029;
-                uc_Loai_421.txt_Truong_030.Text = deso[0].Truong_030;
-                uc_Loai_421.txt_Truong_037.Text = deso[0].Truong_037;
-                uc_Loai_421.txt_Truong_038.Text = deso[0].Truong_038;
-                uc_Loai_421.txt_Truong_039.Text = deso[0].Truong_039;
-                uc_Loai_421.txt_Truong_040.Text = deso[0].Truong_040;
-                uc_Loai_421.txt_Truong_041.Text = deso[0].Truong_041;
-                uc_Loai_421.txt_Truong_042.Text = deso[0].Truong_042;
-                uc_Loai_421.txt_Truong_043.Text = deso[0].Truong_043;
-                uc_Loai_421.txt_Truong_044.Text = deso[0].Truong_044;
-                uc_Loai_421.txt_Truong_045.Text = deso[0].Truong_045;
-                uc_Loai_421.txt_Truong_046.Text = deso[0].Truong_046;
-                uc_Loai_421.txt_Truong_047.Text = deso[0].Truong_047;
-                uc_Loai_421.txt_Truong_048.Text = deso[0].Truong_048;
-                uc_Loai_421.txt_Truong_050.Text = deso[0].Truong_050;
-                uc_Loai_421.txt_Truong_051.Text = deso[0].Truong_051;
-                uc_Loai_421.txt_Truong_052.Text = deso[0].Truong_052;
-                uc_Loai_421.txt_Truong_053.Text = deso[0].Truong_053;
-                uc_Loai_421.txt_Truong_063.Text = deso[0].Truong_063;
-                uc_Loai_421.txt_Truong_064.Text = deso[0].Truong_064;
-                uc_Loai_421.txt_Truong_065.Text = deso[0].Truong_065;
-                uc_Loai_421.txt_Truong_066.Text = deso[0].Truong_066;
-                uc_Loai_421.txt_Truong_077.Text = deso[0].Truong_077;
-                uc_Loai_421.txt_Truong_078.Text = deso[0].Truong_078;
-                uc_Loai_421.txt_Truong_079.Text = deso[0].Truong_079;
-                uc_Loai_421.txt_Truong_080.Text = deso[0].Truong_080;
-                uc_Loai_421.txt_Truong_081.Text = deso[0].Truong_081;
-                uc_Loai_421.txt_Truong_082.Text = deso[0].Truong_082;
-                uc_Loai_421.txt_Truong_083.Text = deso[0].Truong_083;
-                uc_Loai_421.txt_Truong_084.Text = deso[0].Truong_084;
-                uc_Loai_421.txt_Truong_085.Text = deso[0].Truong_085;
-                uc_Loai_421.txt_Truong_086.Text = deso[0].Truong_086;
-                uc_Loai_421.txt_Truong_088.Text = deso[0].Truong_088;
-                uc_Loai_421.txt_Truong_089.Text = deso[0].Truong_089;
-                uc_Loai_421.txt_Truong_090.Text = deso[0].Truong_090;
-                uc_Loai_421.txt_Truong_091.Text = deso[0].Truong_091;
-                uc_Loai_421.txt_Truong_093.Text = deso[0].Truong_093;
-                uc_Loai_421.txt_Truong_094.Text = deso[0].Truong_094;
-                uc_Loai_421.txt_Truong_095.Text = deso[0].Truong_095;
-                uc_Loai_421.txt_Truong_096.Text = deso[0].Truong_096;
-                uc_Loai_421.txt_Truong_097.Text = deso[0].Truong_097;
-                uc_Loai_421.txt_Truong_098.Text = deso[0].Truong_098;
-                uc_Loai_421.txt_Truong_099.Text = deso[0].Truong_099;
-                uc_Loai_421.txt_Truong_100.Text = deso[0].Truong_100;
-                uc_Loai_421.txt_Truong_101.Text = deso[0].Truong_101;
-
-                uc_Loai_421.txt_Truong_126.Text = deso[0].Truong_126;
-                uc_Loai_421.txt_Truong_127.Text = deso[0].Truong_127;
-                uc_Loai_421.txt_Truong_128.Text = deso[0].Truong_128;
-                uc_Loai_421.txt_Truong_129.Text = deso[0].Truong_129;
-                uc_Loai_421.txt_Truong_130.Text = deso[0].Truong_130;
-                uc_Loai_421.txt_Truong_131.Text = deso[0].Truong_131;
-                uc_Loai_421.txt_Truong_132.Text = deso[0].Truong_132;
-                uc_Loai_421.txt_Truong_133.Text = deso[0].Truong_133;
-                uc_Loai_421.txt_Truong_134.Text = deso[0].Truong_134;
-                uc_Loai_421.txt_Truong_135.Text = deso[0].Truong_135;
-                uc_Loai_421.txt_Truong_136.Text = deso[0].Truong_136;
-                uc_Loai_421.txt_Truong_137.Text = deso[0].Truong_137;
-                uc_Loai_421.txt_Truong_138.Text = deso[0].Truong_138;
-                uc_Loai_421.txt_Truong_139.Text = deso[0].Truong_139;
-
-                if (deso[0].Truong_102.Length > 1)
-                {
-                    uc_Loai_421.txt_Truong_102_1.Text = deso[0].Truong_102?.Substring(0, 1);
-                    uc_Loai_421.txt_Truong_102_2.Text = deso[0].Truong_102?.Substring(1, deso[0].Truong_102.Length - 1);
-                }
-                else
-                {
-                    uc_Loai_421.txt_Truong_102_1.Text = string.IsNullOrEmpty(deso[0].Truong_102) ? "" : deso[0].Truong_102;
-                    uc_Loai_421.txt_Truong_102_2.Text = "";
-                }
-                uc_Loai_421.txt_Truong_104.Text = deso[0].Truong_104;
-                uc_Loai_421.txt_Truong_106.Text = deso[0].Truong_106;
             }
 
-            if (deso[1].LoaiPhieu == "Loai1")
-            {
-                tabcontrol_DeSo2.SelectedTabPage = tp_Loai_1_DeSo2;
-
-                uc_Loai_12.txt_Truong_001.Text = deso[1].Truong_001;
-                uc_Loai_12.txt_Truong_002.Text = deso[1].Truong_002;
-            }
-            else if (deso[1].LoaiPhieu == "Loai2")
+            if (deso[1].LoaiPhieu == "Loai2")
             {
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_2_DeSo2;
 
-                uc_Loai_22.txt_Truong_004.Text = deso[1].Truong_002;
-                uc_Loai_22.txt_Truong_006.Text = deso[1].Truong_003;
-                uc_Loai_22.txt_Truong_005.Text = deso[1].Truong_004;
+                uc_Loai_22.txt_Truong_001.Text = deso[1].Truong_001;
+                uc_Loai_22.txt_Truong_002.Text = deso[1].Truong_002;
+                uc_Loai_22.txt_Truong_003.Text = deso[1].Truong_003;
+                uc_Loai_22.txt_Truong_004.Text = deso[1].Truong_004;
+                uc_Loai_22.txt_Truong_005.Text = deso[1].Truong_005;
+                uc_Loai_22.txt_Truong_006.Text = deso[1].Truong_006;
+                uc_Loai_22.txt_Truong_007.Text = deso[1].Truong_007;
+                uc_Loai_22.txt_Truong_008.Text = deso[1].Truong_008;
+                uc_Loai_22.txt_Truong_009.Text = deso[1].Truong_009;
+                uc_Loai_22.txt_Truong_010.Text = deso[1].Truong_010;
             }
-            else if (deso[1].LoaiPhieu == "Loai3")
-            {
-                tabcontrol_DeSo2.SelectedTabPage = tp_Loai_3_DeSo2;
-
-                uc_Loai_32.txt_Truong_002.Text = deso[1].Truong_002;
-                uc_Loai_32.txt_Truong_003.Text = deso[1].Truong_003;
-            }
+           
             else if (deso[1].LoaiPhieu == "Loai4" && deso[1].LoaiPhieu4_2 == false)
             {
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_4_DeSo2;
 
-                if (deso[1].Truong_001.Length > 1)
-                {
-                    uc_Loai_42.txt_Truong_001_1.Text = deso[1].Truong_001?.Substring(0, 1);
-                    uc_Loai_42.txt_Truong_001_2.Text = deso[1].Truong_001?.Substring(1, deso[1].Truong_001.Length - 1);
-                }
-                else
-                {
-                    uc_Loai_42.txt_Truong_001_1.Text = string.IsNullOrEmpty(deso[1].Truong_001) ? "" : deso[1].Truong_001;
-                    uc_Loai_42.txt_Truong_001_2.Text = "";
-                }
-                uc_Loai_42.txt_Truong_003.Text = deso[1].Truong_003;
+                uc_Loai_42.txt_Truong_001.Text = deso[1].Truong_001;
+                uc_Loai_42.txt_Truong_002.Text = deso[1].Truong_002;
                 uc_Loai_42.txt_Truong_004.Text = deso[1].Truong_004;
                 uc_Loai_42.txt_Truong_005.Text = deso[1].Truong_005;
-                uc_Loai_42.txt_Truong_006_.Text = deso[1].Truong_006;
-                uc_Loai_42.txt_Truong_008_.Text = deso[1].Truong_008;
-                uc_Loai_42.txt_Truong_009_.Text = deso[1].Truong_009;
+                uc_Loai_42.txt_Truong_006.Text = deso[1].Truong_006;
+                uc_Loai_42.txt_Truong_007.Text = deso[1].Truong_007;
+                uc_Loai_42.txt_Truong_008.Text = deso[1].Truong_008;
+                uc_Loai_42.txt_Truong_009.Text = deso[1].Truong_009;
+                uc_Loai_42.txt_Truong_010.Text = deso[1].Truong_010;
+                uc_Loai_42.txt_Truong_011.Text = deso[1].Truong_011;
                 uc_Loai_42.txt_Truong_012.Text = deso[1].Truong_012;
                 uc_Loai_42.txt_Truong_013.Text = deso[1].Truong_013;
+                uc_Loai_42.txt_Truong_014.Text = deso[1].Truong_014;
+                uc_Loai_42.txt_Truong_015.Text = deso[1].Truong_015;
+                uc_Loai_42.txt_Truong_016.Text = deso[1].Truong_016;
+                uc_Loai_42.txt_Truong_017.Text = deso[1].Truong_017;
+                uc_Loai_42.txt_Truong_018.Text = deso[1].Truong_018;
+                uc_Loai_42.txt_Truong_019.Text = deso[1].Truong_019;
+                uc_Loai_42.txt_Truong_020.Text = deso[1].Truong_020;
+                uc_Loai_42.txt_Truong_021.Text = deso[1].Truong_021;
+                uc_Loai_42.txt_Truong_022.Text = deso[1].Truong_022;
+                uc_Loai_42.txt_Truong_023.Text = deso[1].Truong_023;
+                uc_Loai_42.txt_Truong_024.Text = deso[1].Truong_024;
+                uc_Loai_42.txt_Truong_025.Text = deso[1].Truong_025;
+                uc_Loai_42.txt_Truong_026.Text = deso[1].Truong_026;
+                uc_Loai_42.txt_Truong_027.Text = deso[1].Truong_027;
                 uc_Loai_42.txt_Truong_028.Text = deso[1].Truong_028;
                 uc_Loai_42.txt_Truong_029.Text = deso[1].Truong_029;
                 uc_Loai_42.txt_Truong_030.Text = deso[1].Truong_030;
-                uc_Loai_42.txt_Truong_037.Text = deso[1].Truong_037;
-                uc_Loai_42.txt_Truong_038.Text = deso[1].Truong_038;
-                uc_Loai_42.txt_Truong_039.Text = deso[1].Truong_039;
+                uc_Loai_42.txt_Truong_031.Text = deso[1].Truong_031;
+                uc_Loai_42.txt_Truong_032.Text = deso[1].Truong_032;
+                uc_Loai_42.txt_Truong_033.Text = deso[1].Truong_033;
+                uc_Loai_42.txt_Truong_034.Text = deso[1].Truong_034;
+                uc_Loai_42.txt_Truong_035.Text = deso[1].Truong_035;
+                uc_Loai_42.txt_Truong_036.Text = deso[1].Truong_036;
+                uc_Loai_42.txt_Truong_0373839.Text = deso[1].Truong_037;
                 uc_Loai_42.txt_Truong_040.Text = deso[1].Truong_040;
-                uc_Loai_42.txt_Truong_041.Text = deso[1].Truong_041;
-                uc_Loai_42.txt_Truong_042.Text = deso[1].Truong_042;
-                uc_Loai_42.txt_Truong_043.Text = deso[1].Truong_043;
+                uc_Loai_42.txt_Truong_0414243.Text = deso[1].Truong_041;
                 uc_Loai_42.txt_Truong_044.Text = deso[1].Truong_044;
                 uc_Loai_42.txt_Truong_045.Text = deso[1].Truong_045;
                 uc_Loai_42.txt_Truong_046.Text = deso[1].Truong_046;
                 uc_Loai_42.txt_Truong_047.Text = deso[1].Truong_047;
                 uc_Loai_42.txt_Truong_048.Text = deso[1].Truong_048;
+                uc_Loai_42.txt_Truong_049.Text = deso[1].Truong_049;
                 uc_Loai_42.txt_Truong_050.Text = deso[1].Truong_050;
                 uc_Loai_42.txt_Truong_051.Text = deso[1].Truong_051;
-                uc_Loai_42.txt_Truong_052.Text = deso[1].Truong_052;
+                uc_Loai_42.txt_Truong_052.EditValue = deso[1].Truong_052;
                 uc_Loai_42.txt_Truong_053.Text = deso[1].Truong_053;
+                uc_Loai_42.txt_Truong_054.Text = deso[1].Truong_054;
+                uc_Loai_42.txt_Truong_055.EditValue = deso[1].Truong_055;
                 uc_Loai_42.txt_Truong_057.Text = deso[1].Truong_057;
                 uc_Loai_42.txt_Truong_058.Text = deso[1].Truong_058;
+                uc_Loai_42.txt_Truong_059.Text = deso[1].Truong_059;
+                uc_Loai_42.txt_Truong_061.Text = deso[1].Truong_061;
                 uc_Loai_42.txt_Truong_063.Text = deso[1].Truong_063;
-                uc_Loai_42.txt_Truong_064.Text = deso[1].Truong_064;
                 uc_Loai_42.txt_Truong_065.Text = deso[1].Truong_065;
-                uc_Loai_42.txt_Truong_066.Text = deso[1].Truong_066;
-                uc_Loai_42.txt_Truong_077.Text = deso[1].Truong_077;
-                uc_Loai_42.txt_Truong_078.Text = deso[1].Truong_078;
-                uc_Loai_42.txt_Truong_079.Text = deso[1].Truong_079;
-                uc_Loai_42.txt_Truong_080.Text = deso[1].Truong_080;
-                uc_Loai_42.txt_Truong_081.Text = deso[1].Truong_081;
-                uc_Loai_42.txt_Truong_082.Text = deso[1].Truong_082;
-                uc_Loai_42.txt_Truong_083.Text = deso[1].Truong_083;
-                uc_Loai_42.txt_Truong_084.Text = deso[1].Truong_084;
-                uc_Loai_42.txt_Truong_085.Text = deso[1].Truong_085;
-                uc_Loai_42.txt_Truong_086.Text = deso[1].Truong_086;
-                uc_Loai_42.txt_Truong_088.Text = deso[1].Truong_088;
-                uc_Loai_42.txt_Truong_089.Text = deso[1].Truong_089;
-                uc_Loai_42.txt_Truong_090.Text = deso[1].Truong_090;
-                uc_Loai_42.txt_Truong_091.Text = deso[1].Truong_091;
-                uc_Loai_42.txt_Truong_093.Text = deso[1].Truong_093;
-                uc_Loai_42.txt_Truong_094.Text = deso[1].Truong_094;
-                uc_Loai_42.txt_Truong_095.Text = deso[1].Truong_095;
-                uc_Loai_42.txt_Truong_096.Text = deso[1].Truong_096;
-                uc_Loai_42.txt_Truong_097.Text = deso[1].Truong_097;
-                uc_Loai_42.txt_Truong_098.Text = deso[1].Truong_098;
-                uc_Loai_42.txt_Truong_099.Text = deso[1].Truong_099;
-                uc_Loai_42.txt_Truong_100.Text = deso[1].Truong_100;
-                uc_Loai_42.txt_Truong_101.Text = deso[1].Truong_101;
-
-                if (deso[1].Truong_102.Length > 1)
-                {
-                    uc_Loai_42.txt_Truong_102_1.Text = deso[1].Truong_102?.Substring(0, 1);
-                    uc_Loai_42.txt_Truong_102_2.Text = deso[1].Truong_102?.Substring(1, deso[1].Truong_102.Length - 1);
-                }
-                else
-                {
-                    uc_Loai_42.txt_Truong_102_1.Text = string.IsNullOrEmpty(deso[1].Truong_102) ? "" : deso[1].Truong_102;
-                    uc_Loai_42.txt_Truong_102_2.Text = "";
-                }
-
-                uc_Loai_42.txt_Truong_103.Text = deso[1].Truong_103;
-                uc_Loai_42.txt_Truong_104.Text = deso[1].Truong_104;
-                uc_Loai_42.txt_Truong_105.Text = deso[1].Truong_105;
-                uc_Loai_42.txt_Truong_106.Text = deso[1].Truong_106;
-                uc_Loai_42.txt_Truong_107.Text = deso[1].Truong_107;
-                uc_Loai_42.txt_Truong_108.EditValue = deso[1].Truong_108;
-                uc_Loai_42.txt_Truong_109.EditValue = deso[1].Truong_109;
-                uc_Loai_42.txt_Truong_110.Text = deso[1].Truong_110;
-                uc_Loai_42.txt_Truong_112.Text = deso[1].Truong_112;
-
-                uc_Loai_42.txt_Truong_126.Text = deso[1].Truong_126;
-                uc_Loai_42.txt_Truong_127.Text = deso[1].Truong_127;
-                uc_Loai_42.txt_Truong_128.Text = deso[1].Truong_128;
-                uc_Loai_42.txt_Truong_129.Text = deso[1].Truong_129;
-                uc_Loai_42.txt_Truong_130.Text = deso[1].Truong_130;
-                uc_Loai_42.txt_Truong_131.Text = deso[1].Truong_131;
-                uc_Loai_42.txt_Truong_132.Text = deso[1].Truong_132;
-                uc_Loai_42.txt_Truong_133.Text = deso[1].Truong_133;
-                uc_Loai_42.txt_Truong_134.Text = deso[1].Truong_134;
-                uc_Loai_42.txt_Truong_135.Text = deso[1].Truong_135;
-                uc_Loai_42.txt_Truong_136.Text = deso[1].Truong_136;
-                uc_Loai_42.txt_Truong_137.Text = deso[1].Truong_137;
-                uc_Loai_42.txt_Truong_138.Text = deso[1].Truong_138;
-                uc_Loai_42.txt_Truong_139.Text = deso[1].Truong_139;
-
-                uc_Loai_42.txt_Truong_158.Text = deso[1].Truong_158;
-                uc_Loai_42.txt_Truong_159.Text = deso[1].Truong_159;
-                uc_Loai_42.txt_Truong_160.Text = deso[1].Truong_160;
-                uc_Loai_42.txt_Truong_161.Text = deso[1].Truong_161;
-                uc_Loai_42.txt_Truong_162.Text = deso[1].Truong_162;
-                uc_Loai_42.txt_Truong_165.Text = deso[1].Truong_165;
-                uc_Loai_42.txt_Truong_166.Text = deso[1].Truong_166;
-                uc_Loai_42.txt_Truong_167.Text = deso[1].Truong_167;
-                uc_Loai_42.txt_Truong_168.Text = deso[1].Truong_168;
+                uc_Loai_42.txt_Truong_067.Text = deso[1].Truong_067;
+                uc_Loai_42.txt_Truong_069.Text = deso[1].Truong_069;
+                uc_Loai_42.txt_Truong_071.Text = deso[1].Truong_071;
+                uc_Loai_42.txt_Truong_073.Text = deso[1].Truong_073;
+                uc_Loai_42.txt_Truong_075.Text = deso[1].Truong_075;
             }
-            else if (deso[1].LoaiPhieu == "Loai4" && deso[1].LoaiPhieu4_2 == true)
+            else if (deso[1].LoaiPhieu == "Loai5" && deso[1].LoaiPhieu4_2 == true)
             {
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_4_2_DeSo2;
 
                 tp_DEJP2.PageVisible = false;
 
-                if (deso[1].Truong_001.Length > 1)
-                {
-                    uc_Loai_422.txt_Truong_001_1.Text = deso[1].Truong_001?.Substring(0, 1);
-                    uc_Loai_422.txt_Truong_001_2.Text = deso[1].Truong_001?.Substring(1, deso[1].Truong_001.Length - 1);
-                }
-                else
-                {
-                    uc_Loai_422.txt_Truong_001_1.Text = string.IsNullOrEmpty(deso[1].Truong_001) ? "" : deso[1].Truong_001;
-                    uc_Loai_422.txt_Truong_001_2.Text = "";
-                }
-
-                uc_Loai_422.txt_Truong_004.Text = deso[1].Truong_004;
-                uc_Loai_422.txt_Truong_006.Text = deso[1].Truong_006;
-                uc_Loai_422.txt_Truong_008.Text = deso[1].Truong_008;
-                uc_Loai_422.txt_Truong_009.Text = deso[1].Truong_009;
-                uc_Loai_422.txt_Truong_012.Text = deso[1].Truong_012;
-                uc_Loai_422.txt_Truong_013.Text = deso[1].Truong_013;
-                uc_Loai_422.txt_Truong_028.Text = deso[1].Truong_028;
-                uc_Loai_422.txt_Truong_029.Text = deso[1].Truong_029;
-                uc_Loai_422.txt_Truong_030.Text = deso[1].Truong_030;
-                uc_Loai_422.txt_Truong_037.Text = deso[1].Truong_037;
-                uc_Loai_422.txt_Truong_038.Text = deso[1].Truong_038;
-                uc_Loai_422.txt_Truong_039.Text = deso[1].Truong_039;
-                uc_Loai_422.txt_Truong_040.Text = deso[1].Truong_040;
-                uc_Loai_422.txt_Truong_041.Text = deso[1].Truong_041;
-                uc_Loai_422.txt_Truong_042.Text = deso[1].Truong_042;
-                uc_Loai_422.txt_Truong_043.Text = deso[1].Truong_043;
-                uc_Loai_422.txt_Truong_044.Text = deso[1].Truong_044;
-                uc_Loai_422.txt_Truong_045.Text = deso[1].Truong_045;
-                uc_Loai_422.txt_Truong_046.Text = deso[1].Truong_046;
-                uc_Loai_422.txt_Truong_047.Text = deso[1].Truong_047;
-                uc_Loai_422.txt_Truong_048.Text = deso[1].Truong_048;
-                uc_Loai_422.txt_Truong_050.Text = deso[1].Truong_050;
-                uc_Loai_422.txt_Truong_051.Text = deso[1].Truong_051;
-                uc_Loai_422.txt_Truong_052.Text = deso[1].Truong_052;
-                uc_Loai_422.txt_Truong_053.Text = deso[1].Truong_053;
-                uc_Loai_422.txt_Truong_063.Text = deso[1].Truong_063;
-                uc_Loai_422.txt_Truong_064.Text = deso[1].Truong_064;
-                uc_Loai_422.txt_Truong_065.Text = deso[1].Truong_065;
-                uc_Loai_422.txt_Truong_066.Text = deso[1].Truong_066;
-                uc_Loai_422.txt_Truong_077.Text = deso[1].Truong_077;
-                uc_Loai_422.txt_Truong_078.Text = deso[1].Truong_078;
-                uc_Loai_422.txt_Truong_079.Text = deso[1].Truong_079;
-                uc_Loai_422.txt_Truong_080.Text = deso[1].Truong_080;
-                uc_Loai_422.txt_Truong_081.Text = deso[1].Truong_081;
-                uc_Loai_422.txt_Truong_082.Text = deso[1].Truong_082;
-                uc_Loai_422.txt_Truong_083.Text = deso[1].Truong_083;
-                uc_Loai_422.txt_Truong_084.Text = deso[1].Truong_084;
-                uc_Loai_422.txt_Truong_085.Text = deso[1].Truong_085;
-                uc_Loai_422.txt_Truong_086.Text = deso[1].Truong_086;
-                uc_Loai_422.txt_Truong_088.Text = deso[1].Truong_088;
-                uc_Loai_422.txt_Truong_089.Text = deso[1].Truong_089;
-                uc_Loai_422.txt_Truong_090.Text = deso[1].Truong_090;
-                uc_Loai_422.txt_Truong_091.Text = deso[1].Truong_091;
-                uc_Loai_422.txt_Truong_093.Text = deso[1].Truong_093;
-                uc_Loai_422.txt_Truong_094.Text = deso[1].Truong_094;
-                uc_Loai_422.txt_Truong_095.Text = deso[1].Truong_095;
-                uc_Loai_422.txt_Truong_096.Text = deso[1].Truong_096;
-                uc_Loai_422.txt_Truong_097.Text = deso[1].Truong_097;
-                uc_Loai_422.txt_Truong_098.Text = deso[1].Truong_098;
-                uc_Loai_422.txt_Truong_099.Text = deso[1].Truong_099;
-                uc_Loai_422.txt_Truong_100.Text = deso[1].Truong_100;
-                uc_Loai_422.txt_Truong_101.Text = deso[1].Truong_101;
-
-                uc_Loai_422.txt_Truong_126.Text = deso[1].Truong_126;
-                uc_Loai_422.txt_Truong_127.Text = deso[1].Truong_127;
-                uc_Loai_422.txt_Truong_128.Text = deso[1].Truong_128;
-                uc_Loai_422.txt_Truong_129.Text = deso[1].Truong_129;
-                uc_Loai_422.txt_Truong_130.Text = deso[1].Truong_130;
-                uc_Loai_422.txt_Truong_131.Text = deso[1].Truong_131;
-                uc_Loai_422.txt_Truong_132.Text = deso[1].Truong_132;
-                uc_Loai_422.txt_Truong_133.Text = deso[1].Truong_133;
-                uc_Loai_422.txt_Truong_134.Text = deso[1].Truong_134;
-                uc_Loai_422.txt_Truong_135.Text = deso[1].Truong_135;
-                uc_Loai_422.txt_Truong_136.Text = deso[1].Truong_136;
-                uc_Loai_422.txt_Truong_137.Text = deso[1].Truong_137;
-                uc_Loai_422.txt_Truong_138.Text = deso[1].Truong_138;
-                uc_Loai_422.txt_Truong_139.Text = deso[1].Truong_139;
-
-                if (deso[1].Truong_102.Length > 1)
-                {
-                    uc_Loai_422.txt_Truong_102_1.Text = deso[1].Truong_102?.Substring(0, 1);
-                    uc_Loai_422.txt_Truong_102_2.Text = deso[1].Truong_102?.Substring(1, deso[1].Truong_102.Length - 1);
-                }
-                else
-                {
-                    uc_Loai_422.txt_Truong_102_1.Text = string.IsNullOrEmpty(deso[1].Truong_102) ? "" : deso[1].Truong_102;
-                    uc_Loai_422.txt_Truong_102_2.Text = "";
-                }
-                uc_Loai_422.txt_Truong_104.Text = deso[1].Truong_104;
-                uc_Loai_422.txt_Truong_106.Text = deso[1].Truong_106;
+               
             }
 
-            Compare_TextBox(uc_Loai_11.txt_Truong_001, uc_Loai_12.txt_Truong_001);
-            Compare_TextBox(uc_Loai_11.txt_Truong_002, uc_Loai_12.txt_Truong_002);
-
+           //loại 2
+            Compare_TextBox(uc_Loai_21.txt_Truong_001, uc_Loai_22.txt_Truong_001);
+            Compare_TextBox(uc_Loai_21.txt_Truong_002, uc_Loai_22.txt_Truong_002);
+            Compare_TextBox(uc_Loai_21.txt_Truong_003, uc_Loai_22.txt_Truong_003);
             Compare_TextBox(uc_Loai_21.txt_Truong_004, uc_Loai_22.txt_Truong_004);
-            Compare_TextBox(uc_Loai_21.txt_Truong_006, uc_Loai_22.txt_Truong_006);
             Compare_TextBox(uc_Loai_21.txt_Truong_005, uc_Loai_22.txt_Truong_005);
+            Compare_TextBox(uc_Loai_21.txt_Truong_006, uc_Loai_22.txt_Truong_006);
+            Compare_TextBox(uc_Loai_21.txt_Truong_007, uc_Loai_22.txt_Truong_007);
+            Compare_TextBox(uc_Loai_21.txt_Truong_008, uc_Loai_22.txt_Truong_008);
+            Compare_TextBox(uc_Loai_21.txt_Truong_009, uc_Loai_22.txt_Truong_009);
+            Compare_TextBox(uc_Loai_21.txt_Truong_010, uc_Loai_22.txt_Truong_010);
 
-            Compare_TextBox(uc_Loai_31.txt_Truong_002, uc_Loai_32.txt_Truong_002);
-            Compare_TextBox(uc_Loai_31.txt_Truong_003, uc_Loai_32.txt_Truong_003);
-
-            Compare_TextBox(uc_Loai_41.txt_Truong_001_1, uc_Loai_42.txt_Truong_001_1);
-            Compare_TextBox(uc_Loai_41.txt_Truong_001_2, uc_Loai_42.txt_Truong_001_2);
-            Compare_TextBox(uc_Loai_41.txt_Truong_003, uc_Loai_42.txt_Truong_003);
+            //loại 4
+            Compare_TextBox(uc_Loai_41.txt_Truong_001, uc_Loai_42.txt_Truong_001);
+            Compare_TextBox(uc_Loai_41.txt_Truong_002, uc_Loai_42.txt_Truong_002);
             Compare_TextBox(uc_Loai_41.txt_Truong_004, uc_Loai_42.txt_Truong_004);
             Compare_TextBox(uc_Loai_41.txt_Truong_005, uc_Loai_42.txt_Truong_005);
-            Compare_TextBox(uc_Loai_41.txt_Truong_006_, uc_Loai_42.txt_Truong_006_);
-            Compare_TextBox(uc_Loai_41.txt_Truong_008_, uc_Loai_42.txt_Truong_008_);
-            Compare_TextBox(uc_Loai_41.txt_Truong_009_, uc_Loai_42.txt_Truong_009_);
+            Compare_TextBox(uc_Loai_41.txt_Truong_006, uc_Loai_42.txt_Truong_006);
+            Compare_TextBox(uc_Loai_41.txt_Truong_007, uc_Loai_42.txt_Truong_007);
+            Compare_TextBox(uc_Loai_41.txt_Truong_008, uc_Loai_42.txt_Truong_008);
+            Compare_TextBox(uc_Loai_41.txt_Truong_009, uc_Loai_42.txt_Truong_009);
+            Compare_TextBox(uc_Loai_41.txt_Truong_010, uc_Loai_42.txt_Truong_010);
+            Compare_TextBox(uc_Loai_41.txt_Truong_011, uc_Loai_42.txt_Truong_011);
             Compare_TextBox(uc_Loai_41.txt_Truong_012, uc_Loai_42.txt_Truong_012);
             Compare_TextBox(uc_Loai_41.txt_Truong_013, uc_Loai_42.txt_Truong_013);
+            Compare_TextBox(uc_Loai_41.txt_Truong_014, uc_Loai_42.txt_Truong_014);
+            Compare_TextBox(uc_Loai_41.txt_Truong_015, uc_Loai_42.txt_Truong_015);
+            Compare_TextBox(uc_Loai_41.txt_Truong_016, uc_Loai_42.txt_Truong_016);
+            Compare_TextBox(uc_Loai_41.txt_Truong_017, uc_Loai_42.txt_Truong_017);
+            Compare_TextBox(uc_Loai_41.txt_Truong_018, uc_Loai_42.txt_Truong_018);
+            Compare_TextBox(uc_Loai_41.txt_Truong_019, uc_Loai_42.txt_Truong_019);
+            Compare_TextBox(uc_Loai_41.txt_Truong_020, uc_Loai_42.txt_Truong_020);
+            Compare_TextBox(uc_Loai_41.txt_Truong_021, uc_Loai_42.txt_Truong_021);
+            Compare_TextBox(uc_Loai_41.txt_Truong_022, uc_Loai_42.txt_Truong_022);
+            Compare_TextBox(uc_Loai_41.txt_Truong_023, uc_Loai_42.txt_Truong_023);
+            Compare_TextBox(uc_Loai_41.txt_Truong_024, uc_Loai_42.txt_Truong_024);
+            Compare_TextBox(uc_Loai_41.txt_Truong_025, uc_Loai_42.txt_Truong_025);
+            Compare_TextBox(uc_Loai_41.txt_Truong_026, uc_Loai_42.txt_Truong_026);
+            Compare_TextBox(uc_Loai_41.txt_Truong_027, uc_Loai_42.txt_Truong_027);
             Compare_TextBox(uc_Loai_41.txt_Truong_028, uc_Loai_42.txt_Truong_028);
             Compare_TextBox(uc_Loai_41.txt_Truong_029, uc_Loai_42.txt_Truong_029);
             Compare_TextBox(uc_Loai_41.txt_Truong_030, uc_Loai_42.txt_Truong_030);
-            Compare_TextBox(uc_Loai_41.txt_Truong_037, uc_Loai_42.txt_Truong_037);
-            Compare_TextBox(uc_Loai_41.txt_Truong_038, uc_Loai_42.txt_Truong_038);
-            Compare_TextBox(uc_Loai_41.txt_Truong_039, uc_Loai_42.txt_Truong_039);
+            Compare_TextBox(uc_Loai_41.txt_Truong_031, uc_Loai_42.txt_Truong_031);
+            Compare_TextBox(uc_Loai_41.txt_Truong_032, uc_Loai_42.txt_Truong_032);
+            Compare_TextBox(uc_Loai_41.txt_Truong_033, uc_Loai_42.txt_Truong_033);
+            Compare_TextBox(uc_Loai_41.txt_Truong_034, uc_Loai_42.txt_Truong_034);
+            Compare_TextBox(uc_Loai_41.txt_Truong_035, uc_Loai_42.txt_Truong_035);
+            Compare_TextBox(uc_Loai_41.txt_Truong_036, uc_Loai_42.txt_Truong_036);
+            Compare_TextBox(uc_Loai_41.txt_Truong_0373839, uc_Loai_42.txt_Truong_0373839);
             Compare_TextBox(uc_Loai_41.txt_Truong_040, uc_Loai_42.txt_Truong_040);
-            Compare_TextBox(uc_Loai_41.txt_Truong_041, uc_Loai_42.txt_Truong_041);
-            Compare_TextBox(uc_Loai_41.txt_Truong_042, uc_Loai_42.txt_Truong_042);
-            Compare_TextBox(uc_Loai_41.txt_Truong_043, uc_Loai_42.txt_Truong_043);
+            Compare_TextBox(uc_Loai_41.txt_Truong_0414243, uc_Loai_42.txt_Truong_0414243);
             Compare_TextBox(uc_Loai_41.txt_Truong_044, uc_Loai_42.txt_Truong_044);
             Compare_TextBox(uc_Loai_41.txt_Truong_045, uc_Loai_42.txt_Truong_045);
             Compare_TextBox(uc_Loai_41.txt_Truong_046, uc_Loai_42.txt_Truong_046);
             Compare_TextBox(uc_Loai_41.txt_Truong_047, uc_Loai_42.txt_Truong_047);
             Compare_TextBox(uc_Loai_41.txt_Truong_048, uc_Loai_42.txt_Truong_048);
+            Compare_TextBox(uc_Loai_41.txt_Truong_049, uc_Loai_42.txt_Truong_049);
             Compare_TextBox(uc_Loai_41.txt_Truong_050, uc_Loai_42.txt_Truong_050);
             Compare_TextBox(uc_Loai_41.txt_Truong_051, uc_Loai_42.txt_Truong_051);
-            Compare_TextBox(uc_Loai_41.txt_Truong_052, uc_Loai_42.txt_Truong_052);
+            Compare_LookUpEdit(uc_Loai_41.txt_Truong_052, uc_Loai_42.txt_Truong_052);
             Compare_TextBox(uc_Loai_41.txt_Truong_053, uc_Loai_42.txt_Truong_053);
+            Compare_TextBox(uc_Loai_41.txt_Truong_054, uc_Loai_42.txt_Truong_054);
+            Compare_LookUpEdit(uc_Loai_41.txt_Truong_055, uc_Loai_42.txt_Truong_055);
             Compare_TextBox(uc_Loai_41.txt_Truong_057, uc_Loai_42.txt_Truong_057);
             Compare_TextBox(uc_Loai_41.txt_Truong_058, uc_Loai_42.txt_Truong_058);
+            Compare_TextBox(uc_Loai_41.txt_Truong_059, uc_Loai_42.txt_Truong_059);
+            Compare_TextBox(uc_Loai_41.txt_Truong_061, uc_Loai_42.txt_Truong_061);
             Compare_TextBox(uc_Loai_41.txt_Truong_063, uc_Loai_42.txt_Truong_063);
-            Compare_TextBox(uc_Loai_41.txt_Truong_064, uc_Loai_42.txt_Truong_064);
             Compare_TextBox(uc_Loai_41.txt_Truong_065, uc_Loai_42.txt_Truong_065);
-            Compare_TextBox(uc_Loai_41.txt_Truong_066, uc_Loai_42.txt_Truong_066);
-            Compare_TextBox(uc_Loai_41.txt_Truong_077, uc_Loai_42.txt_Truong_077);
-            Compare_TextBox(uc_Loai_41.txt_Truong_078, uc_Loai_42.txt_Truong_078);
-            Compare_TextBox(uc_Loai_41.txt_Truong_079, uc_Loai_42.txt_Truong_079);
-            Compare_TextBox(uc_Loai_41.txt_Truong_080, uc_Loai_42.txt_Truong_080);
-            Compare_TextBox(uc_Loai_41.txt_Truong_081, uc_Loai_42.txt_Truong_081);
-            Compare_TextBox(uc_Loai_41.txt_Truong_082, uc_Loai_42.txt_Truong_082);
-            Compare_TextBox(uc_Loai_41.txt_Truong_083, uc_Loai_42.txt_Truong_083);
-            Compare_TextBox(uc_Loai_41.txt_Truong_084, uc_Loai_42.txt_Truong_084);
-            Compare_TextBox(uc_Loai_41.txt_Truong_085, uc_Loai_42.txt_Truong_085);
-            Compare_TextBox(uc_Loai_41.txt_Truong_086, uc_Loai_42.txt_Truong_086);
-            Compare_TextBox(uc_Loai_41.txt_Truong_088, uc_Loai_42.txt_Truong_088);
-            Compare_TextBox(uc_Loai_41.txt_Truong_089, uc_Loai_42.txt_Truong_089);
-            Compare_TextBox(uc_Loai_41.txt_Truong_090, uc_Loai_42.txt_Truong_090);
-            Compare_TextBox(uc_Loai_41.txt_Truong_091, uc_Loai_42.txt_Truong_091);
-            Compare_TextBox(uc_Loai_41.txt_Truong_093, uc_Loai_42.txt_Truong_093);
-            Compare_TextBox(uc_Loai_41.txt_Truong_094, uc_Loai_42.txt_Truong_094);
-            Compare_TextBox(uc_Loai_41.txt_Truong_095, uc_Loai_42.txt_Truong_095);
-            Compare_TextBox(uc_Loai_41.txt_Truong_096, uc_Loai_42.txt_Truong_096);
-            Compare_TextBox(uc_Loai_41.txt_Truong_097, uc_Loai_42.txt_Truong_097);
-            Compare_TextBox(uc_Loai_41.txt_Truong_098, uc_Loai_42.txt_Truong_098);
-            Compare_TextBox(uc_Loai_41.txt_Truong_099, uc_Loai_42.txt_Truong_099);
-            Compare_TextBox(uc_Loai_41.txt_Truong_100, uc_Loai_42.txt_Truong_100);
-            Compare_TextBox(uc_Loai_41.txt_Truong_101, uc_Loai_42.txt_Truong_101);
-            Compare_TextBox(uc_Loai_41.txt_Truong_102_1, uc_Loai_42.txt_Truong_102_1);
-            Compare_TextBox(uc_Loai_41.txt_Truong_102_2, uc_Loai_42.txt_Truong_102_2);
-            Compare_TextBox(uc_Loai_41.txt_Truong_103, uc_Loai_42.txt_Truong_103);
-            Compare_TextBox(uc_Loai_41.txt_Truong_104, uc_Loai_42.txt_Truong_104);
-            Compare_TextBox(uc_Loai_41.txt_Truong_105, uc_Loai_42.txt_Truong_105);
-            Compare_TextBox(uc_Loai_41.txt_Truong_106, uc_Loai_42.txt_Truong_106);
-            Compare_TextBox(uc_Loai_41.txt_Truong_107, uc_Loai_42.txt_Truong_107);
-            Compare_LookUpEdit(uc_Loai_41.txt_Truong_108, uc_Loai_42.txt_Truong_108);
-            Compare_LookUpEdit(uc_Loai_41.txt_Truong_109, uc_Loai_42.txt_Truong_109);
-            Compare_TextBox(uc_Loai_41.txt_Truong_110, uc_Loai_42.txt_Truong_110);
-            Compare_TextBox(uc_Loai_41.txt_Truong_112, uc_Loai_42.txt_Truong_112);
+            Compare_TextBox(uc_Loai_41.txt_Truong_067, uc_Loai_42.txt_Truong_067);
+            Compare_TextBox(uc_Loai_41.txt_Truong_069, uc_Loai_42.txt_Truong_069);
+            Compare_TextBox(uc_Loai_41.txt_Truong_071, uc_Loai_42.txt_Truong_071);
+            Compare_TextBox(uc_Loai_41.txt_Truong_073, uc_Loai_42.txt_Truong_073);
+            Compare_TextBox(uc_Loai_41.txt_Truong_075, uc_Loai_42.txt_Truong_075);
+            
 
-            Compare_TextBox(uc_Loai_41.txt_Truong_126, uc_Loai_42.txt_Truong_126);
-            Compare_TextBox(uc_Loai_41.txt_Truong_127, uc_Loai_42.txt_Truong_127);
-            Compare_TextBox(uc_Loai_41.txt_Truong_128, uc_Loai_42.txt_Truong_128);
-            Compare_TextBox(uc_Loai_41.txt_Truong_129, uc_Loai_42.txt_Truong_129);
-            Compare_TextBox(uc_Loai_41.txt_Truong_130, uc_Loai_42.txt_Truong_130);
-            Compare_TextBox(uc_Loai_41.txt_Truong_131, uc_Loai_42.txt_Truong_131);
-            Compare_TextBox(uc_Loai_41.txt_Truong_132, uc_Loai_42.txt_Truong_132);
-            Compare_TextBox(uc_Loai_41.txt_Truong_133, uc_Loai_42.txt_Truong_133);
-            Compare_TextBox(uc_Loai_41.txt_Truong_134, uc_Loai_42.txt_Truong_134);
-            Compare_TextBox(uc_Loai_41.txt_Truong_135, uc_Loai_42.txt_Truong_135);
-            Compare_TextBox(uc_Loai_41.txt_Truong_136, uc_Loai_42.txt_Truong_136);
-            Compare_TextBox(uc_Loai_41.txt_Truong_137, uc_Loai_42.txt_Truong_137);
-            Compare_TextBox(uc_Loai_41.txt_Truong_138, uc_Loai_42.txt_Truong_138);
-            Compare_TextBox(uc_Loai_41.txt_Truong_139, uc_Loai_42.txt_Truong_139);
-
-            Compare_TextBox(uc_Loai_41.txt_Truong_158, uc_Loai_42.txt_Truong_158);
-            Compare_TextBox(uc_Loai_41.txt_Truong_159, uc_Loai_42.txt_Truong_159);
-            Compare_TextBox(uc_Loai_41.txt_Truong_160, uc_Loai_42.txt_Truong_160);
-            Compare_TextBox(uc_Loai_41.txt_Truong_161, uc_Loai_42.txt_Truong_161);
-            Compare_TextBox(uc_Loai_41.txt_Truong_162, uc_Loai_42.txt_Truong_162);
-            Compare_TextBox(uc_Loai_41.txt_Truong_165, uc_Loai_42.txt_Truong_165);
-            Compare_TextBox(uc_Loai_41.txt_Truong_166, uc_Loai_42.txt_Truong_166);
-            Compare_TextBox(uc_Loai_41.txt_Truong_167, uc_Loai_42.txt_Truong_167);
-            Compare_TextBox(uc_Loai_41.txt_Truong_168, uc_Loai_42.txt_Truong_168);
-
-            Compare_TextBox(uc_Loai_421.txt_Truong_001_1, uc_Loai_422.txt_Truong_001_1);
-            Compare_TextBox(uc_Loai_421.txt_Truong_001_2, uc_Loai_422.txt_Truong_001_2);
-            Compare_TextBox(uc_Loai_421.txt_Truong_004, uc_Loai_422.txt_Truong_004);
-            Compare_TextBox(uc_Loai_421.txt_Truong_006, uc_Loai_422.txt_Truong_006);
-            Compare_TextBox(uc_Loai_421.txt_Truong_008, uc_Loai_422.txt_Truong_008);
-            Compare_TextBox(uc_Loai_421.txt_Truong_009, uc_Loai_422.txt_Truong_009);
-            Compare_TextBox(uc_Loai_421.txt_Truong_012, uc_Loai_422.txt_Truong_012);
-            Compare_TextBox(uc_Loai_421.txt_Truong_013, uc_Loai_422.txt_Truong_013);
-            Compare_TextBox(uc_Loai_421.txt_Truong_028, uc_Loai_422.txt_Truong_028);
-            Compare_TextBox(uc_Loai_421.txt_Truong_029, uc_Loai_422.txt_Truong_029);
-            Compare_TextBox(uc_Loai_421.txt_Truong_030, uc_Loai_422.txt_Truong_030);
-            Compare_TextBox(uc_Loai_421.txt_Truong_037, uc_Loai_422.txt_Truong_037);
-            Compare_TextBox(uc_Loai_421.txt_Truong_038, uc_Loai_422.txt_Truong_038);
-            Compare_TextBox(uc_Loai_421.txt_Truong_039, uc_Loai_422.txt_Truong_039);
-            Compare_TextBox(uc_Loai_421.txt_Truong_040, uc_Loai_422.txt_Truong_040);
-            Compare_TextBox(uc_Loai_421.txt_Truong_041, uc_Loai_422.txt_Truong_041);
-            Compare_TextBox(uc_Loai_421.txt_Truong_042, uc_Loai_422.txt_Truong_042);
-            Compare_TextBox(uc_Loai_421.txt_Truong_043, uc_Loai_422.txt_Truong_043);
-            Compare_TextBox(uc_Loai_421.txt_Truong_044, uc_Loai_422.txt_Truong_044);
-            Compare_TextBox(uc_Loai_421.txt_Truong_045, uc_Loai_422.txt_Truong_045);
-            Compare_TextBox(uc_Loai_421.txt_Truong_046, uc_Loai_422.txt_Truong_046);
-            Compare_TextBox(uc_Loai_421.txt_Truong_047, uc_Loai_422.txt_Truong_047);
-            Compare_TextBox(uc_Loai_421.txt_Truong_048, uc_Loai_422.txt_Truong_048);
-            Compare_TextBox(uc_Loai_421.txt_Truong_050, uc_Loai_422.txt_Truong_050);
-            Compare_TextBox(uc_Loai_421.txt_Truong_051, uc_Loai_422.txt_Truong_051);
-            Compare_TextBox(uc_Loai_421.txt_Truong_052, uc_Loai_422.txt_Truong_052);
-            Compare_TextBox(uc_Loai_421.txt_Truong_053, uc_Loai_422.txt_Truong_053);
-            Compare_TextBox(uc_Loai_421.txt_Truong_063, uc_Loai_422.txt_Truong_063);
-            Compare_TextBox(uc_Loai_421.txt_Truong_064, uc_Loai_422.txt_Truong_064);
-            Compare_TextBox(uc_Loai_421.txt_Truong_065, uc_Loai_422.txt_Truong_065);
-            Compare_TextBox(uc_Loai_421.txt_Truong_066, uc_Loai_422.txt_Truong_066);
-            Compare_TextBox(uc_Loai_421.txt_Truong_077, uc_Loai_422.txt_Truong_077);
-            Compare_TextBox(uc_Loai_421.txt_Truong_078, uc_Loai_422.txt_Truong_078);
-            Compare_TextBox(uc_Loai_421.txt_Truong_079, uc_Loai_422.txt_Truong_079);
-            Compare_TextBox(uc_Loai_421.txt_Truong_080, uc_Loai_422.txt_Truong_080);
-            Compare_TextBox(uc_Loai_421.txt_Truong_081, uc_Loai_422.txt_Truong_081);
-            Compare_TextBox(uc_Loai_421.txt_Truong_082, uc_Loai_422.txt_Truong_082);
-            Compare_TextBox(uc_Loai_421.txt_Truong_083, uc_Loai_422.txt_Truong_083);
-            Compare_TextBox(uc_Loai_421.txt_Truong_084, uc_Loai_422.txt_Truong_084);
-            Compare_TextBox(uc_Loai_421.txt_Truong_085, uc_Loai_422.txt_Truong_085);
-            Compare_TextBox(uc_Loai_421.txt_Truong_086, uc_Loai_422.txt_Truong_086);
-            Compare_TextBox(uc_Loai_421.txt_Truong_088, uc_Loai_422.txt_Truong_088);
-            Compare_TextBox(uc_Loai_421.txt_Truong_089, uc_Loai_422.txt_Truong_089);
-            Compare_TextBox(uc_Loai_421.txt_Truong_090, uc_Loai_422.txt_Truong_090);
-            Compare_TextBox(uc_Loai_421.txt_Truong_091, uc_Loai_422.txt_Truong_091);
-            Compare_TextBox(uc_Loai_421.txt_Truong_093, uc_Loai_422.txt_Truong_093);
-            Compare_TextBox(uc_Loai_421.txt_Truong_094, uc_Loai_422.txt_Truong_094);
-            Compare_TextBox(uc_Loai_421.txt_Truong_095, uc_Loai_422.txt_Truong_095);
-            Compare_TextBox(uc_Loai_421.txt_Truong_096, uc_Loai_422.txt_Truong_096);
-            Compare_TextBox(uc_Loai_421.txt_Truong_097, uc_Loai_422.txt_Truong_097);
-            Compare_TextBox(uc_Loai_421.txt_Truong_098, uc_Loai_422.txt_Truong_098);
-            Compare_TextBox(uc_Loai_421.txt_Truong_099, uc_Loai_422.txt_Truong_099);
-            Compare_TextBox(uc_Loai_421.txt_Truong_100, uc_Loai_422.txt_Truong_100);
-            Compare_TextBox(uc_Loai_421.txt_Truong_101, uc_Loai_422.txt_Truong_101);
-            Compare_TextBox(uc_Loai_421.txt_Truong_102_1, uc_Loai_422.txt_Truong_102_1);
-            Compare_TextBox(uc_Loai_421.txt_Truong_102_2, uc_Loai_422.txt_Truong_102_2);
-            Compare_TextBox(uc_Loai_421.txt_Truong_104, uc_Loai_422.txt_Truong_104);
-            Compare_TextBox(uc_Loai_421.txt_Truong_106, uc_Loai_422.txt_Truong_106);
-
-            Compare_TextBox(uc_Loai_421.txt_Truong_126, uc_Loai_422.txt_Truong_126);
-            Compare_TextBox(uc_Loai_421.txt_Truong_127, uc_Loai_422.txt_Truong_127);
-            Compare_TextBox(uc_Loai_421.txt_Truong_128, uc_Loai_422.txt_Truong_128);
-            Compare_TextBox(uc_Loai_421.txt_Truong_129, uc_Loai_422.txt_Truong_129);
-            Compare_TextBox(uc_Loai_421.txt_Truong_130, uc_Loai_422.txt_Truong_130);
-            Compare_TextBox(uc_Loai_421.txt_Truong_131, uc_Loai_422.txt_Truong_131);
-            Compare_TextBox(uc_Loai_421.txt_Truong_132, uc_Loai_422.txt_Truong_132);
-            Compare_TextBox(uc_Loai_421.txt_Truong_133, uc_Loai_422.txt_Truong_133);
-            Compare_TextBox(uc_Loai_421.txt_Truong_134, uc_Loai_422.txt_Truong_134);
-            Compare_TextBox(uc_Loai_421.txt_Truong_135, uc_Loai_422.txt_Truong_135);
-            Compare_TextBox(uc_Loai_421.txt_Truong_136, uc_Loai_422.txt_Truong_136);
-            Compare_TextBox(uc_Loai_421.txt_Truong_137, uc_Loai_422.txt_Truong_137);
-            Compare_TextBox(uc_Loai_421.txt_Truong_138, uc_Loai_422.txt_Truong_138);
-            Compare_TextBox(uc_Loai_421.txt_Truong_139, uc_Loai_422.txt_Truong_139);
+          
 
             var soloi = ((from w in Global.db_BCL.tbl_DESOs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
             lb_Loi.Text = soloi + " Lỗi";
@@ -1457,239 +1073,249 @@ namespace BaoCaoLuong2017.MyForm
         {
             if (Global.StrCheck == "CHECKDESO")
             {
-                if (tabcontrol_DeSo1.SelectedTabPage.Name == "tp_Loai_1_DeSo1")
-                    Global.db_BCL.SuaVaLuu_deso(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_Loai_11.txt_Truong_001.Text, uc_Loai_11.txt_Truong_002.Text,
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "Loai1", false);
-                else if (tabcontrol_DeSo1.SelectedTabPage.Name == "tp_Loai_2_DeSo1")
-                    Global.db_BCL.SuaVaLuu_deso(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, "", uc_Loai_21.txt_Truong_004.Text, uc_Loai_21.txt_Truong_006.Text,
-                        uc_Loai_21.txt_Truong_005.Text, "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "Loai2", false);
-                else if (tabcontrol_DeSo1.SelectedTabPage.Name == "tp_Loai_3_DeSo1")
-                    Global.db_BCL.SuaVaLuu_deso(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, "", uc_Loai_31.txt_Truong_002.Text, uc_Loai_31.txt_Truong_003.Text,
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "Loai3", false);
+               
+                if (tabcontrol_DeSo1.SelectedTabPage.Name == "tp_Loai_2_DeSo1")
+                    Global.db_BCL.SuaVaLuu_deso_new(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername,
+                        uc_Loai_21.txt_Truong_001.Text, 
+                        uc_Loai_21.txt_Truong_002.Text, 
+                        uc_Loai_21.txt_Truong_003.Text,
+                        uc_Loai_21.txt_Truong_004.Text,
+                        uc_Loai_21.txt_Truong_005.Text,
+                        uc_Loai_21.txt_Truong_006.Text,
+                        uc_Loai_21.txt_Truong_007.Text,
+                        uc_Loai_21.txt_Truong_008.Text,
+                        uc_Loai_21.txt_Truong_009.Text,
+                        uc_Loai_21.txt_Truong_010.Text,
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "Loai2", false);
+               
                 else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_DeSo1)
                 {
-                    string truong001 = uc_Loai_41.txt_Truong_001_1.Text + uc_Loai_41.txt_Truong_001_2.Text;
-                    string truong102 = uc_Loai_41.txt_Truong_102_1.Text + uc_Loai_41.txt_Truong_102_2.Text;
 
                     Global.db_BCL.SuaVaLuu_deso_new(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch,
-                        Global.StrUsername, truong001,
+                        Global.StrUsername,
+                        uc_Loai_41.txt_Truong_001.Text,
+                        uc_Loai_41.txt_Truong_002.Text,
                         "",
-                        uc_Loai_41.txt_Truong_003.Text,
-                        uc_Loai_41.txt_Truong_004.Text,
-                        uc_Loai_41.txt_Truong_005.Text,
-                        uc_Loai_41.txt_Truong_006_.Text,
-                        uc_Loai_41.txt_Truong_008_.Text,
-                        uc_Loai_41.txt_Truong_009_.Text,
+                        uc_Loai_41.txt_Truong_004.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_005.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_006.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_007.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_008.Text,
+                        uc_Loai_41.txt_Truong_009.Text,
+                        uc_Loai_41.txt_Truong_010.Text,
+                        uc_Loai_41.txt_Truong_011.Text?.Replace(",", ""),
                         uc_Loai_41.txt_Truong_012.Text,
                         uc_Loai_41.txt_Truong_013.Text,
+                        uc_Loai_41.txt_Truong_014.Text,
+                        uc_Loai_41.txt_Truong_015.Text,
+                        uc_Loai_41.txt_Truong_016.Text,
+                        uc_Loai_41.txt_Truong_017.Text,
+                        uc_Loai_41.txt_Truong_018.Text,
+                        uc_Loai_41.txt_Truong_019.Text,
+                        uc_Loai_41.txt_Truong_020.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_021.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_022.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_023.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_024.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_025.Text,
+                        uc_Loai_41.txt_Truong_026.Text,
+                        uc_Loai_41.txt_Truong_027.Text,
                         uc_Loai_41.txt_Truong_028.Text,
                         uc_Loai_41.txt_Truong_029.Text,
                         uc_Loai_41.txt_Truong_030.Text,
-                        uc_Loai_41.txt_Truong_037.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_038.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_039.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_040.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_041.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_042.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_043.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_044.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_031.Text,
+                        uc_Loai_41.txt_Truong_032.Text,
+                        uc_Loai_41.txt_Truong_033.Text,
+                        uc_Loai_41.txt_Truong_034.Text,
+                        uc_Loai_41.txt_Truong_035.Text,
+                        uc_Loai_41.txt_Truong_036.Text,
+                        uc_Loai_41.txt_Truong_0373839.Text,
+                        "",
+                        "",
+                        uc_Loai_41.txt_Truong_040.Text,
+                        uc_Loai_41.txt_Truong_0414243.Text,
+                        "",
+                        "",
+                        uc_Loai_41.txt_Truong_044.Text,
                         uc_Loai_41.txt_Truong_045.Text?.Replace(",", ""),
                         uc_Loai_41.txt_Truong_046.Text?.Replace(",", ""),
                         uc_Loai_41.txt_Truong_047.Text?.Replace(",", ""),
                         uc_Loai_41.txt_Truong_048.Text?.Replace(",", ""),
-                        "",
+                        uc_Loai_41.txt_Truong_049.Text?.Replace(",", ""),
                         uc_Loai_41.txt_Truong_050.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_051.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_052.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_053.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_057.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_058.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_063.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_064.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_065.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_066.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_077.Text,
-                        uc_Loai_41.txt_Truong_078.Text,
-                        uc_Loai_41.txt_Truong_079.Text,
-                        uc_Loai_41.txt_Truong_080.Text,
-                        uc_Loai_41.txt_Truong_081.Text,
-                        uc_Loai_41.txt_Truong_082.Text,
-                        uc_Loai_41.txt_Truong_083.Text,
-                        uc_Loai_41.txt_Truong_084.Text,
-                        uc_Loai_41.txt_Truong_085.Text,
-                        uc_Loai_41.txt_Truong_086.Text,
-                        uc_Loai_41.txt_Truong_088.Text,
-                        uc_Loai_41.txt_Truong_089.Text,
-                        uc_Loai_41.txt_Truong_090.Text,
-                        uc_Loai_41.txt_Truong_091.Text,
+                        uc_Loai_41.txt_Truong_051.Text,
+                        uc_Loai_41.txt_Truong_052.Text,
+                        uc_Loai_41.txt_Truong_053.Text,
+                        uc_Loai_41.txt_Truong_054.Text,
+                        uc_Loai_41.txt_Truong_055.Text,
                         "",
-                        uc_Loai_41.txt_Truong_093.Text,
-                        uc_Loai_41.txt_Truong_094.Text,
-                        uc_Loai_41.txt_Truong_095.Text,
-                        uc_Loai_41.txt_Truong_096.Text,
-                        uc_Loai_41.txt_Truong_097.Text,
-                        uc_Loai_41.txt_Truong_098.Text,
-                        uc_Loai_41.txt_Truong_099.Text,
-                        uc_Loai_41.txt_Truong_100.Text,
-                        uc_Loai_41.txt_Truong_101.Text,
-                        truong102,
-                        uc_Loai_41.txt_Truong_103.Text,
-                        uc_Loai_41.txt_Truong_104.Text,
-                        uc_Loai_41.txt_Truong_105.Text,
-                        uc_Loai_41.txt_Truong_106.Text,
-                        uc_Loai_41.txt_Truong_107.Text,
-                        uc_Loai_41.txt_Truong_108.Text,
-                        uc_Loai_41.txt_Truong_109.Text,
-                        uc_Loai_41.txt_Truong_110.Text,
-                        uc_Loai_41.txt_Truong_112.Text,
-
-                        uc_Loai_41.txt_Truong_126.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_127.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_128.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_129.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_130.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_131.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_132.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_133.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_134.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_135.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_136.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_137.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_138.Text?.Replace(",", ""),
-                        uc_Loai_41.txt_Truong_139.Text?.Replace(",", ""),
-
-                        uc_Loai_41.txt_Truong_158.Text,
-                        uc_Loai_41.txt_Truong_159.Text,
-                        uc_Loai_41.txt_Truong_160.Text,
-                        uc_Loai_41.txt_Truong_161.Text,
-                        uc_Loai_41.txt_Truong_162.Text,
-                        uc_Loai_41.txt_Truong_165.Text,
-                        uc_Loai_41.txt_Truong_166.Text,
-                        uc_Loai_41.txt_Truong_167.Text,
-                        uc_Loai_41.txt_Truong_168.Text, "Loai4", false);
+                        uc_Loai_41.txt_Truong_057.Text,
+                        uc_Loai_41.txt_Truong_058.Text?.Replace(",", ""),
+                        uc_Loai_41.txt_Truong_059.Text?.Replace(",", ""),
+                        "",
+                        uc_Loai_41.txt_Truong_061.Text,
+                        "",
+                        uc_Loai_41.txt_Truong_063.Text,
+                        "",
+                        uc_Loai_41.txt_Truong_065.Text,
+                        "",
+                        uc_Loai_41.txt_Truong_067.Text,
+                        "",
+                        uc_Loai_41.txt_Truong_069.Text,
+                        "",
+                        uc_Loai_41.txt_Truong_071.Text,
+                        "",
+                        uc_Loai_41.txt_Truong_073.Text,
+                        "",
+                        uc_Loai_41.txt_Truong_075.Text,
+                         "Loai4", false);
                 }
                 else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_2_DeSo1)
                 {
-                    string truong001 = uc_Loai_421.txt_Truong_001_1.Text + uc_Loai_421.txt_Truong_001_2.Text;
-                    string truong102 = uc_Loai_421.txt_Truong_102_1.Text + uc_Loai_421.txt_Truong_102_2.Text;
 
                     Global.db_BCL.SuaVaLuu_deso_new(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch,
-                        Global.StrUsername, truong001,
-                        "",
-                        "",
-                        uc_Loai_421.txt_Truong_004.Text,
-                       "",
-                        uc_Loai_421.txt_Truong_006.Text,
-                        uc_Loai_421.txt_Truong_008.Text,
-                        uc_Loai_421.txt_Truong_009.Text,
-                        uc_Loai_421.txt_Truong_012.Text,
-                        uc_Loai_421.txt_Truong_013.Text,
-                        uc_Loai_421.txt_Truong_028.Text,
-                        uc_Loai_421.txt_Truong_029.Text,
-                        uc_Loai_421.txt_Truong_030.Text,
-                        uc_Loai_421.txt_Truong_037.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_038.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_039.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_040.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_041.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_042.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_043.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_044.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_045.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_046.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_047.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_048.Text?.Replace(",", ""),
-                        "",
-                        uc_Loai_421.txt_Truong_050.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_051.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_052.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_053.Text?.Replace(",", ""),
-                       "",
-                       "",
-                        uc_Loai_421.txt_Truong_063.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_064.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_065.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_066.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_077.Text,
-                        uc_Loai_421.txt_Truong_078.Text,
-                        uc_Loai_421.txt_Truong_079.Text,
-                        uc_Loai_421.txt_Truong_080.Text,
-                        uc_Loai_421.txt_Truong_081.Text,
-                        uc_Loai_421.txt_Truong_082.Text,
-                        uc_Loai_421.txt_Truong_083.Text,
-                        uc_Loai_421.txt_Truong_084.Text,
-                        uc_Loai_421.txt_Truong_085.Text,
-                        uc_Loai_421.txt_Truong_086.Text,
-                        uc_Loai_421.txt_Truong_088.Text,
-                        uc_Loai_421.txt_Truong_089.Text,
-                        uc_Loai_421.txt_Truong_090.Text,
-                        uc_Loai_421.txt_Truong_091.Text,
-                        "",
-                        uc_Loai_421.txt_Truong_093.Text,
-                        uc_Loai_421.txt_Truong_094.Text,
-                        uc_Loai_421.txt_Truong_095.Text,
-                        uc_Loai_421.txt_Truong_096.Text,
-                        uc_Loai_421.txt_Truong_097.Text,
-                        uc_Loai_421.txt_Truong_098.Text,
-                        uc_Loai_421.txt_Truong_099.Text,
-                        uc_Loai_421.txt_Truong_100.Text,
-                        uc_Loai_421.txt_Truong_101.Text,
-                        truong102,
-                        "",
-                        uc_Loai_421.txt_Truong_104.Text,
-                        "",
-                        uc_Loai_421.txt_Truong_106.Text,
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-
-                        uc_Loai_421.txt_Truong_126.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_127.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_128.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_129.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_130.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_131.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_132.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_133.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_134.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_135.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_136.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_137.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_138.Text?.Replace(",", ""),
-                        uc_Loai_421.txt_Truong_139.Text?.Replace(",", ""),
-
+                        Global.StrUsername,
                         "",
                         "",
                         "",
                         "",
                         "",
                         "",
-                       "",
-                       "",
-                       "", "Loai4", true);
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "Loai5", true);
                 }
 
                 ResetData();
@@ -1717,7 +1343,19 @@ namespace BaoCaoLuong2017.MyForm
                     return;
                 }
 
-                Global.db_BCL.SuaVaLuu_DEJP(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_DEJP1.txt_Truong_002.Text, "Loai4");
+                Global.db_BCL.SuaVaLuu_DEJP(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, 
+                    uc_DEJP1.txt_Truong_003.Text,
+                    uc_DEJP1.txt_Truong_056.Text,
+                    uc_DEJP1.txt_Truong_060.Text,
+                    uc_DEJP1.txt_Truong_062.Text,
+                    uc_DEJP1.txt_Truong_064.Text,
+                    uc_DEJP1.txt_Truong_066.Text,
+                    uc_DEJP1.txt_Truong_068.Text,
+                    uc_DEJP1.txt_Truong_070.Text,
+                    uc_DEJP1.txt_Truong_072.Text,
+                    uc_DEJP1.txt_Truong_074.Text,
+
+                    "Loai4");
 
                 ResetData();
                 if (GetImage_DeJP() == "NULL")
@@ -1742,239 +1380,247 @@ namespace BaoCaoLuong2017.MyForm
         {
             if (Global.StrCheck == "CHECKDESO")
             {
-                if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_1_DeSo2")
-                    Global.db_BCL.SuaVaLuu_deso(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_Loai_12.txt_Truong_001.Text, uc_Loai_12.txt_Truong_002.Text,
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "Loai1", false);
-                else if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_2_DeSo2")
-                    Global.db_BCL.SuaVaLuu_deso(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, "", uc_Loai_22.txt_Truong_004.Text, uc_Loai_22.txt_Truong_006.Text,
-                        uc_Loai_22.txt_Truong_005.Text, "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "Loai2", false);
-                else if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_3_DeSo2")
-                    Global.db_BCL.SuaVaLuu_deso(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, "", uc_Loai_32.txt_Truong_002.Text, uc_Loai_32.txt_Truong_003.Text,
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "", "", "", "",
-                        "", "", "", "", "", "", "Loai3", false);
+                if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_2_DeSo2")
+                    Global.db_BCL.SuaVaLuu_deso_new(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername,
+                        uc_Loai_22.txt_Truong_001.Text, 
+                        uc_Loai_22.txt_Truong_002.Text, 
+                        uc_Loai_22.txt_Truong_003.Text,
+                        uc_Loai_22.txt_Truong_004.Text,
+                        uc_Loai_22.txt_Truong_005.Text,
+                        uc_Loai_22.txt_Truong_006.Text,
+                        uc_Loai_22.txt_Truong_007.Text,
+                        uc_Loai_22.txt_Truong_008.Text,
+                        uc_Loai_22.txt_Truong_009.Text,
+                        uc_Loai_22.txt_Truong_010.Text,
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "Loai2", false);
+                
                 else if (tabcontrol_DeSo2.SelectedTabPage.Name == "tp_Loai_4_DeSo2")
                 {
-                    string truong001 = uc_Loai_42.txt_Truong_001_1.Text + uc_Loai_42.txt_Truong_001_2.Text;
-                    string truong102 = uc_Loai_42.txt_Truong_102_1.Text + uc_Loai_42.txt_Truong_102_2.Text;
 
                     Global.db_BCL.SuaVaLuu_deso_new(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch,
-                        Global.StrUsername, truong001,
+                        Global.StrUsername,
+                        uc_Loai_42.txt_Truong_001.Text,
+                        uc_Loai_42.txt_Truong_002.Text,
                         "",
-                        uc_Loai_42.txt_Truong_003.Text,
-                        uc_Loai_42.txt_Truong_004.Text,
-                        uc_Loai_42.txt_Truong_005.Text,
-                        uc_Loai_42.txt_Truong_006_.Text,
-                        uc_Loai_42.txt_Truong_008_.Text,
-                        uc_Loai_42.txt_Truong_009_.Text,
+                        uc_Loai_42.txt_Truong_004.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_005.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_006.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_007.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_008.Text,
+                        uc_Loai_42.txt_Truong_009.Text,
+                        uc_Loai_42.txt_Truong_010.Text,
+                        uc_Loai_42.txt_Truong_011.Text?.Replace(",", ""),
                         uc_Loai_42.txt_Truong_012.Text,
                         uc_Loai_42.txt_Truong_013.Text,
+                        uc_Loai_42.txt_Truong_014.Text,
+                        uc_Loai_42.txt_Truong_015.Text,
+                        uc_Loai_42.txt_Truong_016.Text,
+                        uc_Loai_42.txt_Truong_017.Text,
+                        uc_Loai_42.txt_Truong_018.Text,
+                        uc_Loai_42.txt_Truong_019.Text,
+                        uc_Loai_42.txt_Truong_020.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_021.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_022.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_023.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_024.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_025.Text,
+                        uc_Loai_42.txt_Truong_026.Text,
+                        uc_Loai_42.txt_Truong_027.Text,
                         uc_Loai_42.txt_Truong_028.Text,
                         uc_Loai_42.txt_Truong_029.Text,
                         uc_Loai_42.txt_Truong_030.Text,
-                        uc_Loai_42.txt_Truong_037.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_038.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_039.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_040.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_041.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_042.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_043.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_044.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_031.Text,
+                        uc_Loai_42.txt_Truong_032.Text,
+                        uc_Loai_42.txt_Truong_033.Text,
+                        uc_Loai_42.txt_Truong_034.Text,
+                        uc_Loai_42.txt_Truong_035.Text,
+                        uc_Loai_42.txt_Truong_036.Text,
+                        uc_Loai_42.txt_Truong_0373839.Text,
+                        "",
+                        "",
+                        uc_Loai_42.txt_Truong_040.Text,
+                        uc_Loai_42.txt_Truong_0414243.Text,
+                        "",
+                        "",
+                        uc_Loai_42.txt_Truong_044.Text,
                         uc_Loai_42.txt_Truong_045.Text?.Replace(",", ""),
                         uc_Loai_42.txt_Truong_046.Text?.Replace(",", ""),
                         uc_Loai_42.txt_Truong_047.Text?.Replace(",", ""),
                         uc_Loai_42.txt_Truong_048.Text?.Replace(",", ""),
-                        "",
+                        uc_Loai_42.txt_Truong_049.Text?.Replace(",", ""),
                         uc_Loai_42.txt_Truong_050.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_051.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_052.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_053.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_057.Text?.Replace(",", ""),
+                        uc_Loai_42.txt_Truong_051.Text,
+                        uc_Loai_42.txt_Truong_052.Text,
+                        uc_Loai_42.txt_Truong_053.Text,
+                        uc_Loai_42.txt_Truong_054.Text,
+                        uc_Loai_42.txt_Truong_055.Text,
+                        "",
+                        uc_Loai_42.txt_Truong_057.Text,
                         uc_Loai_42.txt_Truong_058.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_063.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_064.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_065.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_066.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_077.Text,
-                        uc_Loai_42.txt_Truong_078.Text,
-                        uc_Loai_42.txt_Truong_079.Text,
-                        uc_Loai_42.txt_Truong_080.Text,
-                        uc_Loai_42.txt_Truong_081.Text,
-                        uc_Loai_42.txt_Truong_082.Text,
-                        uc_Loai_42.txt_Truong_083.Text,
-                        uc_Loai_42.txt_Truong_084.Text,
-                        uc_Loai_42.txt_Truong_085.Text,
-                        uc_Loai_42.txt_Truong_086.Text,
-                        uc_Loai_42.txt_Truong_088.Text,
-                        uc_Loai_42.txt_Truong_089.Text,
-                        uc_Loai_42.txt_Truong_090.Text,
-                        uc_Loai_42.txt_Truong_091.Text,
+                        uc_Loai_42.txt_Truong_059.Text?.Replace(",", ""),
                         "",
-                        uc_Loai_42.txt_Truong_093.Text,
-                        uc_Loai_42.txt_Truong_094.Text,
-                        uc_Loai_42.txt_Truong_095.Text,
-                        uc_Loai_42.txt_Truong_096.Text,
-                        uc_Loai_42.txt_Truong_097.Text,
-                        uc_Loai_42.txt_Truong_098.Text,
-                        uc_Loai_42.txt_Truong_099.Text,
-                        uc_Loai_42.txt_Truong_100.Text,
-                        uc_Loai_42.txt_Truong_101.Text,
-                        truong102,
-                        uc_Loai_42.txt_Truong_103.Text,
-                        uc_Loai_42.txt_Truong_104.Text,
-                        uc_Loai_42.txt_Truong_105.Text,
-                        uc_Loai_42.txt_Truong_106.Text,
-                        uc_Loai_42.txt_Truong_107.Text,
-                        uc_Loai_42.txt_Truong_108.Text,
-                        uc_Loai_42.txt_Truong_109.Text,
-                        uc_Loai_42.txt_Truong_110.Text,
-                        uc_Loai_42.txt_Truong_112.Text,
-
-                        uc_Loai_42.txt_Truong_126.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_127.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_128.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_129.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_130.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_131.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_132.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_133.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_134.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_135.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_136.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_137.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_138.Text?.Replace(",", ""),
-                        uc_Loai_42.txt_Truong_139.Text?.Replace(",", ""),
-
-                        uc_Loai_42.txt_Truong_158.Text,
-                        uc_Loai_42.txt_Truong_159.Text,
-                        uc_Loai_42.txt_Truong_160.Text,
-                        uc_Loai_42.txt_Truong_161.Text,
-                        uc_Loai_42.txt_Truong_162.Text,
-                        uc_Loai_42.txt_Truong_165.Text,
-                        uc_Loai_42.txt_Truong_166.Text,
-                        uc_Loai_42.txt_Truong_167.Text,
-                        uc_Loai_42.txt_Truong_168.Text, "Loai4", false);
+                        uc_Loai_42.txt_Truong_061.Text,
+                        "",
+                        uc_Loai_42.txt_Truong_063.Text,
+                        "",
+                        uc_Loai_42.txt_Truong_065.Text,
+                        "",
+                        uc_Loai_42.txt_Truong_067.Text,
+                        "",
+                        uc_Loai_42.txt_Truong_069.Text,
+                        "",
+                        uc_Loai_42.txt_Truong_071.Text,
+                        "",
+                        uc_Loai_42.txt_Truong_073.Text,
+                        "",
+                        uc_Loai_42.txt_Truong_075.Text,
+                        "Loai4", false);
                 }
-                else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_2_DeSo1)
+                else if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_4_2_DeSo2)
                 {
-                    string truong001 = uc_Loai_422.txt_Truong_001_1.Text + uc_Loai_422.txt_Truong_001_2.Text;
-                    string truong102 = uc_Loai_422.txt_Truong_102_1.Text + uc_Loai_422.txt_Truong_102_2.Text;
-
-                    Global.db_BCL.SuaVaLuu_deso_new(lb_username1.Text, lb_username2.Text, lb_Image.Text, Global.StrBatch,
-                        Global.StrUsername, truong001,
-                        "",
-                        "",
-                        uc_Loai_422.txt_Truong_004.Text,
-                       "",
-                        uc_Loai_422.txt_Truong_006.Text,
-                        uc_Loai_422.txt_Truong_008.Text,
-                        uc_Loai_422.txt_Truong_009.Text,
-                        uc_Loai_422.txt_Truong_012.Text,
-                        uc_Loai_422.txt_Truong_013.Text,
-                        uc_Loai_422.txt_Truong_028.Text,
-                        uc_Loai_422.txt_Truong_029.Text,
-                        uc_Loai_422.txt_Truong_030.Text,
-                        uc_Loai_422.txt_Truong_037.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_038.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_039.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_040.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_041.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_042.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_043.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_044.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_045.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_046.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_047.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_048.Text?.Replace(",", ""),
-                        "",
-                        uc_Loai_422.txt_Truong_050.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_051.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_052.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_053.Text?.Replace(",", ""),
-                       "",
-                       "",
-                        uc_Loai_422.txt_Truong_063.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_064.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_065.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_066.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_077.Text,
-                        uc_Loai_422.txt_Truong_078.Text,
-                        uc_Loai_422.txt_Truong_079.Text,
-                        uc_Loai_422.txt_Truong_080.Text,
-                        uc_Loai_422.txt_Truong_081.Text,
-                        uc_Loai_422.txt_Truong_082.Text,
-                        uc_Loai_422.txt_Truong_083.Text,
-                        uc_Loai_422.txt_Truong_084.Text,
-                        uc_Loai_422.txt_Truong_085.Text,
-                        uc_Loai_422.txt_Truong_086.Text,
-                        uc_Loai_422.txt_Truong_088.Text,
-                        uc_Loai_422.txt_Truong_089.Text,
-                        uc_Loai_422.txt_Truong_090.Text,
-                        uc_Loai_422.txt_Truong_091.Text,
-                        "",
-                        uc_Loai_422.txt_Truong_093.Text,
-                        uc_Loai_422.txt_Truong_094.Text,
-                        uc_Loai_422.txt_Truong_095.Text,
-                        uc_Loai_422.txt_Truong_096.Text,
-                        uc_Loai_422.txt_Truong_097.Text,
-                        uc_Loai_422.txt_Truong_098.Text,
-                        uc_Loai_422.txt_Truong_099.Text,
-                        uc_Loai_422.txt_Truong_100.Text,
-                        uc_Loai_422.txt_Truong_101.Text,
-                        truong102,
-                        "",
-                        uc_Loai_422.txt_Truong_104.Text,
-                        "",
-                        uc_Loai_422.txt_Truong_106.Text,
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-
-                        uc_Loai_422.txt_Truong_126.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_127.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_128.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_129.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_130.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_131.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_132.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_133.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_134.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_135.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_136.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_137.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_138.Text?.Replace(",", ""),
-                        uc_Loai_422.txt_Truong_139.Text?.Replace(",", ""),
-
+                    Global.db_BCL.SuaVaLuu_deso_new(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch,
+                        Global.StrUsername,
                         "",
                         "",
                         "",
                         "",
                         "",
                         "",
-                       "",
-                       "",
-                       "", "Loai4", true);
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                       "Loai5", true);
                 }
 
                 ResetData();
@@ -2001,7 +1647,18 @@ namespace BaoCaoLuong2017.MyForm
                     MessageBox.Show("Có ký tự không hợp lệ. Vui lòng kiểm tra lại!");
                     return;
                 }
-                Global.db_BCL.SuaVaLuu_DEJP(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, uc_DEJP2.txt_Truong_002.Text, "Loai4");
+                Global.db_BCL.SuaVaLuu_DEJP(lb_username2.Text, lb_username1.Text, lb_Image.Text, Global.StrBatch, Global.StrUsername, 
+                    uc_DEJP2.txt_Truong_003.Text,
+                    uc_DEJP2.txt_Truong_056.Text,
+                    uc_DEJP2.txt_Truong_060.Text,
+                    uc_DEJP2.txt_Truong_062.Text,
+                    uc_DEJP2.txt_Truong_064.Text,
+                    uc_DEJP2.txt_Truong_066.Text,
+                    uc_DEJP2.txt_Truong_068.Text,
+                    uc_DEJP2.txt_Truong_070.Text,
+                    uc_DEJP2.txt_Truong_072.Text,
+                    uc_DEJP2.txt_Truong_074.Text,
+                    "Loai4");
 
                 ResetData();
                 if (GetImage_DeJP() == "NULL")

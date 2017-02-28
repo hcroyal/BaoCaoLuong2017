@@ -431,9 +431,9 @@
             this.panelControl2.Controls.Add(this.panelControl3);
             this.panelControl2.Controls.Add(this.panelControl4);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl2.Location = new System.Drawing.Point(801, 47);
+            this.panelControl2.Location = new System.Drawing.Point(761, 47);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(543, 675);
+            this.panelControl2.Size = new System.Drawing.Size(583, 675);
             this.panelControl2.TabIndex = 5;
             // 
             // tabcontrol
@@ -442,7 +442,7 @@
             this.tabcontrol.Location = new System.Drawing.Point(2, 28);
             this.tabcontrol.Name = "tabcontrol";
             this.tabcontrol.SelectedTabPage = this.tp_Loai_2;
-            this.tabcontrol.Size = new System.Drawing.Size(539, 613);
+            this.tabcontrol.Size = new System.Drawing.Size(579, 613);
             this.tabcontrol.TabIndex = 1;
             this.tabcontrol.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tp_Loai_2,
@@ -470,7 +470,7 @@
             // 
             this.tp_Loai_4.Controls.Add(this.uc_Loai_41);
             this.tp_Loai_4.Name = "tp_Loai_4";
-            this.tp_Loai_4.Size = new System.Drawing.Size(533, 585);
+            this.tp_Loai_4.Size = new System.Drawing.Size(573, 585);
             this.tp_Loai_4.Text = "Loại 4";
             // 
             // uc_Loai_41
@@ -478,7 +478,7 @@
             this.uc_Loai_41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_Loai_41.Location = new System.Drawing.Point(0, 0);
             this.uc_Loai_41.Name = "uc_Loai_41";
-            this.uc_Loai_41.Size = new System.Drawing.Size(533, 585);
+            this.uc_Loai_41.Size = new System.Drawing.Size(573, 585);
             this.uc_Loai_41.TabIndex = 0;
             // 
             // tp_DEJP
@@ -501,7 +501,7 @@
             this.tp_Loai_42.Controls.Add(this.uc_Loai_421);
             this.tp_Loai_42.Name = "tp_Loai_42";
             this.tp_Loai_42.Size = new System.Drawing.Size(533, 585);
-            this.tp_Loai_42.Text = "Loại 4.2";
+            this.tp_Loai_42.Text = "Loại 5";
             // 
             // uc_Loai_421
             // 
@@ -519,7 +519,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl3.Location = new System.Drawing.Point(2, 641);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(539, 32);
+            this.panelControl3.Size = new System.Drawing.Size(579, 32);
             this.panelControl3.TabIndex = 0;
             // 
             // btn_Pause
@@ -556,7 +556,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(2, 2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(539, 26);
+            this.panelControl4.Size = new System.Drawing.Size(579, 26);
             this.panelControl4.TabIndex = 2;
             // 
             // txt_LoaiPhieu
@@ -581,7 +581,7 @@
             this.uc_PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_PictureBox1.Location = new System.Drawing.Point(0, 47);
             this.uc_PictureBox1.Name = "uc_PictureBox1";
-            this.uc_PictureBox1.Size = new System.Drawing.Size(801, 675);
+            this.uc_PictureBox1.Size = new System.Drawing.Size(761, 675);
             this.uc_PictureBox1.TabIndex = 10;
             // 
             // timer1

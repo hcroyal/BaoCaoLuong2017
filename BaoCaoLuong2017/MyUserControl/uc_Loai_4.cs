@@ -557,19 +557,20 @@ namespace BaoCaoLuong2017.MyUserControl
 
         public void SaveData_Loai_4(string idImage)
         {
-            Global.db_BCL.Insert_Loai4_new(idImage, Global.StrBatch, Global.StrUsername, "Loai4",
+            Global.db_BCL.Insert_Loai4(idImage, Global.StrBatch, Global.StrUsername, "Loai4",
 
                 //txt_Truong_037.Text?.Replace(",", ""),
                 txt_Truong_001.Text,
                 txt_Truong_002.Text,
-                txt_Truong_004.Text,
-                txt_Truong_005.Text,
-                txt_Truong_006.Text,
-                txt_Truong_007.Text,
+                "",
+                txt_Truong_004.Text?.Replace(",", ""),
+                txt_Truong_005.Text?.Replace(",", ""),
+                txt_Truong_006.Text?.Replace(",", ""),
+                txt_Truong_007.Text?.Replace(",", ""),
                 txt_Truong_008.Text,
                 txt_Truong_009.Text,
                 txt_Truong_010.Text,
-                txt_Truong_011.Text,
+                txt_Truong_011.Text?.Replace(",", ""),
                 txt_Truong_012.Text,
                 txt_Truong_013.Text,
                 txt_Truong_014.Text,
@@ -578,11 +579,11 @@ namespace BaoCaoLuong2017.MyUserControl
                 txt_Truong_017.Text,
                 txt_Truong_018.Text,
                 txt_Truong_019.Text,
-                txt_Truong_020.Text,
-                txt_Truong_021.Text,
-                txt_Truong_022.Text,
-                txt_Truong_023.Text,
-                txt_Truong_024.Text,
+                txt_Truong_020.Text?.Replace(",", ""),
+                txt_Truong_021.Text?.Replace(",", ""),
+                txt_Truong_022.Text?.Replace(",", ""),
+                txt_Truong_023.Text?.Replace(",", ""),
+                txt_Truong_024.Text?.Replace(",", ""),
                 txt_Truong_025.Text,
                 txt_Truong_026.Text,
                 txt_Truong_027.Text,
@@ -596,30 +597,43 @@ namespace BaoCaoLuong2017.MyUserControl
                 txt_Truong_035.Text,
                 txt_Truong_036.Text,
                 txt_Truong_0373839.Text,
+                "",
+                "",
                 txt_Truong_040.Text,
                 txt_Truong_0414243.Text,
+                "",
+                "",
                 txt_Truong_044.Text,
-                txt_Truong_045.Text,
-                txt_Truong_046.Text,
-                txt_Truong_047.Text,
-                txt_Truong_048.Text,
-                txt_Truong_049.Text,
-                txt_Truong_050.Text,
+                txt_Truong_045.Text?.Replace(",", ""),
+                txt_Truong_046.Text?.Replace(",", ""),
+                txt_Truong_047.Text?.Replace(",", ""),
+                txt_Truong_048.Text?.Replace(",", ""),
+                txt_Truong_049.Text?.Replace(",", ""),
+                txt_Truong_050.Text?.Replace(",", ""),
                 txt_Truong_051.Text,
                 txt_Truong_052.Text,
-                txt_Truong_053.Text,
+                txt_Truong_053.Text?.Replace(",", ""),
                 txt_Truong_054.Text,
                 txt_Truong_055.Text,
+                "",
                 txt_Truong_057.Text,
-                txt_Truong_058.Text,
-                txt_Truong_059.Text,
+                txt_Truong_058.Text?.Replace(",", ""),
+                txt_Truong_059.Text?.Replace(",", ""),
+                "",
                 txt_Truong_061.Text,
+                "",
                 txt_Truong_063.Text,
+                "",
                 txt_Truong_065.Text,
+                "",
                 txt_Truong_067.Text,
+                "",
                 txt_Truong_069.Text,
+                "",
                 txt_Truong_071.Text,
+                "",
                 txt_Truong_073.Text,
+                "",
                 txt_Truong_075.Text);
         }
 
@@ -677,8 +691,7 @@ namespace BaoCaoLuong2017.MyUserControl
                 int intMod2 = 9;
                 List<string> P = new List<string>();
 
-                for (int i = txt.Text.Length - 1; i >= 0; i--)
-                {
+                for (int i = txt.Text.Length - 1; i >= 0; i--){
                     P.Add(txt.Text[i].ToString());
                     //chỉ lấy 12 ký tự đầu để so sánh. ký tự thứu 13 để compare
                 }
@@ -715,7 +728,7 @@ namespace BaoCaoLuong2017.MyUserControl
             }
             catch { return false; }
         }
-        
+
         private void curency(TextEdit txt)
         {
             string t;
@@ -737,6 +750,7 @@ namespace BaoCaoLuong2017.MyUserControl
                             }
                         }
                     }
+
                 }
                 else
                 {
@@ -764,7 +778,7 @@ namespace BaoCaoLuong2017.MyUserControl
         //    {
         //    }
         //}
-        
+
         //private void txt_Truong_041_KeyUp(object sender, KeyEventArgs e)
         //{
         //    try
@@ -775,7 +789,7 @@ namespace BaoCaoLuong2017.MyUserControl
         //    {
         //    }
         //}
-        
+
         private void doimautrongkhoang(TextEdit txt, int so_nho, int so_lon)
         {
             if (txt.Text.Length > 0)
@@ -986,9 +1000,10 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_005_EditValueChanged(object sender, EventArgs e)
         {
+            
+            doimautrongkhoang((TextEdit)sender, 0, 11);
             if (Changed != null)
                 Changed(sender, e);
-            doimautrongkhoang((TextEdit)sender, 0, 11);
 
             //if (!(Lenght12(txt_Truong_005) || Lenght13(txt_Truong_005)) && (txt_Truong_005.Text.Length == 12 || txt_Truong_005.Text.Length == 13))
             //{
@@ -1224,13 +1239,28 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong0373839_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 6);
+            if (!string.IsNullOrEmpty(((TextEdit)sender).Text))
+                if (((TextEdit)sender).Text!= "?")
+                {
+                    doimautrongkhoang((TextEdit)sender, 6, 6);
+                }
+                else
+                {
+                    doimautrongkhoang((TextEdit)sender, 0, 1);
+                }
+            
+            else
+            {
+                doimautrongkhoang((TextEdit)sender, 0, 1);
+            }
+            
             if (Changed != null)
                 Changed(sender, e);
         }
 
         private void txt_Truong_040_EditValueChanged(object sender, EventArgs e)
         {
+            
             doimautrongkhoang((TextEdit)sender, 0, 1);
             if (Changed != null)
                 Changed(sender, e);
@@ -1238,7 +1268,21 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_0414243_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 6);
+            if (!string.IsNullOrEmpty(((TextEdit)sender).Text))
+            {
+                if (((TextEdit)sender).Text != "?")
+                {
+                    doimautrongkhoang((TextEdit)sender, 6, 6);
+                }
+                else
+                {
+                    doimautrongkhoang((TextEdit)sender, 0, 1);
+                }
+            }
+            else
+            {
+                doimautrongkhoang((TextEdit)sender, 0, 1);
+            }
             if (Changed != null)
                 Changed(sender, e);
         }
@@ -1417,6 +1461,50 @@ namespace BaoCaoLuong2017.MyUserControl
             doimautrongkhoang((TextEdit)sender, 0, 12);
             if (Changed != null)
                 Changed(sender, e);
+        }
+
+        private void txt_Truong_004_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                curency((TextEdit)sender);
+            }
+            catch
+            {
+            }
+        }
+
+        private void txt_Truong_005_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                curency(txt_Truong_005);
+            }
+            catch
+            {
+            }
+        }
+
+        private void txt_Truong_006_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                curency(txt_Truong_006);
+            }
+            catch
+            {
+            }
+        }
+
+        private void txt_Truong_007_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                curency(txt_Truong_007);
+            }
+            catch
+            {
+            }
         }
     }
 }

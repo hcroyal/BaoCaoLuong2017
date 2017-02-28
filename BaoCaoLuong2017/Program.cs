@@ -30,7 +30,7 @@ namespace BaoCaoLuong2017
             {
                 temp = false;
                 Frm_Login a = new Frm_Login();
-                a.lb_programName.Text = "           Dự Án\n           Báo Cáo Lương 2017";
+                a.lb_programName.Text = "           Dự Án\n           Báo Cáo Lương 2017 City S";
                 a.lb_vision.Text = "Phiên bản :";
                 a.grb_1.Text = "Thông Tin PC";
                 a.lb_machine.Text = "Tên PC :";
@@ -46,8 +46,8 @@ namespace BaoCaoLuong2017
                 a.btn_thoat.Text = "Thoát";
                 a.chb_hienthi.Text = "Hiển Thị";
                 a.chb_luu.Text = "Lưu";
-                a.lb_version.Text = @"2.1.2";
-                a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2017\BAO-CAO-LUONG2017";
+                a.lb_version.Text = @"1.0";
+                a.UrlUpdateVersion = @"\\10.10.10.254\DE_Viet\2017\BAO-CAO-LUONG-TP_S";
                 a.LoginEvent += a_LoginEvent;
                 a.ButtonLoginEven += a_ButtonLoginEven;
                 if (a.ShowDialog() == DialogResult.OK)
@@ -123,7 +123,7 @@ namespace BaoCaoLuong2017
             try
             {
                 iKiemtraLogin = Global.db_BPO.KiemTraLogin(username, password);
-                strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == "BaoCaoLuong2017" select w.IDVersion).FirstOrDefault();
+                strVersion = (from w in Global.db_BPO.tbl_Versions where w.IDProject == Global.StrIdProject select w.IDVersion).FirstOrDefault();
                 role = (from w in Global.db_BPO.tbl_Users where w.Username == username select w.IDRole).FirstOrDefault();
                 if (!string.IsNullOrEmpty(role))
                     role = role.ToUpper();

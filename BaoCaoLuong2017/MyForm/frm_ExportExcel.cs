@@ -127,7 +127,7 @@ namespace BaoCaoLuong2017.MyForm
 
             {
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = Global.db_BCL.ExportExcel_new(cbb_Batch.Text);
+                dataGridView1.DataSource = Global.db_BCL.ExportExcel(cbb_Batch.Text);
                 Microsoft.Office.Interop.Excel.Application App = new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel.Workbook book = App.Workbooks.Open(strfilename, 0, true, 5, "", "", false, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "", true, false, 0, true, false, false);
                 Microsoft.Office.Interop.Excel.Sheets _sheet = (Microsoft.Office.Interop.Excel.Sheets)book.Sheets;
@@ -197,40 +197,31 @@ namespace BaoCaoLuong2017.MyForm
                             hLoaiBa = 0;
 
                             //bo qua neu rong
-                            if (string.IsNullOrEmpty(dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "")
-                                && string.IsNullOrEmpty(dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : "")
-                                && string.IsNullOrEmpty(dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : "")
-                                && string.IsNullOrEmpty(dr.Cells[216].Value != null ? dr.Cells[216].Value.ToString() : "")
-                                )
-                                break;
-
-                            wrksheet.Cells[h, 1] = dr.Cells[0].Value != null ? dr.Cells[0].Value.ToString() : "";
-                            wrksheet.Cells[h, 2] = dr.Cells[1].Value != null ? dr.Cells[1].Value.ToString() : "";
-                            wrksheet.Cells[h, 3] = "";
-                            wrksheet.Cells[h, 4] = "";
-                            wrksheet.Cells[h, 5] = "";
-                            wrksheet.Cells[h, 6] = dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : ""; //truong so 4 mới/trường số 2 cũ
-
-                            if (string.IsNullOrEmpty(dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : ""))
-                            {
-                                wrksheet.Cells[h, 7] = "9999999999999";
-                            }
-                            else
-                            {
-                                wrksheet.Cells[h, 7] = dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : "";//truong so 5
-                            }
-
-                            // = "4091953036" neu truong so 1 cua laoi 1 = 06 hoac 07
-                            if (truongso1_tobia == "06" || truongso1_tobia == "07")
-                                wrksheet.Cells[h, 8] = "4091953036";
-                            else
-                            {
-                                wrksheet.Cells[h, 8] = TruongSo06Loai2 = dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : ""; //truong so 6 mới / trường số 3 cũ
-                            }
-
-                            hLoaiHai = h;
-                            wrksheet.Cells[h, 12] = "9";
-                            wrksheet.Cells[h, 217] = dr.Cells[216].Value != null ? dr.Cells[216].Value.ToString() : "";
+                            wrksheet.Cells[h, 1] = dr.Cells[0].Value != null ? dr.Cells[0].Value.ToString() : ""; //tên image
+                            wrksheet.Cells[h, 2] = dr.Cells[1].Value != null ? dr.Cells[1].Value.ToString() : ""; //loại
+                            wrksheet.Cells[h, 3] = "07";  // cố định 07
+                            wrksheet.Cells[h, 4] = ""; //Cột C
+                            wrksheet.Cells[h, 5] = dr.Cells[2].Value != null ? dr.Cells[2].Value.ToString() : ""; //Truong so 1
+                            wrksheet.Cells[h, 6] = ""; //Cột E
+                            wrksheet.Cells[h, 7] = dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : ""; //Truong so 2
+                            wrksheet.Cells[h, 8] = ""; //Cột G
+                            wrksheet.Cells[h, 9] = dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : ""; //Truong so 3
+                            wrksheet.Cells[h, 10] = ""; //Cột I
+                            wrksheet.Cells[h, 11] = dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : ""; //Truong so 4
+                            wrksheet.Cells[h, 12] = ""; //Cột K
+                            wrksheet.Cells[h, 13] = dr.Cells[6].Value != null ? dr.Cells[6].Value.ToString() : ""; //Truong so 5
+                            wrksheet.Cells[h, 14] = ""; //Cột M
+                            wrksheet.Cells[h, 15] = dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : ""; //Truong so 6
+                            wrksheet.Cells[h, 16] = ""; //Cột O
+                            wrksheet.Cells[h, 17] = dr.Cells[8].Value != null ? dr.Cells[8].Value.ToString() : ""; //Truong so 7
+                            wrksheet.Cells[h, 18] = ""; //Cột Q
+                            wrksheet.Cells[h, 19] = dr.Cells[9].Value != null ? dr.Cells[9].Value.ToString() : ""; //Truong so 8
+                            wrksheet.Cells[h, 20] = ""; //Cột S
+                            wrksheet.Cells[h, 21] = dr.Cells[10].Value != null ? dr.Cells[10].Value.ToString() : ""; //Truong so 9
+                            wrksheet.Cells[h, 22] = ""; //Cột U
+                            wrksheet.Cells[h, 23] = dr.Cells[11].Value != null ? dr.Cells[11].Value.ToString() : ""; //Truong so 10
+                            wrksheet.Cells[h, 24] = ""; //Cột W
+                            wrksheet.Cells[h, 146] = "";
                             break;
 
                         case "Loai3":
@@ -268,269 +259,184 @@ namespace BaoCaoLuong2017.MyForm
 
                             wrksheet.Cells[h, 1] = dr.Cells[0].Value != null ? dr.Cells[0].Value.ToString() : "";//idimage
                             wrksheet.Cells[h, 2] = dr.Cells[1].Value != null ? dr.Cells[1].Value.ToString() : "";//loai phieu
-                            wrksheet.Cells[h, 3] = ThemKyTubatKyPhiatruocNeuTrongThiDeTrong(dr.Cells[2].Value != null ? dr.Cells[2].Value.ToString() : "", 8, "0");//truong so 1
-
-                            wrksheet.Cells[h, 4] = dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "";//truong so 2
-                            wrksheet.Cells[h, 5] = dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : "";//truong so 3
-                            wrksheet.Cells[h, 6] = dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : "";//truong so 4
-                            if (string.IsNullOrEmpty(dr.Cells[6].Value != null ? dr.Cells[6].Value.ToString() : ""))
+                            wrksheet.Cells[h, 3] = "01";//cố định 01
+                            wrksheet.Cells[h, 4] = "";//trống
+                            wrksheet.Cells[h, 5] = dr.Cells[2].Value != null ? dr.Cells[2].Value.ToString() : "";//truong so 1
+                            wrksheet.Cells[h, 6] = "";//trống
+                            wrksheet.Cells[h, 7] = dr.Cells[3].Value != null ? dr.Cells[3].Value.ToString() : "";//truong so 2
+                            wrksheet.Cells[h, 8] = "";//trống
+                            wrksheet.Cells[h, 9] = dr.Cells[4].Value != null ? dr.Cells[4].Value.ToString() : "";//truong so 3
+                            wrksheet.Cells[h, 10] = "";//trống
+                            wrksheet.Cells[h, 11] = dr.Cells[5].Value != null ? dr.Cells[5].Value.ToString() : "";//truong so 4
+                            wrksheet.Cells[h, 12] = "";//trống
+                            wrksheet.Cells[h, 13] = dr.Cells[6].Value != null ? dr.Cells[6].Value.ToString() : "";//truong so 5
+                            wrksheet.Cells[h, 14] = "";//trống
+                            wrksheet.Cells[h, 15] = dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : "";//truong so 6
+                            wrksheet.Cells[h, 16] = "";//trống
+                            wrksheet.Cells[h, 17] = dr.Cells[8].Value != null ? dr.Cells[8].Value.ToString() : "";//truong so 7
+                            wrksheet.Cells[h, 18] = "";//trống
+                            wrksheet.Cells[h, 19] = dr.Cells[9].Value != null ? dr.Cells[9].Value.ToString() : "";//truong so 8
+                            wrksheet.Cells[h, 20] = "";//trống
+                            wrksheet.Cells[h, 21] = dr.Cells[10].Value != null ? dr.Cells[10].Value.ToString() : "";//truong so 9
+                            wrksheet.Cells[h, 22] = "";//trống
+                            wrksheet.Cells[h, 23] = dr.Cells[11].Value != null ? dr.Cells[11].Value.ToString() : "";//truong so 10
+                            wrksheet.Cells[h, 24] = "";//trống
+                            wrksheet.Cells[h, 25] = dr.Cells[12].Value != null ? dr.Cells[12].Value.ToString() : "";//truong so 11
+                            wrksheet.Cells[h, 26] = "";//trống
+                            wrksheet.Cells[h, 27] = dr.Cells[13].Value != null ? dr.Cells[13].Value.ToString() : "";//truong so 12
+                            wrksheet.Cells[h, 28] = "";//trống
+                            wrksheet.Cells[h, 29] = dr.Cells[14].Value != null ? dr.Cells[14].Value.ToString() : "";//truong so 13
+                            wrksheet.Cells[h, 30] = "";//trống
+                            wrksheet.Cells[h, 31] = dr.Cells[15].Value != null ? dr.Cells[15].Value.ToString() : "";//truong so 14
+                            wrksheet.Cells[h, 32] = "";//trống
+                            wrksheet.Cells[h, 33] = dr.Cells[16].Value != null ? dr.Cells[16].Value.ToString() : "";//truong so 15
+                            wrksheet.Cells[h, 34] = "";//trống
+                            wrksheet.Cells[h, 35] = dr.Cells[17].Value != null ? dr.Cells[17].Value.ToString() : "";//truong so 16
+                            wrksheet.Cells[h, 36] = "";//trống
+                            wrksheet.Cells[h, 37] = dr.Cells[18].Value != null ? dr.Cells[18].Value.ToString() : "";//truong so 17
+                            wrksheet.Cells[h, 38] = "";//trống
+                            wrksheet.Cells[h, 39] = dr.Cells[19].Value != null ? dr.Cells[19].Value.ToString() : "";//truong so 18
+                            wrksheet.Cells[h, 40] = "";//trống
+                            wrksheet.Cells[h, 41] = dr.Cells[20].Value != null ? dr.Cells[20].Value.ToString() : "";//truong so 19
+                            wrksheet.Cells[h, 42] = "";//trống
+                            wrksheet.Cells[h, 43] = dr.Cells[21].Value != null ? dr.Cells[21].Value.ToString() : "";//truong so 20
+                            wrksheet.Cells[h, 44] = "";//trống
+                            wrksheet.Cells[h, 45] = dr.Cells[22].Value != null ? dr.Cells[22].Value.ToString() : "";//truong so 21
+                            wrksheet.Cells[h, 46] = dr.Cells[23].Value != null ? dr.Cells[23].Value.ToString() : "";//truong so 22
+                            wrksheet.Cells[h, 47] = dr.Cells[24].Value != null ? dr.Cells[24].Value.ToString() : "";//truong so 23
+                            wrksheet.Cells[h, 48] = dr.Cells[25].Value != null ? dr.Cells[25].Value.ToString() : "";//truong so 24
+                            wrksheet.Cells[h, 49] = "";//trống
+                            wrksheet.Cells[h, 50] = dr.Cells[26].Value != null ? dr.Cells[26].Value.ToString() : "";//truong so 25
+                            wrksheet.Cells[h, 51] = "";//trống
+                            wrksheet.Cells[h, 52] = dr.Cells[27].Value != null ? dr.Cells[27].Value.ToString() : "";//truong so 26
+                            wrksheet.Cells[h, 53] = "";//trống
+                            wrksheet.Cells[h, 54] = dr.Cells[28].Value != null ? dr.Cells[28].Value.ToString() : "";//truong so 27
+                            wrksheet.Cells[h, 55] = "";//trống
+                            wrksheet.Cells[h, 56] = dr.Cells[29].Value != null ? dr.Cells[29].Value.ToString() : "";//truong so 28
+                            wrksheet.Cells[h, 57] = "";//trống
+                            wrksheet.Cells[h, 58] = dr.Cells[30].Value != null ? dr.Cells[30].Value.ToString() : "";//truong so 29
+                            wrksheet.Cells[h, 59] = "";//trống
+                            wrksheet.Cells[h, 60] = dr.Cells[31].Value != null ? dr.Cells[31].Value.ToString() : "";//truong so 30
+                            wrksheet.Cells[h, 61] = "";//trống
+                            wrksheet.Cells[h, 62] = dr.Cells[32].Value != null ? dr.Cells[32].Value.ToString() : "";//truong so 31
+                            wrksheet.Cells[h, 63] = "";//trống
+                            wrksheet.Cells[h, 64] = dr.Cells[33].Value != null ? dr.Cells[33].Value.ToString() : "";//truong so 32
+                            wrksheet.Cells[h, 65] = "";//trống
+                            wrksheet.Cells[h, 66] = dr.Cells[34].Value != null ? dr.Cells[34].Value.ToString() : "";//truong so 33
+                            wrksheet.Cells[h, 67] = "";//trống
+                            wrksheet.Cells[h, 68] = dr.Cells[35].Value != null ? dr.Cells[35].Value.ToString() : "";//truong so 34
+                            wrksheet.Cells[h, 69] = "";//trống
+                            wrksheet.Cells[h, 70] = dr.Cells[36].Value != null ? dr.Cells[36].Value.ToString() : "";//truong so 35
+                            wrksheet.Cells[h, 71] = "";//trống
+                            wrksheet.Cells[h, 72] = dr.Cells[37].Value != null ? dr.Cells[37].Value.ToString() : "";//truong so 36
+                            wrksheet.Cells[h, 73] = "";//trống
+                            try
                             {
-                                wrksheet.Cells[h, 7] = "";
+                                wrksheet.Cells[h, 74] = dr.Cells[38].Value != null ? dr.Cells[38].Value.ToString().Substring(0, 2) : "";//truong so 37
+                                wrksheet.Cells[h, 75] = dr.Cells[38].Value != null ? dr.Cells[38].Value.ToString().Substring(2, 2) : "";//truong so 38
+                                wrksheet.Cells[h, 76] = dr.Cells[38].Value != null ? dr.Cells[38].Value.ToString().Substring(4, 2) : "";//truong so 39
                             }
-                            else
+                            catch (Exception)
                             {
-                                wrksheet.Cells[h, 7] = dr.Cells[6].Value != null ? dr.Cells[6].Value.ToString() : "";//truong so 5
+                                wrksheet.Cells[h, 74] = dr.Cells[38].Value != null ? dr.Cells[38].Value.ToString() : "";//truong so 37
+                                wrksheet.Cells[h, 75] = "";//truong so 38
+                                wrksheet.Cells[h, 76] = "";//truong so 39
                             }
-
-                            //Trường số 6
-                            if (truongso1_tobia == "06" || truongso1_tobia == "07")
+                            
+                            wrksheet.Cells[h, 77] = "";//trống
+                            wrksheet.Cells[h, 78] = dr.Cells[41].Value != null ? dr.Cells[41].Value.ToString() : "";//truong so 40
+                            try
                             {
-                                wrksheet.Cells[h, 8] = "4091953036";//thi truong so 6 = "4091953036"
-                                //if (hLoaiHai > 0)
-                                //    wrksheet.Cells[hLoaiHai, 8] = "4091953036";//truong so 6
+                                wrksheet.Cells[h, 79] = dr.Cells[42].Value != null ? dr.Cells[42].Value.ToString().Substring(0, 2) : "";//truong so 41
+                                wrksheet.Cells[h, 80] = dr.Cells[42].Value != null ? dr.Cells[42].Value.ToString().Substring(2, 2) : "";//truong so 42
+                                wrksheet.Cells[h, 81] = dr.Cells[42].Value != null ? dr.Cells[42].Value.ToString().Substring(4, 2) : "";//truong so 43
                             }
-                            else
-                                wrksheet.Cells[h, 8] = TruongSo06Loai4 = dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : "";
-
-                            if ((string.IsNullOrEmpty(TruongSo06Loai2)
-                                && string.IsNullOrEmpty(TruongSo06Loai3)
-                                && string.IsNullOrEmpty(TruongSo06Loai4)) && (hLoaiHai > 0 && hLoaiBa > 0))
+                            catch (Exception)
                             {
-                                wrksheet.Cells[hLoaiHai, 8] = "333333333333";
-                                wrksheet.Cells[hLoaiBa, 8] = "333333333333";
-                                wrksheet.Cells[h, 8] = "333333333333";
+                                wrksheet.Cells[h, 79] = dr.Cells[42].Value != null ? dr.Cells[42].Value.ToString() : "";//truong so 41
+                                wrksheet.Cells[h, 80] = "";//truong so 42
+                                wrksheet.Cells[h, 81] = "";//truong so 43
                             }
-                            else
-                            {
-                                if (string.IsNullOrEmpty(TruongSo06Loai2) && hLoaiHai > 0)
-                                    wrksheet.Cells[hLoaiHai, 8] = "333333333333";
-                                if (string.IsNullOrEmpty(TruongSo06Loai3) && hLoaiBa > 0)
-                                {
-                                    
-                                    wrksheet.Cells[hLoaiBa, 8] = TruongSo06Loai2;
-                                }
-                            }
+                            
+                            wrksheet.Cells[h, 82] = "";//trống
+                            wrksheet.Cells[h, 83] = dr.Cells[45].Value != null ? dr.Cells[45].Value.ToString() : "";//truong so 44
+                            wrksheet.Cells[h, 84] = "";//trống
 
-                            if (string.IsNullOrEmpty(TruongSo06Loai4) || truongso1_tobia == "12" || truongso1_tobia == "13" || truongso1_tobia == "14" || truongso1_tobia == "15")
-                                wrksheet.Cells[h, 8] = TruongSo06Loai2;
+                            //dòng 2
+                            //h++;
 
+                            //wrksheet.Cells[h, 1] = dr.Cells[0].Value != null ? dr.Cells[0].Value.ToString() : "";//idimage
+                            //wrksheet.Cells[h, 2] = dr.Cells[1].Value != null ? dr.Cells[1].Value.ToString() : "";//loai phieu
 
-                            if (TruongSo06Loai4.IndexOf("?") >= 0)
-                                wrksheet.Cells[h, 8] = "?";
-                            //else if (string.IsNullOrEmpty(TruongSo06Loai2) && string.IsNullOrEmpty(dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : ""))
-                            //{
-                            //    wrksheet.Cells[h, 8] = "333333333333";
-                            //    if (hLoaiHai > 0)
-                            //        wrksheet.Cells[hLoaiHai, 8] = "333333333333";
-                            //}
-                            //else if (!string.IsNullOrEmpty(TruongSo06Loai2) && string.IsNullOrEmpty(dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : ""))
-                            //{
-                            //    wrksheet.Cells[h, 8] = TruongSo06Loai2;
-                            //}
-                            //else if (string.IsNullOrEmpty(TruongSo06Loai2) && !string.IsNullOrEmpty(dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : ""))
-                            //{
-                            //    if (hLoaiHai > 0)
-                            //        wrksheet.Cells[hLoaiHai, 8] = dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : "";
-                            //}
-                            //else
-                            //    wrksheet.Cells[h, 8] = dr.Cells[7].Value != null ? dr.Cells[7].Value.ToString() : "";
+                            wrksheet.Cells[h, 85] = "02";//cố định 02
+                            wrksheet.Cells[h, 86] = "";//trống
+                            wrksheet.Cells[h, 87] = dr.Cells[46].Value != null ? dr.Cells[46].Value.ToString() : "";//truong so 45
+                            wrksheet.Cells[h, 88] = "";//trống
+                            wrksheet.Cells[h, 89] = dr.Cells[47].Value != null ? dr.Cells[47].Value.ToString() : "";//truong so 46
+                            wrksheet.Cells[h, 90] = dr.Cells[48].Value != null ? dr.Cells[48].Value.ToString() : "";//truong so 47
+                            wrksheet.Cells[h, 91] = dr.Cells[49].Value != null ? dr.Cells[49].Value.ToString() : "";//truong so 48
+                            wrksheet.Cells[h, 92] = dr.Cells[50].Value != null ? dr.Cells[50].Value.ToString() : "";//truong so 49
+                            wrksheet.Cells[h, 93] = dr.Cells[51].Value != null ? dr.Cells[51].Value.ToString() : "";//truong so 50
+                            wrksheet.Cells[h, 94] = "";//trống
+                            wrksheet.Cells[h, 95] = dr.Cells[52].Value != null ? dr.Cells[52].Value.ToString() : "";//truong so 51
+                            wrksheet.Cells[h, 96] = "";//trống
+                            wrksheet.Cells[h, 97] = dr.Cells[53].Value != null ? dr.Cells[53].Value.ToString() : "";//truong so 52
+                            wrksheet.Cells[h, 98] = "";//trống
+                            wrksheet.Cells[h, 99] = dr.Cells[54].Value != null ? dr.Cells[54].Value.ToString() : "";//truong so 53
+                            wrksheet.Cells[h, 100] = "";//trống
+                            wrksheet.Cells[h, 101] = dr.Cells[55].Value != null ? dr.Cells[55].Value.ToString() : "";//truong so 54
+                            wrksheet.Cells[h, 102] = "";//trống
+                            wrksheet.Cells[h, 103] = dr.Cells[56].Value != null ? dr.Cells[56].Value.ToString() : "";//truong so 55
+                            wrksheet.Cells[h, 104] = "";//trống
+                            wrksheet.Cells[h, 105] = dr.Cells[57].Value != null ? dr.Cells[57].Value.ToString() : "";//truong so 56
+                            wrksheet.Cells[h, 106] = "";//trống
+                            wrksheet.Cells[h, 107] = dr.Cells[58].Value != null ? dr.Cells[58].Value.ToString() : "";//truong so 57
+                            wrksheet.Cells[h, 108] = "";//trống
+                            wrksheet.Cells[h, 109] = dr.Cells[59].Value != null ? dr.Cells[59].Value.ToString() : "";//truong so 58
+                            wrksheet.Cells[h, 110] = "";//trống
+                            wrksheet.Cells[h, 111] = dr.Cells[60].Value != null ? dr.Cells[60].Value.ToString() : "";//truong so 59
+                            wrksheet.Cells[h, 112] = "";//trống
 
-                            wrksheet.Cells[h, 9] = "";
-                            wrksheet.Cells[h, 10] = dr.Cells[9].Value != null ? dr.Cells[9].Value.ToString() : "";
-                            wrksheet.Cells[h, 11] = dr.Cells[10].Value != null ? dr.Cells[10].Value.ToString() : "";
-                            wrksheet.Cells[h, 12] = "";
-                            wrksheet.Cells[h, 13] = "";
-                            //trường số 12
-                            if (truongso1_tobia == "06" || truongso1_tobia == "07")
-                                wrksheet.Cells[h, 14] = "";
-                            else if (string.IsNullOrEmpty(dr.Cells[13].Value != null ? dr.Cells[13].Value.ToString() : ""))
-                                wrksheet.Cells[h, 14] = "1";
-                            else
-                                wrksheet.Cells[h, 14] = dr.Cells[13].Value != null ? dr.Cells[13].Value.ToString() : "";
+                            //dòng 3
+                            //h++;
 
-                            //trường số13
-                            //if (!string.IsNullOrEmpty(dulieu_truong2_loai1))
+                            //wrksheet.Cells[h, 1] = dr.Cells[0].Value != null ? dr.Cells[0].Value.ToString() : "";//idimage
+                            //wrksheet.Cells[h, 2] = dr.Cells[1].Value != null ? dr.Cells[1].Value.ToString() : "";//loai phieu
 
-                            wrksheet.Cells[h, 15] = dr.Cells[14].Value != null ? dr.Cells[14].Value.ToString() : "";
-                            //else
-                            //  wrksheet.Cells[h, 15] = "";
-
-                            for (int i = 14; i <= 27; i++)
-                            {
-                                wrksheet.Cells[h, i + 2] = "";
-                            }
-
-                            wrksheet.Cells[h, 30] = dr.Cells[29].Value != null ? dr.Cells[29].Value.ToString() : "";
-
-                            wrksheet.Cells[h, 31] = dr.Cells[30].Value != null ? dr.Cells[30].Value.ToString() : "";
-                            wrksheet.Cells[h, 32] = dr.Cells[31].Value != null ? dr.Cells[31].Value.ToString() : "";
-
-                            for (int i = 31; i <= 36; i++)
-                            {
-                                wrksheet.Cells[h, i + 2] = "";
-                            }
-
-                            for (int i = 37; i <= 76; i++)
-                            {
-                                if (i == 49 || i == 54 || i == 55 || i == 56 || i == 59 || i == 60 || i == 61 || i == 62 || i == 67 || i == 68 || i == 69 || i == 70 || i == 71 || i == 72 || i == 73 || i == 74 || i == 75 || i == 76)
-                                {
-                                    wrksheet.Cells[h, i + 2] = "";
-                                    continue;
-                                }
-
-                                if ((dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString()) == "0")
-                                    wrksheet.Cells[h, i + 2] = "";
-                                else
-                                    wrksheet.Cells[h, i + 2] = dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString().Replace(",", "");
-                            }
-
-                            //truong so 77
-                            if (!string.IsNullOrEmpty(dr.Cells[79].Value == null ? "" : dr.Cells[79].Value.ToString()))
-                                wrksheet.Cells[h, 79] = "";
-                            else
-                                wrksheet.Cells[h, 79] = dr.Cells[78].Value == null ? "" : dr.Cells[78].Value.ToString();
-
-                            //truong số 78
-                            wrksheet.Cells[h, 80] = dr.Cells[79].Value == null ? "" : dr.Cells[79].Value.ToString();
-
-                            for (int i = 79; i <= 86; i++)
-                            {
-                                if ((dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString()) == "0")
-                                {
-                                    wrksheet.Cells[h, i + 2] = "";
-                                }
-                                else
-                                {
-                                    if ((dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString()).IndexOf('?') >= 0)
-                                    {
-                                        wrksheet.Cells[h, i + 2] = "?";
-                                    }
-                                    else
-                                    {
-                                        wrksheet.Cells[h, i + 2] = dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString();
-                                    }
-                                }
-                            }
-                            wrksheet.Cells[h, 89] = "";
-
-                            //tuwf truowng 88
-                            for (int i = 88; i <= 101; i++)
-                            {
-                                if (i == 92)
-                                {
-                                    if ((dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString()).IndexOf('?') < 0 && !string.IsNullOrEmpty(dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString()))
-                                    {
-                                        if (Convert.ToInt32(dr.Cells[107].Value == null ? "" : dr.Cells[107].Value.ToString()) > 260401 || Convert.ToInt32(dr.Cells[108].Value == null ? "" : dr.Cells[108].Value.ToString()) > 260401)
-                                            wrksheet.Cells[h, 94] = "1";
-                                        else
-                                            wrksheet.Cells[h, 94] = "";
-
-                                        continue;
-                                    }
-                                }
-                                if (i == 100)
-                                {
-                                    if (!string.IsNullOrEmpty(dr.Cells[102].Value == null ? "" : dr.Cells[102].Value.ToString()))
-                                        wrksheet.Cells[h, 101] = "";
-                                    else
-                                        wrksheet.Cells[h, 102] = dr.Cells[101].Value == null ? "" : dr.Cells[101].Value.ToString();
-                                    continue;
-                                }
-                                wrksheet.Cells[h, i + 2] = dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString();
-                            }
-
-                            //truong 102:
-                            if (!string.IsNullOrEmpty(dr.Cells[103].Value == null ? "" : dr.Cells[103].Value.ToString()))
-                            {
-                                if (dr.Cells[103].Value.ToString().IndexOf('?') >= 0)
-                                    wrksheet.Cells[h, 104] = "?";
-                                else
-                                    wrksheet.Cells[h, 104] = ThemKyTubatKyPhiatruoc(dr.Cells[103].Value.ToString(), 8, "0");
-                            }
-                            wrksheet.Cells[h, 105] = "";//truong 103
-                            wrksheet.Cells[h, 106] = dr.Cells[105].Value == null ? "" : dr.Cells[105].Value.ToString();
-                            wrksheet.Cells[h, 107] = dr.Cells[106].Value == null ? "" : dr.Cells[106].Value.ToString();
-
-                            if (!string.IsNullOrEmpty(dr.Cells[107].Value == null ? "" : dr.Cells[107].Value.ToString()))//truong so 106
-                            {
-                                if (dr.Cells[107].Value.ToString().IndexOf('?') >= 0)
-                                    wrksheet.Cells[h, 108] = "?";
-                                else
-                                    wrksheet.Cells[h, 108] = ThemKyTubatKyPhiatruoc(dr.Cells[107].Value.ToString(), 8, "0");
-                            }
-
-                            if (!string.IsNullOrEmpty(dr.Cells[108].Value == null ? "" : dr.Cells[108].Value.ToString()))//truong so 107
-                            {
-                                if (dr.Cells[108].Value.ToString().IndexOf('?') >= 0)
-                                    wrksheet.Cells[h, 109] = "?";
-                                else
-                                    wrksheet.Cells[h, 109] = ThemKyTubatKyPhiatruoc(dr.Cells[108].Value.ToString(), 8, "0");
-                            }
-
-                            wrksheet.Cells[h, 110] = dr.Cells[109].Value == null ? "" : dr.Cells[109].Value.ToString();
-                            wrksheet.Cells[h, 111] = dr.Cells[110].Value == null ? "" : dr.Cells[110].Value.ToString();
-                            wrksheet.Cells[h, 112] = (dr.Cells[111].Value == null ? "" : dr.Cells[111].Value.ToString());
-
-                            for (int i = 126; i <= 139; i++)
-                            {
-                                if ((dr.Cells[i + 1].Value == null ? "" : dr.Cells[i + 1].Value.ToString()) == "0")
-                                    wrksheet.Cells[h, i + 2] = "";
-                                else
-                                    wrksheet.Cells[h, i + 2] = dr.Cells[i + 1].Value != null ? dr.Cells[i + 1].Value.ToString().Replace(",", "") : "";
-                            }
-
-                            wrksheet.Cells[h, 160] = dr.Cells[159].Value == null ? "" : dr.Cells[159].Value.ToString();//truong so 158
-                            wrksheet.Cells[h, 165] = "";
-                            wrksheet.Cells[h, 166] = "";
-
-                            string Truongso159 = dr.Cells[160].Value == null ? "" : dr.Cells[160].Value.ToString();
-                            string Truongso160 = dr.Cells[161].Value == null ? "" : dr.Cells[161].Value.ToString();
-                            string Truongso161 = dr.Cells[162].Value == null ? "" : dr.Cells[162].Value.ToString();
-                            string Truongso162 = dr.Cells[163].Value == null ? "" : dr.Cells[163].Value.ToString();
-
-                            //if(string.IsNullOrEmpty(Truongso161))
-                            //{
-                            //    Truongso161 = Truongso162;
-                            //}
-                            //if (string.IsNullOrEmpty(Truongso160))
-                            //{
-                            //    Truongso160 = Truongso161;
-                            //}
-
-                            //if (string.IsNullOrEmpty(Truongso159))
-                            //{
-                            //    Truongso159 = Truongso160;
-                            //}
-
-                            wrksheet.Cells[h, 161] = Truongso159.IndexOf('?') >= 0 ? "?" : Truongso159; //truongso159
-                            wrksheet.Cells[h, 162] = Truongso160.IndexOf('?') >= 0 ? "?" : Truongso160; //truongso160
-                            wrksheet.Cells[h, 163] = Truongso161.IndexOf('?') >= 0 ? "?" : Truongso161; //truongso161
-                            wrksheet.Cells[h, 164] = Truongso162.IndexOf('?') >= 0 ? "?" : Truongso162; //truongso162
-
-                            string Truongso165 = dr.Cells[166].Value == null ? "" : dr.Cells[166].Value.ToString();//truongso165
-                            string Truongso166 = dr.Cells[167].Value == null ? "" : dr.Cells[167].Value.ToString();
-                            string Truongso167 = dr.Cells[168].Value == null ? "" : dr.Cells[168].Value.ToString();
-                            string Truongso168 = dr.Cells[169].Value == null ? "" : dr.Cells[169].Value.ToString();
-
-                            //if (string.IsNullOrEmpty(Truongso167))
-                            //{
-                            //    Truongso167 = Truongso168;
-                            //}
-                            //if (string.IsNullOrEmpty(Truongso166))
-                            //{
-                            //    Truongso166 = Truongso167;
-                            //}
-
-                            //if (string.IsNullOrEmpty(Truongso165))
-                            //{
-                            //    Truongso165 = Truongso166;
-                            //}
-
-                            wrksheet.Cells[h, 165] = Truongso165.IndexOf('?') >= 0 ? "?" : Truongso165; //truongso165
-                            wrksheet.Cells[h, 166] = Truongso166.IndexOf('?') >= 0 ? "?" : Truongso166; //truongso166
-                            wrksheet.Cells[h, 167] = Truongso167.IndexOf('?') >= 0 ? "?" : Truongso167; //truongso167
-                            wrksheet.Cells[h, 168] = Truongso168.IndexOf('?') >= 0 ? "?" : Truongso168; //truongso168
-                            wrksheet.Cells[h, 217] = dr.Cells[216].Value != null ? dr.Cells[216].Value.ToString() : "";
+                            wrksheet.Cells[h, 113] = "03";//cố định 03
+                            wrksheet.Cells[h, 114] = "";//trống
+                            wrksheet.Cells[h, 115] = dr.Cells[61].Value != null ? dr.Cells[61].Value.ToString() : "";//truong so 60
+                            wrksheet.Cells[h, 116] = "";//trống
+                            wrksheet.Cells[h, 117] = dr.Cells[62].Value != null ? dr.Cells[62].Value.ToString() : "";//truong so 61
+                            wrksheet.Cells[h, 118] = "";//trống
+                            wrksheet.Cells[h, 119] = dr.Cells[63].Value != null ? dr.Cells[63].Value.ToString() : "";//truong so 62
+                            wrksheet.Cells[h, 120] = "";//trống
+                            wrksheet.Cells[h, 121] = dr.Cells[64].Value != null ? dr.Cells[64].Value.ToString() : "";//truong so 63
+                            wrksheet.Cells[h, 122] = "";//trống
+                            wrksheet.Cells[h, 123] = dr.Cells[65].Value != null ? dr.Cells[65].Value.ToString() : "";//truong so 64
+                            wrksheet.Cells[h, 124] = "";//trống
+                            wrksheet.Cells[h, 125] = dr.Cells[66].Value != null ? dr.Cells[66].Value.ToString() : "";//truong so 65
+                            wrksheet.Cells[h, 126] = "";//trống
+                            wrksheet.Cells[h, 127] = dr.Cells[67].Value != null ? dr.Cells[67].Value.ToString() : "";//truong so 66
+                            wrksheet.Cells[h, 128] = "";//trống
+                            wrksheet.Cells[h, 129] = dr.Cells[68].Value != null ? dr.Cells[68].Value.ToString() : "";//truong so 67
+                            wrksheet.Cells[h, 130] = "";//trống
+                            wrksheet.Cells[h, 131] = dr.Cells[69].Value != null ? dr.Cells[69].Value.ToString() : "";//truong so 68
+                            wrksheet.Cells[h, 132] = "";//trống
+                            wrksheet.Cells[h, 133] = dr.Cells[70].Value != null ? dr.Cells[70].Value.ToString() : "";//truong so 69
+                            wrksheet.Cells[h, 134] = "";//trống
+                            wrksheet.Cells[h, 135] = dr.Cells[71].Value != null ? dr.Cells[71].Value.ToString() : "";//truong so 70
+                            wrksheet.Cells[h, 136] = "";//trống
+                            wrksheet.Cells[h, 137] = dr.Cells[72].Value != null ? dr.Cells[72].Value.ToString() : "";//truong so 71
+                            wrksheet.Cells[h, 138] = "";//trống
+                            wrksheet.Cells[h, 139] = dr.Cells[73].Value != null ? dr.Cells[73].Value.ToString() : "";//truong so 72
+                            wrksheet.Cells[h, 140] = "";//trống
+                            wrksheet.Cells[h, 141] = dr.Cells[74].Value != null ? dr.Cells[74].Value.ToString() : "";//truong so 73
+                            wrksheet.Cells[h, 142] = "";//trống
+                            wrksheet.Cells[h, 143] = dr.Cells[75].Value != null ? dr.Cells[75].Value.ToString() : "";//truong so 74
+                            wrksheet.Cells[h, 144] = "";//trống
+                            wrksheet.Cells[h, 145] = dr.Cells[76].Value != null ? dr.Cells[76].Value.ToString() : "";//truong so 75
+                            wrksheet.Cells[h, 146] = "";//trống
 
                             break;
                     }

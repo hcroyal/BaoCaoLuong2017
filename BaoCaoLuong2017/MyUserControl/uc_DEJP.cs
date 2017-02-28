@@ -270,47 +270,47 @@ namespace BaoCaoLuong2017.MyUserControl
         public void setRandom()
         {
             Random rd = new Random();
-            txt_Truong_002.Text = rd.Next(40, 700).ToString();
+            txt_Truong_056.Text = rd.Next(40, 700).ToString();
         }
 
         public void ResetData()
         {
-            txt_Truong_001.Text = string.Empty;
-            txt_Truong_002.Text = string.Empty;
             txt_Truong_003.Text = string.Empty;
-            txt_Truong_004.Text = string.Empty;
-            txt_Truong_005.Text = string.Empty;
-            txt_Truong_006.Text = string.Empty;
-            txt_Truong_007.Text = string.Empty;
-            txt_Truong_008.Text = string.Empty;
-            txt_Truong_009.Text = string.Empty;
-            txt_Truong_010.Text = string.Empty;
+            txt_Truong_056.Text = string.Empty;
+            txt_Truong_060.Text = string.Empty;
+            txt_Truong_062.Text = string.Empty;
+            txt_Truong_064.Text = string.Empty;
+            txt_Truong_066.Text = string.Empty;
+            txt_Truong_068.Text = string.Empty;
+            txt_Truong_070.Text = string.Empty;
+            txt_Truong_072.Text = string.Empty;
+            txt_Truong_074.Text = string.Empty;
 
-            txt_Truong_001.BackColor = Color.White;
-            txt_Truong_002.BackColor = Color.White;
             txt_Truong_003.BackColor = Color.White;
-            txt_Truong_004.BackColor = Color.White;
-            txt_Truong_005.BackColor = Color.White;
-            txt_Truong_006.BackColor = Color.White;
-            txt_Truong_007.BackColor = Color.White;
-            txt_Truong_008.BackColor = Color.White;
-            txt_Truong_009.BackColor = Color.White;
-            txt_Truong_010.BackColor = Color.White;
+            txt_Truong_056.BackColor = Color.White;
+            txt_Truong_060.BackColor = Color.White;
+            txt_Truong_062.BackColor = Color.White;
+            txt_Truong_064.BackColor = Color.White;
+            txt_Truong_066.BackColor = Color.White;
+            txt_Truong_068.BackColor = Color.White;
+            txt_Truong_070.BackColor = Color.White;
+            txt_Truong_072.BackColor = Color.White;
+            txt_Truong_074.BackColor = Color.White;
 
         }
 
         public bool IsEmpty()
         {
-            if (string.IsNullOrEmpty(txt_Truong_001.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_002.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_003.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_004.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_005.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_006.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_007.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_008.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_009.Text) &&
-                 string.IsNullOrEmpty(txt_Truong_010.Text)
+            if (string.IsNullOrEmpty(txt_Truong_003.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_056.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_060.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_062.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_064.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_066.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_068.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_070.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_072.Text) &&
+                 string.IsNullOrEmpty(txt_Truong_074.Text)
                 )
                 return true;
             return false;
@@ -385,12 +385,95 @@ namespace BaoCaoLuong2017.MyUserControl
 
         public void SaveData_DEJP(string idimage)
         {
-            Global.db_BCL.Insert_DEJP(idimage, Global.StrBatch, Global.StrUsername, txt_Truong_002.Text);
+            Global.db_BCL.Insert_DEJP(idimage, Global.StrBatch, Global.StrUsername, 
+                                        txt_Truong_003.Text, 
+                                        txt_Truong_056.Text,
+                                        txt_Truong_060.Text,
+                                        txt_Truong_062.Text,
+                                        txt_Truong_064.Text,
+                                        txt_Truong_066.Text,
+                                        txt_Truong_068.Text,
+                                        txt_Truong_070.Text,
+                                        txt_Truong_072.Text,
+                                        txt_Truong_074.Text
+                                        );
         }
 
         private void labelControl8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_Truong_066_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_060_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_062_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_064_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_056_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_068_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_070_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_072_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
+        }
+
+        private void txt_Truong_074_EditValueChanged(object sender, EventArgs e)
+        {
+            doimautrongkhoang((TextEdit)sender, 0, 30);
+
+            if (Changed != null)
+                Changed(sender, e);
         }
     }
 }

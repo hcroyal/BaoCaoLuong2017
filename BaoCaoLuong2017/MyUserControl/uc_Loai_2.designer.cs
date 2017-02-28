@@ -324,7 +324,7 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Name = "uc_Loai_2";
-            this.Size = new System.Drawing.Size(276, 278);
+            this.Size = new System.Drawing.Size(276, 259);
             this.Load += new System.EventHandler(this.uc_Loai_2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_004.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Truong_006.Properties)).EndInit();

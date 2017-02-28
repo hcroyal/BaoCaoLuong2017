@@ -229,6 +229,7 @@
             this.labelControl8.Size = new System.Drawing.Size(62, 13);
             this.labelControl8.TabIndex = 1;
             this.labelControl8.Text = "Truong So 4:";
+            this.labelControl8.Visible = false;
             // 
             // txt_TruongSo4
             // 
@@ -236,6 +237,7 @@
             this.txt_TruongSo4.Name = "txt_TruongSo4";
             this.txt_TruongSo4.Size = new System.Drawing.Size(356, 20);
             this.txt_TruongSo4.TabIndex = 2;
+            this.txt_TruongSo4.Visible = false;
             // 
             // labelControl9
             // 
@@ -244,6 +246,7 @@
             this.labelControl9.Size = new System.Drawing.Size(73, 13);
             this.labelControl9.TabIndex = 1;
             this.labelControl9.Text = "Ten hinh thu 2:";
+            this.labelControl9.Visible = false;
             // 
             // txt_TenHinhThu2
             // 
@@ -251,6 +254,7 @@
             this.txt_TenHinhThu2.Name = "txt_TenHinhThu2";
             this.txt_TenHinhThu2.Size = new System.Drawing.Size(356, 20);
             this.txt_TenHinhThu2.TabIndex = 2;
+            this.txt_TenHinhThu2.Visible = false;
             // 
             // frm_CreateBatch
             // 

@@ -130,7 +130,7 @@ namespace BaoCaoLuong2017.MyForm
                         return "Error";
                     }
                 }
-                uc_Loai_41.txt_Truong_004.Focus();
+                uc_Loai_41.txt_Truong_001.Focus();
             }
             else if (Global.StrRole == "DEJP")
             {
@@ -176,7 +176,7 @@ namespace BaoCaoLuong2017.MyForm
                     }
                 }
                 tabcontrol.SelectedTabPage = tp_DEJP;
-                uc_DEJP1.txt_Truong_002.Focus();
+                uc_DEJP1.txt_Truong_003.Focus();
             }
             return "OK";
         }
