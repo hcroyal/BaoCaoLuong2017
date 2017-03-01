@@ -1290,7 +1290,21 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_044_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 13);
+            if (!string.IsNullOrEmpty(((TextEdit)sender).Text))
+            {
+                if (((TextEdit)sender).Text != "?")
+                {
+                    doimautrongkhoang((TextEdit)sender, 13, 13);
+                }
+                else
+                {
+                    doimautrongkhoang((TextEdit)sender, 0, 1);
+                }
+            }
+            else
+            {
+                doimautrongkhoang((TextEdit)sender, 0, 1);
+            }
             if (Changed != null)
                 Changed(sender, e);
         }

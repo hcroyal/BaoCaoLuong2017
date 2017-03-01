@@ -1161,7 +1161,7 @@
             this.txt_Truong_044.Location = new System.Drawing.Point(412, 393);
             this.txt_Truong_044.Name = "txt_Truong_044";
             this.txt_Truong_044.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.txt_Truong_044.Properties.Mask.EditMask = "[0-9?]+";
+            this.txt_Truong_044.Properties.Mask.EditMask = "[0-9? ]+";
             this.txt_Truong_044.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txt_Truong_044.Size = new System.Drawing.Size(101, 20);
             this.txt_Truong_044.TabIndex = 62;
