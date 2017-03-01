@@ -193,6 +193,7 @@
             this.txt_Truong_003.Size = new System.Drawing.Size(546, 32);
             this.txt_Truong_003.TabIndex = 0;
             this.txt_Truong_003.Text = "";
+            this.txt_Truong_003.TextChanged += new System.EventHandler(this.txt_Truong_002_EditValueChanged);
             // 
             // txt_Truong_056
             // 
@@ -203,6 +204,7 @@
             this.txt_Truong_056.Size = new System.Drawing.Size(546, 32);
             this.txt_Truong_056.TabIndex = 1;
             this.txt_Truong_056.Text = "";
+            this.txt_Truong_056.TextChanged += new System.EventHandler(this.txt_Truong_056_EditValueChanged);
             // 
             // txt_Truong_060
             // 
@@ -213,6 +215,7 @@
             this.txt_Truong_060.Size = new System.Drawing.Size(547, 32);
             this.txt_Truong_060.TabIndex = 2;
             this.txt_Truong_060.Text = "";
+            this.txt_Truong_060.TextChanged += new System.EventHandler(this.txt_Truong_060_EditValueChanged);
             // 
             // txt_Truong_062
             // 
@@ -223,6 +226,7 @@
             this.txt_Truong_062.Size = new System.Drawing.Size(547, 32);
             this.txt_Truong_062.TabIndex = 3;
             this.txt_Truong_062.Text = "";
+            this.txt_Truong_062.TextChanged += new System.EventHandler(this.txt_Truong_062_EditValueChanged);
             // 
             // txt_Truong_064
             // 
@@ -233,6 +237,7 @@
             this.txt_Truong_064.Size = new System.Drawing.Size(547, 32);
             this.txt_Truong_064.TabIndex = 4;
             this.txt_Truong_064.Text = "";
+            this.txt_Truong_064.TextChanged += new System.EventHandler(this.txt_Truong_064_EditValueChanged);
             // 
             // txt_Truong_066
             // 
@@ -243,6 +248,7 @@
             this.txt_Truong_066.Size = new System.Drawing.Size(547, 32);
             this.txt_Truong_066.TabIndex = 5;
             this.txt_Truong_066.Text = "";
+            this.txt_Truong_066.TextChanged += new System.EventHandler(this.txt_Truong_066_EditValueChanged);
             // 
             // txt_Truong_068
             // 
@@ -253,6 +259,7 @@
             this.txt_Truong_068.Size = new System.Drawing.Size(547, 32);
             this.txt_Truong_068.TabIndex = 6;
             this.txt_Truong_068.Text = "";
+            this.txt_Truong_068.TextChanged += new System.EventHandler(this.txt_Truong_068_EditValueChanged);
             // 
             // txt_Truong_070
             // 
@@ -263,6 +270,7 @@
             this.txt_Truong_070.Size = new System.Drawing.Size(547, 32);
             this.txt_Truong_070.TabIndex = 7;
             this.txt_Truong_070.Text = "";
+            this.txt_Truong_070.TextChanged += new System.EventHandler(this.txt_Truong_070_EditValueChanged);
             // 
             // txt_Truong_072
             // 
@@ -273,6 +281,7 @@
             this.txt_Truong_072.Size = new System.Drawing.Size(547, 32);
             this.txt_Truong_072.TabIndex = 8;
             this.txt_Truong_072.Text = "";
+            this.txt_Truong_072.TextChanged += new System.EventHandler(this.txt_Truong_072_EditValueChanged);
             // 
             // txt_Truong_074
             // 
@@ -283,6 +292,7 @@
             this.txt_Truong_074.Size = new System.Drawing.Size(547, 32);
             this.txt_Truong_074.TabIndex = 9;
             this.txt_Truong_074.Text = "";
+            this.txt_Truong_074.TextChanged += new System.EventHandler(this.txt_Truong_074_EditValueChanged);
             // 
             // uc_DEJP
             // 

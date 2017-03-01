@@ -375,7 +375,7 @@ namespace BaoCaoLuong2017.MyUserControl
         //        txt.Properties.MaxLength = 0;
         //    }
         //}
-        private void doimautrongkhoang(TextEdit txt, int so_nho, int so_lon)
+        private void doimautrongkhoang(RichTextBox txt, int so_nho, int so_lon)
         {
             if (txt.Text.Length > 0)
             {
@@ -422,7 +422,7 @@ namespace BaoCaoLuong2017.MyUserControl
         }
         private void txt_Truong_002_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 25);
+            doimautrongkhoang((RichTextBox)sender, 0, 25);
             
             if (Changed != null)
                 Changed(sender, e);
@@ -451,7 +451,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_066_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
@@ -459,7 +459,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_060_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
@@ -467,7 +467,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_062_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
@@ -475,7 +475,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_064_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
@@ -483,7 +483,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_056_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
@@ -491,7 +491,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_068_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
@@ -499,7 +499,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_070_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
@@ -507,7 +507,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_072_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
@@ -515,7 +515,7 @@ namespace BaoCaoLuong2017.MyUserControl
 
         private void txt_Truong_074_EditValueChanged(object sender, EventArgs e)
         {
-            doimautrongkhoang((TextEdit)sender, 0, 30);
+            doimautrongkhoang((RichTextBox)sender, 0, 30);
 
             if (Changed != null)
                 Changed(sender, e);
