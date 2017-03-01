@@ -71,6 +71,49 @@ namespace BaoCaoLuong2017.MyForm
             }
         }
 
+        public void CompareRichTextBox(RichTextBox t1, RichTextBox t2)
+        {
+
+            int n = 0;
+            string s = t1.Text;
+            string s1 = t2.Text;
+            if (s.Length > s1.Length)
+            {
+                n = s1.Length;
+                t1.SelectionStart = n;
+                t1.SelectionLength = s.Length - s1.Length;
+                t1.SelectionColor = Color.Red;
+                //t1.SelectionBackColor = Color.Red;
+            }
+            else
+            {
+                n = s.Length;
+                t2.SelectionStart = n;
+                t2.SelectionLength = s1.Length - s.Length;
+                t2.SelectionColor = Color.Red;
+                //t2.SelectionBackColor = Color.Red;
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                if (s[i] != s1[i])
+                {
+                    t1.SelectionStart = i;
+                    t1.SelectionLength = 1;
+                    t1.SelectionColor = Color.Red;
+                    //t1.SelectionBackColor = Color.Red;
+
+                    t2.SelectionStart = i;
+                    t2.SelectionLength = 1;
+                    t2.SelectionColor = Color.Red;
+                    //t2.SelectionBackColor = Color.Red;
+                    //loi++;
+
+                }
+            }
+            //loi += Math.Abs(sosanh);
+            //MessageBox.Show("Có tất cả " + loi.ToString() + " loi");  
+        }
         private void frm_Check_Load(object sender, EventArgs e)
         {
             try
@@ -335,7 +378,17 @@ namespace BaoCaoLuong2017.MyForm
             uc_DEJP2.txt_Truong_072.Text = deso[1].Truong_072;
             uc_DEJP2.txt_Truong_074.Text = deso[1].Truong_074;
 
-            Compare_TextBox(uc_DEJP1.txt_Truong_056, uc_DEJP2.txt_Truong_056);
+
+            CompareRichTextBox(uc_DEJP1.txt_Truong_003, uc_DEJP2.txt_Truong_003);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_056, uc_DEJP2.txt_Truong_056);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_060, uc_DEJP2.txt_Truong_060);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_062, uc_DEJP2.txt_Truong_062);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_064, uc_DEJP2.txt_Truong_064);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_066, uc_DEJP2.txt_Truong_066);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_068, uc_DEJP2.txt_Truong_068);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_070, uc_DEJP2.txt_Truong_070);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_072, uc_DEJP2.txt_Truong_072);
+            CompareRichTextBox(uc_DEJP1.txt_Truong_074, uc_DEJP2.txt_Truong_074);
 
             var soloi = ((from w in Global.db_BCL.tbl_DEJPs where w.fBatchName == Global.StrBatch && w.Dem == 1 select w.IdImage).Count() / 2).ToString();
             lb_Loi.Text = soloi + " Lỗi";
@@ -1692,6 +1745,7 @@ namespace BaoCaoLuong2017.MyForm
                 uc_Loai_421.VerticalScroll.Value = e.NewValue;
         }
 
+
         private void tabcontrol_DeSo2_Click(object sender, EventArgs e)
         {
             if (tabcontrol_DeSo2.SelectedTabPage == tp_Loai_1_DeSo2)
@@ -1718,6 +1772,22 @@ namespace BaoCaoLuong2017.MyForm
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_4_DeSo2;
             else if (tabcontrol_DeSo1.SelectedTabPage == tp_Loai_4_2_DeSo1)
                 tabcontrol_DeSo2.SelectedTabPage = tp_Loai_4_2_DeSo2;
+        }
+
+        private void uc_DEJP1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.HorizontalScroll)
+                uc_DEJP1.HorizontalScroll.Value = e.NewValue;
+            else if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.VerticalScroll)
+                uc_DEJP2.VerticalScroll.Value = e.NewValue;
+        }
+
+        private void uc_DEJP2_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.HorizontalScroll)
+                uc_DEJP2.HorizontalScroll.Value = e.NewValue;
+            else if (e.ScrollOrientation == System.Windows.Forms.ScrollOrientation.VerticalScroll)
+                uc_DEJP1.VerticalScroll.Value = e.NewValue;
         }
     }
 }

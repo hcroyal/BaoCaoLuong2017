@@ -212,11 +212,13 @@
             // 
             // uc_DEJP1
             // 
+            this.uc_DEJP1.AutoScroll = true;
             this.uc_DEJP1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_DEJP1.Location = new System.Drawing.Point(0, 0);
             this.uc_DEJP1.Name = "uc_DEJP1";
             this.uc_DEJP1.Size = new System.Drawing.Size(588, 310);
             this.uc_DEJP1.TabIndex = 0;
+            this.uc_DEJP1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uc_DEJP1_Scroll);
             // 
             // panel2
             // 
@@ -342,11 +344,13 @@
             // 
             // uc_DEJP2
             // 
+            this.uc_DEJP2.AutoScroll = true;
             this.uc_DEJP2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uc_DEJP2.Location = new System.Drawing.Point(0, 0);
             this.uc_DEJP2.Name = "uc_DEJP2";
             this.uc_DEJP2.Size = new System.Drawing.Size(588, 305);
             this.uc_DEJP2.TabIndex = 0;
+            this.uc_DEJP2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uc_DEJP2_Scroll);
             // 
             // panel4
             // 
