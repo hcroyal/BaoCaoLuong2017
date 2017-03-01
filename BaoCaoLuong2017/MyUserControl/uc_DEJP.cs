@@ -315,64 +315,109 @@ namespace BaoCaoLuong2017.MyUserControl
                 return true;
             return false;
         }
+        //private void doimautrongkhoang(TextEdit txt, int so_nho, int so_lon)
+        //{
+        //    if (!string.IsNullOrEmpty(txt.Text))
+        //    {
+        //        if (txt.Text.Length >= 2)
+        //        {
+        //            if (txt.Text.Substring(txt.Text.Length - 2, 2) == "  ")
+        //            {
+        //                txt.BackColor = Color.Red;
+        //                txt.ForeColor = Color.White;
+        //                bSubmit = true;
+        //                txt.Properties.MaxLength = txt.Text.Length;
+        //            }
+        //            else
+        //            {
+        //                string result = lChar.Find(s => s == txt.Text[txt.Text.Length - 1].ToString());
+        //                if (!string.IsNullOrEmpty(result))
+        //                {
+        //                    txt.BackColor = Color.Red;
+        //                    txt.ForeColor = Color.White;
+        //                    bSubmit = true;
+        //                    txt.Properties.MaxLength = txt.Text.Length;
+        //                }
+        //                else
+        //                {
+        //                    txt.BackColor = Color.White;
+        //                    txt.ForeColor = Color.Black;
+        //                    bSubmit = false;
+        //                    txt.Properties.MaxLength = 0;
+        //                }
+        //            }
+        //        }
+        //        else
+        //        {
+        //            string result = lChar.Find(s => s == txt.Text[txt.Text.Length - 1].ToString());
+        //            if (!string.IsNullOrEmpty(result))
+        //            {
+        //                txt.BackColor = Color.Red;
+        //                txt.ForeColor = Color.White;
+        //                bSubmit = true;
+        //                txt.Properties.MaxLength = txt.Text.Length;
+        //            }
+        //            else
+        //            {
+        //                txt.BackColor = Color.White;
+        //                txt.ForeColor = Color.Black;
+        //                bSubmit = false;
+        //                txt.Properties.MaxLength = 0;
+        //            }
+        //        }
+
+        //    }
+        //    else
+        //    {
+        //        txt.BackColor = Color.White;
+        //        txt.ForeColor = Color.Black;
+        //        bSubmit = false;
+        //        txt.Properties.MaxLength = 0;
+        //    }
+        //}
         private void doimautrongkhoang(TextEdit txt, int so_nho, int so_lon)
         {
-            if (!string.IsNullOrEmpty(txt.Text))
+            if (txt.Text.Length > 0)
             {
-                if (txt.Text.Length >= 2)
+                if (txt.Text != "?")
                 {
-                    if (txt.Text.Substring(txt.Text.Length - 2, 2) == "  ")
+                    if (txt.Text.Substring(0, 1) == "-")
                     {
-                        txt.BackColor = Color.Red;
-                        txt.ForeColor = Color.White;
-                        bSubmit = true;
-                        txt.Properties.MaxLength = txt.Text.Length;
-                    }
-                    else
-                    {
-                        string result = lChar.Find(s => s == txt.Text[txt.Text.Length - 1].ToString());
-                        if (!string.IsNullOrEmpty(result))
+                        if (txt.Text.Length >= so_nho && txt.Text.Length <= so_lon + 1)
                         {
-                            txt.BackColor = Color.Red;
-                            txt.ForeColor = Color.White;
-                            bSubmit = true;
-                            txt.Properties.MaxLength = txt.Text.Length;
+                            txt.ForeColor = Color.Black;
+                            txt.BackColor = Color.White;
                         }
                         else
                         {
-                            txt.BackColor = Color.White;
+                            txt.ForeColor = Color.White;
+                            txt.BackColor = Color.Red;
+                        }
+                    }
+                    else
+                    {
+                        if (txt.Text.Length >= so_nho && txt.Text.Length <= so_lon)
+                        {
                             txt.ForeColor = Color.Black;
-                            bSubmit = false;
-                            txt.Properties.MaxLength = 0;
+                            txt.BackColor = Color.White;
+                        }
+                        else
+                        {
+                            txt.ForeColor = Color.White;
+                            txt.BackColor = Color.Red;
                         }
                     }
                 }
                 else
                 {
-                    string result = lChar.Find(s => s == txt.Text[txt.Text.Length - 1].ToString());
-                    if (!string.IsNullOrEmpty(result))
-                    {
-                        txt.BackColor = Color.Red;
-                        txt.ForeColor = Color.White;
-                        bSubmit = true;
-                        txt.Properties.MaxLength = txt.Text.Length;
-                    }
-                    else
-                    {
-                        txt.BackColor = Color.White;
-                        txt.ForeColor = Color.Black;
-                        bSubmit = false;
-                        txt.Properties.MaxLength = 0;
-                    }
+                    txt.ForeColor = Color.Black;
+                    txt.BackColor = Color.White;
                 }
-
             }
             else
             {
-                txt.BackColor = Color.White;
                 txt.ForeColor = Color.Black;
-                bSubmit = false;
-                txt.Properties.MaxLength = 0;
+                txt.BackColor = Color.White;
             }
         }
         private void txt_Truong_002_EditValueChanged(object sender, EventArgs e)
